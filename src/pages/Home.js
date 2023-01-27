@@ -9,7 +9,9 @@ export default function Home() {
       
 
       <VideoSection />
-      
+      <div style={{backgroundColor:'red'}}>
+        test
+      </div>
       
     </div>
   )

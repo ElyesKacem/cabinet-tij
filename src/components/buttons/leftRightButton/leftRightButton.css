@@ -1,0 +1,19 @@
+.leftRightButton{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 150px;
+    height: 30px;
+    display: flex;
+  
+    background: linear-gradient(to right, black 50%, rgb(248, 12, 12) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .1s ease-out;
+    padding: 10px 20px 5px 15px;
+    
+}
+.leftRightButton:hover{
+    background-position: left bottom;
+    /* scale: ; */
+}
+

@@ -1,12 +1,15 @@
 .nav{
-position: sticky;
+position: fixed;
  display: flex;
  align-items: center;  
  justify-content: space-between;
+ z-index: 2;
+ width: 100%;
+ /* background-color: rgb(0, 174, 255); */
  
 }
 
-.nav img{
+.logo{
     height: 150px;
 }
 
@@ -19,9 +22,41 @@ position: sticky;
 }
 
 .nav-element{
-    display: block;
-  color: black;
+  
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+
+}
+.logofr{
+  height: 30px;
+  position: absolute;
+  top:0;
+  right: 20%;
+  
+}
+.videoContent{
+  position: absolute;
+  top: 200px;
+  left: 15%;
+  /* width: 100px; */
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* font-weight: bold; */
+  z-index: 3;
+  /* font: "commuterssans-bold"; */
+  /* justify-content: ; */
+}
+
+.videoContent p{
+  font-size: 110px;
+  align-items: center;
+  justify-content: center;
 }
