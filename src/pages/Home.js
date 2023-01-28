@@ -1,5 +1,6 @@
 import React from 'react'
 import Filter from '../components/filter/filter'
+import Services from '../components/sections/service/Services'
 import VideoSection from '../components/sections/video/video'
 
 
@@ -9,9 +10,7 @@ export default function Home() {
       
 
       <VideoSection />
-      <div style={{backgroundColor:'red'}}>
-        test
-      </div>
+      <Services />
       
     </div>
   )
