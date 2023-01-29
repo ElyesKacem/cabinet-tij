@@ -27,7 +27,7 @@ export default function Navbar() {
             <NavbarButton title="Contact" href=""/>
         </div>
         <div style={{marginRight:40}}>
-        <GetQuoteButton></GetQuoteButton>
+        <GetQuoteButton title="Get Quote"></GetQuoteButton>
         <div><img className='logofr' src={logoFrance}/></div>
         </div>
         <div style={{marginRight:40}}>

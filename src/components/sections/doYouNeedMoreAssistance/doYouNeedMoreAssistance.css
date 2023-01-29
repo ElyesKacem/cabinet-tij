@@ -1,0 +1,24 @@
+.shortImage{
+    width: 100%;
+}
+
+.RequestAQuoteButton{
+    font-weight: bold;
+    border: 1px white solid;
+    padding: 16px 26px 16px 26px;
+    color: white;
+    border-radius: 10px;
+    height: 15px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+    background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;
+}
+.RequestAQuoteButton:hover{
+    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    font-size: 15px;
+    transition: all .2s ease-out;
+}

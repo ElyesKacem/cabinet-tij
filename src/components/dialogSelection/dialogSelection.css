@@ -1,0 +1,39 @@
+.container{
+    position: relative;
+    /* max-width: 400px; */
+    width: 200px;
+    height: 150px;
+    border: 2px solid #f6f5f5;
+    /* margin: 100px auto; */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;    
+
+  }
+
+  .container:after{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-top: 0px solid #f6f5f5;
+    border-right: 2px solid #f6f5f5;
+    border-bottom: 2px solid #f6f5f5;
+    border-left: 0px solid #f6f5f5;
+    top:103%;
+    left: 50%;
+    margin-left: -25px;
+    content: '';
+    transform: rotate(45deg);
+    margin-top: -25px;
+    background: #ffffff;
+    
+  }
+
+  .titleDialogSelection{
+    font-weight:bold;
+          font-size: 16px;
+          font-family:"commuterssans-bold";
+  }

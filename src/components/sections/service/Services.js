@@ -21,7 +21,7 @@ export default function Services() {
             
             <div className="greyRectangle">
               <b>
-                Who we are
+                WHO WE ARE
               </b>
             </div>
 

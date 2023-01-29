@@ -29,7 +29,7 @@ export default function VideoSection() {
         </div>
         <br />
       <div>
-      {/* <LeftRightButton></LeftRightButton> */}
+      <LeftRightButton></LeftRightButton>
       </div>
     </div>
     

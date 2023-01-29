@@ -5,10 +5,14 @@ import EastIcon from '@mui/icons-material/East';
 export default function LeftRightButton() {
   return (
     <div className='leftRightButton'>
-      <div>
-        Learn more 
+      <div className='buttonText'>
+       <b>Learn More </b> 
       </div>
-      <EastIcon></EastIcon>
+      <div className='test'>
+      <div className='buttonIcon'>
+        <EastIcon></EastIcon>
+      </div>
+      </div>
       </div>
   )
 }

@@ -1,0 +1,15 @@
+.footerText-title{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    font-weight:bold;
+    font-size: 26px;
+    font-family:"commuterssans-bold";
+    transform: translateX(-21px);
+
+}
+
+.footerText-content{
+    font-size: 16px;
+    font-family:"commuterssans-bold";
+}

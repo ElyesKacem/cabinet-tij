@@ -1,6 +1,6 @@
-.services{
- /* height: 100vh;    */
-}
+/* .services{
+ height: 100vh;   
+} */
 
 .greyEmptyRectangle{
     width: 40px;
@@ -17,7 +17,7 @@
     font-weight:bold;
     font-size: 13px;
     font-family:"commuterssans-bold";
-    text-transform: uppercase;
+    
 }
 .services img {
     border: 2px solid #A7A7A7AB;
@@ -29,9 +29,9 @@
   
     transform: translateX(15px);
       font-weight:bold;
-          font-size: 35px;
+          font-size: 32px;
           font-family:"commuterssans-bold";
-          line-height: 100%;
+          line-height: 110%;
 }
 .secondClass{
     

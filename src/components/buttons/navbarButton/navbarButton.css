@@ -11,7 +11,8 @@
 }
 
 .button:hover .btnText{
-  transform: scale(0.9);
+  transform: scale(0.92);
+  transition: all .2s ease-out;
 }
 .button:hover .btnText2{
   background-position: left bottom;
