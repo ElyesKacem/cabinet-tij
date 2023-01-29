@@ -17,12 +17,19 @@ export default function Footer() {
   justifyContent="center"
   alignItems="flex-start">
                 <Grid item xs={3} style={{display:"flex",flexDirection:"column",justifyItems:"center"}}>
-<div>
+<div style={{
+  display:" flex",
+  justifyContent:" center",
+}}>
 
                 <img src={CabinetTIJ} style={{height:200}} />
                 <br />
 </div>
-<div>
+<div style={{
+  display:" flex",
+  justifyContent:" center",
+  alignItems:" center"
+}}>
 
                 <img src={GoogleMaps} style={{height:30}} />
                 <img src={LinkedIn} style={{height:30}} />
@@ -46,8 +53,9 @@ export default function Footer() {
                 </Grid>
                 
             </Grid>
+<br />
+<br />
     <div style={{height:40,color:'white',backgroundColor:"black"}}>
-
 
 <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
 {/* <div> Terms of use </div> <div>|</div> <div>All Codivyrights © are reserved 2022</div> */}

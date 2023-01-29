@@ -38,3 +38,11 @@
   font-family: 'commuterssans-bold';
   src: url('./assets/fonts/Fontspring-DEMO-commuterssans-bold.otf') format('truetype');
 }
+@font-face {
+  font-family: 'segoe';
+  src: url('./assets/fonts/Segoe\ UI.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'futuraBold';
+  src: url('./assets/fonts/Futura\ Bold\ font.ttf') format('truetype');
+}

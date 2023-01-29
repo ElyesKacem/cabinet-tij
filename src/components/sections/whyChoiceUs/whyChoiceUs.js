@@ -25,9 +25,9 @@ export default function WhyChoiceUs() {
           
           <div style={{display:'flex',justifyContent:"space-around"}}>
           <DialogSelection img={Image1} title="Expertise"/>
-          <DialogSelection img={Image2} width="90px" title="Experience"/>
-          <DialogSelection img={Image3} title="Quality"/>
-          <DialogSelection img={Image4} width="100px" title="Agility"/>
+          <DialogSelection img={Image2} width="70px" title="Experience"/>
+          <DialogSelection img={Image3} width="60px" title="Quality"/>
+          <DialogSelection img={Image4} width="70px" title="Agility"/>
           <DialogSelection img={Image5} title="Efficiency"/>
           </div>
           <br />

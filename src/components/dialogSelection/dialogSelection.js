@@ -10,10 +10,10 @@ export default function DialogSelection(props) {
                 position: 'relative', zIndex: "3",
                 display: "flex",
                 flexDirection: "column",
-                alignitems: "center"
+                alignItems: "center",
 
             }}>
-                <img style={{ width: props.width || 80 }} src={props.img} />
+                <img style={{ width: props.width || 50 }} src={props.img} />
                 <div className="titleDialogSelection">
 
                     {props.title}
