@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavbarButton from '../buttons/navbarButton/navbarButton'
 import './navbar.css'
 // import logo from './images/logo.png';
@@ -8,9 +8,21 @@ import GetQuoteButton from '../buttons/getQuoteButton/getQuoteButton';
 
 
 export default function Navbar() {
+ const [color, setColor] = useState(false);
+
+ const changeColor=()=>{
+  if(window.pageYOffset>0){
+    setColor(true);
+  }
+  else{
+    setColor(false);
+  }
+ }
+
+ window.addEventListener('scroll',changeColor);
 
   return (
-    <div className='nav' style={{color:'red'}} >
+    <div className={color? 'nav nav-background':'nav'} >
        <div><img className='logo' src={logo}/></div>
        
        <div className='nav-element'>
@@ -28,7 +40,7 @@ export default function Navbar() {
         </div>
         <div style={{marginRight:40}}>
         <GetQuoteButton title="Get Quote"></GetQuoteButton>
-        <div><img className='logofr' src={logoFrance}/></div>
+        
         </div>
         <div style={{marginRight:40}}>
           Choice a language

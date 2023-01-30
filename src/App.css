@@ -6,6 +6,7 @@
   height: 100vh;
 } */
 
+
 .myDiv2 {
   position: relative;
   font-family: 'commuterssans-thin', sans-serif;
@@ -30,6 +31,14 @@
   height: 100%;
 }
 
+.logofr{
+  height: 30px;
+  position: absolute;
+  top:0;
+  right: 20%;
+  z-index: 3;
+  
+}
 @font-face {
   font-family: 'commuterssans-thin';
   src: url('./assets/fonts/Fontspring-DEMO-commuterssans-thin.otf') format('truetype');

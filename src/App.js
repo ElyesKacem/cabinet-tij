@@ -5,6 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import { Link, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
+import logoFrance from './assets/images/franceR.png';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
 
         </div>
+        <div><img className='logofr' src={logoFrance}/></div>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
