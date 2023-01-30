@@ -5,10 +5,17 @@ position: fixed;
  justify-content: space-between;
  z-index: 4;
  width: 100%;
+ transition: all .2s ease-out;
+ transition: .3s ease-in;
+ height: 100px;
 }
 
+.nav-background{
+  background:transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
+  transition: all .2s ease-out;
+}
 .logo{
-    height: 150px;
+    height: 140px;
     transform: translateX(84px);
 }
 
