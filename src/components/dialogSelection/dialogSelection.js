@@ -3,7 +3,10 @@ import "./dialogSelection.css"
 
 export default function DialogSelection(props) {
     return (
-        <div className="container" style={{marginLeft:20}}>
+        <div className="container" style={{marginLeft:20}} onClick={()=>{
+            props.setSelectedDataId(props.id);
+
+          }}>
             
 
             <div style={{

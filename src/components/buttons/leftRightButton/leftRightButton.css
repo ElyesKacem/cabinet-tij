@@ -1,6 +1,6 @@
 .leftRightButton{
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius: 6px;
     width: 140px;
     height: 30px;
     display: flex;
@@ -10,7 +10,8 @@
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .2s ease-out;
-    padding: 10px 15px 5px 25px;
+    padding: 10px 15px 0px 25px;
+    cursor: pointer;
     
 }
 .leftRightButton:hover{

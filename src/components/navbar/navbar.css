@@ -7,15 +7,25 @@ position: fixed;
  width: 100%;
  transition: all .2s ease-out;
  transition: .3s ease-in;
- height: 100px;
+ height: 75px;
 }
 
 .nav-background{
   background:transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-  transition: all .2s ease-out;
+  animation:coloringMenuBackground 1s;
 }
+
+@keyframes coloringMenuBackground {
+  from {
+    background:transparent;
+  }
+  to {
+    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
+  }
+}
+
 .logo{
-    height: 140px;
+    height: 120px;
     transform: translateX(84px);
 }
 
@@ -31,7 +41,7 @@ position: fixed;
   
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 14px 16px;
+  /* padding: 14px 16px; */
   text-decoration: none;
   display: flex;
   align-items: center;

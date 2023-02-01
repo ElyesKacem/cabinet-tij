@@ -15,7 +15,7 @@ export default function Services() {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={6}>
+          <Grid item md={12} lg={6}>
             <div className='translateRight40'>
 
             
@@ -39,11 +39,12 @@ export default function Services() {
               </div>
             </div>
             </div>
-
+ 
+ 
 
 
           </Grid>
-          <Grid item xs={6}>
+          <Grid item md={12} lg={6}>
             <img src={Image} />
           </Grid>
         </Grid>

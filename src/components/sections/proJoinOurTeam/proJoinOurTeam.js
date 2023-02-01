@@ -1,8 +1,12 @@
+import { eventWrapper } from '@testing-library/user-event/dist/utils'
 import React from 'react'
 import "./proJoinOurTeam.css"
 
 export default function ProJoinOurTeam() {
   return (
+    <div>
+<div className="proJoinOurTeam-wrapper"></div>
+    
     <div className='proJoinOurTeam'>
         
         <div className='proJoinOurTeam-content'>
@@ -21,6 +25,7 @@ export default function ProJoinOurTeam() {
                 </div>
         </div>
 
+    </div>
     </div>
 
     // <div className="module">

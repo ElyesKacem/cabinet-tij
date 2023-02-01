@@ -2,7 +2,13 @@
     background: url('../../../assets/images/meeting.png') no-repeat;
     background-size: 100%;
     height: 510px;
-    filter: grayscale(50%);
+    /* filter: grayscale(50%); */
+    display: flex;
+    justify-content: center;
+}
+.proJoinOurTeam-wrapper{
+    background-color: black;
+    /* opacity: 75%; */
 }
 
 .proJoinOurTeam-image{

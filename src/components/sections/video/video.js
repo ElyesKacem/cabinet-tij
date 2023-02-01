@@ -28,8 +28,13 @@ export default function VideoSection() {
         </b>
         </div>
         <br />
+      <div style={{display:"flex"}}>
       <div>
-      <LeftRightButton></LeftRightButton>
+      <LeftRightButton title="Learn More" isBlue={true} />
+      </div>
+      <div style={{marginLeft:18}}>
+      <LeftRightButton title="Get in Touch"  />
+      </div>
       </div>
     </div>
     
