@@ -44,6 +44,7 @@ export default function WhyChoiceUs() {
   ]
   const [selectedDataId, setSelectedDataId] = useState(0);
   const [dataToSet, setDataToSet] = useState(data[0]);
+  const [isShadow, setIsShadow] = useState([true,false,false,false,false])
 
   useEffect(() => {
     setDataToSet(data[selectedDataId]);
@@ -66,11 +67,11 @@ export default function WhyChoiceUs() {
           <div>
             
             <div style={{ display: 'flex', justifyContent: "space-around" }}>
-              <DialogSelection setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={0} img={Image1} title="Expertise" />
-              <DialogSelection setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={1} img={Image2} width="70px" title="Experience" />
-              <DialogSelection setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={2} img={Image3} width="60px" title="Quality" />
-              <DialogSelection setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={3} img={Image4} width="70px" title="Agility" />
-              <DialogSelection setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={4} img={Image5} title="Efficiency" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[0]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={0} img={Image1} title="Expertise" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[1]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={1} img={Image2} width="70px" title="Experience" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[2]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={2} img={Image3} width="60px" title="Quality" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[3]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={3} img={Image4} width="70px" title="Agility" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[4]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={4} img={Image5} title="Efficiency" />
             </div>
             <br />
             <br />

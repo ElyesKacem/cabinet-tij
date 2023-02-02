@@ -3,8 +3,11 @@ import "./dialogSelection.css"
 
 export default function DialogSelection(props) {
     return (
-        <div className="container" style={{marginLeft:20}} onClick={()=>{
+        <div className={props.haveShader?"container dialogInfoClass-selected-menu":"container"} style={{marginLeft:20}} onClick={()=>{
             props.setSelectedDataId(props.id);
+            let isShadow=[false,false,false,false,false]
+            isShadow[props.id]=true;
+            props.setIsShadow(isShadow);
 
           }}>
             

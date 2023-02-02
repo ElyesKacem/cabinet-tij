@@ -25,7 +25,7 @@ export default function Services() {
               </b>
             </div>
 
-            <p className='firstClass'>Cabinet Tij For Translation And Interpreting</p>
+            <p className='firstClass' style={{transform:'translateX(20px)'}}>Cabinet Tij For Translation And Interpreting</p>
 
             <p className='secondClass'>We are specialized in the field of technical, administrative and judicial translation and interpreting.</p>
             <p className='thirdClass'>Thanks to our wide network of qualified professionals and strategic partners, we respond quickly and efficiently to the requests of our clients.</p>

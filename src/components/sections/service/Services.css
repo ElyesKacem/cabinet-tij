@@ -27,7 +27,7 @@
 }
 .firstClass{
   
-    transform: translateX(15px);
+    /* transform: translateX(15px); */
       font-weight:bold;
           font-size: 32px;
           font-family:"commuterssans-bold";

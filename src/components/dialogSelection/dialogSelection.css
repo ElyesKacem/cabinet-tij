@@ -24,7 +24,7 @@
     border-right: 2px solid #f6f5f5;
     border-bottom: 2px solid #f6f5f5;
     border-left: 0px solid #f6f5f5;
-    top:103%;
+    top:105%;
     left: 50%;
     margin-left: -25px;
     content: '';
@@ -39,3 +39,7 @@
           font-size: 16px;
           font-family:"commuterssans-bold";
   }
+  
+  .dialogInfoClass-selected-menu{
+    box-shadow: 10px 10px 15px rgb(224, 224, 224);
+}
