@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./ourServices.js"
 import Container from '@mui/material/Container';
 import HomePhotoHover from '../../homePhotoHover/homePhotoHover.js';
@@ -8,6 +8,39 @@ import Image3 from "../../../assets/images/hh2.png"
 import Grid from '@mui/material/Grid';
 
 export default function OurServices() {
+  const [isHover, setIsHover] = useState([false,false,false,false,false]);
+  const data=[
+    {
+      id:0,
+      img:Image1,
+      title:"Interpreting",
+      paragraph:"Legal translation and interpreting"
+    },
+    {
+      id:1,
+      img:Image2,
+      title:"Business",
+      paragraph:"Services for small and large business"
+    },
+    {
+      id:2,
+      img:Image3,
+      title:"Certified Translation",
+      paragraph:"Legal translation and interpreting"
+    },
+    {
+      id:3,
+      img:Image3,
+      title:"Sworn Translation",
+      paragraph:"Legal translation and interpreting"
+    },
+    {
+      id:4,
+      img:Image1,
+      title:"Personal Services",
+      paragraph:"Legal translation and interpreting"
+    }
+  ]
   return (
     <div className='white-background'>
          <br />
@@ -17,7 +50,7 @@ export default function OurServices() {
     <Container>
     <div className='greyEmptyRectangle' style={{transform:'translateX(-40px)'}}/>
     <div className="greyRectangle">
-              <b>
+              <b style={{fontSize:25}}>
                 Our Services
               </b>
             </div>
@@ -27,38 +60,46 @@ export default function OurServices() {
             </Container>
             <div style={{margin:50}}>
 
-            <Grid container spacing={7} direction="row"
+            <Grid container spacing={5} direction="row"
   justifyContent="center"
   alignItems="center">
-                <Grid item>
 
-                    <HomePhotoHover img={Image1}/>
+    {
+      data.map((element)=>
+      <Grid key={element.id} item>
+
+      <HomePhotoHover setIsHover={setIsHover} id={element.id} img={element.img} title={element.title} paragraph={element.paragraph}/>
+  </Grid>)
+    }
+                {/* <Grid item>
+
+                    <HomePhotoHover setIsHover={setIsHover} id={0} img={Image1}/>
                 </Grid>
                 <Grid item>
 
-                    <HomePhotoHover img={Image2}/>
+                    <HomePhotoHover setIsHover={setIsHover} id={1} img={Image2}/>
                 </Grid>
                 <Grid item>
 
-                    <HomePhotoHover img={Image3}/>
+                    <HomePhotoHover setIsHover={setIsHover} id={2} img={Image3}/>
                 </Grid>
                 <Grid item>
 
-                    <HomePhotoHover img={Image3}/>
+                    <HomePhotoHover setIsHover={setIsHover} id={3} img={Image3}/>
                 </Grid>
                 <Grid item>
 
-                    <HomePhotoHover img={Image1}/>
-                </Grid>
+                    <HomePhotoHover setIsHover={setIsHover} id={4} img={Image1}/>
+                </Grid> */}
             </Grid>
             </div>
-
+            
             <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-                <div style={{marginLeft:5,width:30,height:6,backgroundColor:'#e9e5e5',borderRadius:5}}/>
-                <div style={{marginLeft:5,width:30,height:6,backgroundColor:'#e9e5e5',borderRadius:5}}/>
-                <div style={{marginLeft:5,width:30,height:6,backgroundColor:'#858383',borderRadius:5}}/>
-                <div style={{marginLeft:5,width:30,height:6,backgroundColor:'#e9e5e5',borderRadius:5}}/>
-                <div style={{marginLeft:5,width:30,height:6,backgroundColor:'#e9e5e5',borderRadius:5}}/>
+                <div style={{marginLeft:5,width:30,height:6,backgroundColor: isHover[0] ?'#858383':"#e9e5e5",borderRadius:5}}/>
+                <div style={{marginLeft:5,width:30,height:6,backgroundColor: isHover[1] ?'#858383':"#e9e5e5",borderRadius:5}}/>
+                <div style={{marginLeft:5,width:30,height:6,backgroundColor: isHover[2] ?'#858383':"#e9e5e5",borderRadius:5}}/>
+                <div style={{marginLeft:5,width:30,height:6,backgroundColor: isHover[3] ?'#858383':"#e9e5e5",borderRadius:5}}/>
+                <div style={{marginLeft:5,width:30,height:6,backgroundColor: isHover[4] ?'#858383':"#e9e5e5",borderRadius:5}}/>
             </div>
             
             
