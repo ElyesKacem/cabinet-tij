@@ -1,6 +1,6 @@
-/* .services{
- height: 100vh;   
-} */
+.services{
+ padding: 20px;
+}
 
 .greyEmptyRectangle{
     width: 40px;

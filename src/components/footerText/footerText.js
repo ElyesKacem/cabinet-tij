@@ -4,7 +4,7 @@ import EastIcon from '@mui/icons-material/East';
 
 export default function FooterText(props) {
     return (
-        <div>
+        <div className='FooterText'>
             <div className='footerText-title'>
                 <div>
                     <EastIcon />

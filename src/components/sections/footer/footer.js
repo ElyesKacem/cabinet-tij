@@ -15,7 +15,8 @@ export default function Footer() {
 <br /><br /><br /><br />
 <Grid container spacing={10} direction="row"
   justifyContent="center"
-  alignItems="flex-start">
+  alignItems="flex-start"
+  >
                 <Grid item xs={3} style={{display:"flex",flexDirection:"column",justifyItems:"center"}}>
 <div style={{
   display:" flex",
