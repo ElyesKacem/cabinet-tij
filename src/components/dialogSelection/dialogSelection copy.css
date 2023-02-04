@@ -42,43 +42,4 @@
   
   .dialogInfoClass-selected-menu{
     box-shadow: 10px 10px 15px rgb(224, 224, 224);
-  }
-  
-  .dialogSelection-dialog{
-    height: 120px;
-    position: absolute;
-    z-index: 1;
-    
-  }
-  .dialogselection-shadow{
-    /* background-color: red; */
-    width: 140px;
-    height: 100px;
-    position: absolute;
-    background-color: transparent;
-    box-shadow: 10px 10px 15px rgb(224, 224, 224);
-    z-index: 0;
-  
-}
-
-.dialogSelection-content{
-position: relative;
-z-index: 2;
-display: flex;
-/* justify-content: center; */
-align-items: center;
-flex-direction: column;
-transform: translate(15px,15px);
-}
-
-.dialogSelection-content-title{
-  font-weight:bold;
-          font-size: 16px;
-          font-family:"commuterssans-bold";
-}
-.dialogSelection-dialog-rect{
-  position: absolute;
-    z-index: 1;
-    width: 150px;
-    height: 100px;
 }

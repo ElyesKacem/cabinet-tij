@@ -45,7 +45,7 @@ export default function Footer() {
                 </Grid>
                 <Grid item xs={3}>
 
-                    <FooterText title="Solutions" content="Contact Us"/>
+                    <FooterText title="Solutions" />
                 </Grid>
                 <Grid item xs={3}>
 

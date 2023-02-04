@@ -66,16 +66,15 @@ export default function WhyChoiceUs() {
 
           <div>
             
-            <div style={{ display: 'flex', justifyContent: "space-around" }}>
+            <div style={{ display: 'flex', justifyContent: "space-around",transform:'translateX(-6px)' }}>
+            
               <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[0]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={0} img={Image1} title="Expertise" />
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[1]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={1} img={Image2} width="70px" title="Experience" />
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[2]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={2} img={Image3} width="60px" title="Quality" />
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[3]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={3} img={Image4} width="70px" title="Agility" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[1]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={1} img={Image2} title="Experience" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[2]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={2} img={Image3} title="Quality" />
+              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[3]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={3} img={Image4} title="Agility" />
               <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[4]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={4} img={Image5} title="Efficiency" />
             </div>
-            <br />
-            <br />
-            <br />
+            
             <div><DialogInfo onClick={()=>{
               console.log("testeeeeeeeeeee");
             }} data={dataToSet}></DialogInfo></div>

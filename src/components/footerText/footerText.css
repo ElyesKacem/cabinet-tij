@@ -11,7 +11,9 @@
 
 .footerText-content{
     font-size: 20px;
-    font-family:"seoge";
+    font-family:"commuterssans-thin";
+    font-weight: bold;
+    -webkit-text-stroke: 0.2px black;
 }
 
 .FooterText{

@@ -6,7 +6,7 @@ export default function FooterText(props) {
     return (
         <div className='FooterText'>
             <div className='footerText-title'>
-                <div>
+                <div style={{transform:"translateY(5px)"}}>
                     <EastIcon />
                 </div>
                 <div className='footerText-title'>
