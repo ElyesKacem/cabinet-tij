@@ -15,43 +15,55 @@ export default function GetQuoteForm() {
             <br />
             <br />
             <div className='getQuoteForm-content'>
-                <div className='getQuoteForm-content-flex'>
-
-                    <div className="getQuoteForm-content-title">
-                        Request A Quote
-                    </div>
-                    <div className="getQuoteForm-content-nav">
-                        <RequestQuoteButton title="Translation" />
-                        <RequestQuoteButton title="Transcription" />
-                        <RequestQuoteButton title="Interepting" />
-                        <RequestQuoteButton title="VIP Services" />
-                    </div>
+                <div>
+                    <div className="getQuoteForm-content-title">Request A Quote</div>
+                    <br />
+                <div className='getQuoteForm-margin'>
+                <Grid className='getQuoteForm-margin' container spacing={2}>
+                <Grid item xs={3}><RequestQuoteButton title="Translation" /></Grid>
+                        <Grid item xs={3}><RequestQuoteButton title="Interepting" /></Grid>
+                        <Grid item xs={3}><RequestQuoteButton title="Transcription" /></Grid>
+                        <Grid item xs={3}><RequestQuoteButton title="VIP Services" /></Grid>
+                </Grid>
                 </div>
-                <br />
-                <div style={{ display: "flex", justifyContent: "start" }}>
-                    Required fields are marked with asterisk <i style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>(*)</i>
-                </div>
+                <div className='getQuoteForm-margin white-text'>Required fields are marked with asterisk <i style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>(*)</i></div>
                 <br />
                 <br />
-                <div className='getQuoteForm-content-flex'>
-
-                   
-                   <Grid container direction="row"
-  justifyContent="center"
-  alignItems="center"
-  spacing={10}
-  >
-
-                    <Grid item xs={6}>
-                        <input type="text" style={{width:"100%"}}/>
+                <div>
+                    <Grid container spacing={2.2}>
+                            <Grid item xs={6}>
+                               <Grid container spacing={2}>
+                                <Grid item xs={12}>
+                                     <input type="text" className='getQuoteForm-input' placeholder='Full Name' />
+                                </Grid>
+                                <Grid item xs={12}>
+                                     <input type="text" className='getQuoteForm-input' placeholder='Full Name' />
+                                </Grid>
+                                <Grid item xs={12}>
+                                     <input type="text" className='getQuoteForm-input' placeholder='Full Name' />
+                                </Grid>
+                               </Grid>
+                            </Grid>
+                            <Grid item xs={6}>
+                               <Grid container spacing={2}>
+                                <Grid item xs={12}>
+                                     <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/>
+                                </Grid>
+                                <Grid item xs={12}>
+                                     <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/>
+                                </Grid>
+                                <Grid item xs={12}>
+                                     <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/>
+                                </Grid>
+                               </Grid>
+                                
+                            </Grid>
                     </Grid>
-                    <Grid item xs={6}>
-                        <input type="text" style={{width:"100%"}}/>
-                    </Grid>
-
-                   </Grid>
+                    <div>
+                        coco
+                    </div>
                 </div>
-                <br />
+                </div>
             </div>
         </div>
     )
