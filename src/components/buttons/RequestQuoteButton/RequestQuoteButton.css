@@ -1,0 +1,12 @@
+.RequestQuoteButton{
+    color: #243fdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 304px;
+    height: 50px;
+    gap:15px;
+    border-radius: 7px;
+    font-size: 27px;
+}

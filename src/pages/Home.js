@@ -1,6 +1,5 @@
 import React from 'react'
 import DoYouNeedMoreAssistance from '../components/sections/doYouNeedMoreAssistance/doYouNeedMoreAssistance'
-import Footer from '../components/sections/footer/footer'
 import GetInTouchWithUs from '../components/sections/getInTouchWithUs/getInTouchWithUs'
 import OurServices from '../components/sections/ourServices/ourServices'
 import ProJoinOurTeam from '../components/sections/proJoinOurTeam/proJoinOurTeam'
@@ -21,7 +20,7 @@ export default function Home() {
       <OurServices/>
       <GetInTouchWithUs />
       <ProJoinOurTeam />
-      <Footer />
+      
     </div>
   )
 }
