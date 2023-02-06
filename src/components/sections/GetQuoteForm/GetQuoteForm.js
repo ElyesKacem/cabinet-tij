@@ -3,9 +3,23 @@ import "./GetQuoteForm.css"
 import Container from '@mui/material/Container';
 import RequestQuoteButton from '../../buttons/RequestQuoteButton/RequestQuoteButton';
 import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
 
 
 export default function GetQuoteForm() {
+    // const formLabelsTheme = createMuiTheme({
+    //     overrides: {
+    //       MuiFormLabel: {
+    //         asterisk: {
+    //           color: '#db3131',
+    //           '&$error': {
+    //             color: '#db3131'
+    //           },
+    //         }
+    //       }
+    //     }
+    //   })
+
     return (
         <div style={{ height: 1050 }}>
             <div className='getQuoteForm-overlay'></div>
@@ -34,26 +48,35 @@ export default function GetQuoteForm() {
                             <Grid item xs={6}>
                                <Grid container spacing={2}>
                                 <Grid item xs={12}>
-                                     <input type="text" className='getQuoteForm-input' placeholder='Full Name' />
+                                     {/* <input type="text" className='getQuoteForm-input' placeholder='Full Name' /> */}
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
                                 </Grid>
                                 <Grid item xs={12}>
-                                     <input type="text" className='getQuoteForm-input' placeholder='Full Name' />
+                                     {/* <input type="text" className='getQuoteForm-input' placeholder='Full Name' /> */}
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
                                 </Grid>
                                 <Grid item xs={12}>
-                                     <input type="text" className='getQuoteForm-input' placeholder='Full Name' />
+                                     {/* <input type="text" className='getQuoteForm-input' placeholder='Full Name' /> */}
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
                                 </Grid>
                                </Grid>
                             </Grid>
                             <Grid item xs={6}>
                                <Grid container spacing={2}>
                                 <Grid item xs={12}>
-                                     <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/>
+                                     <div className='getQuoteForm-hidden'>
+                                     {/* <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/> */}
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
+
+                                     </div>
                                 </Grid>
                                 <Grid item xs={12}>
-                                     <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/>
+                                     {/* <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/> */}
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
                                 </Grid>
                                 <Grid item xs={12}>
-                                     <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/>
+                                     {/* <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/> */}
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
                                 </Grid>
                                </Grid>
                                 

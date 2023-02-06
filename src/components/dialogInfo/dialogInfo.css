@@ -3,11 +3,13 @@
   height: 400px;
   transform: translate(10px);
   display: flex;
+  border-radius: 13px;
+  /* background-color: r
   /* background-color: red; */
 }
 
 .dialogInfoClass-selected{
-  box-shadow: 0em 0 1em rgb(224, 224, 224);
+  box-shadow: 10px 8px 13px rgba(177, 177, 177, 0.658);
 }
 
 .dialogInfoClass-title{

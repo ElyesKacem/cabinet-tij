@@ -8,6 +8,7 @@ import Navbar from './components/navbar/navbar';
 import logoFrance from './assets/images/franceR.png';
 import GetQuote from './pages/GetQuote';
 import Footer from './components/sections/footer/footer'
+import Enrollement from './pages/Enrollement';
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/requestquote" element={<GetQuote />} />
+          <Route path="/enrollement" element={<Enrollement />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
