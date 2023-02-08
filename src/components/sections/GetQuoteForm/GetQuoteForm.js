@@ -4,21 +4,49 @@ import Container from '@mui/material/Container';
 import RequestQuoteButton from '../../buttons/RequestQuoteButton/RequestQuoteButton';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 export default function GetQuoteForm() {
-    // const formLabelsTheme = createMuiTheme({
-    //     overrides: {
-    //       MuiFormLabel: {
-    //         asterisk: {
-    //           color: '#db3131',
-    //           '&$error': {
-    //             color: '#db3131'
-    //           },
-    //         }
-    //       }
-    //     }
-    //   })
+    const theme = createTheme({
+      overrides: {
+        MuiOutlinedInput: {
+          input: {
+            color: "purple",
+          },
+        },
+        MuiInputLabel: {
+          input: {
+            color: "purple",
+          },
+        },
+      },
+      typography: {
+        fontFamily:"commuterssans-thin",
+      },components: {
+          MuiFormLabel: {
+            styleOverrides: {
+              asterisk: {
+                color: "#db3131",
+                fontFamily:"none",
+                "&$error": {
+                  color: "#db3131",
+                  fontFamily:"none",
+                },
+              },
+            },
+          }, 
+          // MuiButton: {
+          //   styleOverrides: {
+          //     // Name of the slot
+          //     root: {
+          //       // Some CSS
+          //       fontSize: '1rem',
+          //     },
+          //   },
+          // },
+          
+        },
+      });
 
     return (
         <div style={{ height: 1050 }}>
@@ -44,20 +72,30 @@ export default function GetQuoteForm() {
                 <br />
                 <br />
                 <div>
+                <ThemeProvider theme={theme}>
+                                   
                     <Grid container spacing={2.2}>
                             <Grid item xs={6}>
                                <Grid container spacing={2}>
                                 <Grid item xs={12}>
                                      {/* <input type="text" className='getQuoteForm-input' placeholder='Full Name' /> */}
-                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
+                                    
+                                     <TextField  style={{ "& .MuiInputLabel": { color: "red" } }} required  id="filled-basic" label="Filled" variant="filled" fullWidth  
+        //                              sx={{
+        //   input: {
+        //     color: "red",
+        //     background: "green"
+        //   }
+        // }}
+        />
                                 </Grid>
                                 <Grid item xs={12}>
                                      {/* <input type="text" className='getQuoteForm-input' placeholder='Full Name' /> */}
-                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth />
                                 </Grid>
                                 <Grid item xs={12}>
                                      {/* <input type="text" className='getQuoteForm-input' placeholder='Full Name' /> */}
-                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth />
                                 </Grid>
                                </Grid>
                             </Grid>
@@ -66,25 +104,21 @@ export default function GetQuoteForm() {
                                 <Grid item xs={12}>
                                      <div className='getQuoteForm-hidden'>
                                      {/* <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/> */}
-                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
+                                     <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth />
 
                                      </div>
                                 </Grid>
                                 <Grid item xs={12}>
                                      {/* <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/> */}
-                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
+                                     <TextField fullWidth id="filled-multiline-flexible" label="Multiline" multiline minRows={4} required variant="filled"/>
                                 </Grid>
-                                <Grid item xs={12}>
-                                     {/* <input type="text" className='getQuoteForm-input' placeholder='Do you need Proofreading'/> */}
-                                     <TextField required  id="filled-basic" label="Filled" variant="filled" />
-                                </Grid>
+                                
                                </Grid>
                                 
                             </Grid>
                     </Grid>
-                    <div>
-                        coco
-                    </div>
+                    </ThemeProvider>
+                    
                 </div>
                 </div>
             </div>
