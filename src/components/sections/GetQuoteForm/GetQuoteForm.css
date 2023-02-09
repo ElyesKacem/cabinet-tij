@@ -58,7 +58,7 @@
     height: 23px;
     border-radius: 5px;
     padding: 14px 30px 14px 30px;
-    width: 95%;
+    width: 90%;
     transform: translateY(-13px);
     background-color: white;
     color: #1633DB;
@@ -80,9 +80,31 @@ color:white !important;
     height: 51px;
     /* background-color: rgb(160, 54, 54); */
     overflow: hidden;
+    /* transition: transform 1s; */
 }
 
 .getQuoteForm-input-file{
     display: none;
 }
 
+.translateYdown{
+    transform: translateY(67px);
+}
+.translateYdown52{
+    transform: translateY(52px);
+}
+.translateYup{
+    transform: translateY(-67px);
+}
+.translateYup52{
+    transform: translateY(-52px);
+}
+
+
+.getQuoteForm-marginTop{
+    margin-top: 10px;
+}
+
+.getQuoteForm-animation{
+    transition: transform 0.7s;
+}

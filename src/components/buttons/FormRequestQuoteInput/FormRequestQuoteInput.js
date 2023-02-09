@@ -4,7 +4,7 @@ import "./FormRequestQuoteInput.css"
 export default function FormRequestQuoteInput(props) {
     const [show, setShow] = React.useState(true);
   return (
-    <div className="did-floating-label-content">
+    <div className={"did-floating-label-content "+props.className} style={props.style}>
   <input className={props.multiline?"did-floating-input FormRequestQuoteInput-multiline":"did-floating-input"} type="text" placeholder=" " 
 //   onBlur={(e)=>{
 //     if(e.target.value!=""){
@@ -27,7 +27,7 @@ e.target.value==""?setShow(true):setShow(false);
 
 export function FormRequestQuoteInputMultiline(props) {
   const [show, setShow] = React.useState(true);
-  return <div className="did-floating-label-content">
+  return <div className={"did-floating-label-content "+props.className}>
   <textarea className={props.multiline?"did-floating-input FormRequestQuoteInput-multiline":"did-floating-input"} type="text" placeholder=" " 
 //   onBlur={(e)=>{
 //     if(e.target.value!=""){

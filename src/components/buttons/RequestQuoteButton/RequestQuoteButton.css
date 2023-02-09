@@ -1,12 +1,24 @@
 .RequestQuoteButton{
-    color: #243fdb;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    width: 311px;
+    width: 98%;
     height: 50px;
     gap:15px;
     border-radius: 5px;
-    font-size: 27px;
+    font-size: 25px;
+    cursor: pointer;
+    
+}
+
+.RequestQuoteButtonWhite{
+    color: #243fdb;
+    background-color: white;
+    -webkit-text-stroke: 0.4px #243fdb;
+    
+}
+.RequestQuoteButtonBlue{
+    color: white;
+    background:transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;
+    -webkit-text-stroke: 0.4px white;
 }
