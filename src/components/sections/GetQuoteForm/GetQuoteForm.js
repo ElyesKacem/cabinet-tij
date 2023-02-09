@@ -90,7 +90,7 @@ export default function GetQuoteForm() {
                       
                       <div style={{transform:"translateY(-52px)"}}>
                         
-                        <FormRequestQuoteInput className={menuSelected[1]?"getQuoteForm-animation translateYdown52":"getQuoteForm-animation"} style={{position:"relative",zIndex:"3"}} required title="Location "  />
+                        <FormRequestQuoteInput className={menuSelected[1]||menuSelected[3]?"getQuoteForm-animation translateYdown52":"getQuoteForm-animation"} style={{position:"relative",zIndex:"3"}} required title="Location "  />
                         <FormRequestQuoteInput required title="Source Language " style={{marginTop:1}} />
                         
                       </div>
@@ -111,10 +111,12 @@ export default function GetQuoteForm() {
               <Grid item xs={6}>
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
-                    <div className={menuSelected[0]?'getQuoteForm-hidden translateYdown getQuoteForm-animation':"getQuoteForm-hidden getQuoteForm-animation"}>
-                      <div>
+                    <div className="getQuoteForm-hidden getQuoteForm-animation">
+                      <div className={menuSelected[1]||menuSelected[3]?'translateYdown getQuoteForm-animation':menuSelected[2]?"translateYup70 getQuoteForm-animation":"getQuoteForm-animation"}>
+                      <div style={{transform:"translateY(-67px)"}}>
                       <FormRequestQuoteInput title="Date "  />
                       <FormRequestQuoteInput required title="Languages " style={{marginTop:86}} />
+                      </div>
                       </div>
                       {/* <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth /> */}
 

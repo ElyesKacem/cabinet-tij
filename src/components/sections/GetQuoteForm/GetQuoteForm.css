@@ -93,8 +93,14 @@ color:white !important;
 .translateYdown52{
     transform: translateY(52px);
 }
+.translateYdown134{
+    transform: translateY(134px);
+}
 .translateYup{
     transform: translateY(-67px);
+}
+.translateYup70{
+    transform: translateY(-70px);
 }
 .translateYup52{
     transform: translateY(-52px);
