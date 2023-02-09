@@ -1,6 +1,8 @@
 .getQuoteForm-overlay{
-    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-    opacity: 0.5;
+    /* background: transparent linear-gradient(180deg, rgb(36, 45, 101) 0%, rgb(207, 32, 50) 100%) 0% 0% no-repeat padding-box; */
+    background: linear-gradient(180deg, rgba(36, 45, 101, 0.5), rgba(207, 32, 50, 0.5));
+
+    /* opacity: 0.5; */
     
     height: 100%;
     position: relative;
@@ -34,17 +36,53 @@
 .white-text{
     color:white;
 }
+.getQuoteForm-input-label{
+    transform: translateY(14px);
+}
 
-.getQuoteForm-input{
-    height: 40px;
+.getQuoteForm-input-file-button{
+    height: 51px;
     border-radius: 5px;
-    padding:5px 15px 5px 15px;
+    padding:14px 30px 14px 30px;
     width: 95%;
-    border: 1px #d2d1d1 solid;
+    
+    background-color: white;
+    color:#1633DB;
+    -webkit-text-stroke: 0.3px #1633DB;
+    cursor: pointer;
+    transition: all 0.4s;
+    
+
+}
+.getQuoteForm-input-multipleFile-button{
+    height: 23px;
+    border-radius: 5px;
+    padding: 14px 30px 14px 30px;
+    width: 95%;
+    transform: translateY(-13px);
+    background-color: white;
+    color: #1633DB;
+    -webkit-text-stroke: 0.3px #1633DB;
+    cursor: pointer;
+    transition: all 0.4s;
+    text-align: center;
+    
+
+}
+
+.getQuoteForm-input-file-label span:hover{
+background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
+color:white !important;
+-webkit-text-stroke: 0.3px white;
 }
 
 .getQuoteForm-hidden{
-    height: 58px;
+    height: 51px;
     /* background-color: rgb(160, 54, 54); */
     overflow: hidden;
 }
+
+.getQuoteForm-input-file{
+    display: none;
+}
+

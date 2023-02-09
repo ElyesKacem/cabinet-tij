@@ -1,0 +1,48 @@
+
+  .did-floating-label-content { 
+    position:relative; 
+  }
+  .did-floating-label {
+    
+    font-size:13px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:15px;
+    top:17px;
+    padding:0 5px;
+    -webkit-text-stroke: 0.2px black;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+
+  }
+  .did-floating-input, .did-floating-select {
+    font-size:12px;
+    display:block;
+    width:99%;
+    height:51px;
+    padding: 0 20px;
+    background: #fff;
+    color: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: none;
+    
+    
+    
+  }
+  
+  .FormRequestQuoteInput-multiline{
+    height:120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    resize: none;
+  }
+
+  .FormRequestQuoteInput-star{
+    color:red;
+    font-family:"sans-serif";
+    font-size:15px;
+    -webkit-text-stroke: 0.1px red;
+  }
