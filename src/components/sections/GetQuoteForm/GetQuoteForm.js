@@ -14,32 +14,33 @@ import blueTranslation from "../../../assets/images/request a quote icons/blueTr
 import blueInterpreting from "../../../assets/images/request a quote icons/blueInterpreting.svg"
 import blueTranscription from "../../../assets/images/request a quote icons/blueTranscription.svg"
 import blueVIP from "../../../assets/images/request a quote icons/blueVIP.svg"
+import ClearIcon from '@mui/icons-material/Clear';
 export default function GetQuoteForm() {
 
   const [singleFile, setSingleFile] = useState(false);
   const [singleFileName, setSingleFileName] = useState(false);
-  const [menuSelected, setMenuSelected] = useState([true,false,false,false]);
+  const [menuSelected, setMenuSelected] = useState([true, false, false, false]);
 
-  const menuData=[
+  const menuData = [
     {
-      title:"Translation",
-      whiteIcon:whiteTranslation,
-      blueIcon:blueTranslation,
+      title: "Translation",
+      whiteIcon: whiteTranslation,
+      blueIcon: blueTranslation,
     },
     {
-      title:"Interpreting",
-      whiteIcon:whiteInterpreting,
-      blueIcon:blueInterpreting,
+      title: "Interpreting",
+      whiteIcon: whiteInterpreting,
+      blueIcon: blueInterpreting,
     },
     {
-      title:"Transcription",
-      whiteIcon:whiteTranscription,
-      blueIcon:blueTranscription,
+      title: "Transcription",
+      whiteIcon: whiteTranscription,
+      blueIcon: blueTranscription,
     },
     {
-      title:"VIP Services",
-      whiteIcon:whiteVIP,
-      blueIcon:blueVIP,
+      title: "VIP Services",
+      whiteIcon: whiteVIP,
+      blueIcon: blueVIP,
     },
   ]
 
@@ -53,15 +54,15 @@ export default function GetQuoteForm() {
       <br />
       <br />
       <div className='getQuoteForm-content'>
-        <div style={{ width: "85%",maxWidth: 1300 }}>
+        <div style={{ width: "85%", maxWidth: 1300 }}>
           <div className="getQuoteForm-content-title">Request A Quote</div>
           <br />
           <div className='getQuoteForm-margin'>
             <Grid className='getQuoteForm-margin' container spacing={1}>
-              {menuData.map((element,index)=>
-              <Grid key={index} item xs={3}><RequestQuoteButton setMenuSelected={setMenuSelected} icon={menuSelected[index]?element.whiteIcon:element.blueIcon} blue={menuSelected[index]} id={index} title={element.title} /></Grid>
-            )}
-             
+              {menuData.map((element, index) =>
+                <Grid key={index} item xs={3}><RequestQuoteButton setMenuSelected={setMenuSelected} icon={menuSelected[index] ? element.whiteIcon : element.blueIcon} blue={menuSelected[index]} id={index} title={element.title} /></Grid>
+              )}
+
             </Grid>
           </div>
           <div className='getQuoteForm-margin white-text'>Required fields are marked with asterisk <i style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>(<b style={{ color: 'red' }}>*</b>)</i></div>
@@ -86,15 +87,15 @@ export default function GetQuoteForm() {
                     <FormRequestQuoteInput required title="Phone Number " />
                   </Grid>
                   <Grid item xs={12}>
-                  <div className='getQuoteForm-hidden getQuoteForm-animation' >
-                      
-                      <div style={{transform:"translateY(-52px)"}}>
-                        
-                        <FormRequestQuoteInput className={menuSelected[1]||menuSelected[3]?"getQuoteForm-animation translateYdown52":"getQuoteForm-animation"} style={{position:"relative",zIndex:"3"}} required title="Location "  />
-                        <FormRequestQuoteInput required title="Source Language " style={{marginTop:1}} />
-                        
+                    <div className='getQuoteForm-hidden getQuoteForm-animation' >
+
+                      <div style={{ transform: "translateY(-52px)" }}>
+
+                        <FormRequestQuoteInput className={menuSelected[1] || menuSelected[3] ? "getQuoteForm-animation translateYdown52" : "getQuoteForm-animation"} style={{ position: "relative", zIndex: "3" }} required title="Location " />
+                        <FormRequestQuoteInput required title="Source Language " style={{ marginTop: 1 }} />
+
                       </div>
-                      
+
                       {/* <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth /> */}
 
                     </div>
@@ -112,48 +113,86 @@ export default function GetQuoteForm() {
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
                     <div className="getQuoteForm-hidden getQuoteForm-animation">
-                      <div className={menuSelected[1]||menuSelected[3]?'translateYdown getQuoteForm-animation':menuSelected[2]?"translateYup70 getQuoteForm-animation":"getQuoteForm-animation"}>
-                      <div style={{transform:"translateY(-67px)"}}>
-                      <FormRequestQuoteInput title="Date "  />
-                      <FormRequestQuoteInput required title="Languages " style={{marginTop:86}} />
-                      </div>
+                      <div className={menuSelected[1] || menuSelected[3] ? 'translateYdown getQuoteForm-animation' : menuSelected[2] ? "translateYup70 getQuoteForm-animation" : "getQuoteForm-animation"}>
+                        <div style={{ transform: "translateY(-67px)" }}>
+                          <FormRequestQuoteInput title="Date " />
+                          <FormRequestQuoteInput required title="Languages " style={{ marginTop: 86 }} />
+                        </div>
                       </div>
                       {/* <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth /> */}
 
                     </div>
                   </Grid>
-                  <Grid item xs={12} className={menuSelected[0]?"getQuoteForm-animation translateYup":"getQuoteForm-animation"} >
-                    <FormRequestQuoteInputMultiline  multiline title="Notes " required></FormRequestQuoteInputMultiline>
+                  <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} >
+                    <FormRequestQuoteInputMultiline multiline title="Notes " required></FormRequestQuoteInputMultiline>
                     {/* <TextField fullWidth id="filled-multiline-flexible" label="Multiline" multiline minRows={4} required variant="filled"/> */}
                   </Grid>
-                  <Grid item xs={12} className={menuSelected[0]?"getQuoteForm-animation getQuoteForm-input-label translateYup52":"getQuoteForm-animation getQuoteForm-input-label"}  >
-                    <label className='getQuoteForm-input-file-label' htmlFor="requotefile"><input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requotefile" onChange={(e) => {
-                      let file = e.target.value;
-                      setSingleFile(file);
-                      const fileNameArray = file.split('\\')
-                      setSingleFileName(fileNameArray[fileNameArray.length - 1]);
-                    }} /> <span className='getQuoteForm-input-file-button'>Select a file</span> {
+                  <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation getQuoteForm-input-label translateYup52" : "getQuoteForm-animation getQuoteForm-input-label"}  >
+                    
+                    
+                      {/* <Grid container> */}
+                    
+                    <div>
+
+                    
+                    
+                    <label className='getQuoteForm-input-file-label' htmlFor="requotefile">
+                      <input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requotefile" onChange={(e) => {
+                        let file = e.target.value;
+                        setSingleFile(file);
+                        const fileNameArray = file.split('\\')
+                        setSingleFileName(fileNameArray[fileNameArray.length - 1]);
+                      }} />
+
+
+
+                      <div className='getQuoteForm-input-file-button'>Select a file</div>
+
+
+                    
+                      {
                         singleFileName ?
                           <>
-                            <span>&nbsp;&nbsp;{singleFileName} </span>
+                            <div className='getQuoteForm-input-file-label-text'>&nbsp;&nbsp;{singleFileName} </div>
 
                           </>
                           : <>
                             &nbsp;&nbsp;No file chosen
-                          </>} </label>
-                    {singleFile && <span style={{ color: "blue", cursor: "pointer" }} onClick={() => {
-                      setSingleFile(null);
-                      setSingleFileName(false);
-                    }}> &nbsp;&nbsp; X </span>}
+                          </>
+                      }
+
+
+
+                    </label>
+                    {
+                      singleFile && <div className='getQuoteForm-input-file-label-X' onClick={() => {
+                        setSingleFile(null);
+                        setSingleFileName(false);
+                      }}>
+
+                        &nbsp;&nbsp;<ClearIcon sx={{ fill: "url(#linearColors)" }} className='getQuoteForm-input-file-label-X'></ClearIcon> </div>
+                    }
+                    
+                    
+                    </div>
+                    {/* </Grid> */}
+
+
+
                   </Grid>
-                  <Grid item xs={12} className={menuSelected[0]?"getQuoteForm-animation translateYup":"getQuoteForm-animation"}  style={{marginTop:42}}>
+                  <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} style={{ marginTop: 42 }}>
+                    <div style={{transform:"translateY(-13px)"}}>
+
                     <label className='getQuoteForm-input-file-label' htmlFor="requoteMULTIPLEfile"><input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requoteMULTIPLEfile" onChange={(e) => {
                       let file = e.target.value;
                       setSingleFile(file);
                       const fileNameArray = file.split('\\')
                       setSingleFileName(fileNameArray[fileNameArray.length - 1]);
-                    }}  multiple/> <div className='getQuoteForm-input-multipleFile-button'><b style={{fontFamily:"sans-serif"}}>+ &nbsp;&nbsp;  </b> Add more files</div></label>
-                    
+                    }} multiple />
+                      <div className='getQuoteForm-input-multipleFile-button'><b style={{ fontFamily: "sans-serif" }}>+ &nbsp;&nbsp;  </b> Add more files</div>
+                    </label>
+                    </div>
+
                   </Grid>
 
                 </Grid>
