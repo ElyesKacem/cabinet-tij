@@ -1,0 +1,55 @@
+.EnrollementAttachFiles-title {
+    display: flex;
+    align-items: center;
+    -webkit-text-stroke: 0.3px #4B4848;
+    margin-bottom: 30px;
+}
+
+.EnrollementAttachFiles-file-input {
+    display: none;
+}
+
+.EnrollementAttachFiles-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transform: translateX(30px);
+}
+
+.EnrollementAttachFiles-button {
+    border: 1px solid #4B4848;
+    padding: 10px 40px 10px 40px;
+    border-radius: 8px;
+    margin-right: 20px;
+
+}
+
+.EnrollementAttachFiles-button-title {
+    transition: transform 0.1s;
+}
+
+
+.EnrollementAttachFiles-button:hover {
+    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
+}
+
+.EnrollementAttachFiles-button:hover .EnrollementAttachFiles-button-title {
+    transform: scale(0.92);
+    color: white;
+}
+
+.EnrollementAttachFiles-fileName {
+    font-family: "segoe";
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 150px;
+    white-space: nowrap;
+    font-family: "segoe";
+    text-align: left;
+    margin-right: 10px;
+}
+.EnrollementAttachFiles-container{
+    /* display: flex; */
+    margin-bottom: 50px;
+    transform: translateX(20%);
+}

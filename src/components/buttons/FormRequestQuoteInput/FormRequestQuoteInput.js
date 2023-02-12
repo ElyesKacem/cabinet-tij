@@ -5,7 +5,7 @@ export default function FormRequestQuoteInput(props) {
     const [show, setShow] = React.useState(true);
   return (
     <div className={"did-floating-label-content "+props.className} style={props.style}>
-  <input className={props.multiline?"did-floating-input FormRequestQuoteInput-multiline":"did-floating-input"} type="text" placeholder=" " 
+  <input style={{borderRadius:props.borderRadius}} className={props.multiline?"did-floating-input FormRequestQuoteInput-multiline":"did-floating-input"} type="text" placeholder=" " 
 //   onBlur={(e)=>{
 //     if(e.target.value!=""){
 //         setShow(true);
@@ -18,7 +18,14 @@ onChange={(e)=>{
 e.target.value==""?setShow(true):setShow(false);
 }}
   />
-  {show && <label className="did-floating-label">{props.title} 
+  {show && <label className="did-floating-label">
+    
+    
+    {props.title=="Spoken Languages ( with priority )" && <>
+    
+    Spoken Languages <b style={{fontFamily:"sans-serif"}}>(</b> with priority <b style={{fontFamily:"sans-serif"}}>) </b>
+    </>}
+    {props.title!="Spoken Languages ( with priority )" && props.title}
   {props.required && <b className='FormRequestQuoteInput-star'>*</b>}
    </label>}
 </div>
