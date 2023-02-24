@@ -1,5 +1,5 @@
 import React from 'react'
-import TalkToUsNowSection from '../components/TalkToUsNowSection/TalkToUsNowSection';
+import TalkToUsNowSection from '../components/sections/TalkToUsNowSection/TalkToUsNowSection';
 import DoYouNeedMoreAssistance from '../components/sections/doYouNeedMoreAssistance/doYouNeedMoreAssistance';
 
 export default function TalkToUsNow() {

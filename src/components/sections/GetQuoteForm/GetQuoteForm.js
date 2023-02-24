@@ -49,7 +49,7 @@ export default function GetQuoteForm() {
 
 
   return (
-    <div style={{ height: 900 }}>
+    <div style={{ height: 1000 }}>
       <div className='getQuoteForm-overlay'></div>
       <br />
       <br />
@@ -204,6 +204,7 @@ export default function GetQuoteForm() {
               <Grid item xs={12}>
                       <br />
                       <br />
+                      
                       <div className='flexalignjustify'>
 
               <div className='getQuoteForm-submit-button'>Submit</div>

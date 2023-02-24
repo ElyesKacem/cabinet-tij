@@ -1,0 +1,24 @@
+.HoverImage-shader{
+    height: 432px;
+    width: 580px;
+    background-color: #5e5e5e30;
+    position: absolute;
+    z-index: 0;
+    box-shadow: 0em 0 1.4em #5e5e5e61;
+    transform: translateX(40px);
+    border-radius: 9px;
+    transition: all 1s;
+}
+
+.HoverImage-image{
+    height: 400px;
+    position: relative;
+    transition: all 1s;
+}
+
+.HoverImage-moveRight{
+    transform: translateX(20px);
+}
+.HoverImage-moveLeft{
+    transform: translateX(-40px);
+}

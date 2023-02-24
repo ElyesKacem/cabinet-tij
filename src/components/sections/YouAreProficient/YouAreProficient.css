@@ -1,0 +1,62 @@
+.YouAreProficient-container {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.YouAreProficient-zoom img {
+    transition: all 1s;
+
+}
+.YouAreProficient-zoom {
+    width: 600px;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;    
+    position: relative;
+    z-index: 1;
+    background-color: red;
+    transform: translateX(70px);
+}
+
+.YouAreProficient-zoom:hover img {
+    transform: scale(1.1);
+}
+
+.YouAreProficient-blueBakcground {
+    background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;
+    border-radius: 18px;
+    color: white;
+    padding: 70px 110px 70px 110px;
+    width: 400px;
+    position: relative;
+    z-index: 0;
+}
+
+.YouAreProficient-h1{
+    font-family: commuterssans-bold;
+    line-height: 45px;
+    font-size: 28px;
+}
+.YouAreProficient-p{
+    line-height: 35px;
+    width: 98%;
+}
+
+.YouAreProficient-h2{
+    font-family: commuterssans-bold;
+    line-height: 35px;
+    font-size: 18px;
+}
+.YouAreProficient-blueButton{
+    background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;
+border: 1px solid #FFFFFF;
+border-radius: 8px;
+text-align: center;
+width: 200px;
+padding: 10px 8px 10px 8px;
+box-shadow:  -10px 10px 1em rgba(65, 65, 65, 0.29);
+}

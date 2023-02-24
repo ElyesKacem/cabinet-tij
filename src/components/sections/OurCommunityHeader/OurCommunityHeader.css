@@ -1,0 +1,50 @@
+.OurCommunityHeader-container {
+    height: 100px;
+    /* background-color: red; */
+    width: 90%;
+    margin: auto;
+    height: 100%;
+}
+
+.OurCommunityHeader-title {
+    font-size: 50px;
+    font-family: commuterssans-bold;
+    color: white;
+}
+
+.blue {
+    color: #2742E4;
+}
+
+.OurCommunityHeader-paragraph {
+    color: white;
+    font-size: 20px;
+    line-height: 1.4;
+
+}
+
+.EnrollementImage-flyButton {
+    position: relative;
+    width: 150px;
+}
+
+.EnrollementImage-tl {
+    bottom: 354px;
+    
+}
+
+.EnrollementImage-bl {
+        bottom: 134px;
+    right: 166px;
+}
+
+.EnrollementImage-tr {
+    bottom: 324px;
+    left: 200px;
+}
+
+.EnrollementImage-br {
+    bottom: 80px;
+    left:80px;
+    
+}
