@@ -140,3 +140,23 @@ color:white !important;
   white-space: nowrap;
   font-family: "segoe";
 }
+
+.getQuoteForm-submit-button{
+    background-color: white;
+    width: 100px;
+    text-align: center;
+    color: #2F49E7;
+    padding: 15px 40px 15px 40px;
+    font-weight: bold;
+    /* -webkit-text-stroke: 0.5px #1633DB; */
+    border-radius: 5px;
+    transition: all 0.2s;
+    cursor: pointer;
+
+}
+
+.getQuoteForm-submit-button:hover{
+    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
+    color: white;
+    /* -webkit-text-stroke: 0.5px white; */
+}

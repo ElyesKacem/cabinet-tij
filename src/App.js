@@ -9,6 +9,7 @@ import logoFrance from './assets/images/franceR.png';
 import GetQuote from './pages/GetQuote';
 import Footer from './components/sections/footer/footer'
 import Enrollement from './pages/Enrollement';
+import TalkToUsNow from './pages/TalkToUsNow';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/requestquote" element={<GetQuote />} />
           <Route path="/enrollement" element={<Enrollement />} />
+          <Route path="/talktousnow" element={<TalkToUsNow />} />
         </Routes>
         <Footer />
       </div>

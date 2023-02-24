@@ -15,6 +15,9 @@ import blueInterpreting from "../../../assets/images/request a quote icons/blueI
 import blueTranscription from "../../../assets/images/request a quote icons/blueTranscription.svg"
 import blueVIP from "../../../assets/images/request a quote icons/blueVIP.svg"
 import ClearIcon from '@mui/icons-material/Clear';
+
+
+
 export default function GetQuoteForm() {
 
   const [singleFile, setSingleFile] = useState(false);
@@ -46,7 +49,7 @@ export default function GetQuoteForm() {
 
 
   return (
-    <div style={{ height: 1050 }}>
+    <div style={{ height: 900 }}>
       <div className='getQuoteForm-overlay'></div>
       <br />
       <br />
@@ -128,52 +131,52 @@ export default function GetQuoteForm() {
                     {/* <TextField fullWidth id="filled-multiline-flexible" label="Multiline" multiline minRows={4} required variant="filled"/> */}
                   </Grid>
                   <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation getQuoteForm-input-label translateYup52" : "getQuoteForm-animation getQuoteForm-input-label"}  >
-                    
-                    
-                      {/* <Grid container> */}
-                    
+
+
+                    {/* <Grid container> */}
+
                     <div>
 
-                    
-                    
-                    <label className='getQuoteForm-input-file-label' htmlFor="requotefile">
-                      <input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requotefile" onChange={(e) => {
-                        let file = e.target.value;
-                        setSingleFile(file);
-                        const fileNameArray = file.split('\\')
-                        setSingleFileName(fileNameArray[fileNameArray.length - 1]);
-                      }} />
+
+
+                      <label className='getQuoteForm-input-file-label' htmlFor="requotefile">
+                        <input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requotefile" onChange={(e) => {
+                          let file = e.target.value;
+                          setSingleFile(file);
+                          const fileNameArray = file.split('\\')
+                          setSingleFileName(fileNameArray[fileNameArray.length - 1]);
+                        }} />
 
 
 
-                      <div className='getQuoteForm-input-file-button'>Select a file</div>
+                        <div className='getQuoteForm-input-file-button'>Select a file</div>
 
 
-                    
+
+                        {
+                          singleFileName ?
+                            <>
+                              <div className='getQuoteForm-input-file-label-text'>&nbsp;&nbsp;{singleFileName} </div>
+
+                            </>
+                            : <>
+                              &nbsp;&nbsp;No file chosen
+                            </>
+                        }
+
+
+
+                      </label>
                       {
-                        singleFileName ?
-                          <>
-                            <div className='getQuoteForm-input-file-label-text'>&nbsp;&nbsp;{singleFileName} </div>
+                        singleFile && <div className='getQuoteForm-input-file-label-X' onClick={() => {
+                          setSingleFile(null);
+                          setSingleFileName(false);
+                        }}>
 
-                          </>
-                          : <>
-                            &nbsp;&nbsp;No file chosen
-                          </>
+                          &nbsp;&nbsp;<ClearIcon sx={{ fill: "url(#linearColors)" }} className='getQuoteForm-input-file-label-X'></ClearIcon> </div>
                       }
 
 
-
-                    </label>
-                    {
-                      singleFile && <div className='getQuoteForm-input-file-label-X' onClick={() => {
-                        setSingleFile(null);
-                        setSingleFileName(false);
-                      }}>
-
-                        &nbsp;&nbsp;<ClearIcon sx={{ fill: "url(#linearColors)" }} className='getQuoteForm-input-file-label-X'></ClearIcon> </div>
-                    }
-                    
-                    
                     </div>
                     {/* </Grid> */}
 
@@ -181,16 +184,16 @@ export default function GetQuoteForm() {
 
                   </Grid>
                   <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} style={{ marginTop: 42 }}>
-                    <div style={{transform:"translateY(-13px)"}}>
+                    <div style={{ transform: "translateY(-13px)" }}>
 
-                    <label className='getQuoteForm-input-file-label' htmlFor="requoteMULTIPLEfile"><input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requoteMULTIPLEfile" onChange={(e) => {
-                      let file = e.target.value;
-                      setSingleFile(file);
-                      const fileNameArray = file.split('\\')
-                      setSingleFileName(fileNameArray[fileNameArray.length - 1]);
-                    }} multiple />
-                      <div className='getQuoteForm-input-multipleFile-button'><b style={{ fontFamily: "sans-serif" }}>+ &nbsp;&nbsp;  </b> Add more files</div>
-                    </label>
+                      <label className='getQuoteForm-input-file-label' htmlFor="requoteMULTIPLEfile"><input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requoteMULTIPLEfile" onChange={(e) => {
+                        let file = e.target.value;
+                        setSingleFile(file);
+                        const fileNameArray = file.split('\\')
+                        setSingleFileName(fileNameArray[fileNameArray.length - 1]);
+                      }} multiple />
+                        <div className='getQuoteForm-input-multipleFile-button'><b style={{ fontFamily: "sans-serif" }}>+ &nbsp;&nbsp;  </b> Add more files</div>
+                      </label>
                     </div>
 
                   </Grid>
@@ -198,8 +201,15 @@ export default function GetQuoteForm() {
                 </Grid>
 
               </Grid>
-            </Grid>
+              <Grid item xs={12}>
+                      <br />
+                      <br />
+                      <div className='flexalignjustify'>
 
+              <div className='getQuoteForm-submit-button'>Submit</div>
+                      </div>
+              </Grid>
+            </Grid>
 
           </div>
         </div>

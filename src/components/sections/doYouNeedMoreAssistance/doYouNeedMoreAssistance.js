@@ -4,9 +4,9 @@ import Grid from '@mui/material/Grid';
 import Image from "../../../assets/images/Group 1582.svg"
 import GetQuoteButton from '../../buttons/getQuoteButton/getQuoteButton';
 
-export default function DoYouNeedMoreAssistance() {
+export default function DoYouNeedMoreAssistance(props) {
   return (
-    <div>
+    <div style={props.style}>
     <br />
     <br />
     <Grid container direction="row"
