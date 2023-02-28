@@ -54,4 +54,5 @@
 }
 .translateRight40{
     transform: translateX(40px);
+    max-width: 400px;
 }
