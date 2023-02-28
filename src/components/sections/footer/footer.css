@@ -1,0 +1,10 @@
+.marginAuto{
+    
+    background-color: red;
+    margin: auto;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+}
