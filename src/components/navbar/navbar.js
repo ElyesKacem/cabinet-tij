@@ -46,7 +46,7 @@ export default function Navbar() {
 
 
               <div>
-                <div >
+                
 
                 <GetQuoteButton blue={color} title="Get Quote" style={{ transform: "translate(-80px,8px)", color: "white" }}></GetQuoteButton>
                 <input type="checkbox" id="active" onClick={() => {
@@ -54,7 +54,7 @@ export default function Navbar() {
                 }} />
                 <label htmlFor="active" className="menu-btn"><span></span></label>
                 <label htmlFor="active" className="close"></label>
-                </div>
+                
                 <div className="wrapperMobile">
                   <div className='wrapperMobile-menu'>
                     <div>
