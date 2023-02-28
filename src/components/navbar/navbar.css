@@ -3,7 +3,7 @@ position: fixed;
  display: flex;
  align-items: center;  
  justify-content: space-between;
- z-index: 3;
+ z-index: 5;
  width: 100%;
  transition: all .2s ease-out;
  transition: .3s ease-in;

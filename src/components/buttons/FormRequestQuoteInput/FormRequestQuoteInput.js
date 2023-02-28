@@ -1,5 +1,6 @@
 import React from 'react'
 import "./FormRequestQuoteInput.css"
+import CalendarIcon from "../../../assets/images/calendar.svg"
 
 export default function FormRequestQuoteInput(props) {
     const [show, setShow] = React.useState(true);
@@ -52,4 +53,18 @@ e.target.value==""?setShow(true):setShow(false);
   {props.required && <b className='FormRequestQuoteInput-star'>*</b>}
    </label>}
 </div>;
+}
+
+
+
+
+
+export function DateInputGetQuote(props){
+  const [show, setShow] = React.useState(true);
+  return (
+    <div className='did-floating-input' style={{display:"flex",alignItems:"center",gap:10,cursor:"pointer"}}>
+     <img src={CalendarIcon} style={{width:25}} alt="" /> <div style={{fontWeight:"bold"}}>Tuesday, February 27, 2023</div>
+</div>
+  )
+
 }

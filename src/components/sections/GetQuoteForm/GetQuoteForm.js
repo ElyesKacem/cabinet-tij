@@ -5,7 +5,7 @@ import RequestQuoteButton from '../../buttons/RequestQuoteButton/RequestQuoteBut
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import FormRequestQuoteInput, { FormRequestQuoteInputMultiline } from '../../buttons/FormRequestQuoteInput/FormRequestQuoteInput';
+import FormRequestQuoteInput, { DateInputGetQuote, FormRequestQuoteInputMultiline } from '../../buttons/FormRequestQuoteInput/FormRequestQuoteInput';
 import whiteTranslation from "../../../assets/images/request a quote icons/whiteTranslation.svg"
 import whiteInterpreting from "../../../assets/images/request a quote icons/whiteInterpreting.svg"
 import whiteTranscription from "../../../assets/images/request a quote icons/whiteTranscription.svg"
@@ -122,7 +122,7 @@ export default function GetQuoteForm() {
                     <div className="getQuoteForm-hidden getQuoteForm-animation">
                       <div className={menuSelected[1] || menuSelected[3] ? 'translateYdown getQuoteForm-animation' : menuSelected[2] ? "translateYup70 getQuoteForm-animation" : "getQuoteForm-animation"}>
                         <div style={{ transform: "translateY(-67px)" }}>
-                          <FormRequestQuoteInput title="Date " />
+                          <DateInputGetQuote title="Date " />
                           <FormRequestQuoteInput required title="Languages " style={{ marginTop: 86 }} />
                         </div>
                       </div>
@@ -131,6 +131,12 @@ export default function GetQuoteForm() {
                     </div>
                   </Grid>
                   <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} >
+                    <div style={{width:"100%"}}>
+                      <div className='calendar-container'>
+                        
+                      </div>
+                      
+                    </div>
                     <FormRequestQuoteInputMultiline multiline title="Notes " required></FormRequestQuoteInputMultiline>
                     {/* <TextField fullWidth id="filled-multiline-flexible" label="Multiline" multiline minRows={4} required variant="filled"/> */}
                   </Grid>
