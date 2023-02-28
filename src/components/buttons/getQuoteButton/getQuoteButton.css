@@ -10,6 +10,8 @@
     justify-content: center;
     transition: all .2s ease-out;
     cursor: pointer;
+    position: relative;
+    z-index: 3;
 }
 .get-quote-blueBG{
     background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;

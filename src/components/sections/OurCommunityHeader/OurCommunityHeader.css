@@ -7,7 +7,7 @@
 }
 
 .OurCommunityHeader-title {
-    font-size: 50px;
+    font-size: 60px;
     font-family: commuterssans-bold;
     color: white;
 }
@@ -20,6 +20,7 @@
     color: white;
     font-size: 20px;
     line-height: 1.4;
+    width: 80%;
 
 }
 

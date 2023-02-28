@@ -15,6 +15,7 @@ import blueInterpreting from "../../../assets/images/request a quote icons/blueI
 import blueTranscription from "../../../assets/images/request a quote icons/blueTranscription.svg"
 import blueVIP from "../../../assets/images/request a quote icons/blueVIP.svg"
 import ClearIcon from '@mui/icons-material/Clear';
+import VerticalBar from '../../verticalBar/verticalBar';
 
 
 
@@ -50,6 +51,9 @@ export default function GetQuoteForm() {
 
   return (
     <div style={{ height: 1000 }}>
+        <VerticalBar top="55%" left="50px" />
+            <VerticalBar top="17%" left="40%" />
+            <VerticalBar top="90%" left="90%" />
       <div className='getQuoteForm-overlay'></div>
       <br />
       <br />

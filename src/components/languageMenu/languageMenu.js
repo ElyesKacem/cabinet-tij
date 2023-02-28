@@ -27,7 +27,7 @@ export default function LanguageMenu() {
             </div>
         </div>
         
-          <img style={{height:23}} src={EnglishFlag} alt="" />
+          <img style={{height:23,position:"relative",zIndex:"3"}} src={EnglishFlag} alt="" />
           <svg width={0} height={0}>
       <linearGradient id="linearColors" x1={1} y1={0} x2={1} y2={1}>
         <stop offset={0} stopColor="#242D65" />

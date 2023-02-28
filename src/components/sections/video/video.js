@@ -2,11 +2,15 @@ import React from 'react'
 import './video.css'
 import video from '../../../assets/video/video.mp4'
 import LeftRightButton from '../../buttons/leftRightButton/leftRightButton'
+import VerticalBar from '../../verticalBar/verticalBar';
 
 
 export default function VideoSection() {
   return (
     <div className='wrapper'>
+          <VerticalBar top="55%" left="50px" />
+            <VerticalBar top="20%" left="45%" />
+            <VerticalBar top="30%" left="92%" />
     <video src={video} autoPlay loop muted></video>
     <div className="videoContent">
       <div> 

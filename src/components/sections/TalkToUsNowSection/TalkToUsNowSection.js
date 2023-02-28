@@ -5,6 +5,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 import FormRequestQuoteInput, { FormRequestQuoteInputMultiline } from '../../buttons/FormRequestQuoteInput/FormRequestQuoteInput';
 import Image1 from "../../../assets/images/TalkToUs/TalkToUs1.png"
 import HoverImage from '../../HoverImage/HoverImage';
+import VerticalBar from '../../verticalBar/verticalBar';
 
 
 export default function TalkToUsNowSection() {
@@ -23,6 +24,9 @@ export default function TalkToUsNowSection() {
     }
     return (
         <div className='TalkToUsNowSection-background'>
+              <VerticalBar top="55%" left="50px" />
+            <VerticalBar top="17%" left="47%" />
+            <VerticalBar top="90%" left="90%" />
             <br /><br /><br /><br /><br />
             <br /><br /><br /><br />
             <div style={{ width: "90%", maxWidth: 1500, margin: "auto" }}>

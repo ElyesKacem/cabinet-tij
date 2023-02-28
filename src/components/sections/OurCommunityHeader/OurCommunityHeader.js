@@ -8,14 +8,18 @@ import ActivityButton from "../../../assets/images/OurCommunity/Activity.png"
 import FlexibleButton from "../../../assets/images/OurCommunity/Flexible.png"
 import IncomeButton from "../../../assets/images/OurCommunity/Income.png"
 import SupportButton from "../../../assets/images/OurCommunity/Support.png"
+import VerticalBar from '../../verticalBar/verticalBar';
 
 
 export default function OurCommunityHeader() {
     return (
         <div className='TalkToUsNowSection-background'>
+            <VerticalBar top="55%" left="50px" />
+            <VerticalBar top="17%" left="43%" />
+            <VerticalBar top="90%" left="95%" />
             <br /><br /><br /><br /><br /><br /><br />
             <div className='OurCommunityHeader-container'>
-                <Grid container  >
+                <Grid container>
                     <Grid item xs={6}>
                         <div className='OurCommunityHeader-title'>Take part in our</div>
                         <div className='OurCommunityHeader-title blue'>Community</div>

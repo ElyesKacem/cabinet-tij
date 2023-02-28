@@ -1,0 +1,12 @@
+.WeAreHereButton{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 200px;
+    font-weight: bold;
+}

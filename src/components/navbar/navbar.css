@@ -7,12 +7,26 @@ position: fixed;
  width: 100%;
  transition: all .2s ease-out;
  transition: .3s ease-in;
- height: 75px;
+ height: 62px;
+ background-image: transparent;
 }
 
-.nav-background{
-  background:transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-  animation:coloringMenuBackground 1s;
+.nav::before{
+  position: absolute;
+  content: "";
+    inset: 0; /* same as { top: 0; right: 0; bottom: 0; left: 0; } */
+    background-image:linear-gradient(180deg, #242D65 0%, #CF2032 100%);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+/* .nav:hover::before{
+  opacity: 1;
+} */
+
+
+.nav-background::before{
+  opacity: 1;
 }
 
 @keyframes coloringMenuBackground {
@@ -25,8 +39,8 @@ position: fixed;
 }
 
 .logo{
-    height: 120px;
-    transform: translateX(84px);
+    height: 140px;
+    transform: translate(84px,10px);
 }
 @media  screen and (max-width: 900) {
   .logo{
@@ -51,11 +65,25 @@ position: fixed;
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   font-size: 14px;
-
-
+  transform: translateY(2px);
 }
+
+.nav-element-down{
+  transform: translateY(10px);
+}
+.logoScrolled{
+  transform: scale(0.75);
+}
+.navbarAnimation{
+  transition: transform 0.5s;
+}
+.navbarAnimation-up{
+  transform: translateY(-8px);
+}
+
+
 .logofr{
   height: 30px;
   position: absolute;
