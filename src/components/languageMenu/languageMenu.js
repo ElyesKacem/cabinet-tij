@@ -4,12 +4,15 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import EnglishFlag from './../../assets/images/Flag_of_the_United_Kingdom.svg';
 import FrenchFlag from './../../assets/images/FrenchFlag.png';
 
-export default function LanguageMenu() {
+export default function LanguageMenu(props) {
     const [rotateButton, setRotateButton] = React.useState(false);
     const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
+    const mStyle={
+      ...props.style
+    }
   return (
     <div>
-        <div style={{display:'flex',alignItems:'center'}}>
+        <div style={{display:'flex',alignItems:'center',color:"white",mStyle}}>
         <div >
             
             <div className={rotateButton? "dropDownMenu":"dropUpMenu"}>

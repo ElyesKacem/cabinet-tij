@@ -19,7 +19,7 @@ function App() {
 
 
         </div>
-        <div><img className='logofr' style={{height:19}} src={logoFrance}/></div>
+        <div><img className='logofr' src={logoFrance}/></div>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
