@@ -16,6 +16,7 @@ import blueTranscription from "../../../assets/images/request a quote icons/blue
 import blueVIP from "../../../assets/images/request a quote icons/blueVIP.svg"
 import ClearIcon from '@mui/icons-material/Clear';
 import VerticalBar from '../../verticalBar/verticalBar';
+import Calendar from '../../calendar/calendar';
 
 
 
@@ -132,8 +133,8 @@ export default function GetQuoteForm() {
                   </Grid>
                   <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} >
                     <div style={{width:"100%"}}>
-                      <div className='calendar-container'>
-                        
+                      <div className='calendar-container opacity-transition'>
+                      {/* <Calendar></Calendar> */}
                       </div>
                       
                     </div>

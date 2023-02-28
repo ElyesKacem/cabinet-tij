@@ -161,10 +161,17 @@ color:white !important;
     /* -webkit-text-stroke: 0.5px white; */
 }
 .calendar-container{
-    width: 95%;
-    height: 20px;
-    background-color: red;
+    /* width: 95%; */
+    /* height: 100%; */
+    background-color: rgb(168, 168, 168);
     position: absolute;
     z-index: 4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 1;
+    border-radius: 8px;
+    border:1px solid black;
 
+}
+.opacity-transition{
+    transition: all 1s;
 }
