@@ -3,6 +3,9 @@ import "./Services.css"
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Image from "../../../assets/images/Illustration.svg"
+import Pause from "../../../assets/images/pause.png"
+import Play from "../../../assets/images/play.png"
+
 
 export default function Services() {
   return (
@@ -35,7 +38,13 @@ export default function Services() {
 
                 </div>
                 <div className='miniButtonClass'>
-                  Our services
+                  <div style={{position:"relative"}}>
+                    <img src={Pause} style={{width:80}} />
+                    <img src={Play} style={{width:80}} className="servicesPauseButton"/>
+                  </div>
+                  <div>
+                    Our services
+                  </div>
                 </div>
               </div>
             </div>
@@ -45,7 +54,7 @@ export default function Services() {
 
           </Grid>
           <Grid item sm={12} md={6} lg={6}>
-            <img src={Image} />
+            <img className='ServicesleftImage' src={Image} />
           </Grid>
         </Grid>
       </Container>

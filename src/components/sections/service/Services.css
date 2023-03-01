@@ -19,12 +19,6 @@
     font-family:"commuterssans-bold";
     
 }
-.services img {
-    border: 2px solid #A7A7A7AB;
-    background: #cfcfcfab;
-    opacity: 1;
-    width: 100%;
-}
 .firstClass{
   
     /* transform: translateX(15px); */
@@ -51,8 +45,28 @@
     font-weight:bold;
     font-size: 15px;
     font-family:"commuterssans-bold";
+    display: flex;
+    align-items: center;
+    transform: translateX(-10px);
+    cursor: pointer;
 }
 .translateRight40{
     transform: translateX(40px);
     max-width: 400px;
+}
+
+.servicesPauseButton{
+/* position: absolute; */
+width: 100px;
+position: absolute;
+left: 0;
+}
+.servicesPauseButton:hover{
+    opacity: 0;
+}
+.ServicesleftImage{
+    border: 2px solid #A7A7A7AB;
+    background: #cfcfcfab;
+    opacity: 1;
+    width: 100%;
 }
