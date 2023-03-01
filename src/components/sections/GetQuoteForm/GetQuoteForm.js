@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import "./GetQuoteForm.css"
-import Container from '@mui/material/Container';
 import RequestQuoteButton from '../../buttons/RequestQuoteButton/RequestQuoteButton';
 import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import FormRequestQuoteInput, { DateInputGetQuote, FormRequestQuoteInputMultiline } from '../../buttons/FormRequestQuoteInput/FormRequestQuoteInput';
 import whiteTranslation from "../../../assets/images/request a quote icons/whiteTranslation.svg"
 import whiteInterpreting from "../../../assets/images/request a quote icons/whiteInterpreting.svg"
@@ -16,6 +13,8 @@ import blueTranscription from "../../../assets/images/request a quote icons/blue
 import blueVIP from "../../../assets/images/request a quote icons/blueVIP.svg"
 import ClearIcon from '@mui/icons-material/Clear';
 import VerticalBar from '../../verticalBar/verticalBar';
+import Media from 'react-media';
+
 import Calendar from '../../calendar/calendar';
 
 
@@ -48,39 +47,67 @@ export default function GetQuoteForm() {
       blueIcon: blueVIP,
     },
   ]
+  const GLOBAL_MEDIA_QUERIES = {
+    small: "(max-width: 600px)",
+    medium: "(min-width: 600px) and (max-width: 1150px)",
+    large: "(min-width: 1150px)"
+  };
 
 
   return (
-    <div style={{ height: 1000 }}>
-        <VerticalBar top="55%" left="50px" />
-            <VerticalBar top="17%" left="40%" />
-            <VerticalBar top="90%" left="90%" />
+    <div className='getQuoteForm-main' >
+      <VerticalBar top="55%" left="50px" />
+      <VerticalBar top="17%" left="40%" />
+      <VerticalBar top="90%" left="90%" />
       <div className='getQuoteForm-overlay'></div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br /><br /><br /><br /><br />
       <div className='getQuoteForm-content'>
         <div style={{ width: "85%", maxWidth: 1300 }}>
           <div className="getQuoteForm-content-title">Request A Quote</div>
           <br />
-          <div className='getQuoteForm-margin'>
-            <Grid className='getQuoteForm-margin' container spacing={1}>
-              {menuData.map((element, index) =>
-                <Grid key={index} item xs={3}><RequestQuoteButton setMenuSelected={setMenuSelected} icon={menuSelected[index] ? element.whiteIcon : element.blueIcon} blue={menuSelected[index]} id={index} title={element.title} /></Grid>
-              )}
 
-            </Grid>
-          </div>
+          <Media queries={GLOBAL_MEDIA_QUERIES}>
+            {matches => (
+              <React.Fragment>
+                {(matches.medium || matches.small) && <div>
+                  <div className='getQuoteForm-margin' style={{width:"100%",overflowX:"scroll"}}>
+                    <div className='getQuoteForm-margin' style={{display:'flex',gap:30}}>
+                      {menuData.map((element, index) =>
+                        <div className='getQuoteForm-mobile-menu'><RequestQuoteButton style={{width:300}} setMenuSelected={setMenuSelected} icon={menuSelected[index] ? element.whiteIcon : element.blueIcon} blue={menuSelected[index]} id={index} title={element.title} /></div>
+                      )}
+                    </div>
+                  </div>
+
+                </div>}
+                {matches.large && <div>
+
+                  <div className='getQuoteForm-margin'>
+                    <Grid className='getQuoteForm-margin' container spacing={1}>
+                      {menuData.map((element, index) =>
+                        <Grid key={index} item xs={3}><RequestQuoteButton setMenuSelected={setMenuSelected} icon={menuSelected[index] ? element.whiteIcon : element.blueIcon} blue={menuSelected[index]} id={index} title={element.title} /></Grid>
+                      )}
+                    </Grid>
+                  </div>
+
+                </div>}
+
+
+
+
+              </React.Fragment>)}
+          </Media>
+
+
+
+
+
+
+
           <div className='getQuoteForm-margin white-text'>Required fields are marked with asterisk <i style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>(<b style={{ color: 'red' }}>*</b>)</i></div>
-          <br />
-          <br />
+          <br /><br />
           <div>
-
-
             <Grid container spacing={1}>
-              <Grid item xs={6}>
+              <Grid item md={6} xs={12} style={{marginBottom:10}}>
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
                     <FormRequestQuoteInput required title="Full Name " />
@@ -101,11 +128,7 @@ export default function GetQuoteForm() {
 
                         <FormRequestQuoteInput className={menuSelected[1] || menuSelected[3] ? "getQuoteForm-animation translateYdown52" : "getQuoteForm-animation"} style={{ position: "relative", zIndex: "3" }} required title="Location " />
                         <FormRequestQuoteInput required title="Source Language " style={{ marginTop: 1 }} />
-
                       </div>
-
-                      {/* <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth /> */}
-
                     </div>
                   </Grid>
                   <Grid item xs={12}>
@@ -113,11 +136,7 @@ export default function GetQuoteForm() {
                   </Grid>
                 </Grid>
               </Grid>
-
-
-
-
-              <Grid item xs={6}>
+              <Grid item md={6} xs={12}>
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
                     <div className="getQuoteForm-hidden getQuoteForm-animation">
@@ -127,29 +146,19 @@ export default function GetQuoteForm() {
                           <FormRequestQuoteInput required title="Languages " style={{ marginTop: 86 }} />
                         </div>
                       </div>
-                      {/* <TextField required  id="filled-basic" label="Filled" variant="filled" fullWidth /> */}
-
                     </div>
                   </Grid>
                   <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} >
-                    <div style={{width:"100%"}}>
+                    {/* <div style={{width:"100%"}}>
                       <div className='calendar-container opacity-transition'>
-                      {/* <Calendar></Calendar> */}
+                      <Calendar></Calendar>
                       </div>
                       
-                    </div>
+                    </div> */}
                     <FormRequestQuoteInputMultiline multiline title="Notes " required></FormRequestQuoteInputMultiline>
-                    {/* <TextField fullWidth id="filled-multiline-flexible" label="Multiline" multiline minRows={4} required variant="filled"/> */}
                   </Grid>
                   <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation getQuoteForm-input-label translateYup52" : "getQuoteForm-animation getQuoteForm-input-label"}  >
-
-
-                    {/* <Grid container> */}
-
-                    <div>
-
-
-
+                    <div style={{ display: "flex" }}>
                       <label className='getQuoteForm-input-file-label' htmlFor="requotefile">
                         <input type="file" className='getQuoteForm-input-file' placeholder='Full Name' id="requotefile" onChange={(e) => {
                           let file = e.target.value;
@@ -157,9 +166,6 @@ export default function GetQuoteForm() {
                           const fileNameArray = file.split('\\')
                           setSingleFileName(fileNameArray[fileNameArray.length - 1]);
                         }} />
-
-
-
                         <div className='getQuoteForm-input-file-button'>Select a file</div>
 
 
@@ -213,13 +219,13 @@ export default function GetQuoteForm() {
 
               </Grid>
               <Grid item xs={12}>
-                      <br />
-                      <br />
-                      
-                      <div className='flexalignjustify'>
+                <br />
+                <br />
 
-              <div className='getQuoteForm-submit-button'>Submit</div>
-                      </div>
+                <div className='flexalignjustify'>
+
+                  <div className='getQuoteForm-submit-button'>Submit</div>
+                </div>
               </Grid>
             </Grid>
 

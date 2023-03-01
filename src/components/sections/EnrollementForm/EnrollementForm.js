@@ -3,7 +3,13 @@ import "./EnrollementForm.css"
 import Grid from '@mui/material/Grid';
 import FormRequestQuoteInput from '../../buttons/FormRequestQuoteInput/FormRequestQuoteInput';
 import EnrollementAttachFiles from '../../EnrollementAttachFiles/EnrollementAttachFiles';
+import Media from 'react-media';
 export default function EnrollementForm() {
+  const GLOBAL_MEDIA_QUERIES = {
+    small: "(max-width: 999px)",
+    // medium: "(min-width: 600px) and (max-width: 1199px)",
+    large: "(min-width: 1000px)"
+  };
   return (
     <div className='flexalignjustify white-background'>
       <div className='flexalignjustify EnrollementForm-content' >
@@ -22,12 +28,12 @@ export default function EnrollementForm() {
         <b className='EnrollementForm-title'>Identity</b>
         <br />
         <Grid container spacing={4}>
-          <Grid item xs={6}>
+          <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput borderRadius="10px" title="Full name" required /> <br />
             <FormRequestQuoteInput borderRadius="10px" title="Phone" required /><br />
             <FormRequestQuoteInput borderRadius="10px" title="City" required /><br />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput borderRadius="10px" title="Email" required /> <br />
             <FormRequestQuoteInput borderRadius="10px" title="Adress" required /><br />
             <FormRequestQuoteInput borderRadius="10px" title="Postal Code" required /><br />
@@ -40,38 +46,74 @@ export default function EnrollementForm() {
             <FormRequestQuoteInput borderRadius="10px" title="Spoken Languages ( with priority )" required />
 
           </Grid>
-          <Grid item xs={6}>
+          <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput borderRadius="10px" title="Diploma 1" required /> <br />
             <FormRequestQuoteInput borderRadius="10px" title="Experience 1" required /><br />
 
           </Grid>
-          <Grid item xs={6}>
+          <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput borderRadius="10px" title="Diploma 2" required /> <br />
             <FormRequestQuoteInput borderRadius="10px" title="Experience 2" required /><br />
 
           </Grid>
         </Grid>
         <b className='EnrollementForm-title'>Attach Files</b>
+        <Media queries={GLOBAL_MEDIA_QUERIES}>
+          {matches => (
+            <React.Fragment>
+              {matches.large &&
+                <>
 
-        <Grid container
-          direction="row" justifyContent="center"
-          alignItems="center">
-          <Grid item xs={6}>
-            <EnrollementAttachFiles title="Attestation insee or Kbis" />
-            <EnrollementAttachFiles title="Identity document" />
-          </Grid>
-          <Grid item xs={6}>
-            <EnrollementAttachFiles title="Criminal record extract" />
-            <EnrollementAttachFiles title="Professional Photo" />
-          </Grid>
-
-
-        </Grid>
-
-        <label >
+                  <div className='Enrollement-attach-files'>
+                    <div>
+                      <EnrollementAttachFiles title="Attestation insee or Kbis" />
+                      <EnrollementAttachFiles title="Identity document" />
+                    </div>
+                    <div>
+                      <EnrollementAttachFiles title="Criminal record extract" />
+                      <EnrollementAttachFiles title="Professional Photo" />
+                    </div>
+                  </div>
+                  <label >
           <input className='displaynone' type="file" multiple />
           <div className='EnrollementForm-multiple-files'> <b style={{ fontFamily: "sans-serif" }}>+</b> Add More Files </div>
         </label>
+                </>
+
+
+              }
+
+
+
+
+              {matches.small &&
+                <>
+
+                  <div className='Enrollement-attach-files' style={{ flexDirection: "column", transform: "translateX(-30px)", gap: 0 }}>
+                    <br />
+                    <EnrollementAttachFiles title="Attestation insee or Kbis" />
+                    <EnrollementAttachFiles title="Identity document" />
+                    <EnrollementAttachFiles title="Criminal record extract" />
+                    <EnrollementAttachFiles title="Professional Photo" />
+                  </div>
+                  <label >
+          <input className='displaynone' type="file" multiple />
+          <div className='EnrollementForm-multiple-files' style={{padding:"10px 40px 10px 40px",transform:"translateX(10px)"}}> <b style={{ fontFamily: "sans-serif" }}>+</b> <span>Add More Files</span> </div>
+        </label>
+                </>
+
+
+              }
+
+
+
+
+            </React.Fragment>
+          )
+          }
+        </Media>
+
+        
         <br />
         <br />
         <div className='EnrollementForm-submit'>

@@ -130,7 +130,6 @@ color:white !important;
 .getQuoteForm-input-file-label-X{
     color:transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
     cursor: pointer;
-    transform: translateY(7px);
 }
 .getQuoteForm-input-file-label-text{
     text-overflow: ellipsis;
@@ -175,3 +174,24 @@ color:white !important;
 .opacity-transition{
     transition: all 1s;
 }
+
+
+
+/* mobile  */
+
+.getQuoteForm-mobile-menu{
+    display: flex;
+    flex-direction: row;
+}
+.getQuoteForm-main{
+    height:1000px;
+}
+
+@media screen and (max-width: 900px) {
+    .getQuoteForm-main {
+        height:1500px;
+    }
+    .getQuoteForm-submit-button{
+        transform: translateY(-50px);
+    }
+  }

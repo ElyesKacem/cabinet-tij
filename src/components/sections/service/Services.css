@@ -60,6 +60,7 @@
 width: 100px;
 position: absolute;
 left: 0;
+transition: opacity 0.2s;
 }
 .servicesPauseButton:hover{
     opacity: 0;

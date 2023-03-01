@@ -66,3 +66,11 @@ max-width: 70%;
 .EnrollementForm-submit-title{
     transition: transform 0.2s;
 }
+.Enrollement-attach-files{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 175px;
+    transform: translateX(-45px);
+}

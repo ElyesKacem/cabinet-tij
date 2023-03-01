@@ -2,8 +2,11 @@ import React from 'react'
 import "./RequestQuoteButton.css"
 
 export default function RequestQuoteButton(props) {
+  const mStyle={
+    ...props.style
+  }
   return (
-    <div className={props.blue?'RequestQuoteButton RequestQuoteButtonBlue':'RequestQuoteButton RequestQuoteButtonWhite'}
+    <div style={mStyle} className={props.blue?'RequestQuoteButton RequestQuoteButtonBlue':'RequestQuoteButton RequestQuoteButtonWhite'}
     onClick={()=>{
       let menuSelected=[false,false,false,false];
       menuSelected[props.id]=true;
