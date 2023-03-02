@@ -27,6 +27,7 @@
 .EnrollementImage-flyButton {
     position: relative;
     width: 150px;
+    z-index: 4;
 }
 
 .EnrollementImage-tl {

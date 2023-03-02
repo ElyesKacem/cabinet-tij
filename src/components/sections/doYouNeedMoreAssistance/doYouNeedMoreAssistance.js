@@ -3,33 +3,87 @@ import "./doYouNeedMoreAssistance.css"
 import Grid from '@mui/material/Grid';
 import Image from "../../../assets/images/Group 1582.svg"
 import GetQuoteButton from '../../buttons/getQuoteButton/getQuoteButton';
+import Media from 'react-media';
 
 export default function DoYouNeedMoreAssistance(props) {
+  const GLOBAL_MEDIA_QUERIES = {
+    medium: "(max-width: 1080px)",
+    small: "(max-width: 600px)",
+    large: "(min-width: 1080px)"
+  };
   return (
     <div style={props.style}>
-    <br />
-    <br />
-    <Grid container direction="row"
-  justifyContent="center"
-  alignItems="center" spacing={5}>
+      <br />
+      <br />
 
-        <Grid item xs={12} md={3}>
-            <img className='shortImage' src={Image}/>
-        </Grid>
-        <Grid item xs={12} md={6}>
-        <p className='firstClass'>Do You Need More Assistance?</p>
-        <p style={{fontWeight:"bold",
-    fontSize:" 20px",color:'grey'}}>As per customer request, we can provide a suitable quote based on the nature of the document that needs to be translated. We offer the translation of different types of documents including technical and official ones. Our main goal is to provide our clients with all the help and assistance that they need, so feel free to contact us in order to receive a suitable quote.</p>
-        </Grid>
-        <Grid item xs={12} md={3}>
-        
-        <div className='RequestAQuoteButton'>
-            Request a Quote
-        </div>
-        </Grid>
+      <Media queries={GLOBAL_MEDIA_QUERIES}>
+        {matches => (
+          <React.Fragment>
+            {(matches.medium || matches.small) &&
+              <div container style={{ display: "flex", alignItems: "center", gap: 30, padding: 30, flexDirection: "column" }}>
 
-    </Grid>
-    <br /><br /><br /><br />
+                
+{matches.small && 
+                    
+                    <img className='shortImage' style={{ width: 390 }} src={Image} />
+                    
+                    }
+                    {!matches.small && 
+                    
+                    <img className='shortImage' style={{ width: 500 }} src={Image} />
+                    
+                    }
+
+                  <div item xs={12} md={6}>
+                    <p className='firstClass'>Do You Need More Assistance?</p>
+                    <p style={{
+                      fontWeight: "bold",
+                      fontSize: " 20px", color: 'grey'
+                    }}>As per customer request, we can provide a suitable quote based on the nature of the document that needs to be translated. We offer the translation of different types of documents including technical and official ones. Our main goal is to provide our clients with all the help and assistance that they need, so feel free to contact us in order to receive a suitable quote.</p>
+                  </div>
+
+                
+                <div item xs={12} md={3}>
+
+                  <div className='RequestAQuoteButton'>
+                    Request a Quote
+                  </div>
+                </div>
+
+              </div>
+            }
+            {matches.large &&
+              <div>
+
+                <div container style={{ display: "flex", alignItems: "center", gap: 30, padding: 30 }}>
+                <img className='shortImage' style={{ width: 390 }} src={Image} />
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                   
+
+                    <div item xs={12} md={6}>
+                      <p className='firstClass'>Do You Need More Assistance?</p>
+                      <p style={{
+                        fontWeight: "bold",
+                        fontSize: " 20px", color: 'grey'
+                      }}>As per customer request, we can provide a suitable quote based on the nature of the document that needs to be translated. We offer the translation of different types of documents including technical and official ones. Our main goal is to provide our clients with all the help and assistance that they need, so feel free to contact us in order to receive a suitable quote.</p>
+                    </div>
+
+                  </div>
+                  <div item xs={12} md={3}>
+
+                    <div className='RequestAQuoteButton'>
+                      Request a Quote
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            }
+          </React.Fragment>
+        )
+        }
+      </Media>
+      <br /><br /><br /><br />
     </div>
   )
 }
