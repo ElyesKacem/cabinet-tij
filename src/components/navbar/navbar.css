@@ -266,10 +266,7 @@ input[type="checkbox"]{
 #active:checked ~ .wrapperMobile ul li a{
   opacity: 1;
 }
-.wrapperMobile ul li a{
-  /* transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1); */
-  /* transform: translateX(100px); */
-}
+
 #active:checked ~ .wrapperMobile ul li a{
 	transform: none;
 	transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
@@ -367,4 +364,10 @@ input[type="checkbox"]{
 }
 .marginTop-30{
   margin-top: -28px;
+}
+
+.menu-btn-white span,
+.menu-btn-white:before,
+.menu-btn-white:after{
+  border-bottom: 2px solid white;
 }

@@ -53,7 +53,7 @@ export default function Navbar() {
             <input type="checkbox" id="active" onClick={() => {
               setActivateAnimation(!activateAnimation);
             }} />
-            <label htmlFor="active" className="menu-btn"><span></span></label>
+            <label htmlFor="active" className={color?"menu-btn menu-btn-white":"menu-btn"}><span></span></label>
             <label htmlFor="active" className="close"></label>
 
             <div className="wrapperMobile">
