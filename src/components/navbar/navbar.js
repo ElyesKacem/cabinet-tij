@@ -48,7 +48,7 @@ export default function Navbar() {
         </div>
         <div>
           {/* Others */}
-          <GetQuoteButtonPurple purple blue={color} title="Get Quote" style={{ color: "white", transform: "translate(-100px,34px)" }} />
+          <GetQuoteButtonPurple purple blue={color} title="Get Quote" style={{ color: "white", transform: "translate(-100px,37px)" }} />
           <div>
             <input type="checkbox" id="active" onClick={() => {
               setActivateAnimation(!activateAnimation);

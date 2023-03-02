@@ -334,13 +334,13 @@ input[type="checkbox"]{
   /* background-color: cadetblue; */
   position: relative;
   /* z-index: 4; */
-  padding: 10px ;
+  padding: 10px 10px 10px 10px;
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
   width: 100%;
   color: white;
-  margin-top: 30px;
+  margin-top: 24px;
   transition: all 1s;
 }
 
@@ -366,5 +366,5 @@ input[type="checkbox"]{
   opacity: 0;
 }
 .marginTop-30{
-  margin-top: -30px;
+  margin-top: -28px;
 }
