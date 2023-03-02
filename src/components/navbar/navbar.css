@@ -344,10 +344,10 @@ input[type="checkbox"]{
 /* mobile */
 
 .logoMobile{
-  width: 170px;
+  width: 150px;
   position: relative;
   z-index: 10;
-  transform: translateY(-40px);
+  transform: translateY(-20px);
   transition: all 1s;
 }
 .width100{
@@ -370,4 +370,19 @@ input[type="checkbox"]{
 .menu-btn-white:before,
 .menu-btn-white:after{
   border-bottom: 2px solid white;
+}
+
+
+
+
+.logoWeb{
+  width: 140px;
+  position: relative;
+  z-index: 10;
+  transform: translateY(14px);
+  transition: all 1s;
+}
+.width99{
+  width: 100px;
+  transform: translateY(4px);
 }

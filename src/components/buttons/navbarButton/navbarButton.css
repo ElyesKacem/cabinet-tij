@@ -6,7 +6,7 @@
 }
 
 .btnText2{
-  transform: translatex(-10px);
+  transform: translate(-10px,-2px);
   /* background: linear-gradient(to right, black 50%, transparent 50%); */
   color:linear-gradient(to right, black 50%, transparent 50%); 
 }
