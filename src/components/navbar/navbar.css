@@ -19,6 +19,7 @@ position: fixed;
     z-index: 0;
     opacity: 0;
     transition: opacity 0.25s linear;
+    /* z-index: 4; */
 }
 /* .nav:hover::before{
   opacity: 1;
@@ -134,9 +135,9 @@ position: fixed;
 .menu-btn{
   position: absolute;
   z-index: 9;
-  right: 20px;
+  right: 40px;
   /*left: 20px; */
-  top: 14px;
+  top: 38px;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -144,7 +145,7 @@ position: fixed;
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.5);
   /*color: #fff;*/
   /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
   /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
@@ -159,9 +160,9 @@ position: fixed;
 	top: calc(50% - 1px);
 	left: 30%;
 	width: 40%;
-  /* background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box; */
-	border-bottom: 2px solid white;
-  /* border-color: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box; */
+  
+	border-bottom: 2px solid #6e232c;
+  
 	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .menu-btn:before{
@@ -325,16 +326,45 @@ input[type="checkbox"]{
 }
 
 /* version 28 february */
-.nav-container{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-  z-index: 3;
-  padding: 50px;
-  color: white;
-  
-}
+
 .down50{
   transform: translateY(50px);
+}
+.nav-main{
+  /* background-color: cadetblue; */
+  position: relative;
+  /* z-index: 4; */
+  padding: 10px ;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 100%;
+  color: white;
+  margin-top: 30px;
+  transition: all 1s;
+}
+
+/* mobile */
+
+.logoMobile{
+  width: 170px;
+  position: relative;
+  z-index: 10;
+  transform: translateY(-40px);
+  transition: all 1s;
+}
+.width100{
+  width: 100px;
+  transform: translateY(0px);
+}
+
+.languageMenuContainer{
+  opacity: 1;
+  transition: all 0.7s;
+}
+.languageMenuContainer0{
+  opacity: 0;
+}
+.marginTop-30{
+  margin-top: -30px;
 }

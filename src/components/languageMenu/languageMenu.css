@@ -33,6 +33,7 @@
     position: absolute;
     top:30px;
     left: -30px;
+    z-index: 3;
   }
 
   .languageMenuContent{
@@ -40,7 +41,8 @@
     font-weight: bold;
     
     top: 40px;
-    right: -92px;
+    right: -98px;
+    z-index: 10;
 
   }
   .languageMenuContent img{

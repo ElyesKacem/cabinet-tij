@@ -8,17 +8,22 @@ export default function LanguageMenu(props) {
     const [rotateButton, setRotateButton] = React.useState(false);
     const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
     const mStyle={
-      ...props.style
+      ...props.style,
+      display:'flex',alignItems:'center',color:"white"
+
+    }
+    const mOpacity={
+      opacity:props.opacity
     }
   return (
-    <div>
-        <div style={{display:'flex',alignItems:'center',color:"white",mStyle}}>
+    
+        <div style={mStyle}>
         <div >
             
             <div className={rotateButton? "dropDownMenu":"dropUpMenu"}>
-            <div className='languageMenuContent-overlay'>
+            <div className='languageMenuContent-overlay' style={mOpacity}>
             </div>
-            <div className='languageMenuContent'>
+            <div className='languageMenuContent' >
                 <div style={{display:'flex'}}>
                 <img src={EnglishFlag} /> &nbsp;&nbsp;&nbsp;<div>ENGLISH</div>
                 </div>
@@ -42,6 +47,6 @@ export default function LanguageMenu(props) {
     }}/>  
         
         </div>
-    </div>
+    
   )
 }
