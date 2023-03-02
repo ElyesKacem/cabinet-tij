@@ -10,8 +10,8 @@ import Media from 'react-media'
 export default function EnrollementImage() {
 
   const GLOBAL_MEDIA_QUERIES = {
-    large: "(min-width: 900px)",
-    medium: "(min-width: 420px) and(max-width: 900px)",
+    large: "(min-width: 901px)",
+    medium: "(min-width: 420px) and (max-width: 900px)",
     small: "(max-width: 420px)"
   };
   return (
