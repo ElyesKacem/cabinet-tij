@@ -115,7 +115,7 @@ export default function Footer() {
 <br /><br />
 
 
-<div>
+<div style={{transform:"translateX(10px)"}}>
   <div>
   <FooterText title="About" content="We are a translation company whose main goal is to provide specialized translations of various documents both technical and administrative as well as judicial." />
   <FooterText title="Solutions" />

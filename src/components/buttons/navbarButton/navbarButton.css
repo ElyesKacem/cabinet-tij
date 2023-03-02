@@ -18,3 +18,19 @@
 .button:hover .btnText2{
   background-position: left bottom;
 }
+
+.NavbarButton-container{
+  overflow: hidden;
+  /* transform: translateX(-10px); */
+  position: relative;
+}
+
+.NavbarButton-element{
+  transform: translateX(-30px);
+  transition: transform 0.2s;
+  
+}
+.button:hover .NavbarButton-element{
+  transform: translateX(0px);
+  
+}
