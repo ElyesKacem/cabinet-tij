@@ -19,7 +19,7 @@
 }
 .RequestAQuoteButton:hover{
     background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-    border: none;
+    border-color:transparent;
     font-size: 15px;
     transition: all .2s ease-out;
 }

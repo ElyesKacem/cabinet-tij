@@ -2,7 +2,6 @@ import React from 'react'
 import "./DoYouStillNeedHelp.css"
 import Grid from '@mui/material/Grid';
 import Image from "../../../assets/images/Group 1582.svg"
-import GetQuoteButton from '../../buttons/getQuoteButton/getQuoteButton';
 import Media from 'react-media';
 
 export default function DoYouStillNeedHelp() {
@@ -33,7 +32,7 @@ export default function DoYouStillNeedHelp() {
 
         <div className='firstClass'>Do You Still Need Help?</div>
         <p style={{fontWeight:"bold",
-    fontSize:" 20px",color:'grey',width:550}}>Contact us directly and we will answer your questions and requests .</p>
+    fontSize:" 20px",color:'grey'}}>Contact us directly and we will answer your questions and requests .</p>
           </div>
         </Grid>
         <Grid item xs={3}>
