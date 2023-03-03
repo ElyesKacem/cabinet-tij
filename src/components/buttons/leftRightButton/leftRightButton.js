@@ -6,7 +6,8 @@ export default function LeftRightButton(props) {
   // console.log(props.style)
   const myStyle={
     ...props.style,
-    background:props.title=="Learn More" && "transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box"
+    background:props.title=="Learn More" && "transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box",
+    border:props.title=="Learn More" && "none"
   }
   return (
     <div style={myStyle} className='leftRightButton'>

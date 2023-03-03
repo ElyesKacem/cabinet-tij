@@ -43,7 +43,7 @@ export default function Navbar() {
           <React.Fragment>
             {matches.small && <div style={{ display: "block" }} className={color ? 'nav nav-background' : 'nav'}><div className={color ? "languageMenuContainer languageMenuContainer0 " : "languageMenuContainer"}>
 
-              <LanguageMenu opacity="0.7" style={{ position: "absolute", right: 19, top: 10, zIndex: "4" }} />
+              <LanguageMenu opacity="0.9" style={{ position: "absolute", right: 21, top: 10, zIndex: "4" }} />
             </div>
               <div className={color ? 'marginTop-30 nav-main' : "nav-main"}>
                 <div>

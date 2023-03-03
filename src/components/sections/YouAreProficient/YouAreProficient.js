@@ -8,7 +8,7 @@ export default function YouAreProficient() {
     return (
         <div className='white-background'>
             <br /><br /><br /><br /><br /><br />
-            <div className='YouAreProficient-container'>
+            <div className='YouAreProficient-container' style={{transform:"translateX(-40px)"}}>
                 <br /><br /><br />
 
                 <div className='YouAreProficient-zoom'>

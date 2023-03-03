@@ -32,7 +32,7 @@
     opacity: 26%;
     position: absolute;
     top:30px;
-    left: -30px;
+    left: -34px;
     z-index: 3;
   }
 
@@ -41,7 +41,7 @@
     font-weight: bold;
     
     top: 40px;
-    right: -98px;
+    right: -90px;
     z-index: 10;
 
   }
