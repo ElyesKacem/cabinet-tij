@@ -106,83 +106,9 @@ export default function Navbar() {
 
 
 
-      {/* <div style={{ transform: "translateY(5px)" }}> <div className={color ? " navbarAnimation navbarAnimation-up" : "navbarAnimation"}><div className={color ? "logoScrolled navbarAnimation" : "navbarAnimation"}><img className='logo' src={color ? logoWhite : logo} /></div></div> </div>
-      <Media queries={GLOBAL_MEDIA_QUERIES}>
-        {matches => (
-          <React.Fragment>
-            {matches.small && <div>
-
-
-              <div>
-                <GetQuoteButton blue={color} title="Get Quote" style={{ transform: "translate(-80px,8px)", color: "white" }}></GetQuoteButton>
-                <input type="checkbox" id="active" onClick={() => {
-                  setActivateAnimation(!activateAnimation);
-                }} />
-                <label htmlFor="active" className="menu-btn"><span></span></label>
-                <label htmlFor="active" className="close"></label>
-                
-                <div className="wrapperMobile">
-                  <div className='wrapperMobile-menu'>
-                    <div>
-                      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-left toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-left"}><a href="#">Home</a></p>
-                      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-right toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-right"}><a href="#">Services</a></p>
-                      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-left toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-left"}><a href="#">About</a></p>
-                      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-right toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-right"}><a href="#">Contact</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>}
-
-            {matches.large && <div className={color ? 'nav-element navbarAnimation' : "nav-element nav-element-down navbarAnimation"}>
-              <div style={{ marginRight: 40 }}>
-                <NavbarButton title="Home" href="" />
-              </div>
-              <div style={{ marginRight: 40 }}>
-                <NavbarButton title="Services" href="" />
-              </div>
-              <div style={{ marginRight: 40 }}>
-                <NavbarButton title="About" href="" />
-              </div>
-              <div style={{ marginRight: 40 }}>
-                <NavbarButton title="Contact" href="" />
-              </div>
-              <div style={{ marginRight: 40 }}>
-                <GetQuoteButton blue={color} title="Get Quote"></GetQuoteButton>
-
-              </div>
-              <div style={{ marginRight: 20 }}>
-                <LanguageMenu></LanguageMenu>
-              </div>
-            </div>}
-          </React.Fragment>
-        )}
-      </Media> */}
-
 
 
     </div>
   )
 }
 
-{/* <div>
-
-<input type="checkbox" id="active" onClick={() => {
-  setActivateAnimation(!activateAnimation);
-}} />
-<label htmlFor="active" className="menu-btn"><span></span></label>
-<label htmlFor="active" className="close"></label>
-
-<div className="wrapperMobile">
-  <div className='wrapperMobile-menu'>
-    <div>
-      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-left toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-left"}><a href="#">Home</a></p>
-      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-right toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-right"}><a href="#">Services</a></p>
-      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-left toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-left"}><a href="#">About</a></p>
-      <p className={activateAnimation ? 'wrapperMobile-menu-item wrapperMobile-menu-item-right toInit' : "wrapperMobile-menu-item wrapperMobile-menu-item-right"}><a href="#">Contact</a></p>
-    </div>
-  </div>
-</div>
-</div> */}

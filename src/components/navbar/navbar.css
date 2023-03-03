@@ -134,7 +134,7 @@ position: fixed;
 }
 .menu-btn{
   position: absolute;
-  z-index: 3;
+  z-index: 9;
   right: 40px;
   /*left: 20px; */
   top: 38px;
@@ -349,6 +349,7 @@ input[type="checkbox"]{
   z-index: 10;
   transform: translateY(-20px);
   transition: all 1s;
+  margin-left: 5px;
 }
 .width100{
   width: 100px;

@@ -55,6 +55,7 @@ export default function OurCommunityHeader() {
                                         </div>
                                     </Grid>
                                 </Grid>
+                                <br /><br /><br /><br /><br /><br />
                             </div>
                         }
                         {(matches.medium || matches.smallerMedium) &&
@@ -86,6 +87,7 @@ export default function OurCommunityHeader() {
                                         </div>
                                     </div>
                                 </div>
+                                <br /><br /><br /><br /><br /><br />
                             </div>
                         }
                         {(matches.small || matches.smallerSmall || matches.verySmall) &&
@@ -95,15 +97,15 @@ export default function OurCommunityHeader() {
                                         <div className='OurCommunityHeader-title'>Take part in our</div>
                                         <div className='OurCommunityHeader-title blue'>Community</div>
                                         <br />
-                                        <div className='OurCommunityHeader-paragraph'>
+                                        <div className='OurCommunityHeader-paragraph' style={{width:"auto"}}>
                                             TIJ is always on the lookout for multilingual individuals who are passionate about language to become a part of our national translator and interpreter network. We help these talented individuals to advance their careers in the field of language solutions.
                                         </div>
                                         <br /><br /><br /><br />
                                         <img src={DownArrow} className="EnrollementImage-Arrow" style={{ height: 60, width: "auto", marginLeft: "50%" }} />
                                     </div>
                                     <div>
-                                        <div style={{ width: 650, transform: matches.verySmall ? "translateY(-70px)  scale(0.6)   " : matches.smallerSmall ? "translateY(-20px) scale(0.8)" : "translateY(-20px)" }}>
-                                            <HoverImage img={Image1} />
+                                        <div style={{ width: 650, transform: matches.verySmall ? "translateY(-70px)  scale(0.5)   " : matches.smallerSmall ? "translateY(-20px) scale(0.8)" : "translateY(-20px)" }}>
+                                            <HoverImage img={Image1}  />
                                             <img src={ActivityButton} className="EnrollementImage-flyButton EnrollementImage-tl" />
                                             <img src={IncomeButton} className="EnrollementImage-flyButton EnrollementImage-bl" />
                                             <img src={FlexibleButton} className="EnrollementImage-flyButton EnrollementImage-tr" />
@@ -118,7 +120,7 @@ export default function OurCommunityHeader() {
                 }
             </Media>
 
-            <br /><br /><br /><br /><br /><br />
+           
         </div>
     )
 }

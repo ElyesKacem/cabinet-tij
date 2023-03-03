@@ -2,9 +2,12 @@ import React from 'react'
 import "./HoverImage.css"
 
 export default function HoverImage(props) {
-    const [isHover, setIsHover] = React.useState(false);
+  const [isHover, setIsHover] = React.useState(false);
+  const myStyle={
+    ...props.style
+  }
   return (
-    <div className='flexalignjustify' 
+    <div className='flexalignjustify' style={{myStyle}}
     >
         <div className={isHover?'HoverImage-shader HoverImage-moveLeft':'HoverImage-shader'}></div>
         <img onMouseLeave={() => {
