@@ -5,24 +5,14 @@ import EastIcon from '@mui/icons-material/East';
 
 export default function NavbarButton(props) {
   return (
-    <div>
-       
-       <div className="button">
-    <div className="btnTwo">
-      <p className="btnText2">
-        <div className='NavbarButton-container'>
-          <div className='NavbarButton-element'>
+<div className='button'>
+  <div className='btnArrow-container'>
+    <div className='btnArrow-element'><EastIcon  /></div>
+  </div>
+  <div className="btnText">
+    <b>{props.title}</b>
+  </div>
+</div>
 
-        <EastIcon />
-          </div>
-
-        </div>
-        </p>
-    </div>
-    <p className="btnText"><b>{props.title}</b></p>
- </div>
-
-       
-       </div>
   )
 }

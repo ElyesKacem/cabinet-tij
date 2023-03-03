@@ -79,19 +79,19 @@ export default function Navbar() {
             {matches.large && <div style={{ display: "flex" }} className={color ? 'nav nav-background' : 'nav'}>
               <div><img className={color ? 'logoWeb width99' : 'logoWeb'} src={color ? logoWhite : logo} /></div>
               <div className={color ? 'nav-element navbarAnimation' : "nav-element nav-element-down navbarAnimation"}>
-                <div style={{ marginRight: 30 }}>
+                <div style={{ marginRight: 20 }}>
                   <NavbarButton title="Home" href="" />
                 </div>
-                <div style={{ marginRight: 30 }}>
+                <div style={{ marginRight: 20 }}>
                   <NavbarButton title="Services" href="" />
                 </div>
-                <div style={{ marginRight: 30 }}>
+                <div style={{ marginRight: 20 }}>
                   <NavbarButton title="About" href="" />
                 </div>
-                <div style={{ marginRight: 30 }}>
+                <div style={{ marginRight: 20 }}>
                   <NavbarButton title="Contact" href="" />
                 </div>
-                <div style={{ marginRight: 40,marginLeft:10 }}>
+                <div style={{ marginRight: 40,marginLeft:20 }}>
                   <GetQuoteButton blue={color} title="Get Quote"></GetQuoteButton>
 
                 </div>

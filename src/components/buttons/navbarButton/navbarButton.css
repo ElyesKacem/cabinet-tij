@@ -1,36 +1,29 @@
 .button{
   display: flex;
   justify-content: center;
-  transform: translateY(5px);
+  /* transform: translateY(5px); */
   cursor: pointer;
+  gap: 3px;
 }
-
-.btnText2{
-  transform: translate(-10px,-2px);
-  /* background: linear-gradient(to right, black 50%, transparent 50%); */
-  color:linear-gradient(to right, black 50%, transparent 50%); 
+.btnArrow-container{
+      position: relative;
+    width: 25px;
+    height: 22px;
+    /* background-color: red; */
+    overflow: hidden;
 }
-
+.btnArrow-element{
+  position: absolute;
+  left:-25px;
+  transition: all 0.2s;
+  transform: translateY(-2px);
+}
+.btnText{
+transition: transform 0.2s;
+}
 .button:hover .btnText{
-  transform: scale(0.92);
-  transition: all .2s ease-out;
+  transform: scale(0.9);
 }
-.button:hover .btnText2{
-  background-position: left bottom;
-}
-
-.NavbarButton-container{
-  overflow: hidden;
-  /* transform: translateX(-10px); */
-  position: relative;
-}
-
-.NavbarButton-element{
-  transform: translateX(-30px);
-  transition: transform 0.2s;
-  
-}
-.button:hover .NavbarButton-element{
-  transform: translateX(0px);
-  
+.button:hover .btnArrow-element{
+  left: 0;
 }
