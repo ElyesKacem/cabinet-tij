@@ -338,7 +338,7 @@ input[type="checkbox"]{
   width: 100%;
   color: white;
   margin-top: 24px;
-  transition: all 1s;
+  transition: all 0.7s;
 }
 
 /* mobile */

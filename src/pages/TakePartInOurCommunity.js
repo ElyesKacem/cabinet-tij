@@ -7,10 +7,10 @@ import YouAreProficient from '../components/sections/YouAreProficient/YouAreProf
 export default function TakePartInOurCommunity() {
   return (
     <div>
-        <OurCommunityHeader />
+        {/* <OurCommunityHeader /> */}
         <UniqueOpportunity />
-        <YouAreProficient />
-        <WeAreHere />
+        {/* <YouAreProficient />
+        <WeAreHere /> */}
     </div>
   )
 }
