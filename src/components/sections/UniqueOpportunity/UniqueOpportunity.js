@@ -62,9 +62,11 @@ export default function UniqueOpportunity() {
 
                             <div style={{ transform: "scale(0.8)" }}>
                                 <div>
-                                    <div className='grey-square' />
+                                    
                                     <div className='UniqueOpportunity-blueTitle'>
-                                        A unique opportunity to develop
+                                      <span style={{position:"relative"}}><div style={{left:0}} className='grey-square' /><span style={{position:"relative"}}>A</span>
+                                        
+                                        </span> unique opportunity to develop
                                     </div>
                                     <div className='UniqueOpportunity-blueTitle'>
                                         activity serenely
