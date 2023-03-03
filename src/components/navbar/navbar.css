@@ -380,7 +380,7 @@ input[type="checkbox"]{
   position: relative;
   z-index: 10;
   transform: translateY(14px);
-  transition: all 1s;
+  transition: all 0.4s;
 }
 .width99{
   width: 100px;

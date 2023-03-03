@@ -15,7 +15,7 @@ export default function WeAreHere() {
        
             <div style={{display:"flex",gap:10}}>
             <WeAreHereButton title="Join Us" />
-            <WeAreHereButton title="Contact Us" style={{backgroundColor:'white',color:"#6E533D"}}/>
+            <WeAreHereButton title="Contact Us" arrowColor="#6E533D" style={{backgroundColor:'white',color:"#6E533D"}}/>
             </div>
             </div>
         </BackgroundImage>
