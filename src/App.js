@@ -20,7 +20,7 @@ function App() {
 
         </div>
         <div><img className='logofr' src={logoFrance}/></div>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/requestquote" element={<GetQuote />} />
