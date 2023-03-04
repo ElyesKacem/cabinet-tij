@@ -64,7 +64,7 @@ export function DateInputGetQuote(props) {
   return (
     <div onClick={() => {
       props.setShowCalendar(!props.showCalendar)
-    }} className='did-floating-input' style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}>
+    }} className={'did-floating-input '+props.className} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}>
       <img src={CalendarIcon} style={{ width: 25 }} alt="" /> <div style={{ fontWeight: "bold" }}>Tuesday, February 27, 2023</div>
     </div>
   )

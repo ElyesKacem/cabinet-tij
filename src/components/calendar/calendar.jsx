@@ -6,7 +6,8 @@ import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 
 export default function Calendar() {
-  const [selected, setSelected] = React.useState();
+  const today = new Date();
+  const [selected, setSelected] = React.useState(today);
 
   let footer = <p>Please pick a day.</p>;
   if (selected) {
@@ -15,11 +16,15 @@ export default function Calendar() {
   return (
     <div className='flexalignjustify'>
       <DayPicker
-      mode="single"
-      selected={selected}
-      onSelect={setSelected}
-      footer={footer}
-    />
+        mode="single"
+        selected={selected}
+        onSelect={setSelected}
+        footer={footer}
+        
+        // disabledDays={{ after: today }}
+        // selectedDays={new Date()}
+        defaultMonth={new Date()}
+      />
     </div>
   );
 }

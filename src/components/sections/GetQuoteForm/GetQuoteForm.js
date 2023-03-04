@@ -46,6 +46,7 @@ export default function GetQuoteForm() {
   const [menuSelected, setMenuSelected] = useState([true, false, false, false]);
   const [showCalendar, setShowCalendar] = useState(false);
   const [selectedDay, setSelectedDay] = useState(null);
+  const [allowedToOpen, setAllowedToOpen] = useState(true);
   const disabledDays = { before: new Date() };
 
   const wrapperRef = useRef(null);
@@ -99,7 +100,7 @@ export default function GetQuoteForm() {
                   <div className='getQuoteForm-margin' style={{width:"100%",overflowX:"scroll"}}>
                     <div className='getQuoteForm-margin' style={{display:'flex',gap:30}}>
                       {menuData.map((element, index) =>
-                        <div className='getQuoteForm-mobile-menu'><RequestQuoteButton style={{width:300}} setMenuSelected={setMenuSelected} icon={menuSelected[index] ? element.whiteIcon : element.blueIcon} blue={menuSelected[index]} id={index} title={element.title} /></div>
+                        <div key={index} className='getQuoteForm-mobile-menu'><RequestQuoteButton style={{width:300}} setMenuSelected={setMenuSelected} icon={menuSelected[index] ? element.whiteIcon : element.blueIcon} blue={menuSelected[index]} id={index} title={element.title} /></div>
                       )}
                     </div>
                   </div>
@@ -168,7 +169,7 @@ export default function GetQuoteForm() {
                     <div className="getQuoteForm-hidden getQuoteForm-animation">
                       <div className={menuSelected[1] || menuSelected[3] ? 'translateYdown getQuoteForm-animation' : menuSelected[2] ? "translateYup70 getQuoteForm-animation" : "getQuoteForm-animation"}>
                         <div style={{ transform: "translateY(-67px)" }}>
-                          <DateInputGetQuote showCalendar={showCalendar} setShowCalendar={setShowCalendar} title="Date " />
+                          <DateInputGetQuote className={showCalendar?"pointerNone":""} allowedToOpen={allowedToOpen} setAllowedToOpen={setAllowedToOpen} showCalendar={showCalendar} setShowCalendar={setShowCalendar} title="Date " />
                           <FormRequestQuoteInput required title="Languages " style={{ marginTop: 86 }} />
                         </div>
                       </div>
