@@ -24,6 +24,7 @@ export default function GetQuoteForm() {
   const [singleFile, setSingleFile] = useState(false);
   const [singleFileName, setSingleFileName] = useState(false);
   const [menuSelected, setMenuSelected] = useState([true, false, false, false]);
+  const [showCalendar, setShowCalendar] = useState(false)
 
   const menuData = [
     {
@@ -142,19 +143,20 @@ export default function GetQuoteForm() {
                     <div className="getQuoteForm-hidden getQuoteForm-animation">
                       <div className={menuSelected[1] || menuSelected[3] ? 'translateYdown getQuoteForm-animation' : menuSelected[2] ? "translateYup70 getQuoteForm-animation" : "getQuoteForm-animation"}>
                         <div style={{ transform: "translateY(-67px)" }}>
-                          <DateInputGetQuote title="Date " />
+                          <DateInputGetQuote showCalendar={showCalendar} setShowCalendar={setShowCalendar} title="Date " />
                           <FormRequestQuoteInput required title="Languages " style={{ marginTop: 86 }} />
                         </div>
                       </div>
                     </div>
                   </Grid>
-                  <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} >
-                    {/* <div style={{width:"100%"}}>
-                      <div className='calendar-container opacity-transition'>
-                      <Calendar></Calendar>
+                  <Grid item xs={12} style={{position:"relative"}} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} >
+                    
+                    <div style={{position:"relative"}}>
+                      <div className={showCalendar?'calendar-container opacity-transition':"calendar-container opacity-transition hideCalendar"}>
+                      <Calendar />
                       </div>
                       
-                    </div> */}
+                    </div>
                     <FormRequestQuoteInputMultiline multiline title="Notes " required></FormRequestQuoteInputMultiline>
                   </Grid>
                   <Grid item xs={12} className={menuSelected[0] ? "getQuoteForm-animation getQuoteForm-input-label translateYup52" : "getQuoteForm-animation getQuoteForm-input-label"}  >
@@ -212,6 +214,7 @@ export default function GetQuoteForm() {
                         <div className='getQuoteForm-input-multipleFile-button'><b style={{ fontFamily: "sans-serif" }}>+ &nbsp;&nbsp;  </b> Add more files</div>
                       </label>
                     </div>
+                   
 
                   </Grid>
 

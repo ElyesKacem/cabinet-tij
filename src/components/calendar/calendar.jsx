@@ -13,11 +13,13 @@ export default function Calendar() {
     footer = <p>You picked {format(selected, 'PP')}.</p>;
   }
   return (
-    <DayPicker
+    <div className='flexalignjustify'>
+      <DayPicker
       mode="single"
       selected={selected}
       onSelect={setSelected}
       footer={footer}
     />
+    </div>
   );
 }
