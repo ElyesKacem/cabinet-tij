@@ -14,11 +14,11 @@ export default function Home() {
       
 
       {/* <VideoSection />
-      <Services /> */}
+      <Services />
       <WhyChoiceUs />
-      {/* <DoYouNeedMoreAssistance />
+      <DoYouNeedMoreAssistance /> */}
       <OurServices/>
-      <GetInTouchWithUs />
+      {/* <GetInTouchWithUs />
       <ProJoinOurTeam /> */}
       
     </div>
