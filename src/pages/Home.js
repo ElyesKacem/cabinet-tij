@@ -13,12 +13,12 @@ export default function Home() {
     <div>
       
 
-      {/* <VideoSection />
+      <VideoSection />
       <Services />
       <WhyChoiceUs />
       <DoYouNeedMoreAssistance />
       <OurServices/>
-      <GetInTouchWithUs /> */}
+      <GetInTouchWithUs />
       <ProJoinOurTeam />
       
     </div>
