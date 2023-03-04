@@ -16,10 +16,10 @@ export default function Home() {
       {/* <VideoSection />
       <Services />
       <WhyChoiceUs />
-      <DoYouNeedMoreAssistance /> */}
+      <DoYouNeedMoreAssistance />
       <OurServices/>
-      {/* <GetInTouchWithUs />
-      <ProJoinOurTeam /> */}
+      <GetInTouchWithUs /> */}
+      <ProJoinOurTeam />
       
     </div>
   )

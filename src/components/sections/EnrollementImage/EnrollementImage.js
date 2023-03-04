@@ -29,27 +29,27 @@ export default function EnrollementImage() {
           {matches => (
             <React.Fragment>
               {matches.small && <div>
-                <div className='EnrollementImage-title' style={{fontSize:45}}>Enrollement</div>
-        <div className='EnrollementImage-paragraph'>We are delighted that you want to become a member of our group.</div>
-        <div className='EnrollementImage-paragraph'>To submit your membership application, please fill out the form belowand attach any required documents.</div>
-        <br /><br /><br /><br />
-        <img src={DownArrow} className="EnrollementImage-Arrow" />
+                <div className='EnrollementImage-title' style={{ fontSize: 45 }}>Enrollement</div>
+                <div className='EnrollementImage-paragraph'>We are delighted that you want to become a member of our group.</div>
+                <div className='EnrollementImage-paragraph'>To submit your membership application, please fill out the form belowand attach any required documents.</div>
+                <br /><br /><br /><br />
+                <img src={DownArrow} className="EnrollementImage-Arrow" />
 
               </div>}
               {matches.medium && <div>
-                <div className='EnrollementImage-title' style={{fontSize:60}}>Enrollement</div>
-        <div className='EnrollementImage-paragraph'>We are delighted that you want to become a member of our group.</div>
-        <div className='EnrollementImage-paragraph'>To submit your membership application, please fill out the form belowand attach any required documents.</div>
-        <br /><br /><br /><br />
-        <img src={DownArrow} className="EnrollementImage-Arrow" />
+                <div className='EnrollementImage-title' style={{ fontSize: 60 }}>Enrollement</div>
+                <div className='EnrollementImage-paragraph'>We are delighted that you want to become a member of our group.</div>
+                <div className='EnrollementImage-paragraph'>To submit your membership application, please fill out the form belowand attach any required documents.</div>
+                <br /><br /><br /><br />
+                <img src={DownArrow} className="EnrollementImage-Arrow" />
 
               </div>}
               {matches.large && <div>
                 <div className='EnrollementImage-title'>Enrollement</div>
-        <div className='EnrollementImage-paragraph'>We are delighted that you want to become a member of our group.</div>
-        <div className='EnrollementImage-paragraph'>To submit your membership application, please fill out the form belowand attach any required documents.</div>
-        <br /><br /><br /><br />
-        <img src={DownArrow} className="EnrollementImage-Arrow" />
+                <div className='EnrollementImage-paragraph'>We are delighted that you want to become a member of our group.</div>
+                <div className='EnrollementImage-paragraph'>To submit your membership application, please fill out the form belowand attach any required documents.</div>
+                <br /><br /><br /><br />
+                <img src={DownArrow} className="EnrollementImage-Arrow" />
 
               </div>
               }
