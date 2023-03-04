@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import "./GetQuoteForm.css"
 import RequestQuoteButton from '../../buttons/RequestQuoteButton/RequestQuoteButton';
 import Grid from '@mui/material/Grid';
@@ -19,12 +19,37 @@ import Calendar from '../../calendar/calendar';
 
 
 
+
 export default function GetQuoteForm() {
+  
+  function useOutsideAlerter(ref) {
+    React.useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setShowCalendar(false);
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
 
   const [singleFile, setSingleFile] = useState(false);
   const [singleFileName, setSingleFileName] = useState(false);
   const [menuSelected, setMenuSelected] = useState([true, false, false, false]);
-  const [showCalendar, setShowCalendar] = useState(false)
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [selectedDay, setSelectedDay] = useState(null);
+  const disabledDays = { before: new Date() };
+
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef);
 
   const menuData = [
     {
@@ -151,7 +176,7 @@ export default function GetQuoteForm() {
                   </Grid>
                   <Grid item xs={12} style={{position:"relative"}} className={menuSelected[0] ? "getQuoteForm-animation translateYup" : "getQuoteForm-animation"} >
                     
-                    <div style={{position:"relative"}}>
+                    <div ref={wrapperRef} style={{position:"relative"}}>
                       <div className={showCalendar?'calendar-container opacity-transition':"calendar-container opacity-transition hideCalendar"}>
                       <Calendar />
                       </div>
