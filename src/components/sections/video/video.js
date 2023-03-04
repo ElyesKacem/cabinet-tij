@@ -23,7 +23,7 @@ export default function VideoSection() {
         <React.Fragment>
           {
             matches.small &&
-            <div className='flexalignjustify' style={{ flexDirection: "column" }}>
+            <div className='flexalignjustify' style={{ flexDirection: "column" ,fontFamily:"Gilroy-Regular"}}>
               <br /><br /><br /><br /><br /><br /><br /><br />
 
               <b>
@@ -110,7 +110,7 @@ export default function VideoSection() {
             <video src={video} autoPlay loop muted></video>
             <div className="videoContent">
               <div>
-                <b>
+                <b style={{fontWeight:"normal"}} className="regular-font Gilroy-Regular">
 
                   We Provide Outsourced
                 </b>
@@ -122,7 +122,7 @@ export default function VideoSection() {
               <br />
 
               <div>
-                <b>
+                <b style={{fontWeight:"normal"}} className="regular-font Gilroy-Regular">
 
                   For small and mid sized businesses
                 </b>

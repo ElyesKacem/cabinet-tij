@@ -55,7 +55,7 @@ export default function Services() {
                               <img src={Pause} style={{ width: 80 }} />
                               <img src={Play} style={{ width: 80 }} className="servicesPauseButton" />
                             </div>
-                            <div>
+                            <div  className="Gilroy-Regular">
                               Our services
                             </div>
                           </div>

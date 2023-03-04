@@ -15,31 +15,31 @@ export default function OurServices() {
       id: 0,
       img: Image1,
       title: "Interpreting",
-      paragraph: "Legal translation and interpreting"
+      paragraph: "Learn More"
     },
     {
       id: 1,
       img: Image2,
       title: "Business",
-      paragraph: "Services for small and large business"
+      paragraph: "Learn More"
     },
     {
       id: 2,
       img: Image3,
       title: "Certified Translation",
-      paragraph: "Legal translation and interpreting"
+      paragraph: "Learn More"
     },
     {
       id: 3,
       img: Image3,
       title: "Sworn Translation",
-      paragraph: "Legal translation and interpreting"
+      paragraph: "Learn More"
     },
     {
       id: 4,
       img: Image1,
       title: "Personal Services",
-      paragraph: "Legal translation and interpreting"
+      paragraph: "Learn More"
     }
   ]
   const GLOBAL_MEDIA_QUERIES = {

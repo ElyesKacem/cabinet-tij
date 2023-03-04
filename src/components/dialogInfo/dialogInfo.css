@@ -19,10 +19,12 @@
     font-family:"commuterssans-bold";
 }
 .dialogInfoClass-paragraph{
-  font-family: "futuraBold";
+  font-family: "Gilroy-Medium";
   font-size: 25px;
-  padding: 15px;
-  width: 250px;
+  padding: 15px 15px 15px 3px;
+  width: 320px;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 .dialogInfoClass-paragraph-container{

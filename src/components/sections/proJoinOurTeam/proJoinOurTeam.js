@@ -26,16 +26,16 @@ export default function ProJoinOurTeam() {
             <React.Fragment>
               {matches.large &&
                 <>
-                  <div className='proJoinOurTeam-content-header'>Professsional ? <br /> Join Our team</div>
+                  <div className='proJoinOurTeam-content-header'>Professional ? <br /> Join Our team</div>
                   <div className='proJoinOurTeam-content-paragraph'>join our community and be a part of something special .</div>
                   <div className='proJoinOurTeam-content-paragraph'>Together, we can make a difference and create meaningful change.</div>
-                  <LeftRightButton title="Career" style={{ transform: 'translateY(30px)' }} />
+                  <LeftRightButton title="Career" style={{ transform: 'translateY(35px)' }} />
                 </>
               }
               {matches.medium &&
               <>
                 <div style={{transform:"scale(0.7)"}}>
-                  <div className='proJoinOurTeam-content-header' style={{whiteSpace: "nowrap"}}>Professsional ? <br /> Join Our team</div><br />
+                  <div className='proJoinOurTeam-content-header' style={{whiteSpace: "nowrap"}}>Professional ? <br /> Join Our team</div><br />
                   <div className='proJoinOurTeam-content-paragraph'>join our community and be a part of something special .</div>
                   <div className='proJoinOurTeam-content-paragraph'>Together, we can make a difference and create meaningful change.</div>
                 </div>

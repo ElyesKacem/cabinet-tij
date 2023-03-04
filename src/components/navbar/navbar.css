@@ -9,6 +9,7 @@ position: fixed;
  transition: .3s ease-in;
  height: 62px;
  background-image: transparent;
+ font-family: "Gilroy-Regular";
 }
 
 .nav::before{

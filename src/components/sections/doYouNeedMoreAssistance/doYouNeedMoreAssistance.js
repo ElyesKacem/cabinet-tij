@@ -37,7 +37,7 @@ export default function DoYouNeedMoreAssistance(props) {
                 <div>
                   <p className='firstClass'>Do You Need More Assistance?</p>
                   <p style={{
-                    fontWeight: "bold",
+                    
                     fontSize: " 20px", color: 'grey'
                   }}>As per customer request, we can provide a suitable quote based on the nature of the document that needs to be translated. We offer the translation of different types of documents including technical and official ones. Our main goal is to provide our clients with all the help and assistance that they need, so feel free to contact us in order to receive a suitable quote.</p>
                 </div>
@@ -61,11 +61,8 @@ export default function DoYouNeedMoreAssistance(props) {
 
 
                     <div>
-                      <p className='firstClass'>Do You Need More Assistance?</p>
-                      <p style={{
-                        fontWeight: "bold",
-                        fontSize: " 20px", color: 'grey'
-                      }}>As per customer request, we can provide a suitable quote based on the nature of the document that needs to be translated. We offer the translation of different types of documents including technical and official ones. Our main goal is to provide our clients with all the help and assistance that they need, so feel free to contact us in order to receive a suitable quote.</p>
+                      <p className='firstClass '>Do You Need More Assistance?</p>
+                      <p  style={{fontSize: " 21.5px", color: '#4a4a4a',lineHeight: "1.5" }}>As per customer request, we can provide a suitable quote based on the nature of the document that needs to be translated. We offer the translation of different types of documents including technical and official ones. Our main goal is to provide our clients with all the help and assistance that they need, so feel free to contact us in order to receive a suitable quote.</p>
                     </div>
 
                   </div>

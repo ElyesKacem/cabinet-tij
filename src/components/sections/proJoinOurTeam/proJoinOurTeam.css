@@ -28,13 +28,16 @@
 
 .proJoinOurTeam-content-header{
     font-weight:bold;
-    font-size: 60px;
+    font-size: 62px;
     font-family:"commuterssans-bold";
     
     text-align: center;
+    margin-bottom: 12px;
 }
 
 .proJoinOurTeam-content-paragraph{
-    font-size: 25px;
+    
     text-align: center;
+    font-family: "Gilroy-Regular";
+    line-height: 1.5;
 }

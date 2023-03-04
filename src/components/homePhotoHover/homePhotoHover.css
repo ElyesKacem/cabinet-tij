@@ -64,11 +64,11 @@
     visibility: hidden;
 }
 .homePhotoHover-paragraph{
-    transform: translate(35px,215px);
+    transform: translate(34px,215px);
     color: white;
     font-family: "commuterssans-thin";
     -webkit-text-stroke: 0.1px white;
-    font-size: 11px;
+    font-size: 13px;
     width: 139px;
     visibility: hidden;
 }

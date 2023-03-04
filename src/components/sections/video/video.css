@@ -29,3 +29,11 @@
           font-family:"commuterssans-bold";
           line-height: 100%;
   }
+
+  .testes{
+    color:"red"
+  }
+
+  .regular-font{
+    -webkit-text-stroke: 0.4px white;
+  }

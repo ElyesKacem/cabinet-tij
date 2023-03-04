@@ -51,6 +51,10 @@
   font-family: 'commuterssans-bold';
   src: url('./assets/fonts/Gilroy-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('./assets/fonts/Gilroy-Regular.ttf') format('truetype');
+}
 /* @font-face {
   font-family: 'commuterssans-bold';
   src: url('./assets/fonts/Fontspring-DEMO-commuterssans-bold.otf') format('truetype');
@@ -62,4 +66,16 @@
 @font-face {
   font-family: 'futuraBold';
   src: url('./assets/fonts/Futura\ Bold\ font.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url('./assets/fonts/Gilroy-Medium.ttf') format('truetype');
+}
+
+.Gilroy-Regular{
+  font-family: "Gilroy-Regular";
+}
+
+.regular-font-grey{
+  -webkit-text-stroke: 0.4px rgb(85, 85, 85);
 }
