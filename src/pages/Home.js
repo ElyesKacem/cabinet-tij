@@ -13,13 +13,13 @@ export default function Home() {
     <div>
       
 
-      <VideoSection />
-      <Services />
+      {/* <VideoSection />
+      <Services /> */}
       <WhyChoiceUs />
-      <DoYouNeedMoreAssistance />
+      {/* <DoYouNeedMoreAssistance />
       <OurServices/>
       <GetInTouchWithUs />
-      <ProJoinOurTeam />
+      <ProJoinOurTeam /> */}
       
     </div>
   )

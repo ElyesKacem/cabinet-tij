@@ -6,10 +6,7 @@ export default function DialogInfo({ data }) {
 
     return (
         <div className='dialogInfoClass dialogInfoClass-selected' >
-            <Grid
-                container
-                 
-                >
+            <Grid container>
                 <Grid item xs={6} style={{display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column"}}  >
                     <img style={{ height: 270, margin: 30 }} src={data.image} alt=""  />
                 </Grid>

@@ -41,12 +41,20 @@
 }
 @font-face {
   font-family: 'commuterssans-thin';
-  src: url('./assets/fonts/Fontspring-DEMO-commuterssans-thin.otf') format('truetype');
+  src: url('./assets/fonts/Gilroy-Medium.ttf') format('truetype');
 }
+/* @font-face {
+  font-family: 'commuterssans-thin';
+  src: url('./assets/fonts/Fontspring-DEMO-commuterssans-thin.otf') format('truetype');
+} */
 @font-face {
   font-family: 'commuterssans-bold';
-  src: url('./assets/fonts/Fontspring-DEMO-commuterssans-bold.otf') format('truetype');
+  src: url('./assets/fonts/Gilroy-Bold.ttf') format('truetype');
 }
+/* @font-face {
+  font-family: 'commuterssans-bold';
+  src: url('./assets/fonts/Fontspring-DEMO-commuterssans-bold.otf') format('truetype');
+} */
 @font-face {
   font-family: 'segoe';
   src: url('./assets/fonts/SegoeUI.ttf') format('truetype');

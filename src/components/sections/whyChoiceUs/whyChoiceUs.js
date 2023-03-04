@@ -8,13 +8,21 @@ import Image3 from "../../../assets/images/Quality.svg"
 import Image4 from "../../../assets/images/Agility.svg"
 import Image5 from "../../../assets/images/Efficiency.svg"
 import DialogInfo from '../../dialogInfo/dialogInfo';
-import ExperienceImage from "../../../assets/images/ExperienceImage.svg"
-import QualityImage from "../../../assets/images/QualityImage.svg"
-import AgilityImage from "../../../assets/images/AgilityImage.svg"
-import EfficiencyImage from "../../../assets/images/EfficiencyImage.svg"
-import ExpertiseImage from "../../../assets/images/ExpertiseImage.svg"
+import ExperienceImage from "../../../assets/images/home/Expertise.jpg";
+import QualityImage from "../../../assets/images/home/Experience.jpg";
+import AgilityImage from "../../../assets/images/home/Quality.jpg";
+import EfficiencyImage from "../../../assets/images/home/Agility.jpg";
+import ExpertiseImage from "../../../assets/images/home/Efficiacity.jpg";
+import Media from 'react-media';
 
 export default function WhyChoiceUs() {
+
+  const GLOBAL_MEDIA_QUERIES = {
+    small: "(max-width: 900px)",
+    // medium: "(min-width: 600px) and (max-width: 1199px)",
+    large: "(min-width: 900px)"
+  };
+
   let data = [
     {
       image: ExpertiseImage,
@@ -44,46 +52,71 @@ export default function WhyChoiceUs() {
   ]
   const [selectedDataId, setSelectedDataId] = useState(0);
   const [dataToSet, setDataToSet] = useState(data[0]);
-  const [isShadow, setIsShadow] = useState([true,false,false,false,false])
+  const [isShadow, setIsShadow] = useState([true, false, false, false, false])
 
   useEffect(() => {
     setDataToSet(data[selectedDataId]);
   }, [selectedDataId]);
-  
+
 
   return (
     <div className='white-background'>
-      <br />
-      <br />
-      <br />
-      <br />
+      <br /><br /><br /><br />
 
-      <>
-        <div className='WhyChoiceUs'>
 
-          <div className='greyRectangle'>WHY CHOOSE US</div>
-          <p className='text-center firstClass'>Here Are Few Reasons <br /> To Trust Us</p>
+              <>
+                <div className='WhyChoiceUs'>
 
-          <div>
+                  <div className='greyRectangle'>WHY CHOOSE US</div>
+                  <p className='text-center firstClass'>Here Are Few Reasons <br /> To Trust Us</p>
+
+                  <div style={{ transform: "translateX(-10px)" }}>
+
+
+      <Media queries={GLOBAL_MEDIA_QUERIES}>
+        {matches => (
+          <React.Fragment>
+            {matches.large && <>
             
-            <div style={{ display: 'flex', justifyContent: "space-around",transform:'translateX(-6px)' }}>
-            
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[0]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={0} img={Image1} title="Expertise" />
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[1]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={1} img={Image2} title="Experience" />
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[2]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={2} img={Image3} title="Quality" />
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[3]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={3} img={Image4} title="Agility" />
-              <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[4]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={4} img={Image5} title="Efficiency" />
+              <div style={{ display: 'flex', justifyContent: "space-around", transform: 'translateX(-7px)', gap: 28 }}>
+
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[0]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={0} img={Image1} title="Expertise" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[1]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={1} img={Image2} title="Experience" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[2]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={2} img={Image3} title="Quality" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[3]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={3} img={Image4} title="Agility" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[4]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={4} img={Image5} title="Efficiency" />
+              </div>
+
+              <div><DialogInfo data={dataToSet}></DialogInfo></div>
+            </>
+
+            }
+            {matches.small && <>
+            <div style={{transform:" scale(0.8) translateY(-40px)"}}>
+
+              <div style={{ display: 'flex', justifyContent: "space-around", transform: 'translateX(-7px)', gap: 28 }}>
+
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[0]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={0} img={Image1} title="Expertise" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[1]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={1} img={Image2} title="Experience" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[2]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={2} img={Image3} title="Quality" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[3]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={3} img={Image4} title="Agility" />
+                <DialogSelection setIsShadow={setIsShadow} haveShader={isShadow[4]} setSelectedDataId={setSelectedDataId} selectedDataId={selectedDataId} id={4} img={Image5} title="Efficiency" />
+              </div>
+
+              <div><DialogInfo data={dataToSet}></DialogInfo></div>
             </div>
-            
-            <div><DialogInfo onClick={()=>{
-              console.log("testeeeeeeeeeee");
-            }} data={dataToSet}></DialogInfo></div>
-          </div>
-        </div>
-      </>
-      <br />
-      <br />
-      <br />
+            </>
+
+            }
+          </React.Fragment>
+        )
+        }
+      </Media>
+                  </div>
+                </div>
+              </>
+
+      <br /><br /><br />
     </div>
   )
 }

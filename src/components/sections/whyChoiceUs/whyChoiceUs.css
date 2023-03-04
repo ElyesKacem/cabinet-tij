@@ -22,3 +22,9 @@
 .text-center{
     text-align: center;
 }
+
+.WhyChoiceUs-5div{
+    display: flex;
+    gap: 30px;
+    overflow: scroll;
+}
