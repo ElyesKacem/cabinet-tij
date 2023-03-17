@@ -19,8 +19,9 @@ import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 
 import Calendar from "../../calendar/calendar";
-import { FormValidator } from "../../buttons/FormRequestQuoteInput/validation";
+import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
+import { RQ_service } from "../../../services/services";
 
 const menuData = [
   {
@@ -108,11 +109,17 @@ export default function GetQuoteForm() {
   const Handle_submit = () => {
     let result = FormValidator(form);
     if (result) {
-      console.log(result);
-      toast.success("data sent successfully");
-      setForm({ ...initial_form });
-    } else {
-      console.log("fail");
+      RQ_service(
+        result,
+        () => {
+          toast.success("data sent successfully");
+          setForm({ ...initial_form });
+          // use the navigation
+        },
+        () => {
+          toast.error("there was an error while sending data");
+        }
+      );
     }
   };
 
