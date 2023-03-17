@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./GetQuoteForm.css";
 import RequestQuoteButton from "../../buttons/RequestQuoteButton/RequestQuoteButton";
 import Grid from "@mui/material/Grid";
@@ -19,46 +19,6 @@ import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 
 import Calendar from "../../calendar/calendar";
-import { FormValidator } from "../../buttons/FormRequestQuoteInput/validation";
-import { toast } from "react-hot-toast";
-
-const menuData = [
-  {
-    title: "Translation",
-    whiteIcon: whiteTranslation,
-    blueIcon: blueTranslation,
-  },
-  {
-    title: "Interpreting",
-    whiteIcon: whiteInterpreting,
-    blueIcon: blueInterpreting,
-  },
-  {
-    title: "Transcription",
-    whiteIcon: whiteTranscription,
-    blueIcon: blueTranscription,
-  },
-  {
-    title: "VIP Services",
-    whiteIcon: whiteVIP,
-    blueIcon: blueVIP,
-  },
-];
-
-const initial_form = {
-  full_name: "",
-  company_name: "",
-  email: "",
-  phone: "",
-  location: "",
-  languages: "",
-  source_lang: "",
-  target_lang: "",
-  notes: "",
-  date: new Date(),
-  files: [],
-  FORM_TYPE: "translation",
-};
 
 export default function GetQuoteForm() {
   function useOutsideAlerter(ref) {
@@ -84,38 +44,52 @@ export default function GetQuoteForm() {
   const [singleFileName, setSingleFileName] = useState(false);
   const [menuSelected, setMenuSelected] = useState([true, false, false, false]);
   const [showCalendar, setShowCalendar] = useState(false);
+  const [selectedDay, setSelectedDay] = useState(null);
   const [allowedToOpen, setAllowedToOpen] = useState(true);
   const disabledDays = { before: new Date() };
 
+  const [form, setForm] = useState({
+    first_name: "",
+    company_name: "",
+    email: "",
+    phone: "",
+    source_lang: "",
+    target_lang: "",
+    notes: "",
+    files: [],
+    FORM_TYPE: "",
+  });
+
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef);
-
-  const [form, setForm] = useState({ ...initial_form });
 
   const handle_change = (event) => {
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
   };
 
-  useEffect(() => {
-    let selected = menuData.filter((item, index) => {
-      return menuSelected[index];
-    })[0].title;
-    console.log(selected);
-    setForm({ ...form, FORM_TYPE: selected });
-  }, [menuSelected]);
-
-  const Handle_submit = () => {
-    let result = FormValidator(form);
-    if (result) {
-      console.log(result);
-      toast.success("data sent successfully");
-      setForm({ ...initial_form });
-    } else {
-      console.log("fail");
-    }
-  };
-
+  const menuData = [
+    {
+      title: "Translation",
+      whiteIcon: whiteTranslation,
+      blueIcon: blueTranslation,
+    },
+    {
+      title: "Interpreting",
+      whiteIcon: whiteInterpreting,
+      blueIcon: blueInterpreting,
+    },
+    {
+      title: "Transcription",
+      whiteIcon: whiteTranscription,
+      blueIcon: blueTranscription,
+    },
+    {
+      title: "VIP Services",
+      whiteIcon: whiteVIP,
+      blueIcon: blueVIP,
+    },
+  ];
   const GLOBAL_MEDIA_QUERIES = {
     small: "(max-width: 600px)",
     medium: "(min-width: 600px) and (max-width: 1150px)",
@@ -215,39 +189,16 @@ export default function GetQuoteForm() {
               <Grid item md={6} xs={12} style={{ marginBottom: 10 }}>
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
-                    <FormRequestQuoteInput
-                      onChange={handle_change}
-                      name="full_name"
-                      value={form.full_name}
-                      required
-                      title="Full Name "
-                    />
+                    <FormRequestQuoteInput required title="Full Name " />
                   </Grid>
                   <Grid item xs={12}>
-                    <FormRequestQuoteInput
-                      onChange={handle_change}
-                      name="company_name"
-                      value={form.company_name}
-                      title="Company name "
-                    />
+                    <FormRequestQuoteInput title="Company name " />
                   </Grid>
                   <Grid item xs={12}>
-                    <FormRequestQuoteInput
-                      onChange={handle_change}
-                      name="email"
-                      value={form.email}
-                      required
-                      title="E mail "
-                    />
+                    <FormRequestQuoteInput required title="E mail " />
                   </Grid>
                   <Grid item xs={12}>
-                    <FormRequestQuoteInput
-                      onChange={handle_change}
-                      name="phone"
-                      value={form.phone}
-                      required
-                      title="Phone Number "
-                    />
+                    <FormRequestQuoteInput required title="Phone Number " />
                   </Grid>
                   <Grid item xs={12}>
                     <div className="getQuoteForm-hidden getQuoteForm-animation">
@@ -261,29 +212,17 @@ export default function GetQuoteForm() {
                           style={{ position: "relative", zIndex: "3" }}
                           required
                           title="Location "
-                          onChange={handle_change}
-                          name="location"
-                          value={form.location}
                         />
                         <FormRequestQuoteInput
                           required
                           title="Source Language "
-                          onChange={handle_change}
-                          name="source_lang"
-                          value={form.source_lang}
                           style={{ marginTop: 1 }}
                         />
                       </div>
                     </div>
                   </Grid>
                   <Grid item xs={12}>
-                    <FormRequestQuoteInput
-                      onChange={handle_change}
-                      name="target_lang"
-                      value={form.target_lang}
-                      required
-                      title="Target Language "
-                    />
+                    <FormRequestQuoteInput required title="Target Language " />
                   </Grid>
                 </Grid>
               </Grid>
@@ -313,9 +252,6 @@ export default function GetQuoteForm() {
                             required
                             title="Languages "
                             style={{ marginTop: 86 }}
-                            onChange={handle_change}
-                            name="languages"
-                            value={form.languages}
                           />
                         </div>
                       </div>
@@ -339,17 +275,14 @@ export default function GetQuoteForm() {
                             : "calendar-container opacity-transition hideCalendar"
                         }
                       >
-                        <Calendar name="date" onChange={handle_change} />
+                        <Calendar />
                       </div>
                     </div>
                     <FormRequestQuoteInputMultiline
                       multiline
                       title="Notes "
                       required
-                      onChange={handle_change}
-                      name="notes"
-                      value={form.notes}
-                    />
+                    ></FormRequestQuoteInputMultiline>
                   </Grid>
                   <Grid
                     item
@@ -457,12 +390,7 @@ export default function GetQuoteForm() {
                 <br />
 
                 <div className="flexalignjustify">
-                  <div
-                    onClick={Handle_submit}
-                    className="getQuoteForm-submit-button"
-                  >
-                    Submit
-                  </div>
+                  <div className="getQuoteForm-submit-button">Submit</div>
                 </div>
               </Grid>
             </Grid>
