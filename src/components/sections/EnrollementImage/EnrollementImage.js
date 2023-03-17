@@ -1,7 +1,7 @@
 import React from 'react'
 import Arrow from "../../../assets/images/DownArrow.png"
 import "./EnrollementImage.css"
-import Background from "../../../assets/images/EnrollementImage.png"
+import Background from "../../../assets/images/EnrollementImage.jpg"
 import BackgroundImage from '../../backgroundImage/backgroundImage'
 import DownArrow from "../../../assets/images/DownArrow.png"
 import VerticalBar from '../../verticalBar/verticalBar'

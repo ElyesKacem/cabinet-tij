@@ -93,7 +93,7 @@ export default function VideoSection() {
               <br />
               <div style={{ display: "flex" }}>
                 <div>
-                  <LeftRightButton title="Learn More" />
+                  <LeftRightButton isBlue title="Learn More" />
                 </div>
                 <div style={{ marginLeft: 18 }}>
                   <LeftRightButton  title="Get in Touch" />
@@ -130,7 +130,7 @@ export default function VideoSection() {
               <br />
               <div style={{ display: "flex" }}>
                 <div>
-                  <LeftRightButton title="Learn More" />
+                  <LeftRightButton isBlue title="Learn More" />
                 </div>
                 <div style={{ marginLeft: 18 }}>
                   <LeftRightButton title="Get in Touch" />

@@ -6,12 +6,14 @@ export default function LeftRightButton(props) {
   
   const myStyle={
     ...props.style,
-    background:(props.title=="Learn More" || props.isBlue) && "transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box",
-    border:props.title=="Learn More" && "none",
-    color:"white"
+    background:( props.isBlue) && "transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box",
+    backgroundColor:(props.isWhite)&&"white",
+    // color:props.isWhite?"#0B2AD6":"white",
+    border:(props.isBlue || props.isWhite)&&"none",
+    // paddingTop:(props.isWhite)&&14
   }
   return (
-    <div style={myStyle} className='leftRightButton'>
+    <div style={myStyle} className={props.isWhite?'leftRightButton leftRightButton-white':'leftRightButton'}>
       <div className='LeftRightButton-container'>
 
         <div className='buttonText'>

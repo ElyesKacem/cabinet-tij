@@ -48,7 +48,9 @@ export default function YouAreProficient() {
                                         </div>
                                         <br />
                                         <div className='YouAreProficient-blueButton'>
+                                            <div  className='YouAreProficient-blueButton-title'>
                                             Become a member
+                                            </div>
                                         </div>
                                     </div>
 

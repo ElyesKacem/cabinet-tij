@@ -3,6 +3,7 @@ import "./getInTouchWithUs.css"
 import Grid from '@mui/material/Grid';
 import EastIcon from '@mui/icons-material/East';
 import Media from 'react-media';
+import LeftRightButton from '../../buttons/leftRightButton/leftRightButton';
 export default function GetInTouchWithUs() {
     const GLOBAL_MEDIA_QUERIES = {
         large: "(min-width: 700px)",
@@ -38,7 +39,9 @@ export default function GetInTouchWithUs() {
                             <br />
                             <br />
 
-                            <div className='getInTouchWithUsFrom-button'>
+                            <LeftRightButton isWhite title="Submit" />
+
+                            {/* <div className='getInTouchWithUsFrom-button'>
                                 <div style={{transform:"translate(-0.5px,3.5px)",display:"flex",cursor:"pointer"}}>
 
                                     <div>
@@ -48,7 +51,7 @@ export default function GetInTouchWithUs() {
                                         <EastIcon />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <br /><br /><br /><br />
                     </div>
@@ -79,14 +82,16 @@ export default function GetInTouchWithUs() {
                             <br />
                             <br />
 
-                            <div className='getInTouchWithUsFrom-button'>
+                            <LeftRightButton isWhite title="Submit" />
+
+                            {/* <div className='getInTouchWithUsFrom-button'>
                                 <div>
                                     Submit
                                 </div>
                                 <div style={{ marginLeft: 20 }}>
                                     <EastIcon />
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <br /><br /><br /><br />
                     </div>
