@@ -76,7 +76,7 @@ export default function EnrollementForm() {
                   </div>
                   <label >
           <input className='displaynone' type="file" multiple />
-          <div className='EnrollementForm-multiple-files'> <b style={{ fontFamily: "sans-serif" }}>+</b> Add More Files </div>
+          <div className='EnrollementForm-multiple-files' style={{transform:"translateX(10px)"}}> <b style={{ fontFamily: "sans-serif" }}>+</b> Add More Files </div>
         </label>
                 </>
 

@@ -80,10 +80,10 @@ export default function Navbar() {
               <div><img className={color ? 'logoWeb width99' : 'logoWeb'} src={color ? logoWhite : logo} /></div>
               <div className={color ? 'nav-element navbarAnimation' : "nav-element nav-element-down navbarAnimation"}>
                 <div style={{ marginRight: 20 }}>
-                  <NavbarButton title="Home" href="" />
+                  <NavbarButton title="Home" href="/" />
                 </div>
                 <div style={{ marginRight: 20 }}>
-                  <NavbarButton title="Services" href="" />
+                  <NavbarButton title="Services" href="/#services" />
                 </div>
                 <div style={{ marginRight: 20 }}>
                   <NavbarButton title="About" href="" />

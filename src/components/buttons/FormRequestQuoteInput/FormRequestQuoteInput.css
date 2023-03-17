@@ -4,21 +4,21 @@
   }
   .did-floating-label {
     
-    font-size:13px;
+    font-size:15px;
     font-weight:normal;
     position:absolute;
     pointer-events:none;
     left:15px;
     top:17px;
     padding:0 5px;
-    -webkit-text-stroke: 0.2px black;
+    -webkit-text-stroke: 0.2px rgb(198, 198, 198);
     transition:0.2s ease all; 
     -moz-transition:0.2s ease all; 
     -webkit-transition:0.2s ease all;
 
   }
   .did-floating-input, .did-floating-select {
-    font-size:12px;
+    font-size:15px;
     display:block;
     width:100%;
     height:51px;
@@ -28,7 +28,9 @@
     border-radius: 5px;
     box-sizing: border-box;
     border: none;
-    border: 1.5px solid rgb(139, 139, 139)
+    border: 1.5px solid rgb(139, 139, 139);
+    font-family: "Gilroy-Regular";
+    font-weight: bold;
     
     
     

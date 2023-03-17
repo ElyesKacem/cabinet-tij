@@ -15,8 +15,8 @@ export default function Services() {
     large: "(min-width: 1000px)"
   };
   return (
-    <div className='services'>
-
+    <div className='services' id="services">
+  <br /><br /><br /><br /><br /><br />
 
       <Media queries={GLOBAL_MEDIA_QUERIES}>
         {matches => (
@@ -231,7 +231,7 @@ export default function Services() {
           </Grid>
         </Grid>
       </Container> */}
-      <br /><br /><br /><br /><br /><br />
+    
     </div>
   )
 }

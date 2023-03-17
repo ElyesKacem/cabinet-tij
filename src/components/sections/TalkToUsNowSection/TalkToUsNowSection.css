@@ -59,6 +59,7 @@
     border:1.4px solid white ;
     border-radius: 6px;
     color: black;
+    
 }
 
 .TalkToUsNowSection-container{
@@ -66,7 +67,7 @@
     justify-content: space-evenly;
 }
 .TalkToUsNowSection-subContainer{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Gilroy-Medium";
     text-align: center;
     display: flex;
     flex-direction: column;

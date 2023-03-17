@@ -61,8 +61,12 @@
 } */
 @font-face {
   font-family: 'segoe';
-  src: url('./assets/fonts/SegoeUI.ttf') format('truetype');
+  src: url('./assets/fonts/Gilroy-Medium.ttf') format('truetype');
 }
+/* @font-face {
+  font-family: 'segoe';
+  src: url('./assets/fonts/SegoeUI.ttf') format('truetype');
+} */
 @font-face {
   font-family: 'futuraBold';
   src: url('./assets/fonts/Futura\ Bold\ font.ttf') format('truetype');

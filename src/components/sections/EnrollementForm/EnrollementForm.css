@@ -5,6 +5,7 @@
 }
 .EnrollementForm-paragraph{
     -webkit-text-stroke: 0.5px #4B4848;
+    margin-top: 4px;
 }
 
 .EnrollementForm-paragraph b{
@@ -42,7 +43,7 @@ max-width: 70%;
 .EnrollementForm-multiple-files{
     cursor: pointer;
     border: #4B4848 1px solid;
-    padding: 10px 120px 10px 120px;
+    padding: 12px 120px 12px 120px;
     border-radius: 8px;
     margin-right: 20px;
 }
