@@ -44,11 +44,12 @@ export default function VideoSection() {
               </b>
 
               <br />
-              <div style={{ display: "flex" }}>
+              <br />
+              <div style={{ display: "flex",flexDirection:"column",gap:20 }}>
                 <div>
                   <LeftRightButton isBlue whiteText title="Learn More" />
                 </div>
-                <div style={{ marginLeft: 18 }}>
+                <div >
                   <LeftRightButton whiteText isBlue={true} title="Get in Touch" />
                 </div>
               </div>
@@ -58,7 +59,7 @@ export default function VideoSection() {
               <br />
               <br />
               <br />
-              <div style={{padding:30}}>
+              <div style={{padding:32}}>
               <video src={video} autoPlay loop muted></video>
 
               </div>

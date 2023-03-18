@@ -27,6 +27,6 @@
     display: flex;
     gap: 60px;
     overflow: scroll;
-    width: 400px;
+    width: 100%;
     
 }
