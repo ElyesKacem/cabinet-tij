@@ -86,16 +86,24 @@ export default function GetQuoteForm() {
   const [menuSelected, setMenuSelected] = useState([true, false, false, false]);
   const [showCalendar, setShowCalendar] = useState(false);
   const [allowedToOpen, setAllowedToOpen] = useState(true);
-  const disabledDays = { before: new Date() };
 
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef);
 
   const [form, setForm] = useState({ ...initial_form });
+  const [sending, set_sending] = useState(false);
 
   const handle_change = (event) => {
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
+  };
+
+  const handle_image = (event) => {
+    const files = [...form.files];
+    Object.values(event.target.files).map((file) => {
+      files.push(file);
+    });
+    setForm({ ...form, files: files });
   };
 
   useEffect(() => {
@@ -108,16 +116,23 @@ export default function GetQuoteForm() {
 
   const Handle_submit = () => {
     let result = FormValidator(form);
+    if (sending) {
+      toast.error("we are sending please wait");
+      return;
+    }
     if (result) {
+      set_sending(true);
       RQ_service(
         result,
         () => {
           toast.success("data sent successfully");
           setForm({ ...initial_form });
+          set_sending(false);
           // use the navigation
         },
         () => {
           toast.error("there was an error while sending data");
+          set_sending(false);
         }
       );
     }
@@ -378,6 +393,7 @@ export default function GetQuoteForm() {
                           placeholder="Full Name"
                           id="requotefile"
                           onChange={(e) => {
+                            handle_image(e);
                             let file = e.target.value;
                             setSingleFile(file);
                             const fileNameArray = file.split("\\");
@@ -439,6 +455,7 @@ export default function GetQuoteForm() {
                           placeholder="Full Name"
                           id="requoteMULTIPLEfile"
                           onChange={(e) => {
+                            handle_image(e);
                             let file = e.target.value;
                             setSingleFile(file);
                             const fileNameArray = file.split("\\");
