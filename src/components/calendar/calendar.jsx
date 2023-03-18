@@ -9,9 +9,11 @@ export default function Calendar({ name, onChange }) {
   const today = new Date();
   const [selected, setSelected] = React.useState(today);
   const handle_change = (select) => {
-    setSelected(select);
-    const event = { target: { name: name, value: new Date(select) } };
-    onChange(event);
+    if (select) {
+      setSelected(select);
+      const event = { target: { name: name, value: new Date(select) } };
+      onChange(event);
+    }
   };
 
   let footer = <p>Please pick a day.</p>;

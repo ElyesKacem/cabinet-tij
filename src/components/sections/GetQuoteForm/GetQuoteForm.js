@@ -330,6 +330,7 @@ export default function GetQuoteForm() {
                             showCalendar={showCalendar}
                             setShowCalendar={setShowCalendar}
                             title="Date "
+                            value={form.date}
                           />
                           <FormRequestQuoteInput
                             required

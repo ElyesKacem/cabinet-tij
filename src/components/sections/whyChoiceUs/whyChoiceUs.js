@@ -16,6 +16,41 @@ import EfficiencyImage from "../../../assets/images/home/Efficiacity.jpg";
 import Media from "react-media";
 
 export default function WhyChoiceUs() {
+  const GLOBAL_MEDIA_QUERIES = {
+    // medium: "(min-width: 600px) and (max-width: 1199px)",
+    large: "(min-width: 900px)",
+    medium: "(max-width: 900px) and (min-width: 550px)",
+    small: "(max-width: 550px)",
+  };
+
+  let data = [
+    {
+      image: ExpertiseImage,
+      title: "Expertise",
+      paragraph:
+        "Our Cabinet Provides a large network of over 400 language professionals.",
+    },
+    {
+      image: ExperienceImage,
+      title: "Experience",
+      paragraph: "More than 80 Languages translated and interpreted.",
+    },
+    {
+      image: QualityImage,
+      title: "Quality",
+      paragraph: "Tracking and verification of all completed missions.",
+    },
+    {
+      image: AgilityImage,
+      title: "Agility",
+      paragraph: "24/7 and 365 days a year intervention throughout France.",
+    },
+    {
+      image: EfficiencyImage,
+      title: "Efficiency",
+      paragraph: "A quick and effective response to your needs.",
+    },
+  ];
   const [selectedDataId, setSelectedDataId] = useState(0);
   const [dataToSet, setDataToSet] = useState(data[0]);
   const [isShadow, setIsShadow] = useState([true, false, false, false, false]);

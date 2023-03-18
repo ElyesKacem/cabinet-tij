@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./FormRequestQuoteInput.css";
 import CalendarIcon from "../../../assets/images/calendar.svg";
+import { FullDateEn } from "../../../Functions/DateFunctions";
 
 export default function FormRequestQuoteInput(props) {
   const { name, value, onChange } = props;
@@ -107,8 +108,10 @@ export function DateInputGetQuote(props) {
         cursor: "pointer",
       }}
     >
-      <img src={CalendarIcon} style={{ width: 25 }} alt="" />{" "}
-      <div style={{ fontWeight: "bold" }}>Tuesday, February 27, 2023</div>
+      <img src={CalendarIcon} style={{ width: 25 }} alt="" />
+      <div style={{ fontWeight: "bold" }}> {FullDateEn(props.value)}</div>
     </div>
   );
 }
+
+// Tuesday, February 27, 2023
