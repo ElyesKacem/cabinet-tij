@@ -172,7 +172,7 @@ export default function Navbar() {
                     <NavbarButton title={texts.Home} href="/" />
                   </div>
                   <div style={{ marginRight: 20 }}>
-                    <NavbarButton title={texts.Services} href="/#services" />
+                    <NavbarButton title={texts.Services} href="#services" />
                   </div>
                   <div style={{ marginRight: 20 }}>
                     <NavbarButton title={texts.About} href="" />
