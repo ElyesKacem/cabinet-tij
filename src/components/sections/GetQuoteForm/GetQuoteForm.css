@@ -167,8 +167,8 @@ color:white !important;
     z-index: 4;
     font-family: 'Gilroy-Medium UI', Tahoma, Geneva, Verdana, sans-serif;
     opacity: 1;
-    border-radius: 8px;
-    border:1px solid black;
+    border-radius: 5px;
+    border:1px solid #8b8b8b;
     top:0px;
 
 }

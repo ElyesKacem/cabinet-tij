@@ -29,31 +29,31 @@ export default function EnrollementForm() {
         <br />
         <Grid container spacing={4}>
           <Grid item sm={6} xs={12}>
-            <FormRequestQuoteInput borderRadius="10px" title="Full name" required /> <br />
-            <FormRequestQuoteInput borderRadius="10px" title="Phone" required /><br />
-            <FormRequestQuoteInput borderRadius="10px" title="City" required /><br />
+            <FormRequestQuoteInput borderRadius="5px" title="Full name" required /> <br />
+            <FormRequestQuoteInput borderRadius="5px" title="Phone" required /><br />
+            <FormRequestQuoteInput borderRadius="5px" title="City" required /><br />
           </Grid>
           <Grid item sm={6} xs={12}>
-            <FormRequestQuoteInput borderRadius="10px" title="Email" required /> <br />
-            <FormRequestQuoteInput borderRadius="10px" title="Adress" required /><br />
-            <FormRequestQuoteInput borderRadius="10px" title="Postal Code" required /><br />
+            <FormRequestQuoteInput borderRadius="5px" title="Email" required /> <br />
+            <FormRequestQuoteInput borderRadius="5px" title="Adress" required /><br />
+            <FormRequestQuoteInput borderRadius="5px" title="Postal Code" required /><br />
           </Grid>
         </Grid>
         <b className='EnrollementForm-title' style={{ width: 120, textAlign: "center" }}>Expertise And Experience</b>
         <br />
         <Grid container spacing={4}>
           <Grid item xs={12}>
-            <FormRequestQuoteInput borderRadius="10px" title="Spoken Languages ( with priority )" required />
+            <FormRequestQuoteInput borderRadius="5px" title="Spoken Languages ( with priority )" required />
 
           </Grid>
           <Grid item sm={6} xs={12}>
-            <FormRequestQuoteInput borderRadius="10px" title="Diploma 1" required /> <br />
-            <FormRequestQuoteInput borderRadius="10px" title="Experience 1" required /><br />
+            <FormRequestQuoteInput borderRadius="5px" title="Diploma 1" required /> <br />
+            <FormRequestQuoteInput borderRadius="5px" title="Experience 1" required /><br />
 
           </Grid>
           <Grid item sm={6} xs={12}>
-            <FormRequestQuoteInput borderRadius="10px" title="Diploma 2" required /> <br />
-            <FormRequestQuoteInput borderRadius="10px" title="Experience 2" required /><br />
+            <FormRequestQuoteInput borderRadius="5px" title="Diploma 2" required /> <br />
+            <FormRequestQuoteInput borderRadius="5px" title="Experience 2" required /><br />
 
           </Grid>
         </Grid>

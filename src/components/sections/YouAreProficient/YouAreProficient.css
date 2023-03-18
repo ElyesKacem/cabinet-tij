@@ -11,11 +11,12 @@
     transition: all 1s;
 
 }
+
 .YouAreProficient-zoom {
     width: 600px;
     height: 450px;
     border-radius: 8px;
-    overflow: hidden;    
+    overflow: hidden;
     position: relative;
     z-index: 1;
     transform: translateX(70px);
@@ -35,39 +36,44 @@
     z-index: 0;
 }
 
-.YouAreProficient-h1{
+.YouAreProficient-h1 {
     font-family: Gilroy-Bold;
     line-height: 45px;
     font-size: 28px;
 }
-.YouAreProficient-p{
+
+.YouAreProficient-p {
     line-height: 35px;
     width: 98%;
 }
 
-.YouAreProficient-h2{
+.YouAreProficient-h2 {
     font-family: Gilroy-Bold;
     line-height: 35px;
     font-size: 18px;
 }
-.YouAreProficient-blueButton{
+
+.YouAreProficient-blueButton {
     background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;
-border: 1px solid #FFFFFF;
-border-radius: 8px;
-text-align: center;
-width: 200px;
-padding: 10px 8px 10px 8px;
-box-shadow:  -10px 10px 1em rgba(65, 65, 65, 0.29);
-cursor: pointer;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    padding: 10px 8px 10px 8px;
+    box-shadow: -10px 10px 1em rgba(65, 65, 65, 0.29);
+    cursor: pointer;
 }
-.YouAreProficient-blueButton:hover{
+
+.YouAreProficient-blueButton:hover {
     background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
     border-color: transparent;
 }
-.YouAreProficient-blueButton:hover .YouAreProficient-blueButton-title{
+
+.YouAreProficient-blueButton:hover .YouAreProficient-blueButton-title {
     transform: scale(0.9);
 }
-.YouAreProficient-blueButton-title{
+
+.YouAreProficient-blueButton-title {
     transition: 0.5s all;
-    
+
 }

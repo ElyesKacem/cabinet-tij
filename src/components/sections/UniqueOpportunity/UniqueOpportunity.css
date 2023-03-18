@@ -16,7 +16,7 @@
     width: 64px;
     height: 64px;
     background-color: #ada8a86d;
-    border-radius: 8px;
+    border-radius: 5px;
     position:absolute;
     z-index: 0;
     transform: translate(-30px,-20px);

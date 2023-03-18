@@ -1,7 +1,7 @@
 .leftRightButton{
     border: 1px solid white;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 5px;
     width: 140px;
     height: 30px;
     display: flex;
