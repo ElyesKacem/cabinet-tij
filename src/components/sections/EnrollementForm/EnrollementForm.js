@@ -98,7 +98,7 @@ export default function EnrollementForm() {
         <Grid container spacing={4}>
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Full name"
               required
               name="full_name"
@@ -107,7 +107,7 @@ export default function EnrollementForm() {
             />
             <br />
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Phone"
               name="phone"
               value={form.phone}
@@ -116,7 +116,7 @@ export default function EnrollementForm() {
             />
             <br />
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="City"
               name="city"
               value={form.city}
@@ -127,7 +127,7 @@ export default function EnrollementForm() {
           </Grid>
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Email"
               name="email"
               value={form.email}
@@ -136,7 +136,7 @@ export default function EnrollementForm() {
             />
             <br />
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Adress"
               required
               name="adress"
@@ -145,7 +145,7 @@ export default function EnrollementForm() {
             />
             <br />
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Postal Code"
               required
               name="postal_code"
@@ -165,7 +165,7 @@ export default function EnrollementForm() {
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Spoken Languages ( with priority )"
               required
               name="spoken_lang"
@@ -175,7 +175,7 @@ export default function EnrollementForm() {
           </Grid>
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Diploma 1"
               required
               name="diploma1"
@@ -184,7 +184,7 @@ export default function EnrollementForm() {
             />
             <br />
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Experience 1"
               required
               name="exp1"
@@ -195,7 +195,7 @@ export default function EnrollementForm() {
           </Grid>
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Diploma 2"
               required
               name="diploma2"
@@ -204,7 +204,7 @@ export default function EnrollementForm() {
             />
             <br />
             <FormRequestQuoteInput
-              borderRadius="10px"
+              borderRadius="5px"
               title="Experience 2"
               required
               name="exp2"
