@@ -57,7 +57,7 @@ export default function GetInTouchWithUs() {
                     </div>
                 }
                 {(matches.medium || matches.small) &&
-                    <div className='getInTouchWithUs' style={{ padding: matches.small ? 20 : 40 }}>
+                    <div className='getInTouchWithUs' style={{ padding:25 }}>
                         <br /><br /><br /><br />
                         <div className='getInTouchWithUsFrom' style={{ width: "auto", padding: matches.small ? "36px 50px 44px 26px" : "60px 125px 60px 100px" }}>
                             <div className='getInTouchWithUsFrom-title'>Get in Touch With Us</div>

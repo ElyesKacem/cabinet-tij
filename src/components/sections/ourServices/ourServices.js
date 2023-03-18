@@ -53,7 +53,7 @@ export default function OurServices() {
 
 
       <Container>
-        <div style={{ padding: "0px 50px 0px 50px" }}>
+        <div style={{ padding: "0px 50px 0px 55px" }}>
           <div className='greyEmptyRectangle' style={{ transform: 'translateX(-40px)' }} />
 
           <div className="greyRectangle">
