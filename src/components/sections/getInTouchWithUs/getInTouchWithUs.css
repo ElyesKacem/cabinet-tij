@@ -3,7 +3,7 @@
     width: 60%;
     padding:60px 125px 60px 100px;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -14,20 +14,20 @@
 .getInTouchWithUsFrom-title{
     font-weight:bold;
     font-size: 30px;
-    font-family:"commuterssans-bold";
+    font-family:"Gilroy-Bold";
     text-align: center;
 }
 
 .getInTouchWithUsFrom-input::placeholder{
     color:white;
-    font-family: "commuterssans-thin";
+    font-family: "Gilroy-Medium";
     
 }
 .getInTouchWithUsFrom-input{
     background-color: rgba(255, 255, 255, 0.192);
     border: none;
     height: 55px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     padding-left: 20px;
     color: white;

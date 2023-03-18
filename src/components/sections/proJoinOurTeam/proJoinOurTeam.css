@@ -1,43 +1,40 @@
-.proJoinOurTeam-wrapper{
-    
-    height: 550px;
-    background: url('../../../assets/images/meeting.png') no-repeat;
-    /* background-size: 100%; */
-    
+.proJoinOurTeam-wrapper {
+  height: 550px;
+  background: url("../../../assets/images/meeting.jpg") no-repeat;
+  /* background-size: 100%; */
 }
 
-.proJoinOurTeam-overlay{
-    background-color: black;
-    height: 550px;
-    /* height: 100%; */
-    opacity: 31%;
-    /* width: 100px; */
+.proJoinOurTeam-overlay {
+  background-color: black;
+  height: 550px;
+  /* height: 100%; */
+  opacity: 31%;
+  /* width: 100px; */
 }
 
-.proJoinOurTeam-content{
-    position: absolute;
-    color: white;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 550px;
-    flex-direction: column;
-    width: 100%;
+.proJoinOurTeam-content {
+  position: absolute;
+  color: white;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  flex-direction: column;
+  width: 100%;
 }
 
-.proJoinOurTeam-content-header{
-    font-weight:bold;
-    font-size: 62px;
-    font-family:"commuterssans-bold";
-    
-    text-align: center;
-    margin-bottom: 12px;
+.proJoinOurTeam-content-header {
+  font-weight: bold;
+  font-size: 62px;
+  font-family: "Gilroy-Regular";
+
+  text-align: center;
+  margin-bottom: 12px;
 }
 
-.proJoinOurTeam-content-paragraph{
-    
-    text-align: center;
-    font-family: "Gilroy-Regular";
-    line-height: 1.5;
+.proJoinOurTeam-content-paragraph {
+  text-align: center;
+  font-family: "Gilroy-Regular";
+  line-height: 1.5;
 }

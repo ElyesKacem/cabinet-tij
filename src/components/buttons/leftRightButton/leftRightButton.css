@@ -1,10 +1,11 @@
 .leftRightButton{
     border: 1px solid white;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 5px;
     width: 140px;
     height: 30px;
     display: flex;
+    align-items: center;
     justify-content: center;
   
   
@@ -15,6 +16,17 @@
 }
 .leftRightButton:hover{
 border-color: transparent;
+}
+.leftRightButton-white{
+    color: #0B2AD6;
+    width: 200px;
+    border-radius: 5px;
+    padding: 15px 10px 10px 20px;
+    font-size: 19px;
+    
+}
+.leftRightButton-white:hover{
+    color: white;
 }
 .buttonIcon{
     transform: translateY(-1px);

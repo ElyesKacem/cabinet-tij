@@ -75,7 +75,7 @@ export default function Services() {
               </>
             }
             {matches.medium &&
-              <>
+              <div style={{padding:10}}>
 
                 <div className='greyEmptyRectangle' />
                 <div>
@@ -108,6 +108,7 @@ export default function Services() {
                           </div>
                         </div>
                       </div>
+                      <br />
                     </div>
 
 
@@ -119,15 +120,12 @@ export default function Services() {
                   </div>
                 </div>
 
-              </>
+              </div>
             }
             {matches.small &&
-              <>
-
-
-                <div>
+               <div style={{padding:10}}>
                   <div >
-                    <div className='translateRight40' style={{ maxWidth: 500, transform: "scale(0.8)" }}>
+                    <div className='translateRight40' style={{ maxWidth: 350, }}>
 
 
                       <div>
@@ -164,12 +162,13 @@ export default function Services() {
 
 
                   </div>
+                  <br />
                   <div >
                     <img className='ServicesleftImage' src={Image} />
                   </div>
                 </div>
 
-              </>
+              
             }
           </React.Fragment>
         )

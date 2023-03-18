@@ -5,7 +5,7 @@
 }
 
 .TalkToUsNowSection-title{
-    font-family: commuterssans-bold;
+    font-family: Gilroy-Bold;
     font-size: 50px;
     color: white;
 }
@@ -20,7 +20,7 @@
     -webkit-text-stroke: 0.4px #7B264B;
 }
 .thin{
-    font-family: "segoe";
+    font-family: "Gilroy-Medium";
     font-style: normal;
 }
 .TalkToUsNowSection-selectFile{
@@ -54,10 +54,10 @@
     width: 120px;
     padding: 12px 25px 12px 25px;
     text-align: center;
-    font-family: commuterssans-bold;
+    font-family: Gilroy-Bold;
     font-weight: bold;
     border:1.4px solid white ;
-    border-radius: 6px;
+    border-radius: 5px;
     color: black;
     
 }

@@ -11,12 +11,12 @@
 .greyRectangle{
     color: #e2c522;
     background-color:#dfdfdf ;
-    border-radius: 3px;
+    border-radius: 5px;
     display: inline-block;
     padding: 10px 35px 10px 35px;
     font-weight:bold;
     font-size: 13px;
-    font-family:"commuterssans-bold";
+    font-family:"Gilroy-Bold";
     
 }
 .firstClass{
@@ -24,7 +24,7 @@
     /* transform: translateX(15px); */
       font-weight:bold;
           font-size: 32px;
-          font-family:"commuterssans-bold";
+          font-family:"Gilroy-Bold";
           line-height: 110%;
 }
 .secondClass{
@@ -45,14 +45,15 @@
     
     font-weight:bold;
     font-size: 15px;
-    font-family:"commuterssans-bold";
+    font-family:"Gilroy-Bold";
     display: flex;
     align-items: center;
     transform: translateX(-10px);
     cursor: pointer;
 }
 .translateRight40{
-    transform: translateX(40px);
+    margin-left: 40px;
+    padding-right: 30px;
     max-width: 400px;
 }
 

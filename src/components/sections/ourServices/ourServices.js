@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import "./ourServices.js"
 import Container from '@mui/material/Container';
 import HomePhotoHover from '../../homePhotoHover/homePhotoHover.js';
-import Image1 from "../../../assets/images/hh0.png"
-import Image2 from "../../../assets/images/hh1.png"
-import Image3 from "../../../assets/images/hh2.png"
+import Image1 from "../../../assets/images/hh0.jpg"
+import Image2 from "../../../assets/images/hh1.jpg"
+import Image3 from "../../../assets/images/hh2.jpg"
 import Grid from '@mui/material/Grid';
 import Media from 'react-media';
 
@@ -53,7 +53,7 @@ export default function OurServices() {
 
 
       <Container>
-        <div style={{ padding: "0px 50px 0px 50px" }}>
+        <div style={{ padding: "0px 50px 0px 55px" }}>
           <div className='greyEmptyRectangle' style={{ transform: 'translateX(-40px)' }} />
 
           <div className="greyRectangle">
