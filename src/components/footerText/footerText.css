@@ -4,14 +4,14 @@
     /* justify-content: space-evenly; */
     font-weight:bold;
     font-size: 26px;
-    font-family:"commuterssans-bold";
+    font-family:"Gilroy-Bold";
     transform: translateX(-25px);
 
 }
 
 .footerText-content{
     font-size: 20px;
-    font-family:"segoe";
+    font-family:"Gilroy-Medium";
     max-width: 300px;
     min-height: 130px;
     /* font-weight: bold;

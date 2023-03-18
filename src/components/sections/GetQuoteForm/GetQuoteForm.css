@@ -137,7 +137,7 @@ color:white !important;
   width: 260px;
   /* height: 1.2em;  */
   white-space: nowrap;
-  font-family: "segoe";
+  font-family: "Gilroy-Medium";
 }
 
 .getQuoteForm-submit-button{
@@ -165,7 +165,7 @@ color:white !important;
     background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 4;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gilroy-Medium UI', Tahoma, Geneva, Verdana, sans-serif;
     opacity: 1;
     border-radius: 8px;
     border:1px solid black;

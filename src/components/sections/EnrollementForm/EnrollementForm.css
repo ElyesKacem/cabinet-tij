@@ -10,7 +10,7 @@
 
 .EnrollementForm-paragraph b{
     
-    font-family: "segoe";
+    font-family: "Gilroy-Medium";
     -webkit-text-stroke: 0.5px #4B4848;
 }
 
@@ -27,14 +27,14 @@ max-width: 70%;
     font-weight: bold;
     -webkit-text-stroke: 0.3px black;
     color:black;
-    font-family: "commuterssans-bold";
+    font-family: "Gilroy-Bold";
 }
 .EnrollementForm-title{
     margin:15px;
     font-weight: bold;
     color:#524F4F;
     -webkit-text-stroke: 0.3px #524F4F;
-    font-family: "commuterssans-bold";
+    font-family: "Gilroy-Bold";
     text-align: center;
 }
 .displaynone{

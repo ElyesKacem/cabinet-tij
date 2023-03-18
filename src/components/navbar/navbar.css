@@ -55,7 +55,7 @@ position: fixed;
  display: flex;
  align-items: center;  
  justify-content:space-between ;
- margin-left: 20;
+ /* margin-left: 20; */
  
 }
 
@@ -387,5 +387,5 @@ input[type="checkbox"]{
 }
 .width99{
   width: 100px;
-  transform: translateY(4px);
+  transform: translate(2px,4px);
 }

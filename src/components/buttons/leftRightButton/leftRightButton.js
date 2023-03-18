@@ -10,6 +10,7 @@ export default function LeftRightButton(props) {
     backgroundColor:(props.isWhite)&&"white",
     // color:props.isWhite?"#0B2AD6":"white",
     border:(props.isBlue || props.isWhite)&&"none",
+    color:props.whiteText&&"white"
     // paddingTop:(props.isWhite)&&14
   }
   return (

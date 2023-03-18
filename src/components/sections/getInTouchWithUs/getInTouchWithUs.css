@@ -14,13 +14,13 @@
 .getInTouchWithUsFrom-title{
     font-weight:bold;
     font-size: 30px;
-    font-family:"commuterssans-bold";
+    font-family:"Gilroy-Bold";
     text-align: center;
 }
 
 .getInTouchWithUsFrom-input::placeholder{
     color:white;
-    font-family: "commuterssans-thin";
+    font-family: "Gilroy-Medium";
     
 }
 .getInTouchWithUsFrom-input{

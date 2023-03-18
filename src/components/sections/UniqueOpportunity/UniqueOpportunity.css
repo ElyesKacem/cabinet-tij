@@ -7,7 +7,7 @@
 }
 .UniqueOpportunity-blueTitle{
     font-size: 50px;
-    font-family:commuterssans-bold ;
+    font-family:Gilroy-Bold ;
     position: relative;
     z-index: 1;
     color: #2742E4;
@@ -29,6 +29,6 @@
 }
 
 .UniqueOpportunity-blackTitle{
-    font-family:commuterssans-bold ;
+    font-family:Gilroy-Bold ;
     font-size: 30px;
 }

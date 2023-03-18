@@ -39,12 +39,12 @@
 }
 
 .EnrollementAttachFiles-fileName {
-    font-family: "segoe";
+    font-family: "Gilroy-Medium";
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 150px;
     white-space: nowrap;
-    font-family: "segoe";
+    font-family: "Gilroy-Medium";
     text-align: left;
     margin-right: 10px;
     background-color: red;

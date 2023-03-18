@@ -9,7 +9,7 @@
 
 .myDiv2 {
   position: relative;
-  font-family: 'commuterssans-thin', sans-serif;
+  font-family: 'Gilroy-Medium', sans-serif;
   font-size: bold;
   
 }
@@ -40,15 +40,15 @@
   
 }
 @font-face {
-  font-family: 'commuterssans-thin';
+  font-family: 'Gilroy-Medium';
   src: url('./assets/fonts/Gilroy-Medium.ttf') format('truetype');
 }
 /* @font-face {
-  font-family: 'commuterssans-thin';
-  src: url('./assets/fonts/Fontspring-DEMO-commuterssans-thin.otf') format('truetype');
+  font-family: 'Gilroy-Medium';
+  src: url('./assets/fonts/Fontspring-DEMO-Gilroy-Medium.otf') format('truetype');
 } */
 @font-face {
-  font-family: 'commuterssans-bold';
+  font-family: 'Gilroy-Bold';
   src: url('./assets/fonts/Gilroy-Bold.ttf') format('truetype');
 }
 @font-face {
@@ -56,16 +56,16 @@
   src: url('./assets/fonts/Gilroy-Regular.ttf') format('truetype');
 }
 /* @font-face {
-  font-family: 'commuterssans-bold';
-  src: url('./assets/fonts/Fontspring-DEMO-commuterssans-bold.otf') format('truetype');
+  font-family: 'Gilroy-Bold';
+  src: url('./assets/fonts/Fontspring-DEMO-Gilroy-Bold.otf') format('truetype');
 } */
 @font-face {
-  font-family: 'segoe';
+  font-family: 'Gilroy-Medium';
   src: url('./assets/fonts/Gilroy-Medium.ttf') format('truetype');
 }
 /* @font-face {
-  font-family: 'segoe';
-  src: url('./assets/fonts/SegoeUI.ttf') format('truetype');
+  font-family: 'Gilroy-Medium';
+  src: url('./assets/fonts/Gilroy-MediumUI.ttf') format('truetype');
 } */
 @font-face {
   font-family: 'futuraBold';
