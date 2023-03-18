@@ -1,21 +1,45 @@
-import React from 'react'
-import './video.css'
-import video from '../../../assets/video/video.mp4'
-import LeftRightButton from '../../buttons/leftRightButton/leftRightButton'
-import VerticalBar from '../../verticalBar/verticalBar';
-import Media from 'react-media';
+import React from "react";
+import "./video.css";
+import video from "../../../assets/video/video.mp4";
+import LeftRightButton from "../../buttons/leftRightButton/leftRightButton";
+import VerticalBar from "../../verticalBar/verticalBar";
+import Media from "react-media";
+import GetLang from "./video.lang";
 
+const GLOBAL_MEDIA_QUERIES = {
+  large: "(min-width: 1210px) ",
+  medium: " (min-width:1110px) and (max-width: 1210px)",
+  small: "(max-width:1110px)",
+  // medium: "(min-width: 600px) and (max-width: 1199px)",
+};
 
 export default function VideoSection() {
-  const GLOBAL_MEDIA_QUERIES = {
-    large: "(min-width: 1210px) ",
-    medium: " (min-width:1110px) and (max-width: 1210px)",
-    small: "(max-width:1110px)"
-    // medium: "(min-width: 600px) and (max-width: 1199px)",
-  };
-  return (<React.Fragment>
+  const texts = GetLang();
 
+  return (
+    <React.Fragment>
+      <Media queries={GLOBAL_MEDIA_QUERIES}>
+        {(matches) => (
+          <React.Fragment>
+            {matches.small && (
+              <div
+                className="flexalignjustify"
+                style={{
+                  flexDirection: "column",
+                  fontFamily: "Gilroy-Regular",
+                }}
+              >
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
 
+                <b>{texts.We_Provide_Outsourced}</b>
+                <br />
 
 
     <Media queries={GLOBAL_MEDIA_QUERIES}>
@@ -53,7 +77,29 @@ export default function VideoSection() {
                   <LeftRightButton whiteText isBlue={true} title="Get in Touch" />
                 </div>
               </div>
+            )}
+            {matches.medium && (
+              <div className="wrapper">
+                <VerticalBar top="55%" left="50px" />
+                <VerticalBar top="20%" left="45%" />
+                <VerticalBar top="30%" left="92%" />
+                <video src={video} autoPlay loop muted></video>
+                <div className="videoContent">
+                  <div>
+                    <b>{texts.We_Provide_Outsourced}</b>
+                  </div>
+                  <br />
 
+                  <div className="videoContentMiddle" style={{ fontSize: 70 }}>
+                    {texts.Translation}
+                    <div
+                      style={{ fontFamily: "sans-serif", textAlign: "center" }}
+                    >
+                      &
+                    </div>
+                    {texts.Interpreting}
+                  </div>
+                  <br />
 
 
               <br />
@@ -100,18 +146,35 @@ export default function VideoSection() {
                   <LeftRightButton  title="Get in Touch" />
                 </div>
               </div>
-            </div>
+            )}
 
-          </div>}
+            {matches.large && (
+              <div className="wrapper">
+                <VerticalBar top="55%" left="50px" />
+                <VerticalBar top="20%" left="45%" />
+                <VerticalBar top="30%" left="92%" />
+                <video src={video} autoPlay loop muted></video>
+                <div className="videoContent">
+                  <div>
+                    <b
+                      style={{ fontWeight: "normal" }}
+                      className="regular-font Gilroy-Regular"
+                    >
+                      {texts.We_Provide_Outsourced}
+                    </b>
+                  </div>
+                  <br />
 
-          {matches.large && <div className='wrapper'>
-            <VerticalBar top="55%" left="50px" />
-            <VerticalBar top="20%" left="45%" />
-            <VerticalBar top="30%" left="92%" />
-            <video src={video} autoPlay loop muted></video>
-            <div className="videoContent">
-              <div>
-                <b style={{fontWeight:"normal"}} className="regular-font Gilroy-Regular">
+                  <div className="videoContentMiddle" style={{ fontSize: 90 }}>
+                    {texts.Translation}
+                    <div
+                      style={{ fontFamily: "sans-serif", textAlign: "center" }}
+                    >
+                      &
+                    </div>
+                    {texts.Interpreting}
+                  </div>
+                  <br />
 
                   We Provide Outsourced
                 </b>
@@ -137,19 +200,10 @@ export default function VideoSection() {
                   <LeftRightButton title="Get in Touch" />
                 </div>
               </div>
-            </div>
-
-          </div>}
-        </React.Fragment>
-      )}
-    </Media>
-
-
-
-
-
-
-
-  </React.Fragment>
-  )
+            )}
+          </React.Fragment>
+        )}
+      </Media>
+    </React.Fragment>
+  );
 }
