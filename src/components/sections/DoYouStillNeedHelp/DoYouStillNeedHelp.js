@@ -1,7 +1,7 @@
 import React from 'react'
 import "./DoYouStillNeedHelp.css"
 import Grid from '@mui/material/Grid';
-import Image from "../../../assets/images/Group 1582.svg"
+import Image from "../../../assets/images/dysnh.jpg"
 import Media from 'react-media';
 
 export default function DoYouStillNeedHelp() {

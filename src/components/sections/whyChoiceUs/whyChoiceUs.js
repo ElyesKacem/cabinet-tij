@@ -8,11 +8,11 @@ import Image3 from "../../../assets/images/Quality.svg"
 import Image4 from "../../../assets/images/Agility.svg"
 import Image5 from "../../../assets/images/Efficiency.svg"
 import DialogInfo, { DialogInfoMobile } from '../../dialogInfo/dialogInfo';
-import ExperienceImage from "../../../assets/images/home/Expertise.jpg";
-import QualityImage from "../../../assets/images/home/Experience.jpg";
-import AgilityImage from "../../../assets/images/home/Quality.jpg";
-import EfficiencyImage from "../../../assets/images/home/Agility.jpg";
-import ExpertiseImage from "../../../assets/images/home/Efficiacity.jpg";
+import ExpertiseImage from "../../../assets/images/home/Expertise.jpg";
+import ExperienceImage from "../../../assets/images/home/Experience.jpg";
+import QualityImage from "../../../assets/images/home/Quality.jpg";
+import AgilityImage from "../../../assets/images/home/Agility.jpg";
+import EfficiencyImage from "../../../assets/images/home/Efficiacity.jpg";
 import Media from 'react-media';
 
 export default function WhyChoiceUs() {

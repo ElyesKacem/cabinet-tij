@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import "./ourServices.js"
 import Container from '@mui/material/Container';
 import HomePhotoHover from '../../homePhotoHover/homePhotoHover.js';
-import Image1 from "../../../assets/images/hh0.png"
-import Image2 from "../../../assets/images/hh1.png"
-import Image3 from "../../../assets/images/hh2.png"
+import Image1 from "../../../assets/images/hh0.jpg"
+import Image2 from "../../../assets/images/hh1.jpg"
+import Image3 from "../../../assets/images/hh2.jpg"
 import Grid from '@mui/material/Grid';
 import Media from 'react-media';
 

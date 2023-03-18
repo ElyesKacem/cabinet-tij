@@ -3,7 +3,7 @@ import "./OurCommunityHeader.css"
 import Grid from '@mui/material/Grid';
 import DownArrow from "../../../assets/images/DownArrow.png"
 import HoverImage from '../../HoverImage/HoverImage';
-import Image1 from "../../../assets/images/OurCommunity/ourCommunityHeader.png"
+import Image1 from "../../../assets/images/OurCommunity/ourCommunityHeader.jpg"
 import ActivityButton from "../../../assets/images/OurCommunity/Activity.png"
 import FlexibleButton from "../../../assets/images/OurCommunity/Flexible.png"
 import IncomeButton from "../../../assets/images/OurCommunity/Income.png"

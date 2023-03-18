@@ -3,7 +3,7 @@ import "./TalkToUsNowSection.css"
 import Grid from '@mui/material/Grid';
 import ClearIcon from '@mui/icons-material/Clear';
 import FormRequestQuoteInput, { FormRequestQuoteInputMultiline } from '../../buttons/FormRequestQuoteInput/FormRequestQuoteInput';
-import Image1 from "../../../assets/images/TalkToUs/TalkToUs1.png"
+import Image1 from "../../../assets/images/TalkToUs/TalkToUs1.jpg"
 import HoverImage from '../../HoverImage/HoverImage';
 import VerticalBar from '../../verticalBar/verticalBar';
 import Media from 'react-media';

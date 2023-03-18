@@ -10,7 +10,7 @@ export default function HoverImage(props) {
     <div className='flexalignjustify' style={{myStyle}}
     >
         <div className={isHover?'HoverImage-shader HoverImage-moveLeft':'HoverImage-shader'}></div>
-        <img onMouseLeave={() => {
+        <img style={{borderRadius:8}} onMouseLeave={() => {
         setIsHover(!isHover);
       }}
       

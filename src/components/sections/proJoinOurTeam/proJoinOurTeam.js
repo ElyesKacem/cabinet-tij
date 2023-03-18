@@ -2,8 +2,8 @@ import React from 'react'
 import BackgroundImage from '../../backgroundImage/backgroundImage'
 import LeftRightButton from '../../buttons/leftRightButton/leftRightButton'
 import "./proJoinOurTeam.css"
-import Background from "../../../assets/images/meeting.png"
-import VerticalBar from '../../verticalBar/verticalBar'
+import Background from "../../../assets/images/meeting.jpg"
+import VerticalBar from '../../verticalBar/verticalBar' 
 import Media from 'react-media'
 
 export default function ProJoinOurTeam() {

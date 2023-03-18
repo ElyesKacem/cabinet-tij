@@ -1,7 +1,7 @@
 import React from 'react'
 import "./YouAreProficient.css"
 import Grid from '@mui/material/Grid';
-import Zoomed from "../../../assets/images/OurCommunity/zoomed.png";
+import Zoomed from "../../../assets/images/OurCommunity/zoomed.jpg";
 import Idea from "../../../assets/images/OurCommunity/idea.svg";
 import Media from 'react-media';
 

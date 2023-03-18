@@ -1,7 +1,7 @@
 import React from 'react'
 import "./doYouNeedMoreAssistance.css"
 import Grid from '@mui/material/Grid';
-import Image from "../../../assets/images/Group 1582.svg"
+import Image from "../../../assets/images/dynma.jpg"
 import GetQuoteButton from '../../buttons/getQuoteButton/getQuoteButton';
 import Media from 'react-media';
 

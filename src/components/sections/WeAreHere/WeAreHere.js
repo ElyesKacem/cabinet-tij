@@ -1,7 +1,7 @@
 import React from 'react'
 import BackgroundImage from '../../backgroundImage/backgroundImage'
 import "./WeAreHere.css"
-import Img from "../../../assets/images/OurCommunity/ourCommunityFinal.png";
+import Img from "../../../assets/images/OurCommunity/ourCommunityFinal.jpg";
 import WeAreHereButton from '../../buttons/WeAreHereButton/WeAreHereButton';
 import Media from 'react-media';
 
