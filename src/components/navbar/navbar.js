@@ -178,7 +178,7 @@ export default function Navbar() {
                     <NavbarButton title="About" href="" />
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <NavbarButton title="Contact" href="" />
+                    <NavbarButton title="Contact" href="/TalkToUsNow" />
                   </div>
                   <div style={{ marginRight: 40, marginLeft: 20 }}>
                     <GetQuoteButton

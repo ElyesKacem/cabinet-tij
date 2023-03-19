@@ -202,6 +202,39 @@ export const FormValidator = (form) => {
   }
 };
 
+export const FormValidatorTalkToUs = (form) => {
+  const { full_name, email, subject, notes, files, from } = form;
+
+  if (!not_emp(full_name)) {
+    toast.error("Name can't be empty");
+    return false;
+  }
+
+  if (!not_emp(email)) {
+    toast.error("E-mail can't be empty");
+    return false;
+  }
+
+  if (!not_emp(subject)) {
+    toast.error("Subject can't be empty");
+    return false;
+  }
+
+  if (!not_emp(notes)) {
+    toast.error("Notes can't be empty");
+    return false;
+  }
+
+  return {
+    full_name,
+    email,
+    subject,
+    notes,
+    files,
+    from,
+  };
+};
+
 // export const SendingData = () => {
 //   return toast.loading("Sending Data...", {
 //     icon: <CircularProgress sx={{ color: "blue" }} />,

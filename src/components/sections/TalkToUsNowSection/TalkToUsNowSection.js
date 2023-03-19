@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TalkToUsNowSection.css";
 import Grid from "@mui/material/Grid";
 import ClearIcon from "@mui/icons-material/Clear";
@@ -9,20 +9,77 @@ import Image1 from "../../../assets/images/TalkToUs/TalkToUs1.jpg";
 import HoverImage from "../../HoverImage/HoverImage";
 import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
+import { RQ_service } from "../../../services/services";
+import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { FormValidatorTalkToUs } from "../GetQuoteForm/validation";
 
 export default function TalkToUsNowSection() {
   const [fileName, setFileName] = React.useState();
   const [file, setFile] = React.useState();
+  const [sending, set_sending] = useState(false);
+  const initial_form = {
+    full_name: "",
+    email: "",
+    subject: "",
+    notes: "",
+    files: [],
+    from: "Request a quote",
+  };
+
+  const [form, setForm] = useState({ ...initial_form });
+
   const handlePutFile = (e) => {
     let file = e.target.value;
     setFile(file);
     const fileNameArray = file.split("\\");
     setFileName(fileNameArray[fileNameArray.length - 1]);
   };
+
   const handleRemoveFile = () => {
     setFile(null);
     setFileName(null);
   };
+
+  const handle_image = (event) => {
+    const files = [...form.files];
+    Object.values(event.target.files).map((file) => {
+      files.push(file);
+    });
+    setForm({ ...form, files: files });
+  };
+
+  const handle_change = (event) => {
+    const { name, value } = event.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const Handle_submit = () => {
+    let result = FormValidatorTalkToUs(form);
+
+    if (sending) {
+      toast.error("we are sending please wait");
+      return;
+    }
+    if (result) {
+      set_sending(true);
+      RQ_service(
+        result,
+        () => {
+          toast.success("data sent successfully");
+          setForm({ ...initial_form });
+          // delete file from state
+          set_sending(false);
+          // use the navigation
+        },
+        () => {
+          toast.error("there was an error while sending data");
+          set_sending(false);
+        }
+      );
+    }
+  };
+
   const GLOBAL_MEDIA_QUERIES = {
     medium: "(max-width: 1200px)",
     small: " (max-width: 640px)",
@@ -57,7 +114,7 @@ export default function TalkToUsNowSection() {
                     >
                       <div>
                         <div className="TalkToUsNowSection-title">
-                          Talk to us now
+                          Talk To Us Now
                         </div>
                         <div className="TalkToUsNowSection-paragraph">
                           For further information, please contact us at contact
@@ -66,7 +123,13 @@ export default function TalkToUsNowSection() {
                           form. If you are a professional in translation or
                           interpreting and wish to become part of our
                           distinguished group of talents, kindly complete our
-                          Online <b>Application Form</b>
+                          Online{" "}
+                          <Link
+                            style={{ textDecoration: "none" }}
+                            to="/enrollement"
+                          >
+                            <b>Application Form</b>
+                          </Link>
                         </div>
                         <br />
                         <br />
@@ -79,19 +142,40 @@ export default function TalkToUsNowSection() {
                           }}
                         >
                           <div item xs={12}>
-                            <FormRequestQuoteInput required title="Full Name" />
+                            <FormRequestQuoteInput
+                              onChange={handle_change}
+                              name="full_name"
+                              value={form.full_name}
+                              required
+                              title="Full Name"
+                            />
                           </div>
                           <div item xs={12}>
-                            <FormRequestQuoteInput required title="Email" />
+                            <FormRequestQuoteInput
+                              onChange={handle_change}
+                              name="email"
+                              value={form.email}
+                              required
+                              title="Email"
+                            />
                           </div>
                           <div item xs={12}>
-                            <FormRequestQuoteInput required title="Subject" />
+                            <FormRequestQuoteInput
+                              onChange={handle_change}
+                              name="subject"
+                              value={form.subject}
+                              required
+                              title="Subject"
+                            />
                           </div>
                           <div item xs={12}>
                             <FormRequestQuoteInputMultiline
                               multiline
                               required
                               title="Notes"
+                              onChange={handle_change}
+                              name="notes"
+                              value={form.notes}
                             />
                           </div>
                           <div item xs={12}>
@@ -129,6 +213,7 @@ export default function TalkToUsNowSection() {
                       <br />
                       <br />
                       <div
+                        onClick={Handle_submit}
                         className="getQuoteForm-submit-button"
                         style={{ transform: "translateY(0px)" }}
                       >
@@ -167,10 +252,7 @@ export default function TalkToUsNowSection() {
                       </div>
                       <div className="TalkToUsNowSection-subContainer">
                         <div className="TalkToUsNowSection-pinkb">Find Us</div>
-                        <div style={{ width: 200 }}>
-                          3 rue Boccador, 75008 Paris.{" "}
-                        </div>
-                        <div>93450 L'IIe-Saint-Denis</div>
+                        <div>3 rue Boccador, 75008 Paris.</div>
                       </div>
                     </div>
                   </div>
@@ -194,7 +276,7 @@ export default function TalkToUsNowSection() {
                     >
                       <div>
                         <div className="TalkToUsNowSection-title">
-                          Talk to us now
+                          Talk To Us Now
                         </div>
                         <div className="TalkToUsNowSection-paragraph">
                           For further information, please contact us at contact
@@ -203,26 +285,53 @@ export default function TalkToUsNowSection() {
                           form. If you are a professional in translation or
                           interpreting and wish to become part of our
                           distinguished group of talents, kindly complete our
-                          Online <b>Application Form</b>
+                          Online{" "}
+                          <Link
+                            style={{ textDecoration: "none" }}
+                            to="/enrollement"
+                          >
+                            <b>Application Form</b>
+                          </Link>
                         </div>
                         <br />
                         <br />
 
                         <Grid container spacing={2}>
                           <Grid item xs={12}>
-                            <FormRequestQuoteInput required title="Full Name" />
+                            <FormRequestQuoteInput
+                              onChange={handle_change}
+                              name="full_name"
+                              value={form.full_name}
+                              required
+                              title="Full Name"
+                            />
                           </Grid>
                           <Grid item xs={12}>
-                            <FormRequestQuoteInput required title="Email" />
+                            <FormRequestQuoteInput
+                              onChange={handle_change}
+                              name="email"
+                              value={form.email}
+                              required
+                              title="Email"
+                            />
                           </Grid>
                           <Grid item xs={12}>
-                            <FormRequestQuoteInput required title="Subject" />
+                            <FormRequestQuoteInput
+                              onChange={handle_change}
+                              name="subject"
+                              value={form.subject}
+                              required
+                              title="Subject"
+                            />
                           </Grid>
                           <Grid item xs={12}>
                             <FormRequestQuoteInputMultiline
                               multiline
                               required
                               title="Notes"
+                              onChange={handle_change}
+                              name="notes"
+                              value={form.notes}
                             />
                           </Grid>
                           <Grid item xs={12}>
@@ -259,7 +368,12 @@ export default function TalkToUsNowSection() {
                       </div>
                       <br />
                       <br />
-                      <div className="getQuoteForm-submit-button">Submit</div>
+                      <div
+                        onClick={Handle_submit}
+                        className="getQuoteForm-submit-button"
+                      >
+                        Submit
+                      </div>
                     </div>
                   </Grid>
                   <Grid item xs={6} style={{ transform: "translateY(20px)" }}>
@@ -277,10 +391,7 @@ export default function TalkToUsNowSection() {
                       </div>
                       <div className="TalkToUsNowSection-subContainer">
                         <div className="TalkToUsNowSection-pinkb">Find Us</div>
-                        <div style={{ width: 200 }}>
-                          3 rue Boccador, 75008 Paris.{" "}
-                        </div>
-                        <div>93450 L'IIe-Saint-Denis</div>
+                        <div>3 rue Boccador, 75008 Paris.</div>
                       </div>
                     </div>
                   </Grid>

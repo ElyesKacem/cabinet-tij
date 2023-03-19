@@ -22,7 +22,6 @@ import Calendar from "../../calendar/calendar";
 import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
 import { RQ_service } from "../../../services/services";
-import CircularProgress from "@mui/material/CircularProgress";
 
 const menuData = [
   {
@@ -130,6 +129,7 @@ export default function GetQuoteForm() {
         () => {
           toast.success("data sent successfully");
           setForm({ ...initial_form });
+          // delete file from state
           set_sending(false);
           // use the navigation
         },
