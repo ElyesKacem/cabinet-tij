@@ -7,6 +7,7 @@ import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
 
 import { RQ_service } from "../../../services/services";
+import LeftRightButton from "../../buttons/leftRightButton/leftRightButton";
 
 const GLOBAL_MEDIA_QUERIES = {
   large: "(min-width: 700px)",
@@ -127,21 +128,11 @@ export default function GetInTouchWithUs() {
                 </Grid>
                 <br />
                 <br />
-
-                <div className="getInTouchWithUsFrom-button">
-                  <div
-                    style={{
-                      transform: "translate(-0.5px,3.5px)",
-                      display: "flex",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <div onClick={Handle_submit}>Submit</div>
-                    <div style={{ marginLeft: 20 }}>
-                      <EastIcon />
-                    </div>
-                  </div>
-                </div>
+                <LeftRightButton
+                  onClick={Handle_submit}
+                  isWhite
+                  title="Submit"
+                />
               </div>
               <br />
               <br />
@@ -228,12 +219,11 @@ export default function GetInTouchWithUs() {
                 <br />
                 <br />
 
-                <div className="getInTouchWithUsFrom-button">
-                  <div onClick={Handle_submit}>Submit</div>
-                  <div style={{ marginLeft: 20 }}>
-                    <EastIcon />
-                  </div>
-                </div>
+                <LeftRightButton
+                  onClick={Handle_submit}
+                  isWhite
+                  title="Submit"
+                />
               </div>
               <br />
               <br />
