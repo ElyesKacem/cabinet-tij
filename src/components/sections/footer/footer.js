@@ -63,7 +63,7 @@ export default function Footer() {
                   </div>
 
                   <div style={{ transform: "translateX(80px)" }}>
-                    <FooterText title="Information" content="Contact Us" />
+                    <FooterText title="Information" content=" " />
                   </div>
                 </div>
               </>
@@ -107,7 +107,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <FooterText title="Support" content="Contact Us" />
-                      <FooterText title="Information" content="Contact Us" />
+                      <FooterText title="Information" content=" " />
                     </div>
                   </div>
 
@@ -149,7 +149,7 @@ export default function Footer() {
                       <FooterText title="Solutions" />
                     </div>
                     <div>
-                      <FooterText title="Information" content="Contact Us" />
+                      <FooterText title="Information" content=" " />
                       <FooterText title="Support" content="Contact Us" />
                     </div>
                   </div>
