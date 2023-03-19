@@ -367,7 +367,11 @@ export default function GetQuoteForm() {
                             : "calendar-container opacity-transition hideCalendar"
                         }
                       >
-                        <Calendar name="date" onChange={handle_change} />
+                        <Calendar
+                          setShowCalendar={setShowCalendar}
+                          name="date"
+                          onChange={handle_change}
+                        />
                       </div>
                     </div>
                     <FormRequestQuoteInputMultiline

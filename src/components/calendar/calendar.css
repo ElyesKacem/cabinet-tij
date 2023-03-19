@@ -1,0 +1,11 @@
+.calendar-ok {
+  background: transparent linear-gradient(180deg, #4159f0 0%, #0827d5 100%) 0%
+    0% no-repeat padding-box;
+  color: white;
+  padding: 8px 20px 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.new-selected {
+  color: "red";
+}
