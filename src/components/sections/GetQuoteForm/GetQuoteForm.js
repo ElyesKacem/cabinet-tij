@@ -60,6 +60,7 @@ const initial_form = {
   date: new Date(),
   files: [],
   FORM_TYPE: "translation",
+  from: "Request a quote",
 };
 
 export default function GetQuoteForm() {
@@ -124,20 +125,15 @@ export default function GetQuoteForm() {
     }
     if (result) {
       set_sending(true);
-      toast.loading("Sending Data...", {
-        icon: <CircularProgress sx={{ color: "blue" }} />,
-      });
       RQ_service(
         result,
         () => {
-          toast.dismiss();
           toast.success("data sent successfully");
           setForm({ ...initial_form });
           set_sending(false);
           // use the navigation
         },
         () => {
-          toast.dismiss();
           toast.error("there was an error while sending data");
           set_sending(false);
         }
@@ -434,6 +430,8 @@ export default function GetQuoteForm() {
                           onClick={() => {
                             setSingleFile(null);
                             setSingleFileName(false);
+                            const { others, files } = form;
+                            setForm(others);
                           }}
                         >
                           &nbsp;&nbsp;

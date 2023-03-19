@@ -2,7 +2,7 @@ import { not_emp } from "../../../Functions/validators";
 import { toast } from "react-hot-toast";
 
 export const FormValidator = (form) => {
-  const { full_name, company, email, subect, content, files } = form;
+  const { full_name, company, email, subject, content, from, files } = form;
 
   if (!not_emp(full_name)) {
     toast.error("Name can't be empty");
@@ -19,8 +19,8 @@ export const FormValidator = (form) => {
     return false;
   }
 
-  if (!not_emp(subect)) {
-    toast.error("Subect can't be empty");
+  if (!not_emp(subject)) {
+    toast.error("Subject can't be empty");
     return false;
   }
 
@@ -33,8 +33,8 @@ export const FormValidator = (form) => {
     full_name,
     company,
     email,
-    subect,
+    subject,
     content,
-    files,
+    from,
   };
 };

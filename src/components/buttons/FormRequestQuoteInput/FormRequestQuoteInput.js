@@ -39,14 +39,10 @@ export default function FormRequestQuoteInput(props) {
       />
       {show && (
         <label className="did-floating-label">
-          {props.title == "Spoken Languages ( with priority )" && (
-            <>
-              Spoken Languages <b style={{ fontFamily: "sans-serif" }}>(</b>{" "}
-              with priority <b style={{ fontFamily: "sans-serif" }}>) </b>
-            </>
+          {props.title}
+          {props.required && (
+            <b className="FormRequestQuoteInput-star">&nbsp;*</b>
           )}
-          {props.title != "Spoken Languages ( with priority )" && props.title}
-          {props.required && <b className="FormRequestQuoteInput-star">*</b>}
         </label>
       )}
     </div>

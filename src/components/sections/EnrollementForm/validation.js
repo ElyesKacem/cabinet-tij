@@ -63,6 +63,11 @@ export const FormValidator = (form) => {
     return false;
   }
 
+  if (files.length < 4) {
+    toast.error("Please put all files");
+    return false;
+  }
+
   return {
     full_name,
     phone,

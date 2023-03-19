@@ -1,71 +1,88 @@
 .EnrollementAttachFiles-title {
-    display: flex;
-    align-items: center;
-    -webkit-text-stroke: 0.3px #4B4848;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  -webkit-text-stroke: 0.3px #4b4848;
+  margin-bottom: 30px;
 }
 
 .EnrollementAttachFiles-file-input {
-    display: none;
+  display: none;
 }
 
 .EnrollementAttachFiles-label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transform: translateX(30px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transform: translateX(30px);
 }
 
 .EnrollementAttachFiles-button {
-    border: 1px solid #4B4848;
-    padding: 10px 40px 10px 40px;
-    border-radius: 5px;
-    margin-right: 20px;
-
+  border: 1px solid #4b4848;
+  padding: 10px 40px 10px 40px;
+  border-radius: 5px;
+  margin-right: 20px;
 }
 
 .EnrollementAttachFiles-button-title {
-    transition: transform 0.1s;
+  transition: transform 0.1s;
+  font-family: "Gilroy-Medium";
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Gilroy-Medium";
+  text-align: left;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(180deg, #242d65, #cf2032);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
-
 .EnrollementAttachFiles-button:hover {
-    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
+    0% no-repeat padding-box;
 }
 
 .EnrollementAttachFiles-button:hover .EnrollementAttachFiles-button-title {
-    transform: scale(0.92);
-    color: white;
+  transform: scale(0.92);
+  background-image: linear-gradient(180deg, #ffffff, #ffffff);
 }
 
 .EnrollementAttachFiles-fileName {
-    font-family: "Gilroy-Medium";
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 150px;
-    white-space: nowrap;
-    font-family: "Gilroy-Medium";
-    text-align: left;
-    margin-right: 10px;
-    background-color: red;
+  font-family: "Gilroy-Medium";
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 150px;
+  white-space: nowrap;
+  font-family: "Gilroy-Medium";
+  text-align: left;
+  margin-right: 10px;
+  /* Create the gradient. */
+  background-image: linear-gradient(180deg, #242d65, #cf2032);
 
-    /* Create the gradient. */
-    background-image: linear-gradient(180deg, #242D65, #CF2032);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
 
-    /* Set the background size and repeat properties. */
-    background-size: 100%;
-    background-repeat: repeat;
-
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 .EnrollementAttachFiles-container {
-    /* display: flex; */
-    margin-bottom: 50px;
-    transform: translateX(20%);
+  /* display: flex; */
+  margin-bottom: 50px;
+  transform: translateX(20%);
 }

@@ -92,7 +92,7 @@ export default function EnrollementForm() {
           information
         </div>
 
-        <b className="EnrollementForm-blackTitle">Apply for affiliation</b>
+        <b className="EnrollementForm-blackTitle">Apply For Affiliation</b>
         <b className="EnrollementForm-title">Identity</b>
         <br />
         <Grid container spacing={4}>
@@ -128,7 +128,7 @@ export default function EnrollementForm() {
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Email"
+              title="E-mail"
               name="email"
               value={form.email}
               onChange={handle_change}

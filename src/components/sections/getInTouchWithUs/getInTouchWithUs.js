@@ -19,9 +19,10 @@ const initial_form = {
   full_name: "",
   company: "",
   email: "",
-  subect: "",
+  subject: "",
   content: "",
   files: [],
+  from: "Get in touch with us",
 };
 
 export default function GetInTouchWithUs() {
@@ -37,7 +38,6 @@ export default function GetInTouchWithUs() {
     let result = FormValidator(form);
     if (sending) {
       toast.error("we are sending please wait");
-      return;
     }
     if (result) {
       set_sending(true);
@@ -69,7 +69,7 @@ export default function GetInTouchWithUs() {
               <br />
               <div className="getInTouchWithUsFrom">
                 <div className="getInTouchWithUsFrom-title">
-                  Get in Touch With Us
+                  Get In Touch With Us
                 </div>
                 <br />
                 <br />
@@ -110,8 +110,8 @@ export default function GetInTouchWithUs() {
                       type="text"
                       placeholder="Subject *"
                       className="getInTouchWithUsFrom-input"
-                      name="subect"
-                      value={form.subect}
+                      name="subject"
+                      value={form.subject}
                       onChange={handle_change}
                     />
                   </Grid>
@@ -159,7 +159,7 @@ export default function GetInTouchWithUs() {
                 }}
               >
                 <div className="getInTouchWithUsFrom-title">
-                  Get in Touch With Us
+                  Get In Touch With Us
                 </div>
                 <br />
                 <br />
@@ -200,8 +200,8 @@ export default function GetInTouchWithUs() {
                       type="text"
                       placeholder="Subject *"
                       className="getInTouchWithUsFrom-input"
-                      name="subect"
-                      value={form.subect}
+                      name="subject"
+                      value={form.subject}
                       onChange={handle_change}
                     />
                   </Grid>
