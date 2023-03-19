@@ -168,7 +168,7 @@ export default function TalkToUsNowSection() {
                       <div className="TalkToUsNowSection-subContainer">
                         <div className="TalkToUsNowSection-pinkb">Find Us</div>
                         <div style={{ width: 200 }}>
-                          1 rue René et Isa Lefèvre{" "}
+                          3 rue Boccador, 75008 Paris.{" "}
                         </div>
                         <div>93450 L'IIe-Saint-Denis</div>
                       </div>
@@ -278,7 +278,7 @@ export default function TalkToUsNowSection() {
                       <div className="TalkToUsNowSection-subContainer">
                         <div className="TalkToUsNowSection-pinkb">Find Us</div>
                         <div style={{ width: 200 }}>
-                          1 rue René et Isa Lefèvre{" "}
+                          3 rue Boccador, 75008 Paris.{" "}
                         </div>
                         <div>93450 L'IIe-Saint-Denis</div>
                       </div>
