@@ -26,6 +26,14 @@ export default function Calendar({ name, onChange }) {
         mode="single"
         selected={selected}
         footer={footer}
+        styles={{
+          caption: {
+            background:
+              "transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box",
+            borderRadius: 5,
+            color: "white",
+          },
+        }}
         // disabledDays={{ after: today }}
         // selectedDays={new Date()}
         onSelect={handle_change}

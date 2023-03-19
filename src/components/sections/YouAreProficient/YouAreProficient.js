@@ -41,7 +41,7 @@ export default function YouAreProficient() {
                     <img src={Idea} style={{ height: 70 }} />
 
                     <div className="YouAreProficient-h1">
-                      You are proficient in both a foreign language and French.
+                      You are language specialist.
                     </div>
                     <br />
                     <div className="YouAreProficient-p">
@@ -90,7 +90,7 @@ export default function YouAreProficient() {
                     <img src={Idea} style={{ height: 70 }} />
 
                     <div className="YouAreProficient-h1">
-                      You are proficient in both a foreign language and French.
+                      You are language specialist.
                     </div>
                     <br />
                     <div className="YouAreProficient-p">
@@ -147,7 +147,7 @@ export default function YouAreProficient() {
                     <img src={Idea} style={{ height: 70 }} />
 
                     <div className="YouAreProficient-h1">
-                      You are proficient in both a foreign language and French.
+                      You are language specialist.
                     </div>
                     <br />
                     <div className="YouAreProficient-p">
@@ -206,7 +206,7 @@ export default function YouAreProficient() {
                   <img src={Idea} style={{ height: 70 }} />
 
                   <div className="YouAreProficient-h1">
-                    You are proficient in both a foreign language and French.
+                    You are language specialist.
                   </div>
                   <br />
                   <div className="YouAreProficient-p">

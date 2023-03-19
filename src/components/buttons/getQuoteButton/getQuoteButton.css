@@ -1,41 +1,49 @@
-.get-quote{
-    /* font-weight: bold; */
-    border: 1px white solid;
-    padding: 10px 30px 10px 30px;
-    border-radius:5px;
-    height: 15px;
-    width: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .2s ease-out;
-    cursor: pointer;
-    position: relative;
-    z-index: 3;
+.get-quote {
+  /* font-weight: bold; */
+  border: 1px white solid;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  height: 15px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  font-weight: bold;
+  font-size: 14.5px;
 }
-.get-quote-purple{
-    /* font-weight: bold; */
-    padding: 10px 30px 10px 30px;
-    border-radius:5px;
-    height: 15px;
-    width: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .2s ease-out;
-    cursor: pointer;
-    position: relative;
-    z-index: 3;
-    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-
+.get-quote-purple {
+  /* font-weight: bold; */
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  height: 15px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  font-size: 14.5px;
+  z-index: 3;
+  background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
+    0% no-repeat padding-box;
 }
-.get-quote-blueBG{
-    background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;
-    border-color: transparent;
+.get-quote-blueBG {
+  background: transparent linear-gradient(180deg, #4159f0 0%, #0827d5 100%) 0%
+    0% no-repeat padding-box;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 14.5px;
 }
-.get-quote:hover{
-    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-    border-color: transparent;
-    font-size: 15px;
-    transition: all .2s ease-out;
+.get-quote:hover {
+  background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
+    0% no-repeat padding-box;
+  border-color: transparent;
+  font-size: 15px;
+  transition: all 0.2s ease-out;
 }

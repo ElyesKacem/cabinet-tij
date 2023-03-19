@@ -30,7 +30,7 @@ function App() {
           <div>
             <img className="logofr" src={logoFrance} />
           </div>
-          <Toaster />
+          <Toaster position="top-center" />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

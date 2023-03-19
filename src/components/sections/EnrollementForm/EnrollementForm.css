@@ -1,77 +1,80 @@
-.flexalignjustify{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.flexalignjustify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.EnrollementForm-paragraph{
-    -webkit-text-stroke: 0.5px #4B4848;
-    margin-top: 4px;
-}
-
-.EnrollementForm-paragraph b{
-    
-    font-family: "Gilroy-Medium";
-    -webkit-text-stroke: 0.5px #4B4848;
+.EnrollementForm-paragraph {
+  -webkit-text-stroke: 0.5px #4b4848;
+  margin-top: 4px;
 }
 
-.EnrollementForm-content{
-flex-direction: column;
-text-align: center;
-color:#4B4848;
-width: 80%;
-max-width: 70%;
+.EnrollementForm-paragraph b {
+  font-family: "Gilroy-Medium";
+  -webkit-text-stroke: 0.5px #4b4848;
 }
 
-.EnrollementForm-blackTitle{
-    margin:25px;
-    font-weight: bold;
-    -webkit-text-stroke: 0.3px black;
-    color:black;
-    font-family: "Gilroy-Bold";
-}
-.EnrollementForm-title{
-    margin:15px;
-    font-weight: bold;
-    color:#524F4F;
-    -webkit-text-stroke: 0.3px #524F4F;
-    font-family: "Gilroy-Bold";
-    text-align: center;
-}
-.displaynone{
-    display: none;
-}
-.EnrollementForm-multiple-files{
-    cursor: pointer;
-    border: #4B4848 1px solid;
-    padding: 12px 120px 12px 120px;
-    border-radius: 5px;
-    margin-right: 20px;
-}
-.EnrollementForm-multiple-files:hover{
-    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-    color:white;
+.EnrollementForm-content {
+  flex-direction: column;
+  text-align: center;
+  color: #4b4848;
+  width: 80%;
+  max-width: 70%;
 }
 
-.EnrollementForm-submit{
-    color: white;
-    background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box;
-    padding:12px 42px 12px 42px;
-    border-radius: 5px;
-    cursor: pointer;
+.EnrollementForm-blackTitle {
+  margin: 25px;
+  font-weight: bold;
+  -webkit-text-stroke: 0.3px black;
+  color: black;
+  font-family: "Gilroy-Bold";
 }
-.EnrollementForm-submit:hover .EnrollementForm-submit-title
-{
-    transform: scale(0.95);
+.EnrollementForm-title {
+  margin: 15px;
+  font-weight: bold;
+  color: #524f4f;
+  -webkit-text-stroke: 0.3px #524f4f;
+  font-family: "Gilroy-Bold";
+  text-align: center;
+}
+.displaynone {
+  display: none;
+}
+.EnrollementForm-multiple-files {
+  cursor: pointer;
+  border: #4b4848 1px solid;
+  padding: 12px 120px 12px 120px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.EnrollementForm-multiple-files:hover {
+  background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
+    0% no-repeat padding-box;
+  color: white;
 }
 
-.EnrollementForm-submit-title{
-    transition: transform 0.2s;
+.EnrollementForm-submit {
+  color: white;
+  background: transparent linear-gradient(180deg, #4159f0 0%, #0827d5 100%) 0%
+    0% no-repeat padding-box;
+  padding: 12px 42px 12px 42px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 95px;
+  font-size: 19px;
+  margin-top: 7px;
 }
-.Enrollement-attach-files{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 175px;
-    transform: translateX(-45px);
+.EnrollementForm-submit:hover .EnrollementForm-submit-title {
+  transform: scale(0.95);
+}
+
+.EnrollementForm-submit-title {
+  transition: transform 0.2s;
+}
+.Enrollement-attach-files {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 175px;
+  transform: translateX(-45px);
 }

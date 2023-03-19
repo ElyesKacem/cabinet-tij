@@ -22,6 +22,7 @@ import Calendar from "../../calendar/calendar";
 import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
 import { RQ_service } from "../../../services/services";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const menuData = [
   {
@@ -117,7 +118,9 @@ export default function GetQuoteForm() {
   const Handle_submit = () => {
     let result = FormValidator(form);
     if (sending) {
-      toast.error("we are sending please wait");
+      toast.error("we are sending please wait", {
+        icon: <CircularProgress sx={{ color: "blue" }} />,
+      });
       return;
     }
     if (result) {
@@ -131,7 +134,9 @@ export default function GetQuoteForm() {
           // use the navigation
         },
         () => {
-          toast.error("there was an error while sending data");
+          toast.error("there was an error while sending data", {
+            icon: <CircularProgress sx={{ color: "green" }} />,
+          });
           set_sending(false);
         }
       );
@@ -259,7 +264,7 @@ export default function GetQuoteForm() {
                       name="email"
                       value={form.email}
                       required
-                      title="E mail "
+                      title="E-mail "
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -470,7 +475,7 @@ export default function GetQuoteForm() {
                           <b style={{ fontFamily: "sans-serif" }}>
                             + &nbsp;&nbsp;{" "}
                           </b>{" "}
-                          Add more files
+                          Add More Files
                         </div>
                       </label>
                     </div>

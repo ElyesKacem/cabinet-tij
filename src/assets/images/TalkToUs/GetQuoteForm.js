@@ -378,7 +378,7 @@ export default function GetQuoteForm() {
                           <b style={{ fontFamily: "sans-serif" }}>
                             + &nbsp;&nbsp;{" "}
                           </b>{" "}
-                          Add more files
+                          Add More Files
                         </div>
                       </label>
                     </div>
