@@ -7,7 +7,7 @@ export const RQ_service = (data, succ, fail) => {
   formdata.append("text", parser(data));
 
   axios
-    .post("/sendmail", formdata, { text: parser(data) })
+    .post("http://localhost:4000/sendmail", formdata, { text: parser(data) })
     .then((res) => {
       console.log(res);
       succ();

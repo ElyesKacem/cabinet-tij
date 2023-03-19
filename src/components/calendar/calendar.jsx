@@ -94,9 +94,9 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
           day: {
             margin: "auto",
           },
-          nav_button_next: {
-            color: "red",
-          },
+          // nav_button_next: {
+          //   color: "red",
+          // },
         }}
         // disabledDays={{ after: today }}
         // selectedDays={new Date()}

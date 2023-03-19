@@ -1,5 +1,6 @@
 import { not_emp } from "../../../Functions/validators";
 import { toast } from "react-hot-toast";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const translationValid = (form) => {
   const { full_name, email, phone, target_lang, source_lang, notes, files } =
@@ -32,6 +33,11 @@ const translationValid = (form) => {
 
   if (!not_emp(notes)) {
     toast.error("Notes can't be empty");
+    return false;
+  }
+
+  if (files.length == 0) {
+    toast.error("files can't be empty");
     return false;
   }
   return { full_name, email, phone, target_lang, source_lang, notes, files };
@@ -70,6 +76,12 @@ const InterpretingValid = (form) => {
     toast.error("Notes can't be empty");
     return false;
   }
+
+  if (files.length == 0) {
+    toast.error("files can't be empty");
+    return false;
+  }
+
   return { full_name, email, phone, target_lang, location, notes, files, date };
 };
 
@@ -119,6 +131,12 @@ const TranscriptValid = (form) => {
     toast.error("Notes can't be empty");
     return false;
   }
+
+  if (files.length == 0) {
+    toast.error("files can't be empty");
+    return false;
+  }
+
   return {
     full_name,
     email,
@@ -145,3 +163,9 @@ export const FormValidator = (form) => {
       return translationValid(form);
   }
 };
+
+// export const SendingData = () => {
+//   return toast.loading("Sending Data...", {
+//     icon: <CircularProgress sx={{ color: "blue" }} />,
+//   });
+// };

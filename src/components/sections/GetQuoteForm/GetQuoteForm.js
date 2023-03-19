@@ -117,26 +117,28 @@ export default function GetQuoteForm() {
 
   const Handle_submit = () => {
     let result = FormValidator(form);
+
     if (sending) {
-      toast.error("we are sending please wait", {
-        icon: <CircularProgress sx={{ color: "blue" }} />,
-      });
+      toast.error("we are sending please wait");
       return;
     }
     if (result) {
       set_sending(true);
+      toast.loading("Sending Data...", {
+        icon: <CircularProgress sx={{ color: "blue" }} />,
+      });
       RQ_service(
         result,
         () => {
+          toast.dismiss();
           toast.success("data sent successfully");
           setForm({ ...initial_form });
           set_sending(false);
           // use the navigation
         },
         () => {
-          toast.error("there was an error while sending data", {
-            icon: <CircularProgress sx={{ color: "green" }} />,
-          });
+          toast.dismiss();
+          toast.error("there was an error while sending data");
           set_sending(false);
         }
       );
