@@ -29,28 +29,29 @@ export default function LanguageMenu(props) {
     <div style={mStyle}>
       <div>
         <div className={rotateButton ? "dropDownMenu" : "dropUpMenu"}>
-          <div className="languageMenuContent-overlay" style={mOpacity}></div>
-          <div className="languageMenuContent">
-            <div
-              style={{ display: "flex", cursor: "pointer" }}
-              onClick={() => {
-                setLang("en");
-              }}
-            >
-              <img src={EnglishFlag} /> &nbsp;&nbsp;&nbsp;
-              <div>{texts.English}</div>
-            </div>
+          <div className="languageMenuContent-overlay" style={mOpacity}>
+            <div className="languageMenuContent">
+              <div
+                style={{ display: "flex", cursor: "pointer" }}
+                onClick={() => {
+                  setLang("en");
+                }}
+              >
+                <img src={EnglishFlag} /> &nbsp;&nbsp;&nbsp;
+                <div>{texts.English}</div>
+              </div>
 
-            <br />
+              <br />
 
-            <div
-              onClick={() => {
-                setLang("fr");
-              }}
-              style={{ display: "flex", cursor: "pointer" }}
-            >
-              <img src={FrenchFlag} /> &nbsp;&nbsp;&nbsp;
-              <div>{texts.French}</div>
+              <div
+                onClick={() => {
+                  setLang("fr");
+                }}
+                style={{ display: "flex", cursor: "pointer" }}
+              >
+                <img src={FrenchFlag} /> &nbsp;&nbsp;&nbsp;
+                <div>{texts.French}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -69,7 +70,11 @@ export default function LanguageMenu(props) {
       </svg>
       <ExpandLessIcon
         className={rotateButton ? "rotateButtonForward" : "rotateButtonBack"}
-        sx={{ fontSize: 50, fill: "url(#linearColors)", cursor: "pointer" }}
+        sx={{
+          fontSize: 50,
+          fill: props.color ? "white" : "url(#linearColors)",
+          cursor: "pointer",
+        }}
         onClick={() => {
           setRotateButton(!rotateButton);
         }}

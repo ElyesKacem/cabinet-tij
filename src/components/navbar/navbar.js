@@ -187,7 +187,7 @@ export default function Navbar() {
                     ></GetQuoteButton>
                   </div>
                   <div style={{ marginRight: 20 }}>
-                    <LanguageMenu></LanguageMenu>
+                    <LanguageMenu color={color}></LanguageMenu>
                   </div>
                 </div>
               </div>

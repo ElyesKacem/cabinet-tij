@@ -1,82 +1,90 @@
-.rotateButtonForward{
-    transform: rotate(180deg);
-    animation: rotationForward 0.7s;
+.rotateButtonForward {
+  transform: rotate(180deg);
+  animation: rotationForward 0.7s;
 }
 
 @keyframes rotationForward {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(180deg);
-    }
-  }
-.rotateButtonBack{
+  from {
     transform: rotate(0deg);
-    animation: rotationBack 0.7s;
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.rotateButtonBack {
+  transform: rotate(0deg);
+  animation: rotationBack 0.7s;
 }
 
 @keyframes rotationBack {
-    from {
-      transform: rotate(180deg);
-    }
-    to {
-      transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(180deg);
   }
+  to {
+    transform: rotate(0deg);
+  }
+}
 
-  .languageMenuContent-overlay{
-    background: transparent linear-gradient(180deg, #CF2032 0%, #242D65 100%) 0% 0% no-repeat padding-box;;
-    width: 135px;
-    height: 80px;
-    opacity: 26%;
-    position: absolute;
-    top:30px;
-    left: -40px;
-    z-index: 3;
-  }
+.languageMenuContent-overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(207, 32, 50, 0.4),
+    rgba(36, 45, 101, 0.4)
+  );
+  /* transparent linear-gradient(180deg, #cf2032 0%, #242d65 100%) 0%
+    0% no-repeat padding-box; */
+  width: 135px;
+  height: 80px;
+  /* opacity: 26%; */
+  position: absolute;
+  top: 30px;
+  left: -40px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .languageMenuContent{
-    position: absolute;
-    font-weight: bold;
-    
-    top: 40px;
-    right: -77px;
-    z-index: 10;
+.languageMenuContent {
+  position: relative;
+  font-weight: bold;
 
-  }
-  .languageMenuContent img{
-    height: 20px;
-  }
+  /* top: 40px;
+  right: 50%; */
+  /* z-index: 10; */
+}
+.languageMenuContent img {
+  height: 20px;
+}
 
-  .dropDownMenu{
-    transform: translateY(0px);
-    animation: dropDownMenuAnimation 0.7s;
-  }
+.dropDownMenu {
+  transform: translateY(0px);
+  animation: dropDownMenuAnimation 0.7s;
+}
 
-  @keyframes dropDownMenuAnimation {
-    from {
-      transform: translateY(-60px);
-      opacity: 0%;
-    }
-    to {
-      transform: translateY(0px);
-      opacity: 100%;
-    }
-  }
-  .dropUpMenu{
+@keyframes dropDownMenuAnimation {
+  from {
     transform: translateY(-60px);
-    animation: dropUpMenuAnimation 0.7s;
-    opacity: 0;
+    opacity: 0%;
   }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+.dropUpMenu {
+  transform: translateY(-60px);
+  animation: dropUpMenuAnimation 0.7s;
+  opacity: 0;
+}
 
-  @keyframes dropUpMenuAnimation {
-    from {
-      transform: translateY(0px);
-      opacity: 100%;
-    }
-    to {
-      transform: translateY(-60px);
-      opacity: 0%;
-    }
+@keyframes dropUpMenuAnimation {
+  from {
+    transform: translateY(0px);
+    opacity: 100%;
   }
+  to {
+    transform: translateY(-60px);
+    opacity: 0%;
+  }
+}
