@@ -1,10 +1,18 @@
-.marginAuto{
-    
-    background-color: red;
-    margin: auto;
+.marginAuto {
+  background-color: red;
+  margin: auto;
 }
 
-.footer-container{
-    display: flex;
-    justify-content: center;
+.footer-container {
+  display: flex;
+  justify-content: center;
+}
+.footer-b-container {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
 }

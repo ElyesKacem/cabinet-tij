@@ -8,6 +8,7 @@ import LinkedIn from "../../../assets/images/LinkedIn.png";
 import FooterText from "../../footerText/footerText.js";
 import Media from "react-media";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -169,7 +170,17 @@ export default function Footer() {
           position: "relative",
           zIndex: "3",
         }}
-      ></div>
+      >
+        <div className="footer-b-container">
+          <Link
+            style={{ color: "white", textDecoration: "none" }}
+            to="/termeofuse"
+          >
+            Terms of use | Privacy and Policy
+          </Link>
+          <div>All Copyrights © are reserved 2022</div>
+        </div>
+      </div>
     </div>
   );
 }

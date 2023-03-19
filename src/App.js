@@ -14,6 +14,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { LangContext } from "./context/Lang.context";
+import TermOfUse from "./pages/TermOfUse";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -37,6 +38,7 @@ function App() {
             <Route path="/requestquote" element={<GetQuote />} />
             <Route path="/enrollement" element={<Enrollement />} />
             <Route path="/talktousnow" element={<TalkToUsNow />} />
+            <Route path="/termeofuse" element={<TermOfUse />} />
             <Route
               path="/TakePartInOurCommunity"
               element={<TakePartInOurCommunity />}

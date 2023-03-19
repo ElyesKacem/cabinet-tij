@@ -1,31 +1,30 @@
-.EnrollementImage-Arrow{
-    width: 50px;
-    transition: transform 1s;
-    transform: translateY(20px);
-    
+.EnrollementImage-Arrow {
+  width: 50px;
+  transition: transform 1s;
+  transform: translateY(20px);
 }
-.EnrollementImage-Arrow:hover{
-   transform: translateY(50px);
-
+.EnrollementImage-Arrow:hover {
+  transform: translateY(50px);
 }
-.EnrollementImage-content{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    text-align: center;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.09));    
+.EnrollementImage-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.09));
 }
 
-.EnrollementImage-title{
-    font-size: 70px;
-font-family: "Gilroy-Bold";
-    font-weight: bold;
+.EnrollementImage-title {
+  font-size: 70px;
+  font-family: "Gilroy-Bold";
+  font-weight: bold;
+  color: white;
 }
-.EnrollementImage-paragraph{
-margin-top: 10px;
-line-height: 1.5;
-font-family: "Gilroy-Regular";
+.EnrollementImage-paragraph {
+  margin-top: 10px;
+  line-height: 1.5;
+  font-family: "Gilroy-Regular";
 }
