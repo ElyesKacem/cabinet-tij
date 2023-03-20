@@ -142,8 +142,8 @@ export default function GetQuoteForm() {
   };
 
   const GLOBAL_MEDIA_QUERIES = {
-    small: "(max-width: 600px)",
-    medium: "(min-width: 600px) and (max-width: 1150px)",
+    small: "(max-width: 800px)",
+    medium: "(max-width: 1150px)",
     large: "(min-width: 1150px)",
   };
 
@@ -174,7 +174,10 @@ export default function GetQuoteForm() {
                     >
                       <div
                         className="getQuoteForm-margin"
-                        style={{ display: "flex", gap: 30 }}
+                        style={{
+                          display: "flex",
+                          gap: 10,
+                        }}
                       >
                         {menuData.map((element, index) => (
                           <div key={index} className="getQuoteForm-mobile-menu">

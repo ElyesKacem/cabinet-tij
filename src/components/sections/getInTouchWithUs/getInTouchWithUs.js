@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./getInTouchWithUs.css";
 import Grid from "@mui/material/Grid";
-import EastIcon from "@mui/icons-material/East";
 import Media from "react-media";
 import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
@@ -13,6 +12,8 @@ const GLOBAL_MEDIA_QUERIES = {
   large: "(min-width: 700px)",
   medium: "(max-width: 700px)",
   small: "(max-width: 600px)",
+  verySmall: "(max-width: 406px)",
+  mobile: "(max-width: 900px)",
 };
 
 const initial_form = {
@@ -159,7 +160,7 @@ export default function GetInTouchWithUs() {
                 }}
               >
                 <div className="getInTouchWithUsFrom-title">
-                  Get In Touch With Us
+                  Get In Touch {matches.verySmall && <br />} With Us
                 </div>
                 <br />
                 <br />
@@ -223,6 +224,7 @@ export default function GetInTouchWithUs() {
                   onClick={Handle_submit}
                   isWhite
                   title="Submit"
+                  style={{ transform: "translateX(15px)" }}
                 />
               </div>
               <br />

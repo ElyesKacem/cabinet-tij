@@ -10,7 +10,7 @@ import Media from "react-media";
 export default function Services() {
   const GLOBAL_MEDIA_QUERIES = {
     small: "(max-width: 649px)",
-    medium: "(max-width: 999px) and (min-width: 650px)",
+    medium: "(max-width: 999px) ",
     large: "(min-width: 1000px)",
   };
   return (
@@ -72,7 +72,12 @@ export default function Services() {
                                   className="servicesPauseButton"
                                 />
                               </div>
-                              <div className="Gilroy-Regular">Our services</div>
+                              <div
+                                // style={{ fontSize: 17 }}
+                                className="Gilroy-Regular"
+                              >
+                                Our services
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -86,7 +91,7 @@ export default function Services() {
               </>
             )}
             {matches.medium && (
-              <div style={{ padding: 10 }}>
+              <div style={{ padding: 2 }}>
                 <div className="greyEmptyRectangle" />
                 <div>
                   <div>
@@ -124,7 +129,7 @@ export default function Services() {
                                 className="servicesPauseButton"
                               />
                             </div>
-                            <div>Our services</div>
+                            <div style={{ fontSize: 17 }}>Our services</div>
                           </div>
                         </div>
                       </div>
@@ -137,7 +142,7 @@ export default function Services() {
                 </div>
               </div>
             )}
-            {matches.small && (
+            {/* {matches.small && (
               <div style={{ padding: 10 }}>
                 <div>
                   <div className="translateRight40" style={{ maxWidth: 350 }}>
@@ -188,7 +193,7 @@ export default function Services() {
                   <img className="ServicesleftImage" src={Image} />
                 </div>
               </div>
-            )}
+            )} */}
           </React.Fragment>
         )}
       </Media>

@@ -74,20 +74,6 @@ export default function Footer() {
                   className="footer-container"
                   style={{ flexDirection: "column", alignItems: "center" }}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img src={CabinetTIJ} style={{ height: 200 }} />
-                    <div>
-                      <img src={GoogleMaps} style={{ height: 30 }} />
-                      <img src={LinkedIn} style={{ height: 30 }} />
-                    </div>
-                  </div>
-
                   <br />
                   <br />
 
@@ -111,10 +97,27 @@ export default function Footer() {
                     </div>
                   </div>
 
-                  <br />
-                  <br />
                   <div></div>
                 </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    marginTop: 0,
+                  }}
+                >
+                  <img src={CabinetTIJ} style={{ height: 200 }} />
+                  <div>
+                    <img src={GoogleMaps} style={{ height: 30 }} />
+                    <img src={LinkedIn} style={{ height: 30 }} />
+                  </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
               </>
             )}
             {matches.small && (
@@ -123,20 +126,6 @@ export default function Footer() {
                   className="footer-container"
                   style={{ flexDirection: "column", alignItems: "center" }}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img src={CabinetTIJ} style={{ height: 200 }} />
-                    <div>
-                      <img src={GoogleMaps} style={{ height: 30 }} />
-                      <img src={LinkedIn} style={{ height: 30 }} />
-                    </div>
-                  </div>
-
                   <br />
                   <br />
 
@@ -154,6 +143,22 @@ export default function Footer() {
                     </div>
                   </div>
                 </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    transform: "translateY(-60px)",
+                  }}
+                >
+                  <img src={CabinetTIJ} style={{ height: 200 }} />
+                  <div>
+                    <img src={GoogleMaps} style={{ height: 30 }} />
+                    <img src={LinkedIn} style={{ height: 30 }} />
+                  </div>
+                </div>
+                <br />
+                <br />
               </>
             )}
           </div>

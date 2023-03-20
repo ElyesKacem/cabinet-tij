@@ -29,20 +29,11 @@ export default function DoYouNeedMoreAssistance(props) {
                   flexDirection: "column",
                 }}
               >
-                {matches.small && (
-                  <img
-                    className="shortImage"
-                    style={{ width: 390 }}
-                    src={Image}
-                  />
-                )}
-                {!matches.small && (
-                  <img
-                    className="shortImage"
-                    style={{ width: 500 }}
-                    src={Image}
-                  />
-                )}
+                <img
+                  className="shortImage"
+                  style={{ width: "100%" }}
+                  src={Image}
+                />
 
                 <div>
                   <p className="firstClass">Do You Need More Assistance?</p>

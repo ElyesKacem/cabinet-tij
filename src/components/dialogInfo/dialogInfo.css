@@ -1,4 +1,4 @@
-.dialogInfoClass{
+.dialogInfoClass {
   width: 850px;
   height: 400px;
   transform: translate(10px);
@@ -8,17 +8,17 @@
   /* background-color: red; */
 }
 
-.dialogInfoClass-selected{
+.dialogInfoClass-selected {
   box-shadow: 10px 8px 13px rgba(177, 177, 177, 0.658);
 }
 
-.dialogInfoClass-title{
-  font-weight:bold;
-  color:#223EE2;
-    font-size: 50px;
-    font-family:"Gilroy-Bold";
+.dialogInfoClass-title {
+  font-weight: bold;
+  color: #223ee2;
+  font-size: 50px;
+  font-family: "Gilroy-Bold";
 }
-.dialogInfoClass-paragraph{
+.dialogInfoClass-paragraph {
   font-family: "Gilroy-Medium";
   font-size: 25px;
   padding: 15px 15px 15px 3px;
@@ -27,16 +27,15 @@
   line-height: 1.5;
 }
 
-.dialogInfoClass-paragraph-container{
+.dialogInfoClass-paragraph-container {
   position: relative;
-  top:20%;
-  margin-left: 30px;
+  top: 20%;
+  margin-left: 60px;
 }
 
 /* version mobile */
 
-
-.dialogInfoM{
+.dialogInfoM {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -45,5 +44,4 @@
   border-radius: 7px;
   padding-top: 50px;
   padding-bottom: 50px;
-
 }

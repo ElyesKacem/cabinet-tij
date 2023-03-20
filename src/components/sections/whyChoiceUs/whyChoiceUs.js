@@ -20,7 +20,8 @@ export default function WhyChoiceUs() {
     // medium: "(min-width: 600px) and (max-width: 1199px)",
     large: "(min-width: 900px)",
     medium: "(max-width: 900px) and (min-width: 550px)",
-    small: "(max-width: 550px)",
+    small: "(max-width: 550px) ",
+    verysmall: "(max-width: 414px)",
   };
 
   let data = [
@@ -73,152 +74,156 @@ export default function WhyChoiceUs() {
             Here Are Few Reasons <br /> To Trust Us
           </p>
 
-          <div>
-            <Media queries={GLOBAL_MEDIA_QUERIES}>
-              {(matches) => (
-                <React.Fragment>
-                  {matches.large && (
-                    <div style={{ transform: "translateX(-10px)" }}>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-around",
-                          transform: "translateX(-7px)",
-                          gap: 28,
-                        }}
-                      >
-                        <DialogSelection
-                          setIsShadow={setIsShadow}
-                          haveShader={isShadow[0]}
-                          setSelectedDataId={setSelectedDataId}
-                          selectedDataId={selectedDataId}
-                          id={0}
-                          img={Image1}
-                          title="Expertise"
-                        />
-                        <DialogSelection
-                          setIsShadow={setIsShadow}
-                          haveShader={isShadow[1]}
-                          setSelectedDataId={setSelectedDataId}
-                          selectedDataId={selectedDataId}
-                          id={1}
-                          img={Image2}
-                          title="Experience"
-                        />
-                        <DialogSelection
-                          setIsShadow={setIsShadow}
-                          haveShader={isShadow[2]}
-                          setSelectedDataId={setSelectedDataId}
-                          selectedDataId={selectedDataId}
-                          id={2}
-                          img={Image3}
-                          title="Quality"
-                        />
-                        <DialogSelection
-                          setIsShadow={setIsShadow}
-                          haveShader={isShadow[3]}
-                          setSelectedDataId={setSelectedDataId}
-                          selectedDataId={selectedDataId}
-                          id={3}
-                          img={Image4}
-                          title="Agility"
-                        />
-                        <DialogSelection
-                          setIsShadow={setIsShadow}
-                          haveShader={isShadow[4]}
-                          setSelectedDataId={setSelectedDataId}
-                          selectedDataId={selectedDataId}
-                          id={4}
-                          img={Image5}
-                          title="Efficiency"
-                        />
+          <Media queries={GLOBAL_MEDIA_QUERIES}>
+            {(matches) => (
+              <React.Fragment>
+                {matches.large && (
+                  <div style={{ transform: "translateX(-10px)" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                        transform: "translateX(-7px)",
+                        gap: 28,
+                      }}
+                    >
+                      <DialogSelection
+                        setIsShadow={setIsShadow}
+                        haveShader={isShadow[0]}
+                        setSelectedDataId={setSelectedDataId}
+                        selectedDataId={selectedDataId}
+                        id={0}
+                        img={Image1}
+                        title="Expertise"
+                      />
+                      <DialogSelection
+                        setIsShadow={setIsShadow}
+                        haveShader={isShadow[1]}
+                        setSelectedDataId={setSelectedDataId}
+                        selectedDataId={selectedDataId}
+                        id={1}
+                        img={Image2}
+                        title="Experience"
+                      />
+                      <DialogSelection
+                        setIsShadow={setIsShadow}
+                        haveShader={isShadow[2]}
+                        setSelectedDataId={setSelectedDataId}
+                        selectedDataId={selectedDataId}
+                        id={2}
+                        img={Image3}
+                        title="Quality"
+                      />
+                      <DialogSelection
+                        setIsShadow={setIsShadow}
+                        haveShader={isShadow[3]}
+                        setSelectedDataId={setSelectedDataId}
+                        selectedDataId={selectedDataId}
+                        id={3}
+                        img={Image4}
+                        title="Agility"
+                      />
+                      <DialogSelection
+                        setIsShadow={setIsShadow}
+                        haveShader={isShadow[4]}
+                        setSelectedDataId={setSelectedDataId}
+                        selectedDataId={selectedDataId}
+                        id={4}
+                        img={Image5}
+                        title="Efficiency"
+                      />
+                    </div>
+
+                    <div>
+                      <DialogInfo data={dataToSet}></DialogInfo>
+                    </div>
+                  </div>
+                )}
+                {(matches.medium || matches.small) && (
+                  <>
+                    <div
+                      style={{
+                        width: matches.small ? 380 : 500,
+                        transform: matches.verysmall
+                          ? "scale(0.8) translateY(-50px)"
+                          : "scale(1)",
+                      }}
+                    >
+                      <div className="WhyChoiceUs-5div">
+                        <div>
+                          <DialogSelection
+                            defaultCursor={true}
+                            setIsShadow={setIsShadow}
+                            haveShader={isShadow[0]}
+                            setSelectedDataId={setSelectedDataId}
+                            selectedDataId={selectedDataId}
+                            id={0}
+                            img={Image1}
+                            title="Expertise"
+                          />
+                        </div>
+                        <div>
+                          <DialogSelection
+                            defaultCursor={true}
+                            setIsShadow={setIsShadow}
+                            haveShader={isShadow[1]}
+                            setSelectedDataId={setSelectedDataId}
+                            selectedDataId={selectedDataId}
+                            id={1}
+                            img={Image2}
+                            title="Experience"
+                          />
+                        </div>
+                        <div>
+                          <DialogSelection
+                            defaultCursor={true}
+                            setIsShadow={setIsShadow}
+                            haveShader={isShadow[2]}
+                            setSelectedDataId={setSelectedDataId}
+                            selectedDataId={selectedDataId}
+                            id={2}
+                            img={Image3}
+                            title="Quality"
+                          />
+                        </div>
+                        <div>
+                          <DialogSelection
+                            defaultCursor={true}
+                            setIsShadow={setIsShadow}
+                            haveShader={isShadow[3]}
+                            setSelectedDataId={setSelectedDataId}
+                            selectedDataId={selectedDataId}
+                            id={3}
+                            img={Image4}
+                            title="Agility"
+                          />
+                        </div>
+                        <div>
+                          <DialogSelection
+                            defaultCursor={true}
+                            setIsShadow={setIsShadow}
+                            haveShader={isShadow[4]}
+                            setSelectedDataId={setSelectedDataId}
+                            selectedDataId={selectedDataId}
+                            id={4}
+                            img={Image5}
+                            title="Efficiency"
+                          />
+                        </div>
                       </div>
 
                       <div>
-                        <DialogInfo data={dataToSet}></DialogInfo>
+                        <DialogInfoMobile data={dataToSet}></DialogInfoMobile>
                       </div>
                     </div>
-                  )}
-                  {(matches.medium || matches.small) && (
-                    <>
-                      <div style={{ width: matches.small ? 380 : 500 }}>
-                        <div className="WhyChoiceUs-5div">
-                          <div>
-                            <DialogSelection
-                              defaultCursor={true}
-                              setIsShadow={setIsShadow}
-                              haveShader={isShadow[0]}
-                              setSelectedDataId={setSelectedDataId}
-                              selectedDataId={selectedDataId}
-                              id={0}
-                              img={Image1}
-                              title="Expertise"
-                            />
-                          </div>
-                          <div>
-                            <DialogSelection
-                              defaultCursor={true}
-                              setIsShadow={setIsShadow}
-                              haveShader={isShadow[1]}
-                              setSelectedDataId={setSelectedDataId}
-                              selectedDataId={selectedDataId}
-                              id={1}
-                              img={Image2}
-                              title="Experience"
-                            />
-                          </div>
-                          <div>
-                            <DialogSelection
-                              defaultCursor={true}
-                              setIsShadow={setIsShadow}
-                              haveShader={isShadow[2]}
-                              setSelectedDataId={setSelectedDataId}
-                              selectedDataId={selectedDataId}
-                              id={2}
-                              img={Image3}
-                              title="Quality"
-                            />
-                          </div>
-                          <div>
-                            <DialogSelection
-                              defaultCursor={true}
-                              setIsShadow={setIsShadow}
-                              haveShader={isShadow[3]}
-                              setSelectedDataId={setSelectedDataId}
-                              selectedDataId={selectedDataId}
-                              id={3}
-                              img={Image4}
-                              title="Agility"
-                            />
-                          </div>
-                          <div>
-                            <DialogSelection
-                              defaultCursor={true}
-                              setIsShadow={setIsShadow}
-                              haveShader={isShadow[4]}
-                              setSelectedDataId={setSelectedDataId}
-                              selectedDataId={selectedDataId}
-                              id={4}
-                              img={Image5}
-                              title="Efficiency"
-                            />
-                          </div>
-                        </div>
-
-                        <div>
-                          <DialogInfoMobile data={dataToSet}></DialogInfoMobile>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </React.Fragment>
-              )}
-            </Media>
-          </div>
+                  </>
+                )}
+              </React.Fragment>
+            )}
+          </Media>
         </div>
       </>
 
-      <br />
       <br />
       <br />
     </div>
