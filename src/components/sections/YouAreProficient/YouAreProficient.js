@@ -8,9 +8,9 @@ import Media from "react-media";
 export default function YouAreProficient() {
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1000px)",
-    medium: "(max-width: 999px) and (min-width: 681px)",
-    small: "(max-width: 680px) and (min-width: 494px)",
-    verySmall: "(max-width: 494px)",
+    medium: "(max-width: 999px) ",
+    small: "(max-width: 661px)",
+    vsmall: "(max-width: 576px)",
   };
   return (
     <div className="white-background">
@@ -86,7 +86,13 @@ export default function YouAreProficient() {
                   className="YouAreProficient-container"
                   style={{ flexDirection: "column", gap: 30 }}
                 >
-                  <div className="YouAreProficient-blueBakcground">
+                  <div
+                    className="YouAreProficient-blueBakcground"
+                    style={{
+                      width: matches.small && "auto",
+                      padding: matches.vsmall && 44,
+                    }}
+                  >
                     <img src={Idea} style={{ height: 70 }} />
 
                     <div className="YouAreProficient-h1">
@@ -108,139 +114,33 @@ export default function YouAreProficient() {
                       adventure.
                     </div>
                     <br />
-                    <div className="YouAreProficient-blueButton">
-                      Become a member
-                    </div>
                   </div>
                   <div
                     className="YouAreProficient-zoom"
-                    style={{ transform: "translate(0px)" }}
+                    style={{
+                      transform: "translate(0px)",
+                      width: matches.small && "100%",
+                      height: matches.small && "auto",
+                    }}
                   >
                     <img src={Zoomed} style={{ width: 600 }} alt="" />
                   </div>
-                </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-              </>
-            )}
-            {matches.small && (
-              <>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <div
-                  className="YouAreProficient-container"
-                  style={{
-                    flexDirection: "column",
-                    gap: 30,
-                    transform: "scale(0.7)",
-                  }}
-                >
-                  <div className="YouAreProficient-blueBakcground">
-                    <img src={Idea} style={{ height: 70 }} />
-
-                    <div className="YouAreProficient-h1">
-                      You are language specialist.
-                    </div>
-                    <br />
-                    <div className="YouAreProficient-p">
-                      You align with our ethical principles ? you are
-                      independent ? you possess a strong moral compass and
-                      professional integrity ? you value confidentiality and
-                      objectivity highly ? you have a business mindset or are
-                      seeking an additional income ? and you are interested in
-                      making a career out of your language skills ?
-                    </div>
-                    <br />
-
-                    <div className="YouAreProficient-h2">
-                      If so, we would be very happy for you to be a part of our
-                      adventure.
-                    </div>
-                    <br />
-                    <div className="YouAreProficient-blueButton">
-                      Become a member
-                    </div>
-                  </div>
-                  <div
-                    className="YouAreProficient-zoom"
-                    style={{ transform: "translate(0px)" }}
-                  >
-                    <img src={Zoomed} style={{ width: 600 }} alt="" />
-                  </div>
-                </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-              </>
-            )}
-            {matches.verySmall && (
-              <div
-                className="YouAreProficient-container"
-                style={{
-                  flexDirection: "column",
-                  gap: 30,
-                  transform: "scale(0.7)",
-                  marginLeft: "5%",
-                }}
-              >
-                <div
-                  className="YouAreProficient-blueBakcground"
-                  style={{
-                    padding: "30px 35px 30px 45px",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 350,
-                  }}
-                >
-                  <img src={Idea} style={{ height: 70 }} />
-
-                  <div className="YouAreProficient-h1">
-                    You are language specialist.
-                  </div>
-                  <br />
-                  <div className="YouAreProficient-p">
-                    You align with our ethical principles ? you are independent
-                    ? you possess a strong moral compass and professional
-                    integrity ? you value confidentiality and objectivity highly
-                    ? you have a business mindset or are seeking an additional
-                    income ? and you are interested in making a career out of
-                    your language skills ?
-                  </div>
-                  <br />
-
-                  <div className="YouAreProficient-h2">
-                    If so, we would be very happy for you to be a part of our
-                    adventure.
-                  </div>
-                  <br />
                   <div className="YouAreProficient-blueButton">
-                    Become a member
+                    <div
+                      className="YouAreProficient-blueButton-title"
+                      style={{ color: "white" }}
+                    >
+                      Become a member
+                    </div>
                   </div>
                 </div>
-                <div
-                  className="YouAreProficient-zoom"
-                  style={{
-                    transform: "translate(0px)",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "100%",
-                  }}
-                >
-                  <img src={Zoomed} style={{ width: "100%" }} alt="" />
-                </div>
-              </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+              </>
             )}
           </React.Fragment>
         )}

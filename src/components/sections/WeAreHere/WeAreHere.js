@@ -7,9 +7,9 @@ import Media from "react-media";
 
 export default function WeAreHere() {
   const GLOBAL_MEDIA_QUERIES = {
-    large: "(min-width: 834px)",
-    medium: "(max-width: 833px)",
-    small: "(max-width: 618px)",
+    large: "(min-width: 929px)",
+    medium: "(max-width: 929px)",
+    small: "(max-width: 531px)",
   };
 
   return (
@@ -47,14 +47,27 @@ export default function WeAreHere() {
             {(matches.medium || matches.small) && (
               <div
                 className="WeAreHere-container"
-                style={{ transform: matches.small ? "scale(0.7)" : "scale(1)" }}
+                style={{
+                  transform: matches.small && "scale(0.9)",
+
+                  paddingLeft: matches.small && 0,
+                  paddingRight: matches.small && 0,
+                }}
               >
-                <div className="OurCommunityHeader-title">
+                <div
+                  className="OurCommunityHeader-title"
+                  style={{
+                    fontSize: matches.small && 43,
+                  }}
+                >
                   We are here, it<b className="normal">'</b>s time for you to
                   join TIJ.
                 </div>
 
-                <p className="OurCommunityHeader-paragraph">
+                <p
+                  className="OurCommunityHeader-paragraph"
+                  style={{ width: "auto" }}
+                >
                   It will take less than 10 minutes for you to submit your
                   application <br /> for affiliation. The process will be
                   completed in a time frame of 1<b className="normal">-</b>2

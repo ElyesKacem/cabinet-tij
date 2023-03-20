@@ -1,11 +1,13 @@
-.normal{
-    font-family: sans-serif;
-    font-weight: normal;
+.normal {
+  font-family: sans-serif;
+  font-weight: normal;
 }
-.WeAreHere-container{
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+.WeAreHere-container {
+  /* margin-left: 10%; */
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
