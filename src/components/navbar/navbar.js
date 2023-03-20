@@ -12,6 +12,8 @@ import Media from "react-media";
 
 import { LangContext } from "../../context/Lang.context";
 import GetText from "./navbar.lang";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const GLOBAL_MEDIA_QUERIES = {
   small: "(max-width: 999px)",
@@ -175,13 +177,19 @@ export default function Navbar() {
                   }
                 >
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <NavbarButton title="Home" href="/" />
+                    <HashLink smooth to="/#home">
+                      <NavbarButton title="Home"/>
+                    </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <NavbarButton title="Services" href="/#services" />
+                    <HashLink smooth to="/#services">
+                      <NavbarButton title="Services"/>
+                    </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <NavbarButton title="About" href="" />
+                    <HashLink smooth to="/#replace it mofo">
+                      <NavbarButton title="About"/>
+                    </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
                     <NavbarButton title="Contact" href="/TalkToUsNow" />
