@@ -17,12 +17,12 @@ export const RQ_service = (data, succ, fail) => {
   axios
     .post("http://localhost:4000/sendmail", formdata, { text: parser(data) })
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       toast.dismiss();
       succ();
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
       toast.dismiss();
       fail();
     });

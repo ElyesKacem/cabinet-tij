@@ -91,6 +91,7 @@ export default function Navbar() {
                     <div>
                       <input
                         type="checkbox"
+                        value={true}
                         id="active"
                         onClick={() => {
                           setActivateAnimation(!activateAnimation);
@@ -110,7 +111,10 @@ export default function Navbar() {
                       </label>
                       <label htmlFor="active" className="close"></label>
 
-                      <div className="wrapperMobile">
+                      <div
+                        style={{ top: activateAnimation ? 0 : "100%" }}
+                        className="wrapperMobile"
+                      >
                         <div className="wrapperMobile-menu">
                           <div>
                             <p
@@ -120,7 +124,20 @@ export default function Navbar() {
                                   : "wrapperMobile-menu-item wrapperMobile-menu-item-left"
                               }
                             >
-                              <a href="#">{texts.Home}</a>
+                              <HashLink
+                                className="resetcss"
+                                onClick={() => {
+                                  setActivateAnimation(!activateAnimation);
+                                }}
+                                smooth
+                                to="/#home"
+                              >
+                                <a
+                                  style={{ fontWeight: "normal", fontSize: 28 }}
+                                >
+                                  {texts.Home}
+                                </a>
+                              </HashLink>
                             </p>
                             <p
                               className={
@@ -129,7 +146,20 @@ export default function Navbar() {
                                   : "wrapperMobile-menu-item wrapperMobile-menu-item-right"
                               }
                             >
-                              <a href="#">{texts.Services}</a>
+                              <HashLink
+                                className="resetcss"
+                                onClick={() => {
+                                  setActivateAnimation(!activateAnimation);
+                                }}
+                                smooth
+                                to="/#services"
+                              >
+                                <a
+                                  style={{ fontWeight: "normal", fontSize: 28 }}
+                                >
+                                  {texts.Services}
+                                </a>
+                              </HashLink>
                             </p>
                             <p
                               className={
@@ -138,7 +168,20 @@ export default function Navbar() {
                                   : "wrapperMobile-menu-item wrapperMobile-menu-item-left"
                               }
                             >
-                              <a href="#">{texts.About}</a>
+                              <HashLink
+                                className="resetcss"
+                                onClick={() => {
+                                  setActivateAnimation(!activateAnimation);
+                                }}
+                                smooth
+                                to="/#about"
+                              >
+                                <a
+                                  style={{ fontWeight: "normal", fontSize: 28 }}
+                                >
+                                  {texts.About}
+                                </a>
+                              </HashLink>
                             </p>
                             <p
                               className={
@@ -147,7 +190,20 @@ export default function Navbar() {
                                   : "wrapperMobile-menu-item wrapperMobile-menu-item-right"
                               }
                             >
-                              <a href="#">{texts.Contact}</a>
+                              <HashLink
+                                className="resetcss"
+                                onClick={() => {
+                                  setActivateAnimation(!activateAnimation);
+                                }}
+                                smooth
+                                to="/TalkToUsNow#contact"
+                              >
+                                <a
+                                  style={{ fontWeight: "normal", fontSize: 28 }}
+                                >
+                                  {texts.Contact}
+                                </a>
+                              </HashLink>
                             </p>
                           </div>
                         </div>

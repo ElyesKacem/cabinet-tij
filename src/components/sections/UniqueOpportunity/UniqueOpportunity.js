@@ -33,13 +33,13 @@ export default function UniqueOpportunity() {
                 </div>
                 <br />
                 <div className="UniqueOpportunity-paragraph">
-                  TIJ is looking to bring on board interpreters, translators and
-                  foreign language educators
+                  TIJ is looking to bring on board interpreters and translators
+                  to provide them
                 </div>
                 <div className="UniqueOpportunity-paragraph">
                   {" "}
-                  and to provide them with the necessary support to excel in the
-                  language service field{" "}
+                  with the necessary support to excel in the language service
+                  field{" "}
                 </div>
                 <br />
                 <br />
@@ -62,13 +62,13 @@ export default function UniqueOpportunity() {
                 </div>
                 <br />
                 <div className="UniqueOpportunity-paragraph">
-                  TIJ is looking to bring on board interpreters, translators and
-                  foreign language educators
+                  TIJ is looking to bring on board interpreters and translators
+                  to provide them
                 </div>
                 <div className="UniqueOpportunity-paragraph">
                   {" "}
-                  and to provide them with the necessary support to excel in the
-                  language service field{" "}
+                  with the necessary support to excel in the language service
+                  field{" "}
                 </div>
                 <br />
                 <br />
@@ -91,13 +91,13 @@ export default function UniqueOpportunity() {
                 </div>
                 <br />
                 <div className="UniqueOpportunity-paragraph">
-                  TIJ is looking to bring on board interpreters, translators and
-                  foreign language educators
+                  TIJ is looking to bring on board interpreters and translators
+                  to provide them
                 </div>
                 <div className="UniqueOpportunity-paragraph">
                   {" "}
-                  and to provide them with the necessary support to excel in the
-                  language service field{" "}
+                  with the necessary support to excel in the language service
+                  field{" "}
                 </div>
                 <br />
                 <br />

@@ -133,6 +133,10 @@ export default function GetInTouchWithUs() {
                   onClick={Handle_submit}
                   isWhite
                   title="Submit"
+                  style={{
+                    transform: "translateX(15px) scale(0.9)",
+                    fontWeight: "bold",
+                  }}
                 />
               </div>
               <br />
@@ -224,7 +228,10 @@ export default function GetInTouchWithUs() {
                   onClick={Handle_submit}
                   isWhite
                   title="Submit"
-                  style={{ transform: "translateX(15px)" }}
+                  style={{
+                    transform: "translateX(15px) scale(0.9)",
+                    fontWeight: "bold",
+                  }}
                 />
               </div>
               <br />

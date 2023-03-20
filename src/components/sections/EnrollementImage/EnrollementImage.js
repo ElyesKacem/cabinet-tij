@@ -35,7 +35,7 @@ export default function EnrollementImage() {
                     We are delighted that you want to become a member of our
                     group
                     <br /> To submit your membership application, please fill
-                    out the form belowand attach any required documents.
+                    out the form below and attach any required documents.
                   </div>
                   <br />
                   <br />
@@ -52,7 +52,7 @@ export default function EnrollementImage() {
                     We are delighted that you want to become a member of our
                     group
                     <br /> To submit your membership application, please fill
-                    out the form belowand attach any required documents.
+                    out the form below and attach any required documents.
                   </div>
                   <br />
                   <br />

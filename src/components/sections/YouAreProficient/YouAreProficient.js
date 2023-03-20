@@ -87,6 +87,17 @@ export default function YouAreProficient() {
                   style={{ flexDirection: "column", gap: 30 }}
                 >
                   <div
+                    className="YouAreProficient-zoom"
+                    style={{
+                      transform: "translate(0px)",
+                      width: matches.small && "100%",
+                      height: matches.small && "auto",
+                    }}
+                  >
+                    <img src={Zoomed} style={{ width: 600 }} alt="" />
+                  </div>
+
+                  <div
                     className="YouAreProficient-blueBakcground"
                     style={{
                       width: matches.small && "auto",
@@ -114,23 +125,13 @@ export default function YouAreProficient() {
                       adventure.
                     </div>
                     <br />
-                  </div>
-                  <div
-                    className="YouAreProficient-zoom"
-                    style={{
-                      transform: "translate(0px)",
-                      width: matches.small && "100%",
-                      height: matches.small && "auto",
-                    }}
-                  >
-                    <img src={Zoomed} style={{ width: 600 }} alt="" />
-                  </div>
-                  <div className="YouAreProficient-blueButton">
-                    <div
-                      className="YouAreProficient-blueButton-title"
-                      style={{ color: "white" }}
-                    >
-                      Become a member
+                    <div className="YouAreProficient-blueButton">
+                      <div
+                        className="YouAreProficient-blueButton-title"
+                        style={{ color: "white" }}
+                      >
+                        Become a member
+                      </div>
                     </div>
                   </div>
                 </div>

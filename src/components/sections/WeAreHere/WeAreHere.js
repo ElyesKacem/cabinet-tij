@@ -26,12 +26,8 @@ export default function WeAreHere() {
 
                 <p className="OurCommunityHeader-paragraph">
                   It will take less than 10 minutes for you to submit your
-                  application <br /> for affiliation. The process will be
-                  completed in a time frame of 1<b className="normal">-</b>2
-                  weeks.
-                  <br /> Please note that only self<b className="normal">-</b>
-                  employed individuals are eligible for affiliation <br /> with
-                  our network.
+                  application <br /> for affiliation. We will get back to you as
+                  soon as possible!
                 </p>
 
                 <div style={{ display: "flex", gap: 10 }}>
@@ -69,12 +65,8 @@ export default function WeAreHere() {
                   style={{ width: "auto" }}
                 >
                   It will take less than 10 minutes for you to submit your
-                  application <br /> for affiliation. The process will be
-                  completed in a time frame of 1<b className="normal">-</b>2
-                  weeks.
-                  <br /> Please note that only self<b className="normal">-</b>
-                  employed individuals are eligible for affiliation <br /> with
-                  our network.
+                  application <br /> for affiliation. We will get back to you as
+                  soon as possible!
                 </p>
 
                 <div style={{ display: "flex", gap: 10 }}>

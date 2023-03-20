@@ -137,7 +137,11 @@ export default function Services() {
                     </div>
                   </div>
                   <div>
-                    <img className="ServicesleftImage" src={Image} />
+                    <img
+                      className="ServicesleftImage"
+                      style={{ transform: "translateX(-2px)" }}
+                      src={Image}
+                    />
                   </div>
                 </div>
               </div>

@@ -16,7 +16,7 @@ export default function HoverImage(props) {
         }
       ></div>
       <img
-        style={{ borderRadius: 5, myStyle }}
+        style={{ borderRadius: 8, myStyle }}
         onMouseLeave={() => {
           setIsHover(!isHover);
         }}

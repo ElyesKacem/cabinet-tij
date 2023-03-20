@@ -111,7 +111,7 @@ export default function GetQuoteForm() {
     let selected = menuData.filter((item, index) => {
       return menuSelected[index];
     })[0].title;
-    console.log(selected);
+    // console.log(selected);
     setForm({ ...form, FORM_TYPE: selected });
   }, [menuSelected]);
 

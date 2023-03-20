@@ -104,6 +104,7 @@ export default function TalkToUsNowSection() {
             {(matches.medium || matches.small) && (
               <div style={{ width: "90%", maxWidth: 1500, margin: "auto" }}>
                 <div className="TalkToUsNowSection-title">Talk To Us Now</div>
+                <br />
                 <div style={{ transform: "translateY(-20px)" }}>
                   {matches.small && (
                     <div style={{ transform: "scale(0.6)" }}>
@@ -285,6 +286,7 @@ export default function TalkToUsNowSection() {
                         <div className="TalkToUsNowSection-title">
                           Talk To Us Now
                         </div>
+                        <br />
                         <div className="TalkToUsNowSection-paragraph">
                           For further information, please contact us at contact
                           <i className="thin">@</i>cabinet

@@ -20,7 +20,7 @@ function App() {
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    console.log(lang);
+    // console.log(lang);
   }, [lang]);
 
   return (

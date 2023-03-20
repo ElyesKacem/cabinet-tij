@@ -18,6 +18,8 @@ export default function TermOfUse() {
       <br />
       <div style={{ marginLeft: 50 }}>
         <div className="EnrollementImage-title">Privacy And Policy</div>
+        <br />
+        <br />
         <img
           src={DownArrow}
           style={{ width: 40 }}
