@@ -22,6 +22,7 @@ const GLOBAL_MEDIA_QUERIES = {
 export default function Navbar() {
   const [color, setColor] = useState(false);
   const [activateAnimation, setActivateAnimation] = useState(false);
+  const [hideMenu, setHideMenu] = useState(false);
 
   const texts = GetText();
 
@@ -57,12 +58,13 @@ export default function Navbar() {
                   }
                 >
                   <LanguageMenu
+                    setHideMenu={setHideMenu}
                     opacity="0.9"
                     style={{
                       position: "absolute",
                       right: 21,
-                      top: 10,
-                      zIndex: "4",
+                      top: 15,
+                      zIndex: "8",
                     }}
                   />
                 </div>
@@ -95,7 +97,11 @@ export default function Navbar() {
                       <label
                         htmlFor="active"
                         className={
-                          color ? "menu-btn menu-btn-white" : "menu-btn"
+                          !color && hideMenu
+                            ? "disable"
+                            : color
+                            ? "menu-btn menu-btn-white"
+                            : "menu-btn"
                         }
                       >
                         <span></span>

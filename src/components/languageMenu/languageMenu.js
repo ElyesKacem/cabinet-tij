@@ -77,6 +77,7 @@ export default function LanguageMenu(props) {
         }}
         onClick={() => {
           setRotateButton(!rotateButton);
+          props.setHideMenu(!rotateButton);
         }}
       />
     </div>
