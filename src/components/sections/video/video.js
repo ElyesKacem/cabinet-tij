@@ -1,9 +1,11 @@
 import React from "react";
 import "./video.css";
 import video from "../../../assets/video/video.mp4";
+import Img from "../../../assets/images/home/mobilehome.jpg";
 import LeftRightButton from "../../buttons/leftRightButton/leftRightButton";
 import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
+import BackgroundImage from "../../backgroundImage/backgroundImage";
 
 export default function VideoSection() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -25,7 +27,70 @@ export default function VideoSection() {
                   fontFamily: "Gilroy-Regular",
                 }}
               >
-                <br />
+                <BackgroundImage
+                  height={800}
+                  img={Img}
+                  style={{ width: "100%" }}
+                >
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <div
+                    className="EnrollementBeforeFooter-element"
+                    style={{ color: "white" }}
+                  >
+                    <b>We Provide Outsourced</b>
+                    <br />
+
+                    <div
+                      className="videoContentMiddle"
+                      style={{ color: "white", fontSize: 55 }}
+                    >
+                      Translation
+                      <div
+                        style={{
+                          fontFamily: "sans-serif",
+                          textAlign: "center",
+                        }}
+                      >
+                        &
+                      </div>
+                      Interpreting
+                    </div>
+                    <br />
+
+                    <b>For small and mid sized businesses</b>
+
+                    <br />
+                    <br />
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 20,
+                      }}
+                    >
+                      <div>
+                        <LeftRightButton isBlue whiteText title="Learn More" />
+                      </div>
+                      <div>
+                        <LeftRightButton
+                          whiteText
+                          isBlue={true}
+                          title="Get in Touch"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </BackgroundImage>
+                {/* <br />
                 <br />
                 <br />
                 <br />
@@ -79,7 +144,7 @@ export default function VideoSection() {
                 <br />
                 <div style={{ padding: 32 }}>
                   <video src={video} autoPlay loop muted></video>
-                </div>
+                </div> */}
               </div>
             )}
             {matches.medium && (

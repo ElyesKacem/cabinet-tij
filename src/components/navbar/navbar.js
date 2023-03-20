@@ -83,7 +83,7 @@ export default function Navbar() {
                       title="Get Quote"
                       style={{
                         color: "white",
-                        transform: "translate(-80px,36px)",
+                        transform: "translate(-80px,35px)",
                       }}
                     />
                     <div>
