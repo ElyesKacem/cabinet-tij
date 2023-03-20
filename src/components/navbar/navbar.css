@@ -378,3 +378,6 @@ input[type="checkbox"] {
 .disable {
   display: none;
 }
+.resetcss {
+  all: unset;
+}

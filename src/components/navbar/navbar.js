@@ -177,22 +177,28 @@ export default function Navbar() {
                   }
                 >
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <HashLink smooth to="/#home">
-                      <NavbarButton title="Home"/>
+                    <HashLink className="resetcss" smooth to="/#home">
+                      <NavbarButton title="Home" />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <HashLink smooth to="/#services">
-                      <NavbarButton title="Services"/>
+                    <HashLink className="resetcss" smooth to="/#services">
+                      <NavbarButton title="Services" />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <HashLink smooth to="/#replace it mofo">
-                      <NavbarButton title="About"/>
+                    <HashLink className="resetcss" smooth to="/#about">
+                      <NavbarButton title="About" />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <NavbarButton title="Contact" href="/TalkToUsNow" />
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <NavbarButton title="Contact" href="/TalkToUsNow" />
+                    </HashLink>
                   </div>
                   <div style={{ marginRight: 40, marginLeft: 20 }}>
                     <GetQuoteButton

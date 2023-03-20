@@ -48,7 +48,7 @@ export default function OurServices() {
     small: "(max-width: 479px)",
   };
   return (
-    <div className="white-background">
+    <div className="white-background" id="services">
       <br />
       <br /> <br />
       <br />
