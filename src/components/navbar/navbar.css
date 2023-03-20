@@ -322,7 +322,7 @@ input[type="checkbox"] {
   /* background-color: cadetblue; */
   position: relative;
   /* z-index: 4; */
-  padding: 10px 10px 10px 10px;
+  padding: 10px 25px 23px 0px;
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
@@ -342,8 +342,8 @@ input[type="checkbox"] {
   transition: all 1s;
 }
 .width100 {
-  width: 100px;
-  transform: translateY(0px);
+  width: 85px;
+  transform: translateY(8px);
 }
 
 .languageMenuContainer {

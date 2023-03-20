@@ -62,7 +62,7 @@ export default function Navbar() {
                     opacity="0.9"
                     style={{
                       position: "absolute",
-                      right: 21,
+                      right: 14,
                       top: 15,
                       zIndex: "8",
                     }}
@@ -83,7 +83,7 @@ export default function Navbar() {
                       title="Get Quote"
                       style={{
                         color: "white",
-                        transform: "translate(-100px,37px)",
+                        transform: "translate(-80px,36px)",
                       }}
                     />
                     <div>
