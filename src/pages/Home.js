@@ -9,7 +9,7 @@ import WhyChoiceUs from "../components/sections/whyChoiceUs/whyChoiceUs";
 
 export default function Home() {
   return (
-    <div>
+    <div id="home">
       <VideoSection />
       <Services />
       <WhyChoiceUs />
