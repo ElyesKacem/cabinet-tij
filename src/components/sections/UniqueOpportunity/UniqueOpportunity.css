@@ -1,34 +1,34 @@
-.UniqueOpportunity-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+.UniqueOpportunity-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
-.UniqueOpportunity-blueTitle{
-    font-size: 50px;
-    font-family:Gilroy-Bold ;
-    position: relative;
-    z-index: 1;
-    color: #2742E4;
+.UniqueOpportunity-blueTitle {
+  font-size: 49px;
+  font-family: Gilroy-Bold;
+  position: relative;
+  z-index: 1;
+  color: #2742e4;
 }
-.grey-square{
-    width: 64px;
-    height: 64px;
-    background-color: #ada8a86d;
-    border-radius: 5px;
-    position:absolute;
-    z-index: 0;
-    transform: translate(-30px,-20px);
-}
-
-.UniqueOpportunity-paragraph{
-    font-size: 20px;
-    -webkit-text-stroke: 1px black;
-    line-height: 35px;
+.grey-square {
+  width: 64px;
+  height: 64px;
+  background-color: #ada8a86d;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 0;
+  transform: translate(-30px, -20px);
 }
 
-.UniqueOpportunity-blackTitle{
-    font-family:Gilroy-Bold ;
-    font-size: 30px;
+.UniqueOpportunity-paragraph {
+  font-size: 20px;
+  -webkit-text-stroke: 1px black;
+  line-height: 35px;
+}
+
+.UniqueOpportunity-blackTitle {
+  font-family: Gilroy-Bold;
+  font-size: 30px;
 }

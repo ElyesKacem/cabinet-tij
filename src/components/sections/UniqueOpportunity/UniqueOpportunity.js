@@ -25,10 +25,10 @@ export default function UniqueOpportunity() {
                 <div>
                   <div className="grey-square" />
                   <div className="UniqueOpportunity-blueTitle">
-                    A unique opportunity to develop your
+                    A Unique Opportunity To Develop Your
                   </div>
                   <div className="UniqueOpportunity-blueTitle">
-                    activity serenely
+                    Activity Serenely
                   </div>
                 </div>
                 <br />
@@ -54,10 +54,10 @@ export default function UniqueOpportunity() {
                 <div>
                   <div className="grey-square" />
                   <div className="UniqueOpportunity-blueTitle">
-                    A unique opportunity to develop your
+                    A Unique Opportunity To Develop Your
                   </div>
                   <div className="UniqueOpportunity-blueTitle">
-                    activity serenely
+                    Activity Serenely
                   </div>
                 </div>
                 <br />
@@ -86,10 +86,7 @@ export default function UniqueOpportunity() {
                       <div style={{ left: 0 }} className="grey-square" />
                       <span style={{ position: "relative" }}>A</span>
                     </span>{" "}
-                    unique opportunity to develop
-                  </div>
-                  <div className="UniqueOpportunity-blueTitle">
-                    activity serenely
+                    Unique Opportunity To Develop Activity Serenely
                   </div>
                 </div>
                 <br />

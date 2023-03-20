@@ -32,6 +32,9 @@ export default function OurCommunityHeader() {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
       <Media queries={GLOBAL_MEDIA_QUERIES}>
         {(matches) => (
           <React.Fragment>
@@ -99,7 +102,7 @@ export default function OurCommunityHeader() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 130,
+                    gap: 100,
                   }}
                 >
                   <div>
@@ -173,7 +176,7 @@ export default function OurCommunityHeader() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 130,
+                    gap: 100,
                   }}
                 >
                   <div>
@@ -209,7 +212,7 @@ export default function OurCommunityHeader() {
                       style={{
                         width: 650,
                         transform: matches.verySmall
-                          ? "translateY(-70px)  scale(0.5)   "
+                          ? "translateY(-80px)  scale(0.5)   "
                           : matches.smallerSmall
                           ? "translateY(-20px) scale(0.8)"
                           : "translateY(-20px)",

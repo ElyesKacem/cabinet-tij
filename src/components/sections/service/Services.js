@@ -14,7 +14,7 @@ export default function Services() {
     large: "(min-width: 1000px)",
   };
   return (
-    <div className="services" id="services">
+    <div className="services" id="about">
       <br />
       <br />
       <br />
