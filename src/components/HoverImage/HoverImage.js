@@ -7,7 +7,7 @@ export default function HoverImage(props) {
     ...props.style,
   };
   return (
-    <div className="flexalignjustify" style={{ myStyle }}>
+    <div className="flexalignjustify">
       <div
         className={
           isHover
@@ -16,7 +16,7 @@ export default function HoverImage(props) {
         }
       ></div>
       <img
-        style={{ borderRadius: 5 }}
+        style={{ borderRadius: 5, myStyle }}
         onMouseLeave={() => {
           setIsHover(!isHover);
         }}

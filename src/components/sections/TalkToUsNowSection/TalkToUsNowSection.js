@@ -81,9 +81,10 @@ export default function TalkToUsNowSection() {
   };
 
   const GLOBAL_MEDIA_QUERIES = {
+    large: "(min-width: 1200px)",
     medium: "(max-width: 1200px)",
     small: " (max-width: 640px)",
-    large: "(min-width: 1200px)",
+    vsmall: " (max-width: 389px)",
   };
   return (
     <div className="TalkToUsNowSection-background">
@@ -102,8 +103,52 @@ export default function TalkToUsNowSection() {
           <React.Fragment>
             {(matches.medium || matches.small) && (
               <div style={{ width: "90%", maxWidth: 1500, margin: "auto" }}>
-                <div container>
-                  <div item xs={6}>
+                <div className="TalkToUsNowSection-title">Talk To Us Now</div>
+                <div style={{ transform: "translateY(-20px)" }}>
+                  {matches.small && (
+                    <div style={{ transform: "scale(0.6)" }}>
+                      <HoverImage img={Image1} />
+                    </div>
+                  )}
+                  {!matches.small && (
+                    <>
+                      <br />
+                      <br />
+                      <br />
+                      <div>
+                        <HoverImage img={Image1} />
+                        <br />
+                        <br />
+                        <br />
+                      </div>
+                    </>
+                  )}
+
+                  <div className="TalkToUsNowSection-container">
+                    <div
+                      className="TalkToUsNowSection-subContainer"
+                      style={{ paddingLeft: 8, paddingRight: 8 }}
+                    >
+                      <div className="TalkToUsNowSection-pinkb">Contact Us</div>
+                      <div>contact@cabinet-tij.com</div>
+
+                      <div>06 99 08 64 91</div>
+                    </div>
+                    <div
+                      className="TalkToUsNowSection-subContainer"
+                      style={{ paddingLeft: 8, paddingRight: 8 }}
+                    >
+                      <div className="TalkToUsNowSection-pinkb">Find Us</div>
+                      <div>3 rue Boccador, 75008 Paris.</div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div>
+                  <div>
                     <div
                       style={{
                         width: "100%",
@@ -113,9 +158,6 @@ export default function TalkToUsNowSection() {
                       }}
                     >
                       <div>
-                        <div className="TalkToUsNowSection-title">
-                          Talk To Us Now
-                        </div>
                         <div className="TalkToUsNowSection-paragraph">
                           For further information, please contact us at contact
                           <i className="thin">@</i>cabinet
@@ -141,7 +183,7 @@ export default function TalkToUsNowSection() {
                             gap: 15,
                           }}
                         >
-                          <div item xs={12}>
+                          <div>
                             <FormRequestQuoteInput
                               onChange={handle_change}
                               name="full_name"
@@ -150,7 +192,7 @@ export default function TalkToUsNowSection() {
                               title="Full Name"
                             />
                           </div>
-                          <div item xs={12}>
+                          <div>
                             <FormRequestQuoteInput
                               onChange={handle_change}
                               name="email"
@@ -159,7 +201,7 @@ export default function TalkToUsNowSection() {
                               title="Email"
                             />
                           </div>
-                          <div item xs={12}>
+                          <div>
                             <FormRequestQuoteInput
                               onChange={handle_change}
                               name="subject"
@@ -168,7 +210,7 @@ export default function TalkToUsNowSection() {
                               title="Subject"
                             />
                           </div>
-                          <div item xs={12}>
+                          <div>
                             <FormRequestQuoteInputMultiline
                               multiline
                               required
@@ -178,7 +220,7 @@ export default function TalkToUsNowSection() {
                               value={form.notes}
                             />
                           </div>
-                          <div item xs={12}>
+                          <div>
                             <label
                               htmlFor="file"
                               className="TalkToUsNowSection-selectFile"
@@ -218,41 +260,6 @@ export default function TalkToUsNowSection() {
                         style={{ transform: "translateY(0px)" }}
                       >
                         Submit
-                      </div>
-                    </div>
-                  </div>
-                  <div item xs={6} style={{ transform: "translateY(20px)" }}>
-                    {matches.small && (
-                      <div style={{ transform: "scale(0.6)" }}>
-                        <HoverImage img={Image1} />
-                      </div>
-                    )}
-                    {!matches.small && (
-                      <>
-                        <br />
-                        <br />
-                        <br />
-                        <div>
-                          <HoverImage img={Image1} />
-                          <br />
-                          <br />
-                          <br />
-                        </div>
-                      </>
-                    )}
-
-                    <div className="TalkToUsNowSection-container">
-                      <div className="TalkToUsNowSection-subContainer">
-                        <div className="TalkToUsNowSection-pinkb">
-                          Contact Us
-                        </div>
-                        <div>contact@cabinet-tij.com</div>
-
-                        <div>06 99 08 64 91</div>
-                      </div>
-                      <div className="TalkToUsNowSection-subContainer">
-                        <div className="TalkToUsNowSection-pinkb">Find Us</div>
-                        <div>3 rue Boccador, 75008 Paris.</div>
                       </div>
                     </div>
                   </div>
