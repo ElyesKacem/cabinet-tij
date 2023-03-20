@@ -10,12 +10,12 @@ import WhyChoiceUs from "../components/sections/whyChoiceUs/whyChoiceUs";
 export default function Home() {
   return (
     <div>
-      <VideoSection />
+      {/* <VideoSection />
       <Services />
       <WhyChoiceUs />
       <DoYouNeedMoreAssistance />
       <OurServices />
-      <GetInTouchWithUs />
+      <GetInTouchWithUs /> */}
       <ProJoinOurTeam />
     </div>
   );

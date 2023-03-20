@@ -12,8 +12,10 @@
 .EnrollementAttachFiles-label {
   cursor: pointer;
   display: flex;
+  flex-direction: column;
+  gap: 30px;
   align-items: center;
-  transform: translateX(30px);
+  transform: translateX(20px);
 }
 
 .EnrollementAttachFiles-button {
@@ -84,5 +86,5 @@
 .EnrollementAttachFiles-container {
   /* display: flex; */
   margin-bottom: 50px;
-  transform: translateX(20%);
+  transform: translateX(14%);
 }

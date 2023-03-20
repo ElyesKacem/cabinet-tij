@@ -39,17 +39,18 @@ export default function EnrollementAttachFiles(props) {
               Choose Files
             </div>
           </div>
-          <div className="EnrollementAttachFiles-fileName">
-            {!fileName && "No Chosen File"}
-            {fileName && fileName}
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div className="EnrollementAttachFiles-fileName">
+              {!fileName && "No Chosen File"}
+              {fileName && fileName}
+            </div>
+            {fileName && (
+              <ClearIcon
+                sx={{ fill: "url(#linearColors)" }}
+                onClick={handleRemoveFile}
+              />
+            )}
           </div>
-          {fileName && (
-            <ClearIcon
-              sx={{ fill: "url(#linearColors)" }}
-              style={{ transform: "translateY(2px)" }}
-              onClick={handleRemoveFile}
-            />
-          )}
         </label>
       </div>
     </div>

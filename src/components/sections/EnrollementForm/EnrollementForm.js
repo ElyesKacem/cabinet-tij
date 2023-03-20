@@ -10,9 +10,9 @@ import { toast } from "react-hot-toast";
 import { RQ_service } from "../../../services/services";
 
 const GLOBAL_MEDIA_QUERIES = {
-  small: "(max-width: 999px)",
+  small: "(max-width: 1056px)",
   // medium: "(min-width: 600px) and (max-width: 1199px)",
-  large: "(min-width: 1000px)",
+  large: "(min-width: 1056px)",
 };
 
 const initial_form = {
@@ -288,7 +288,7 @@ export default function EnrollementForm() {
                     <div
                       className="EnrollementForm-multiple-files"
                       style={{
-                        padding: "10px 40px 10px 40px",
+                        padding: "10px 45px 10px 40px",
                         transform: "translateX(10px)",
                       }}
                     >

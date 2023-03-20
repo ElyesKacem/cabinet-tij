@@ -20,6 +20,7 @@ export default function BackgroundImage(props) {
     backgroundSize: "cover",
     height: props.height || 857,
     ...props.style,
+    position: "relative",
   };
 
   return <div style={myStyle}>{props.children}</div>;
