@@ -20,7 +20,6 @@ export default function LeftRightButton(props) {
   return (
     <div
       style={myStyle}
-      onClick={() => props.onClick()}
       className={
         props.isWhite
           ? "leftRightButton leftRightButton-white"

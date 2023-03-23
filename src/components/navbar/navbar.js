@@ -96,7 +96,6 @@ export default function Navbar() {
                     <div>
                       <input
                         type="checkbox"
-                        value={true}
                         id="active"
                         onClick={() => {
                           setActivateAnimation(!activateAnimation);
