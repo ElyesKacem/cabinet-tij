@@ -230,7 +230,10 @@ export default function GetQuoteForm() {
             )}
           </Media>
 
-          <div className="getQuoteForm-margin white-text">
+          <div
+            className="getQuoteForm-margin white-text"
+            style={{ marginTop: 10 }}
+          >
             Required fields are marked with asterisk{" "}
             <i style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>
               (<b style={{ color: "red" }}>*</b>)

@@ -17,14 +17,7 @@ export default function FooterText(props) {
       <br />
       <div className="footerText-content">
         {props.title != ("Support" || "Information") && props.content}
-        {props.title == "Support" && (
-          <a
-            style={{ textDecoration: "none", color: "black" }}
-            href="talktousnow"
-          >
-            Contact us
-          </a>
-        )}
+        {props.title == "Support" && "Contact us"}
         {props.title == "Solutions" && (
           <>
             Interpreting

@@ -46,28 +46,40 @@ export default function Footer() {
                       className="flexalignjustify"
                       style={{ gap: 5, transform: "translateX(10px)" }}
                     >
-                      <a href="https://goo.gl/maps/7SrAawYYk3GdMg2u6">
+                      <a
+                        target="_blank"
+                        href="https://goo.gl/maps/7SrAawYYk3GdMg2u6"
+                      >
                         <img
                           className="footer-icons"
                           src={GoogleMaps}
                           style={{ height: 30 }}
                         />
                       </a>
-                      <a href="https://www.linkedin.com/company/cabinet-tij/">
+                      <a
+                        target="_blank"
+                        href="https://www.linkedin.com/company/cabinet-tij/"
+                      >
                         <img
                           className="footer-icons"
                           src={LinkedIn}
                           style={{ height: 30 }}
                         />
                       </a>
-                      <a href="https://www.facebook.com/cabinet.TIJ?mibextid=LQQJ4d">
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/cabinet.TIJ?mibextid=LQQJ4d"
+                      >
                         <img
                           className="footer-icons"
                           src={Facebook}
                           style={{ height: 30, marginLeft: 4 }}
                         />
                       </a>
-                      <a href="https://instagram.com/cabinet_tij_de_france?igshid=YmMyMTA2M2Y=">
+                      <a
+                        target="_blank"
+                        href="https://instagram.com/cabinet_tij_de_france?igshid=YmMyMTA2M2Y="
+                      >
                         <img
                           className="footer-icons"
                           src={Instagram}
@@ -172,28 +184,40 @@ export default function Footer() {
                     className="flexalignjustify"
                     style={{ gap: 5, transform: "translateX(10px)" }}
                   >
-                    <a href="https://goo.gl/maps/7SrAawYYk3GdMg2u6">
+                    <a
+                      target="_blank"
+                      href="https://goo.gl/maps/7SrAawYYk3GdMg2u6"
+                    >
                       <img
                         className="footer-icons"
                         src={GoogleMaps}
                         style={{ height: 30 }}
                       />
                     </a>
-                    <a href="https://www.linkedin.com/company/cabinet-tij/">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/cabinet-tij/"
+                    >
                       <img
                         className="footer-icons"
                         src={LinkedIn}
                         style={{ height: 30 }}
                       />
                     </a>
-                    <a href="https://www.facebook.com/cabinet.TIJ?mibextid=LQQJ4d">
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/cabinet.TIJ?mibextid=LQQJ4d"
+                    >
                       <img
                         className="footer-icons"
                         src={Facebook}
                         style={{ height: 30, marginLeft: 4 }}
                       />
                     </a>
-                    <a href="https://instagram.com/cabinet_tij_de_france?igshid=YmMyMTA2M2Y=">
+                    <a
+                      target="_blank"
+                      href="https://instagram.com/cabinet_tij_de_france?igshid=YmMyMTA2M2Y="
+                    >
                       <img
                         className="footer-icons"
                         src={Instagram}
@@ -251,28 +275,40 @@ export default function Footer() {
                     className="flexalignjustify"
                     style={{ gap: 5, transform: "translateX(10px)" }}
                   >
-                    <a href="https://goo.gl/maps/7SrAawYYk3GdMg2u6">
+                    <a
+                      target="_blank"
+                      href="https://goo.gl/maps/7SrAawYYk3GdMg2u6"
+                    >
                       <img
                         className="footer-icons"
                         src={GoogleMaps}
                         style={{ height: 30 }}
                       />
                     </a>
-                    <a href="https://www.linkedin.com/company/cabinet-tij/">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/company/cabinet-tij/"
+                    >
                       <img
                         className="footer-icons"
                         src={LinkedIn}
                         style={{ height: 30 }}
                       />
                     </a>
-                    <a href="https://www.facebook.com/cabinet.TIJ?mibextid=LQQJ4d">
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/cabinet.TIJ?mibextid=LQQJ4d"
+                    >
                       <img
                         className="footer-icons"
                         src={Facebook}
                         style={{ height: 30, marginLeft: 4 }}
                       />
                     </a>
-                    <a href="https://instagram.com/cabinet_tij_de_france?igshid=YmMyMTA2M2Y=">
+                    <a
+                      target="_blank"
+                      href="https://instagram.com/cabinet_tij_de_france?igshid=YmMyMTA2M2Y="
+                    >
                       <img
                         className="footer-icons"
                         src={Instagram}

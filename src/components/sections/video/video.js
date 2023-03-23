@@ -6,6 +6,7 @@ import LeftRightButton from "../../buttons/leftRightButton/leftRightButton";
 import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 import BackgroundImage from "../../backgroundImage/backgroundImage";
+import { HashLink } from "react-router-hash-link";
 
 export default function VideoSection() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -78,15 +79,31 @@ export default function VideoSection() {
                       }}
                     >
                       <div>
-                        <LeftRightButton isBlue whiteText title="Learn More" />
+                        <HashLink
+                          className="resetcss"
+                          smooth
+                          to="/requestquote#getquote"
+                        >
+                          <LeftRightButton
+                            isBlue
+                            whiteText
+                            title="Learn More"
+                          />
+                        </HashLink>
                       </div>
-                      <div>
-                        <LeftRightButton
-                          whiteText
-                          isBlue={true}
-                          title="Get in Touch"
-                        />
-                      </div>
+                      <HashLink
+                        className="resetcss"
+                        smooth
+                        to="/TalkToUsNow#contact"
+                      >
+                        <div>
+                          <LeftRightButton
+                            whiteText
+                            isBlue={true}
+                            title="Get in Touch"
+                          />
+                        </div>
+                      </HashLink>
                     </div>
                   </div>
                 </BackgroundImage>
@@ -128,7 +145,7 @@ export default function VideoSection() {
                   style={{ display: "flex", flexDirection: "column", gap: 20 }}
                 >
                   <div>
-                    <LeftRightButton isBlue whiteText title="Learn More" />
+                    </HashLink><LeftRightButton isBlue whiteText title="Learn More" /></HashLink>
                   </div>
                   <div>
                     <LeftRightButton
@@ -175,12 +192,24 @@ export default function VideoSection() {
                   </div>
                   <br />
                   <div style={{ display: "flex" }}>
-                    <div>
-                      <LeftRightButton isBlue title="Learn More" />
-                    </div>
-                    <div style={{ marginLeft: 18 }}>
-                      <LeftRightButton title="Get in Touch" />
-                    </div>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/requestquote#getquote"
+                    >
+                      <div>
+                        <LeftRightButton isBlue title="Learn More" />
+                      </div>
+                    </HashLink>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <div style={{ marginLeft: 18 }}>
+                        <LeftRightButton title="Get in Touch" />
+                      </div>
+                    </HashLink>
                   </div>
                 </div>
               </div>
@@ -227,9 +256,15 @@ export default function VideoSection() {
                     <div>
                       <LeftRightButton isBlue title="Learn More" />
                     </div>
-                    <div style={{ marginLeft: 18 }}>
-                      <LeftRightButton title="Get in Touch" />
-                    </div>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <div style={{ marginLeft: 18 }}>
+                        <LeftRightButton title="Get in Touch" />
+                      </div>
+                    </HashLink>
                   </div>
                 </div>
               </div>

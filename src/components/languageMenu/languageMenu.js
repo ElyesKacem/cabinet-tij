@@ -9,7 +9,6 @@ import GetText from "./languageMenu.lang";
 
 export default function LanguageMenu(props) {
   const [rotateButton, setRotateButton] = React.useState(false);
-  const [showLanguageMenu, setShowLanguageMenu] = React.useState(false);
 
   const { setLang } = useContext(LangContext);
   const texts = GetText();
@@ -35,6 +34,8 @@ export default function LanguageMenu(props) {
                 style={{ display: "flex", cursor: "pointer" }}
                 onClick={() => {
                   setLang("en");
+                  setRotateButton(!rotateButton);
+                  props.setHideMenu(!rotateButton);
                 }}
               >
                 <img src={EnglishFlag} /> &nbsp;&nbsp;&nbsp;
@@ -46,6 +47,8 @@ export default function LanguageMenu(props) {
               <div
                 onClick={() => {
                   setLang("fr");
+                  setRotateButton(!rotateButton);
+                  props.setHideMenu(!rotateButton);
                 }}
                 style={{ display: "flex", cursor: "pointer" }}
               >
