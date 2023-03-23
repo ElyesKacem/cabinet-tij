@@ -10,9 +10,8 @@ import GetQuoteButton, {
 import LanguageMenu from "../languageMenu/languageMenu";
 import Media from "react-media";
 
-import { LangContext } from "../../context/Lang.context";
 import GetText from "./navbar.lang";
-import { Link } from "react-router-dom";
+
 import { HashLink } from "react-router-hash-link";
 
 const GLOBAL_MEDIA_QUERIES = {
@@ -70,11 +69,17 @@ export default function Navbar() {
                     }}
                   />
                 </div>
-                <div className={color ? "marginTop-30 nav-main" : "nav-main"}>
+                <div
+                  className={
+                    color || activateAnimation
+                      ? "marginTop-30 nav-main"
+                      : "nav-main"
+                  }
+                >
                   <div>
                     <img
                       className={color ? "width100 logoMobile" : "logoMobile"}
-                      src={color ? logoWhite : logo}
+                      src={color && !activateAnimation ? logoWhite : logo}
                     />
                   </div>
                   <div>
@@ -139,8 +144,8 @@ export default function Navbar() {
                             <p
                               className={
                                 activateAnimation
-                                  ? "wrapperMobile-menu-item wrapperMobile-menu-item-left toInit"
-                                  : "wrapperMobile-menu-item wrapperMobile-menu-item-left"
+                                  ? "wrapperMobile-menu-item wrapperMobile-menu-item-right toInit"
+                                  : "wrapperMobile-menu-item wrapperMobile-menu-item-right"
                               }
                             >
                               <HashLink
@@ -158,8 +163,8 @@ export default function Navbar() {
                             <p
                               className={
                                 activateAnimation
-                                  ? "wrapperMobile-menu-item wrapperMobile-menu-item-right toInit"
-                                  : "wrapperMobile-menu-item wrapperMobile-menu-item-right"
+                                  ? "wrapperMobile-menu-item wrapperMobile-menu-item-left toInit"
+                                  : "wrapperMobile-menu-item wrapperMobile-menu-item-left"
                               }
                             >
                               <HashLink
