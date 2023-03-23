@@ -17,3 +17,12 @@
   margin: auto;
   font-size: 14px;
 }
+
+/* .footer-icons {
+  transition: 0.2s all;
+} */
+.footer-icons:hover {
+  filter: grayscale(70%);
+  cursor: pointer;
+  transform: scale(0.9);
+}

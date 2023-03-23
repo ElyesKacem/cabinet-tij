@@ -82,7 +82,9 @@ export function FormRequestQuoteInputMultiline(props) {
       {show && (
         <label className="did-floating-label">
           {props.title}
-          {props.required && <b className="FormRequestQuoteInput-star">*</b>}
+          {props.required && (
+            <b className="FormRequestQuoteInput-star">&nbsp;*</b>
+          )}
         </label>
       )}
     </div>

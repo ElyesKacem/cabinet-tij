@@ -148,7 +148,7 @@ export default function GetQuoteForm() {
   };
 
   return (
-    <div className="getQuoteForm-main">
+    <div className="getQuoteForm-main" id="getquote">
       <VerticalBar top="55%" left="50px" />
       <VerticalBar top="17%" left="40%" />
       <VerticalBar top="90%" left="90%" />
@@ -273,7 +273,6 @@ export default function GetQuoteForm() {
                       onChange={handle_change}
                       name="phone"
                       value={form.phone}
-                      required
                       title="Phone Number "
                     />
                   </Grid>

@@ -24,11 +24,6 @@ const translationValid = (form) => {
     return false;
   }
 
-  if (!not_emp(phone)) {
-    toast.error("Phone Number can't be empty");
-    return false;
-  }
-
   if (!not_emp(source_lang)) {
     toast.error("Source Language can't be empty");
     return false;
@@ -80,11 +75,6 @@ const InterpretingValid = (form) => {
 
   if (!not_emp(email)) {
     toast.error("Email can't be empty");
-    return false;
-  }
-
-  if (!not_emp(phone)) {
-    toast.error("Phone Number can't be empty");
     return false;
   }
 
@@ -141,11 +131,6 @@ const TranscriptValid = (form) => {
 
   if (!not_emp(email)) {
     toast.error("Email can't be empty");
-    return false;
-  }
-
-  if (!not_emp(phone)) {
-    toast.error("Phone Number can't be empty");
     return false;
   }
 

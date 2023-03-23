@@ -1,93 +1,83 @@
-.homePhotoHover{
-    transition: all 0.5s;
-    /* overflow: hidden; */
-    /* background: url("../../assets/images/hh0.png") repeat 0 0; */
-    background-size:100% 100%;
-    
-    /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
-    width: 200px;
-    height: 311px;
+.homePhotoHover {
+  transition: all 0.5s;
+  /* overflow: hidden; */
+  /* background: url("../../assets/images/hh0.png") repeat 0 0; */
+  background-size: 100% 100%;
+
+  /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
+  width: 200px;
+  height: 311px;
 }
 
-.homePhotoHoverOverlay{
-    
- 
-    width: 200px;
-    height: 311px;
-    position: absolute;
-    opacity: 20%;
-    z-index: 2;
-    /* transition: all 1s; */
-    
-    /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
+.homePhotoHoverOverlay {
+  width: 200px;
+  height: 311px;
+  position: absolute;
+  opacity: 20%;
+  z-index: 2;
+  /* transition: all 1s; */
+
+  /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
 }
 
-.homePhotoHover:hover{
-    
-    /* background: transparent linear-gradient(180deg, #010101 0%, #080808 100%) 0% 0% no-repeat padding-box; */
-    box-shadow: 10px 10px 15px rgb(195, 195, 195);
-    transform: scale(1.2);
+.homePhotoHover:hover {
+  /* background: transparent linear-gradient(180deg, #010101 0%, #080808 100%) 0% 0% no-repeat padding-box; */
+  box-shadow: 10px 10px 15px rgb(195, 195, 195);
+  transform: scale(1.2);
 }
-.homePhotoHover:hover .homePhotoHoverOverlay{
-    
-    
-    background: transparent linear-gradient(180deg, #010101 0%, #080808 100%) 0% 0% no-repeat padding-box;
-    /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
+.homePhotoHover:hover .homePhotoHoverOverlay {
+  background: transparent linear-gradient(180deg, #010101 0%, #080808 100%) 0%
+    0% no-repeat padding-box;
+  /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
 }
 
-
-.homePhotoHover-content{
-    position: absolute;
-    z-index: 3;
-    font-family: "Gilroy-Bold";
-    transition: transform 0.2s;
-    
+.homePhotoHover-content {
+  position: absolute;
+  z-index: 3;
+  font-family: "Gilroy-Bold";
+  transition: transform 0.2s;
 }
 
-.homePhotoHover-title{
-    color:#223ee2;
-    display: flex;
-    font-size: 20px;
-    transform: translate(8px,210px);
-    width: 200px;
-    
+.homePhotoHover-title {
+  color: #223ee2;
+  display: flex;
+  font-size: 19px;
+  transform: translate(8px, 210px);
+  width: 200px;
 }
-.homePhotoHover-dash{
-    font-weight: bold;
-    font-family: "Gilroy-Medium";
-    transform: translateY(2px);
-    
+.homePhotoHover-dash {
+  font-weight: bold;
+  font-family: "Gilroy-Medium";
 }
 
-.hide{
-    
-    visibility: hidden;
+.hide {
+  visibility: hidden;
 }
-.homePhotoHover-paragraph{
-    transform: translate(34px,215px);
-    color: white;
-    font-family: "Gilroy-Medium";
-    -webkit-text-stroke: 0.1px white;
-    font-size: 13px;
-    width: 139px;
-    visibility: hidden;
-}
-
-.homePhotoHover-arrow{
-    color:#2644f0;
-    transform:translate(8px,210px);
-    visibility: hidden;
+.homePhotoHover-paragraph {
+  transform: translate(34px, 215px);
+  color: white;
+  font-family: "Gilroy-Medium";
+  -webkit-text-stroke: 0.1px white;
+  font-size: 13px;
+  width: 139px;
+  visibility: hidden;
 }
 
-.homePhotoHover:hover .homePhotoHover-content{
-    transform: translateY(-30px);
+.homePhotoHover-arrow {
+  color: #2644f0;
+  transform: translate(8px, 210px);
+  visibility: hidden;
 }
-.homePhotoHover:hover .homePhotoHover-dash{
-    visibility: hidden;
+
+.homePhotoHover:hover .homePhotoHover-content {
+  transform: translateY(-28px);
 }
-.homePhotoHover:hover .homePhotoHover-paragraph{
-    visibility: visible;
+.homePhotoHover:hover .homePhotoHover-dash {
+  visibility: hidden;
 }
-.homePhotoHover:hover .homePhotoHover-arrow{
-    visibility: visible;
+.homePhotoHover:hover .homePhotoHover-paragraph {
+  visibility: visible;
+}
+.homePhotoHover:hover .homePhotoHover-arrow {
+  visibility: visible;
 }

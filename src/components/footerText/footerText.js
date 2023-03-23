@@ -3,8 +3,11 @@ import "./footerText.css";
 import EastIcon from "@mui/icons-material/East";
 
 export default function FooterText(props) {
+  const ms = {
+    ...props.style,
+  };
   return (
-    <div className="FooterText">
+    <div className="FooterText" style={ms}>
       <div className="footerText-title">
         <div style={{ transform: "translate(-10px,5px)" }}>
           <EastIcon />

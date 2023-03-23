@@ -19,7 +19,7 @@ export default function EnrollementImage() {
       <VerticalBar top="17%" left="40%" />
       <VerticalBar top="90%" left="90%" />
 
-      <div className="EnrollementImage-content">
+      <div className="EnrollementImage-content" id="enrollement">
         <Media queries={GLOBAL_MEDIA_QUERIES}>
           {(matches) => (
             <React.Fragment>

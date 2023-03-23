@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import Zoomed from "../../../assets/images/OurCommunity/zoomed.jpg";
 import Idea from "../../../assets/images/OurCommunity/idea.svg";
 import Media from "react-media";
+import { HashLink } from "react-router-hash-link";
 
 export default function YouAreProficient() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -59,11 +60,19 @@ export default function YouAreProficient() {
                       adventure.
                     </div>
                     <br />
-                    <div className="YouAreProficient-blueButton">
-                      <div className="YouAreProficient-blueButton-title">
-                        Become a member
+
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/enrollement#enrollement"
+                    >
+                      {" "}
+                      <div className="YouAreProficient-blueButton">
+                        <div className="YouAreProficient-blueButton-title">
+                          Become a member
+                        </div>
                       </div>
-                    </div>
+                    </HashLink>
                   </div>
                 </div>
                 <br />
@@ -125,6 +134,7 @@ export default function YouAreProficient() {
                       adventure.
                     </div>
                     <br />
+
                     <div className="YouAreProficient-blueButton">
                       <div
                         className="YouAreProficient-blueButton-title"

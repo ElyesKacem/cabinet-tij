@@ -4,7 +4,17 @@
   padding: 8px 20px 8px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 .new-selected {
   color: "red";
+}
+
+/* rdp-button_reset rdp-button rdp-nav_button rdp-nav_button_next */
+
+.rdp-nav_button_next:hover {
+  color: rgb(165, 0, 130);
+}
+.rdp-nav_button_previous:hover {
+  color: rgb(165, 0, 130);
 }

@@ -4,6 +4,7 @@ import "./WeAreHere.css";
 import Img from "../../../assets/images/OurCommunity/ourCommunityFinal.jpg";
 import WeAreHereButton from "../../buttons/WeAreHereButton/WeAreHereButton";
 import Media from "react-media";
+import { HashLink } from "react-router-hash-link";
 
 export default function WeAreHere() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -31,12 +32,24 @@ export default function WeAreHere() {
                 </p>
 
                 <div style={{ display: "flex", gap: 10 }}>
-                  <WeAreHereButton title="Join Us" />
-                  <WeAreHereButton
-                    title="Contact Us"
-                    arrowColor="#6E533D"
-                    style={{ backgroundColor: "white", color: "#6E533D" }}
-                  />
+                  <HashLink
+                    className="resetcss"
+                    smooth
+                    to="/enrollement#enrollement"
+                  >
+                    <WeAreHereButton title="Join Us" />
+                  </HashLink>
+                  <HashLink
+                    className="resetcss"
+                    smooth
+                    to="/TalkToUsNow#contact"
+                  >
+                    <WeAreHereButton
+                      title="Contact Us"
+                      arrowColor="#6E533D"
+                      style={{ backgroundColor: "white", color: "#6E533D" }}
+                    />
+                  </HashLink>
                 </div>
               </div>
             )}
@@ -70,12 +83,24 @@ export default function WeAreHere() {
                 </p>
 
                 <div style={{ display: "flex", gap: 10 }}>
-                  <WeAreHereButton title="Join Us" />
-                  <WeAreHereButton
-                    title="Contact Us"
-                    arrowColor="#6E533D"
-                    style={{ backgroundColor: "white", color: "#6E533D" }}
-                  />
+                  <HashLink
+                    className="resetcss"
+                    smooth
+                    to="/enrollement#enrollement"
+                  >
+                    <WeAreHereButton title="Join Us" />
+                  </HashLink>
+                  <HashLink
+                    className="resetcss"
+                    smooth
+                    to="/TalkToUsNow#contact"
+                  >
+                    <WeAreHereButton
+                      title="Contact Us"
+                      arrowColor="#6E533D"
+                      style={{ backgroundColor: "white", color: "#6E533D" }}
+                    />
+                  </HashLink>
                 </div>
               </div>
             )}

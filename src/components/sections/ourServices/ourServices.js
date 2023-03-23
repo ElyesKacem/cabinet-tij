@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./ourServices.js";
 import Container from "@mui/material/Container";
 import HomePhotoHover from "../../homePhotoHover/homePhotoHover.js";
-import Image1 from "../../../assets/images/hh0.jpg";
-import Image2 from "../../../assets/images/hh1.jpg";
-import Image3 from "../../../assets/images/hh2.jpg";
+import Image1 from "../../../assets/images/services/hh0.jpg";
+import Image2 from "../../../assets/images/services/hh1.jpg";
+import Image3 from "../../../assets/images/services/hh2.jpg";
+import Image4 from "../../../assets/images/services/business.jpg";
+import Image5 from "../../../assets/images/services/personal.jpg";
 import Grid from "@mui/material/Grid";
 import Media from "react-media";
 
@@ -12,34 +14,24 @@ export default function OurServices() {
   const [isHover, setIsHover] = useState([false, false, false, false, false]);
   const data = [
     {
-      id: 0,
       img: Image1,
       title: "Interpreting",
-      paragraph: "Learn More",
     },
     {
-      id: 1,
       img: Image2,
-      title: "Business",
-      paragraph: "Learn More",
+      title: "Translation",
     },
     {
-      id: 2,
-      img: Image3,
-      title: "Certified Translation",
-      paragraph: "Learn More",
-    },
-    {
-      id: 3,
       img: Image3,
       title: "Sworn Translation",
-      paragraph: "Learn More",
     },
     {
-      id: 4,
-      img: Image1,
+      img: Image4,
+      title: "Business",
+    },
+    {
+      img: Image5,
       title: "Personal Services",
-      paragraph: "Learn More",
     },
   ];
   const GLOBAL_MEDIA_QUERIES = {
@@ -84,14 +76,13 @@ export default function OurServices() {
                       justifyContent="center"
                       alignItems="center"
                     >
-                      {data.map((element) => (
-                        <Grid key={element.id} item>
+                      {data.map((element, index) => (
+                        <Grid key={index} item>
                           <HomePhotoHover
                             setIsHover={setIsHover}
                             id={element.id}
                             img={element.img}
                             title={element.title}
-                            paragraph={element.paragraph}
                           />
                         </Grid>
                       ))}
@@ -198,7 +189,6 @@ export default function OurServices() {
                             id={element.id}
                             img={element.img}
                             title={element.title}
-                            paragraph={element.paragraph}
                           />
                         </Grid>
                       ))}

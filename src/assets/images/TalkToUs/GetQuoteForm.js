@@ -179,7 +179,7 @@ export default function GetQuoteForm() {
           <div className="getQuoteForm-margin white-text">
             Required fields are marked with asterisk{" "}
             <i style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>
-              (<b style={{ color: "red" }}>*</b>)
+              (<b style={{ color: "red" }}>&nbsp;*</b>)
             </i>
           </div>
           <br />

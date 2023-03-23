@@ -65,6 +65,7 @@
   width: 95px;
   font-size: 19px;
   margin-top: 7px;
+  font-weight: bold;
 }
 .EnrollementForm-submit:hover .EnrollementForm-submit-title {
   transform: scale(0.95);

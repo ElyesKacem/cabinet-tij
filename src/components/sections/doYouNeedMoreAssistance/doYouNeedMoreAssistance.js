@@ -1,9 +1,8 @@
 import React from "react";
 import "./doYouNeedMoreAssistance.css";
-import Grid from "@mui/material/Grid";
 import Image from "../../../assets/images/dynma.jpg";
-import GetQuoteButton from "../../buttons/getQuoteButton/getQuoteButton";
 import Media from "react-media";
+import { HashLink } from "react-router-hash-link";
 
 export default function DoYouNeedMoreAssistance(props) {
   const GLOBAL_MEDIA_QUERIES = {
@@ -54,7 +53,13 @@ export default function DoYouNeedMoreAssistance(props) {
                 </div>
 
                 <div>
-                  <div className="RequestAQuoteButton">Request a Quote</div>
+                  <HashLink
+                    className="resetcss"
+                    smooth
+                    to="/TalkToUsNow#contact"
+                  >
+                    <div className="RequestAQuoteButton">Request a Quote</div>
+                  </HashLink>
                 </div>
               </div>
             )}
@@ -96,7 +101,13 @@ export default function DoYouNeedMoreAssistance(props) {
                     </div>
                   </div>
                   <div>
-                    <div className="RequestAQuoteButton">Request a Quote</div>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/requestquote#getquote"
+                    >
+                      <div className="RequestAQuoteButton">Request a Quote</div>
+                    </HashLink>
                   </div>
                 </div>
               </div>
