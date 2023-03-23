@@ -14,6 +14,9 @@ export default function LeftRightButton(props) {
     color: props.whiteText && "white",
     // paddingTop:(props.isWhite)&&14
   };
+  const iconStyle = {
+    ...props.iconStyle,
+  };
   return (
     <div
       style={myStyle}
@@ -29,7 +32,7 @@ export default function LeftRightButton(props) {
           <b>{props.title} </b>
         </div>
         <div className="test">
-          <div className="buttonIcon">
+          <div className="buttonIcon" style={iconStyle}>
             <EastIcon></EastIcon>
           </div>
         </div>

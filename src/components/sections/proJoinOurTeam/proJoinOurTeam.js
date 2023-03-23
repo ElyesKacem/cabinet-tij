@@ -44,6 +44,7 @@ export default function ProJoinOurTeam() {
                     <LeftRightButton
                       title="Career"
                       style={{ transform: "translateY(35px)" }}
+                      iconStyle={{ transform: "translateY(-2px)" }}
                     />
                   </div>
                 </BackgroundImage>
@@ -82,6 +83,7 @@ export default function ProJoinOurTeam() {
                         change.
                       </div>
                       <LeftRightButton
+                        iconStyle={{ transform: "translateY(-2px)" }}
                         title="Career"
                         style={{
                           transform: "translateY(35px)",

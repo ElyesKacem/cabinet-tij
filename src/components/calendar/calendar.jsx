@@ -10,18 +10,18 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
   const today = new Date();
   const [selected, setSelected] = React.useState(today);
 
-  // const css = `
-  // .new-today{
-  //   background-color:red;
-  //   color:white;
-  // }
-  // .new-rdp-day{
-  //   margin:auto;
-  // }
-  // .new-rdp-head-cell{
-  //   witdh:100px;
-  // }
-  // `;
+  const css = `
+  .new-today{
+    
+    color:white;
+  }
+  .new-selected{
+    background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%;
+    color:white;
+    border:none;
+    font-weight:bold;
+  }
+  `;
 
   const handle_change = (select) => {
     if (select) {
@@ -68,12 +68,11 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
   }
   return (
     <div className="flexalignjustify">
-      {/* <style>{css}</style> */}
+      <style>{css}</style>
       <DayPicker
-        // modifiersClassNames={{
-        //   selected: "new-rdp-head-cell",
-        //   today: "new-today",
-        // }}
+        modifiersClassNames={{
+          selected: "new-selected",
+        }}
         mode="single"
         selected={selected}
         footer={footer}
@@ -94,6 +93,10 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
           day: {
             margin: "auto",
           },
+          day_selected: {
+            color: "red",
+          },
+
           // nav_button_next: {
           //   color: "red",
           // },

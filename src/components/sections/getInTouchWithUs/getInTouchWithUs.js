@@ -131,11 +131,14 @@ export default function GetInTouchWithUs() {
                 <br />
                 <LeftRightButton
                   onClick={Handle_submit}
+                  iconStyle={{ transform: "scale(0.9) translateY(-3px)" }}
                   isWhite
                   title="Submit"
                   style={{
                     transform: "translateX(15px)",
-                    padding: "10px 0px 6px 10px",
+                    fontSize: 16,
+                    padding: "14px 0px 6px 10px",
+                    width: 160,
                   }}
                 />
               </div>
@@ -226,11 +229,14 @@ export default function GetInTouchWithUs() {
 
                 <LeftRightButton
                   onClick={Handle_submit}
+                  iconStyle={{ transform: "scale(0.9)" }}
                   isWhite
                   title="Submit"
                   style={{
                     transform: "translateX(15px)",
-                    padding: "10px 0px 6px 10px",
+                    fontSize: 18,
+                    padding: "14px 0px 6px 10px",
+                    width: 160,
                   }}
                 />
               </div>

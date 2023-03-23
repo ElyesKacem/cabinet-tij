@@ -375,7 +375,7 @@ export default function GetQuoteForm() {
                           multiple
                         />
                         <div className="getQuoteForm-input-multipleFile-button">
-                          <b style={{ fontFamily: "sans-serif" }}>
+                          <b style={{ fontFamily: "sans-serif", fontSize: 20 }}>
                             + &nbsp;&nbsp;{" "}
                           </b>{" "}
                           Add More Files
