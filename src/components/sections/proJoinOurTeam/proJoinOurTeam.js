@@ -32,7 +32,8 @@ export default function ProJoinOurTeam() {
                     <VerticalBar top="400px" left="90%" />
 
                     <div className="proJoinOurTeam-content-header">
-                      Professional ? <br /> Join Our team
+                      Professional ? <br />{" "}
+                      <b style={{ fontSize: 50 }}>Join Our team</b>
                     </div>
                     <div className="proJoinOurTeam-content-paragraph">
                       join our community and be a part of something special .
@@ -73,7 +74,8 @@ export default function ProJoinOurTeam() {
                         className="proJoinOurTeam-content-header"
                         style={{ fontSize: matches.small && 48 }}
                       >
-                        Professional ? <br /> Join Our team
+                        Professional ? <br />{" "}
+                        <b style={{ fontSize: 50 }}>Join Our team</b>
                       </div>
                       <div className="proJoinOurTeam-content-paragraph">
                         join our community and be a part of something special .

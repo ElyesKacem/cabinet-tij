@@ -3,6 +3,7 @@ import "./DoYouStillNeedHelp.css";
 import Grid from "@mui/material/Grid";
 import Image from "../../../assets/images/dysnh.jpg";
 import Media from "react-media";
+import { HashLink } from "react-router-hash-link";
 
 export default function DoYouStillNeedHelp() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -46,7 +47,13 @@ export default function DoYouStillNeedHelp() {
                     </div>
                   </Grid>
                   <Grid item xs={3}>
-                    <div className="RequestAQuoteButton">Contact Us</div>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <div className="RequestAQuoteButton">Contact Us</div>
+                    </HashLink>
                   </Grid>
                 </Grid>
               </div>
@@ -78,7 +85,13 @@ export default function DoYouStillNeedHelp() {
                     </p>
                   </Grid>
                   <Grid item xs={3}>
-                    <div className="RequestAQuoteButton">Contact Us</div>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <div className="RequestAQuoteButton">Contact Us</div>
+                    </HashLink>
                   </Grid>
                 </Grid>
               </div>

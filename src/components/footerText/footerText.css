@@ -21,3 +21,8 @@
 .FooterText {
   padding: 20px;
 }
+@media screen and (max-width: 850px) {
+  .footerText-title {
+    justify-content: center;
+  }
+}

@@ -18,7 +18,7 @@ import { HashLink } from "react-router-hash-link";
 const GLOBAL_MEDIA_QUERIES = {
   small: "(max-width: 999px)",
   // medium: "(min-width: 600px) and (max-width: 1199px)",
-  large: "(min-width: 1000px)",
+  large: "(min-width: 999px)",
 };
 
 export default function Navbar() {
@@ -64,7 +64,7 @@ export default function Navbar() {
                     opacity="0.9"
                     style={{
                       position: "absolute",
-                      right: 14,
+                      right: 8,
                       top: 15,
                       zIndex: "8",
                     }}
@@ -85,7 +85,7 @@ export default function Navbar() {
                       title="Get Quote"
                       style={{
                         color: "white",
-                        transform: "translate(-80px,35px)",
+                        transform: "translate(-73px,35px)",
                       }}
                     />
                     <div>
@@ -131,12 +131,9 @@ export default function Navbar() {
                                 }}
                                 smooth
                                 to="/#home"
+                                style={{ fontWeight: "normal", fontSize: 28 }}
                               >
-                                <a
-                                  style={{ fontWeight: "normal", fontSize: 28 }}
-                                >
-                                  {texts.Home}
-                                </a>
+                                {texts.Home}
                               </HashLink>
                             </p>
                             <p
@@ -153,12 +150,9 @@ export default function Navbar() {
                                 }}
                                 smooth
                                 to="/#about"
+                                style={{ fontWeight: "normal", fontSize: 28 }}
                               >
-                                <a
-                                  style={{ fontWeight: "normal", fontSize: 28 }}
-                                >
-                                  {texts.About}
-                                </a>
+                                {texts.About}
                               </HashLink>
                             </p>
                             <p
@@ -175,12 +169,9 @@ export default function Navbar() {
                                 }}
                                 smooth
                                 to="/#services"
+                                style={{ fontWeight: "normal", fontSize: 28 }}
                               >
-                                <a
-                                  style={{ fontWeight: "normal", fontSize: 28 }}
-                                >
-                                  {texts.Services}
-                                </a>
+                                {texts.Services}
                               </HashLink>
                             </p>
 
@@ -198,12 +189,9 @@ export default function Navbar() {
                                 }}
                                 smooth
                                 to="/TalkToUsNow#contact"
+                                style={{ fontWeight: "normal", fontSize: 28 }}
                               >
-                                <a
-                                  style={{ fontWeight: "normal", fontSize: 28 }}
-                                >
-                                  {texts.Contact}
-                                </a>
+                                {texts.Contact}
                               </HashLink>
                             </p>
                           </div>

@@ -1,54 +1,58 @@
+@media screen and (max-width: 1386px) {
+  .OurCommunityHeader-title,
+  .OurCommunityHeader-paragraph {
+    text-align: center;
+  }
+}
+
 .OurCommunityHeader-container {
-    height: 100px;
-    /* background-color: red; */
-    width: 90%;
-    margin: auto;
-    height: 100%;
-    max-width: 1500px;
+  height: 100px;
+  /* background-color: red; */
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  max-width: 1500px;
 }
 
 .OurCommunityHeader-title {
-    font-size: 60px;
-    font-family: Gilroy-Bold;
-    color: white;
+  font-size: 60px;
+  font-family: Gilroy-Bold;
+  color: white;
 }
 
 .blue {
-    color: #2742E4;
+  color: #2742e4;
 }
 
 .OurCommunityHeader-paragraph {
-    color: white;
-    font-size: 20px;
-    line-height: 1.4;
-    width: 80%;
-    font-family: "Gilroy-Medium";
-
+  color: white;
+  font-size: 20px;
+  line-height: 1.4;
+  width: 80%;
+  font-family: "Gilroy-Medium";
 }
 
 .EnrollementImage-flyButton {
-    position: relative;
-    width: 150px;
-    z-index: 4;
+  position: relative;
+  width: 150px;
+  z-index: 4;
 }
 
 .EnrollementImage-tl {
-    bottom: 354px;
-    
+  bottom: 354px;
 }
 
 .EnrollementImage-bl {
-        bottom: 134px;
-    right: 166px;
+  bottom: 134px;
+  right: 166px;
 }
 
 .EnrollementImage-tr {
-    bottom: 324px;
-    left: 200px;
+  bottom: 324px;
+  left: 200px;
 }
 
 .EnrollementImage-br {
-    bottom: 80px;
-    left:80px;
-    
+  bottom: 80px;
+  left: 80px;
 }

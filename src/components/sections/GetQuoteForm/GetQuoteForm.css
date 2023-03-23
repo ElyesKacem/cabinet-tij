@@ -31,7 +31,9 @@
   text-align: center;
 }
 
-.getQuoteForm-margin {
+.getQuoteForm-margin::-webkit-scrollbar {
+  -webkit-appearance: none;
+
   margin-top: 10px;
 }
 

@@ -80,7 +80,7 @@ export default function OurServices() {
                         <Grid key={index} item>
                           <HomePhotoHover
                             setIsHover={setIsHover}
-                            id={element.id}
+                            id={index}
                             img={element.img}
                             title={element.title}
                           />
@@ -182,11 +182,11 @@ export default function OurServices() {
                       justifyContent="center"
                       alignItems="center"
                     >
-                      {data.map((element) => (
-                        <Grid key={element.id} item>
+                      {data.map((element, index) => (
+                        <Grid key={index} item>
                           <HomePhotoHover
                             setIsHover={setIsHover}
-                            id={element.id}
+                            id={index}
                             img={element.img}
                             title={element.title}
                           />

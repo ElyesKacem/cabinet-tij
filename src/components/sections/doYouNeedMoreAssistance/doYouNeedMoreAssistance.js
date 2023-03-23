@@ -56,7 +56,7 @@ export default function DoYouNeedMoreAssistance(props) {
                   <HashLink
                     className="resetcss"
                     smooth
-                    to="/TalkToUsNow#contact"
+                    to="/requestquote#getquote"
                   >
                     <div className="RequestAQuoteButton">Request a Quote</div>
                   </HashLink>

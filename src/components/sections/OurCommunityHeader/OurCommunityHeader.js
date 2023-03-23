@@ -124,11 +124,6 @@ export default function OurCommunityHeader() {
                     <br />
                     <br />
                     <br />
-                    <img
-                      src={DownArrow}
-                      className="EnrollementImage-Arrow"
-                      style={{ height: 60, width: "auto", marginLeft: "50%" }}
-                    />
                   </div>
                   <div>
                     <br />
@@ -157,6 +152,13 @@ export default function OurCommunityHeader() {
                         src={SupportButton}
                         className="EnrollementImage-flyButton EnrollementImage-br"
                       />
+                    </div>{" "}
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                      <img
+                        src={DownArrow}
+                        className="EnrollementImage-Arrow"
+                        style={{ height: 60, width: "auto" }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -176,7 +178,6 @@ export default function OurCommunityHeader() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 100,
                   }}
                 >
                   <div>
@@ -201,11 +202,6 @@ export default function OurCommunityHeader() {
                     <br />
                     <br />
                     <br />
-                    <img
-                      src={DownArrow}
-                      className="EnrollementImage-Arrow"
-                      style={{ height: 60, width: "auto", marginLeft: "50%" }}
-                    />
                   </div>
                   <div>
                     <div
@@ -236,6 +232,22 @@ export default function OurCommunityHeader() {
                         className="EnrollementImage-flyButton EnrollementImage-br"
                       />
                     </div>
+                    <div style={{ display: "flex", justifyContent: "center" }}>
+                      <img
+                        src={DownArrow}
+                        className="EnrollementImage-Arrow"
+                        style={{
+                          height: 60,
+                          width: "auto",
+                          transform: matches.verySmall && "translateY(-100px)",
+                        }}
+                      />
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                   </div>
                 </div>
               </div>

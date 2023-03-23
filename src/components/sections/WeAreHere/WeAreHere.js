@@ -11,6 +11,7 @@ export default function WeAreHere() {
     large: "(min-width: 929px)",
     medium: "(max-width: 929px)",
     small: "(max-width: 531px)",
+    vsmall: "(max-width: 431px)",
   };
 
   return (
@@ -20,18 +21,25 @@ export default function WeAreHere() {
           <React.Fragment>
             {matches.large && (
               <div className="WeAreHere-container">
-                <div className="OurCommunityHeader-title">
+                <div className="WeAreHere-container-title">
                   We are here, it<b className="normal">'</b>s time
                   <br /> for you to join TIJ.
                 </div>
 
-                <p className="OurCommunityHeader-paragraph">
+                <p className="WeAreHere-container-paragraph">
                   It will take less than 10 minutes for you to submit your
                   application <br /> for affiliation. We will get back to you as
                   soon as possible!
                 </p>
 
-                <div style={{ display: "flex", gap: 10 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: 10,
+                    alignItems: matches.vsmall && "center",
+                    flexDirection: matches.vsmall && "column",
+                  }}
+                >
                   <HashLink
                     className="resetcss"
                     smooth
@@ -53,7 +61,7 @@ export default function WeAreHere() {
                 </div>
               </div>
             )}
-            {(matches.medium || matches.small) && (
+            {matches.medium && (
               <div
                 className="WeAreHere-container"
                 style={{
@@ -64,7 +72,7 @@ export default function WeAreHere() {
                 }}
               >
                 <div
-                  className="OurCommunityHeader-title"
+                  className="WeAreHere-container-title"
                   style={{
                     fontSize: matches.small && 43,
                   }}
@@ -74,7 +82,7 @@ export default function WeAreHere() {
                 </div>
 
                 <p
-                  className="OurCommunityHeader-paragraph"
+                  className="WeAreHere-container-paragraph"
                   style={{ width: "auto" }}
                 >
                   It will take less than 10 minutes for you to submit your
@@ -82,7 +90,14 @@ export default function WeAreHere() {
                   soon as possible!
                 </p>
 
-                <div style={{ display: "flex", gap: 10 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: 10,
+                    alignItems: matches.vsmall && "center",
+                    flexDirection: matches.vsmall && "column",
+                  }}
+                >
                   <HashLink
                     className="resetcss"
                     smooth

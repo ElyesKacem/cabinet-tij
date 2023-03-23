@@ -2,6 +2,7 @@ import React from "react";
 import "./homePhotoHover.css";
 import RemoveIcon from "@mui/icons-material/Remove";
 import EastIcon from "@mui/icons-material/East";
+import { HashLink } from "react-router-hash-link";
 
 export default function HomePhotoHover(props) {
   // console.log(props.img);
@@ -29,7 +30,12 @@ export default function HomePhotoHover(props) {
             </div>
             {props.title}
           </div>
-          <div className="homePhotoHover-paragraph">Learn More</div>
+
+          <div className="homePhotoHover-paragraph">
+            <HashLink className="resetcss" smooth to="/requestquote#getquote">
+              <div>Learn More</div>
+            </HashLink>
+          </div>
         </div>
       </div>
     </div>

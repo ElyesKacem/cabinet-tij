@@ -11,3 +11,15 @@
   justify-content: center;
   height: 100%;
 }
+.WeAreHere-container-paragraph {
+  color: white;
+  font-size: 20px;
+  line-height: 1.4;
+  width: 80%;
+  font-family: "Gilroy-Medium";
+}
+.WeAreHere-container-title {
+  font-size: 60px;
+  font-family: Gilroy-Bold;
+  color: white;
+}

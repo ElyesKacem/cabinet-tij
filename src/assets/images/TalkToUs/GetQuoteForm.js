@@ -44,9 +44,8 @@ export default function GetQuoteForm() {
   const [singleFileName, setSingleFileName] = useState(false);
   const [menuSelected, setMenuSelected] = useState([true, false, false, false]);
   const [showCalendar, setShowCalendar] = useState(false);
-  const [selectedDay, setSelectedDay] = useState(null);
+
   const [allowedToOpen, setAllowedToOpen] = useState(true);
-  const disabledDays = { before: new Date() };
 
   const [form, setForm] = useState({
     first_name: "",

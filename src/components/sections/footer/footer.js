@@ -13,8 +13,8 @@ import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   const GLOBAL_MEDIA_QUERIES = {
-    large: "(min-width: 1222px)",
-    medium: "(max-width: 1222px) and (min-width: 851px)",
+    large: "(min-width: 1253px)",
+    medium: "(max-width: 1253px) and (min-width: 851px)",
     // medium: "(min-width: 600px) and (max-width: 1199px)",
     small: "(max-width: 850px)",
   };
@@ -84,7 +84,13 @@ export default function Footer() {
                     />
                     <br />
                     <br />
-                    <FooterText title="Support" content="Contact Us" />
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <FooterText title="Support" content="Contact Us" />
+                    </HashLink>
                   </div>
 
                   <div
@@ -110,7 +116,11 @@ export default function Footer() {
                       title="About"
                       content="We are a translation company whose main goal is to provide specialized translations of various documents both technical and administrative as well as judicial."
                     />
-                    <FooterText title="Support" content="Contact Us" />
+                    <HashLink
+                    className="resetcss"
+                    smooth
+                    to="/TalkToUsNow#contact"
+                  ><FooterText title="Support" content="Contact Us" /></HashLink>
                   </div>
                   <div style={{ display: "flex" }}>
                     <FooterText title="Solutions" />
@@ -134,7 +144,13 @@ export default function Footer() {
                       <FooterText title="Solutions" />
                     </div>
                     <div>
-                      <FooterText title="Support" content="Contact Us" />
+                      <HashLink
+                        className="resetcss"
+                        smooth
+                        to="/TalkToUsNow#contact"
+                      >
+                        <FooterText title="Support" content="Contact Us" />
+                      </HashLink>
                       <FooterText
                         style={{ transform: "translateY(50px)" }}
                         title="Information"
@@ -212,7 +228,13 @@ export default function Footer() {
                     </div>
                     <div>
                       <FooterText title="Information" content=" " />
-                      <FooterText title="Support" content="Contact Us" />
+                      <HashLink
+                        className="resetcss"
+                        smooth
+                        to="/TalkToUsNow#contact"
+                      >
+                        <FooterText title="Support" content="Contact Us" />
+                      </HashLink>
                     </div>
                   </div>
                 </div>

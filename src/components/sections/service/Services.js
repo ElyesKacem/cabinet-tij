@@ -64,28 +64,29 @@ export default function Services() {
 
                           <div>
                             <div></div>
-                            <div className="miniButtonClass">
-                              <div style={{ position: "relative" }}>
-                                <img src={Pause} style={{ width: 80 }} />
-                                <img
-                                  src={Play}
-                                  style={{ width: 80 }}
-                                  className="servicesPauseButton"
-                                />
-                              </div>
-                              <HashLink
-                                className="resetcss"
-                                smooth
-                                to="/#services"
-                              >
+                            <HashLink
+                              className="resetcss"
+                              smooth
+                              to="/#services"
+                            >
+                              <div className="miniButtonClass">
+                                <div style={{ position: "relative" }}>
+                                  <img src={Pause} style={{ width: 80 }} />
+                                  <img
+                                    src={Play}
+                                    style={{ width: 80 }}
+                                    className="servicesPauseButton"
+                                  />
+                                </div>
+
                                 <div
                                   // style={{ fontSize: 17 }}
                                   className="Gilroy-Regular"
                                 >
                                   Our services
                                 </div>
-                              </HashLink>
-                            </div>
+                              </div>
+                            </HashLink>
                           </div>
                         </div>
                       </div>
@@ -127,23 +128,20 @@ export default function Services() {
 
                         <div>
                           <div></div>
-                          <div className="miniButtonClass">
-                            <div style={{ position: "relative" }}>
-                              <img src={Pause} style={{ width: 80 }} />
-                              <img
-                                src={Play}
-                                style={{ width: 80 }}
-                                className="servicesPauseButton"
-                              />
-                            </div>
-                            <HashLink
-                              className="resetcss"
-                              smooth
-                              to="/#services"
-                            >
+                          <HashLink className="resetcss" smooth to="/#services">
+                            <div className="miniButtonClass">
+                              <div style={{ position: "relative" }}>
+                                <img src={Pause} style={{ width: 80 }} />
+                                <img
+                                  src={Play}
+                                  style={{ width: 80 }}
+                                  className="servicesPauseButton"
+                                />
+                              </div>
+
                               <div style={{ fontSize: 17 }}>Our services</div>
-                            </HashLink>
-                          </div>
+                            </div>
+                          </HashLink>
                         </div>
                       </div>
                       <br />

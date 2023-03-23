@@ -84,7 +84,6 @@ export default function TalkToUsNowSection() {
     large: "(min-width: 1200px)",
     medium: "(max-width: 1200px)",
     small: " (max-width: 640px)",
-    vsmall: " (max-width: 389px)",
   };
   return (
     <div className="TalkToUsNowSection-background">
@@ -103,7 +102,12 @@ export default function TalkToUsNowSection() {
           <React.Fragment>
             {(matches.medium || matches.small) && (
               <div style={{ width: "90%", maxWidth: 1500, margin: "auto" }}>
-                <div className="TalkToUsNowSection-title">Talk To Us Now</div>
+                <div
+                  className="TalkToUsNowSection-title"
+                  style={{ textAlign: "center" }}
+                >
+                  Talk To Us Now
+                </div>
                 <br />
                 <div style={{ transform: "translateY(-20px)" }}>
                   {matches.small && (
