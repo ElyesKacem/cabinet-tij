@@ -134,8 +134,8 @@ export default function GetInTouchWithUs() {
                   isWhite
                   title="Submit"
                   style={{
-                    transform: "translateX(15px) scale(0.9)",
-                    fontWeight: "bold",
+                    transform: "translateX(15px)",
+                    padding: "10px 0px 6px 10px",
                   }}
                 />
               </div>
@@ -229,8 +229,8 @@ export default function GetInTouchWithUs() {
                   isWhite
                   title="Submit"
                   style={{
-                    transform: "translateX(15px) scale(0.9)",
-                    fontWeight: "bold",
+                    transform: "translateX(15px)",
+                    padding: "10px 0px 6px 10px",
                   }}
                 />
               </div>

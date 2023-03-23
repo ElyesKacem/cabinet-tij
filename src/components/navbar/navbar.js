@@ -142,28 +142,6 @@ export default function Navbar() {
                             <p
                               className={
                                 activateAnimation
-                                  ? "wrapperMobile-menu-item wrapperMobile-menu-item-right toInit"
-                                  : "wrapperMobile-menu-item wrapperMobile-menu-item-right"
-                              }
-                            >
-                              <HashLink
-                                className="resetcss"
-                                onClick={() => {
-                                  setActivateAnimation(!activateAnimation);
-                                }}
-                                smooth
-                                to="/#services"
-                              >
-                                <a
-                                  style={{ fontWeight: "normal", fontSize: 28 }}
-                                >
-                                  {texts.Services}
-                                </a>
-                              </HashLink>
-                            </p>
-                            <p
-                              className={
-                                activateAnimation
                                   ? "wrapperMobile-menu-item wrapperMobile-menu-item-left toInit"
                                   : "wrapperMobile-menu-item wrapperMobile-menu-item-left"
                               }
@@ -183,6 +161,29 @@ export default function Navbar() {
                                 </a>
                               </HashLink>
                             </p>
+                            <p
+                              className={
+                                activateAnimation
+                                  ? "wrapperMobile-menu-item wrapperMobile-menu-item-right toInit"
+                                  : "wrapperMobile-menu-item wrapperMobile-menu-item-right"
+                              }
+                            >
+                              <HashLink
+                                className="resetcss"
+                                onClick={() => {
+                                  setActivateAnimation(!activateAnimation);
+                                }}
+                                smooth
+                                to="/#services"
+                              >
+                                <a
+                                  style={{ fontWeight: "normal", fontSize: 28 }}
+                                >
+                                  {texts.Services}
+                                </a>
+                              </HashLink>
+                            </p>
+
                             <p
                               className={
                                 activateAnimation
@@ -238,13 +239,13 @@ export default function Navbar() {
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <HashLink className="resetcss" smooth to="/#services">
-                      <NavbarButton title="Services" />
+                    <HashLink className="resetcss" smooth to="/#about">
+                      <NavbarButton title="About" />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
-                    <HashLink className="resetcss" smooth to="/#about">
-                      <NavbarButton title="About" />
+                    <HashLink className="resetcss" smooth to="/#services">
+                      <NavbarButton title="Services" />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>

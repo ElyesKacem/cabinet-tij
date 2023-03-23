@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.js";
-import Grid from "@mui/material/Grid";
 // import Container from '@mui/material/Container';
 import CabinetTIJ from "../../../assets/images/logo.png";
 import GoogleMaps from "../../../assets/images/googleMaps.png";
@@ -8,6 +7,7 @@ import LinkedIn from "../../../assets/images/LinkedIn.png";
 import FooterText from "../../footerText/footerText.js";
 import Media from "react-media";
 import "./footer.css";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -176,12 +176,14 @@ export default function Footer() {
         }}
       >
         <div className="footer-b-container">
-          <a
-            style={{ color: "white", textDecoration: "none" }}
-            href="/termeofuse"
-          >
-            Terms of use | Privacy and Policy
-          </a>
+          <HashLink className="resetcss" smooth to="/termeofuse#termeofuse">
+            <a
+              style={{ color: "white", textDecoration: "none" }}
+              href="/termeofuse"
+            >
+              Terms of use | Privacy and Policy
+            </a>
+          </HashLink>
           <div>All Copyrights © are reserved 2022</div>
         </div>
       </div>

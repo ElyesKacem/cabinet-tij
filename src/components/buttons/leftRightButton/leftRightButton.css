@@ -1,68 +1,69 @@
-.leftRightButton{
-    border: 1px solid white;
-    overflow: hidden;
-    border-radius: 5px;
-    width: 140px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-  
-    padding: 10px 15px 0px 25px;
-    cursor: pointer;
-    position: relative;
-    
+.leftRightButton {
+  border: 1px solid white;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 140px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 15px 0px 25px;
+  cursor: pointer;
+  position: relative;
 }
-.leftRightButton:hover{
-border-color: transparent;
+.leftRightButton:hover {
+  border-color: transparent;
 }
-.leftRightButton-white{
-    color: #0B2AD6;
-    width: 200px;
-    border-radius: 5px;
-    padding: 15px 10px 10px 20px;
-    font-size: 19px;
-    
+.leftRightButton-white {
+  color: #0b2ad6;
+  width: 200px;
+  border-radius: 5px;
+  padding: 15px 10px 10px 20px;
+  font-size: 19px;
 }
-.leftRightButton-white:hover{
-    color: white;
+.leftRightButton-white:hover {
+  color: white;
 }
-.buttonIcon{
-    transform: translateY(-1px);
+.buttonText {
+  font-weight: bold;
+}
+.buttonIcon {
+  transform: translateY(-1px);
 }
 
-.leftRightButton:hover .buttonIcon{
-    transform: scaleX(1.3);
-    transition: all .2s ease-out;
+.leftRightButton:hover .buttonIcon {
+  transform: scaleX(1.3);
+  transition: all 0.2s ease-out;
 }
-.leftRightButton:hover .buttonText{
-    transform: translateX(-2px);
-    transition: all .2s ease-out;
+.leftRightButton:hover .buttonText {
+  transform: translateX(-2px);
+  transition: all 0.2s ease-out;
 }
-.leftRightButton:hover .test{
-    transform: translateX(5px);
-    transition: all .2s ease-out;
-}
-
-.LeftRightButton-container{
-    display: flex;
-    gap: 10px;
-    position: relative;
-    z-index: 2;
+.leftRightButton:hover .test {
+  transform: translateX(5px);
+  transition: all 0.2s ease-out;
 }
 
-.LeftRightButton-background{
-    /* background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box; */
-    background: transparent linear-gradient(180deg, #242D65 0%, #CF2032 100%) 0% 0% no-repeat padding-box;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 100%;
+.LeftRightButton-container {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
 }
-.leftRightButton:hover .LeftRightButton-background{
-    right: 0;
+
+.LeftRightButton-background {
+  /* background: transparent linear-gradient(180deg, #4159F0 0%, #0827D5 100%) 0% 0% no-repeat padding-box; */
+  background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
+    0% no-repeat padding-box;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 100%;
+}
+.leftRightButton:hover .LeftRightButton-background {
+  right: 0;
 }

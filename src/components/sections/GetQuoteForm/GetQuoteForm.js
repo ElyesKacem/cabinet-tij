@@ -424,7 +424,7 @@ export default function GetQuoteForm() {
                             </div>
                           </>
                         ) : (
-                          <>&nbsp;&nbsp;No file chosen</>
+                          <span>&nbsp;&nbsp;No file chosen</span>
                         )}
                       </label>
                       {singleFile && (

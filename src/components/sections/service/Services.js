@@ -6,6 +6,7 @@ import Image from "../../../assets/images/Illustration.svg";
 import Pause from "../../../assets/images/pause.png";
 import Play from "../../../assets/images/play.png";
 import Media from "react-media";
+import { HashLink } from "react-router-hash-link";
 
 export default function Services() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -72,12 +73,18 @@ export default function Services() {
                                   className="servicesPauseButton"
                                 />
                               </div>
-                              <div
-                                // style={{ fontSize: 17 }}
-                                className="Gilroy-Regular"
+                              <HashLink
+                                className="resetcss"
+                                smooth
+                                to="/#services"
                               >
-                                Our services
-                              </div>
+                                <div
+                                  // style={{ fontSize: 17 }}
+                                  className="Gilroy-Regular"
+                                >
+                                  Our services
+                                </div>
+                              </HashLink>
                             </div>
                           </div>
                         </div>
@@ -129,7 +136,13 @@ export default function Services() {
                                 className="servicesPauseButton"
                               />
                             </div>
-                            <div style={{ fontSize: 17 }}>Our services</div>
+                            <HashLink
+                              className="resetcss"
+                              smooth
+                              to="/#services"
+                            >
+                              <div style={{ fontSize: 17 }}>Our services</div>
+                            </HashLink>
                           </div>
                         </div>
                       </div>

@@ -7,7 +7,11 @@ export default function TermOfUse() {
     color: "#2f49e7",
   };
   return (
-    <div style={{ minHeight: 500 }} className="TalkToUsNowSection-background">
+    <div
+      id="termeofuse"
+      style={{ minHeight: 500 }}
+      className="TalkToUsNowSection-background"
+    >
       <br />
       <br />
       <br />
