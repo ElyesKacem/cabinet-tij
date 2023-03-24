@@ -191,7 +191,9 @@ export default function VideoSection() {
                     <b>{texts.For_small_and_mid_sized_businesses}</b>
                   </div>
                   <br />
-                  <div style={{ display: "flex" }}>
+                  <div
+                    style={{ display: "flex", transform: "translateY(15px)" }}
+                  >
                     <HashLink className="resetcss" smooth to="/#about">
                       <div>
                         <LeftRightButton isBlue title={texts.LearnMore} />
@@ -250,7 +252,9 @@ export default function VideoSection() {
                     </b>
                   </div>
                   <br />
-                  <div style={{ display: "flex" }}>
+                  <div
+                    style={{ display: "flex", transform: "translateY(15px)" }}
+                  >
                     <HashLink className="resetcss" smooth to="/#about">
                       <div>
                         <LeftRightButton isBlue title={texts.LearnMore} />

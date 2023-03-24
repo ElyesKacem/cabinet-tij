@@ -5,7 +5,7 @@ const texts = {
   en: {
     title: "Request A Quote",
     required: "Required fields are marked with asterisk",
-    translation: "About",
+    translation: "Translation",
     interpreting: "Interpreting",
     transcription: "Transcription",
     vipServ: "VIP Services",

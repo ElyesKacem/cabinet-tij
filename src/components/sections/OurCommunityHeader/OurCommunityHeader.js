@@ -29,7 +29,7 @@ export default function OurCommunityHeader() {
     verySmall: "(max-width: 583px)",
   };
   return (
-    <div className="TalkToUsNowSection-background">
+    <div id="community" className="TalkToUsNowSection-background">
       <VerticalBar top="55%" left="50px" />
       <VerticalBar top="17%" left="43%" />
       <VerticalBar top="90%" left="95%" />

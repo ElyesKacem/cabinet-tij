@@ -61,7 +61,7 @@ export default function WhyChoiceUs() {
 
   useEffect(() => {
     setDataToSet(data[selectedDataId]);
-  }, [selectedDataId]);
+  }, [selectedDataId, lang]);
 
   return (
     <div className="white-background">

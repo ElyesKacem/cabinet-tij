@@ -48,7 +48,7 @@ export default function ProJoinOurTeam() {
                     <HashLink
                       className="resetcss"
                       smooth
-                      to="/enrollement#enrollement"
+                      to="TakePartInOurCommunity#community"
                     >
                       <LeftRightButton
                         title={text.bt}
@@ -95,7 +95,7 @@ export default function ProJoinOurTeam() {
                       <HashLink
                         className="resetcss"
                         smooth
-                        to="/enrollement#enrollement"
+                        to="TakePartInOurCommunity#community"
                       >
                         <LeftRightButton
                           iconStyle={{ transform: "translateY(-1px)" }}
