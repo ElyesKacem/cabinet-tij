@@ -97,6 +97,7 @@
   flex-direction: column;
   color: white;
   z-index: 3;
+  width: 38%;
 }
 
 .videoContent p {

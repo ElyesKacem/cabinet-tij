@@ -36,12 +36,12 @@ export default function HomePhotoHover(props) {
             <div className="homePhotoHover-dash">
               <RemoveIcon></RemoveIcon>
             </div>
-            {props.title}
+            &nbsp;{props.title}
           </div>
 
           <div className="homePhotoHover-paragraph">
             <HashLink className="resetcss" smooth to="/requestquote#getquote">
-              <div>Learn More</div>
+              <div>&nbsp;Learn More</div>
             </HashLink>
           </div>
         </div>

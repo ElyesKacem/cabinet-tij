@@ -7,6 +7,7 @@ import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 import BackgroundImage from "../../backgroundImage/backgroundImage";
 import { HashLink } from "react-router-hash-link";
+import GetText from "./video.lang";
 
 export default function VideoSection() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -15,6 +16,7 @@ export default function VideoSection() {
     small: "(max-width:1110px)",
     // medium: "(min-width: 600px) and (max-width: 1199px)",
   };
+  const texts = GetText();
   return (
     <React.Fragment>
       <Media queries={GLOBAL_MEDIA_QUERIES}>
@@ -47,14 +49,18 @@ export default function VideoSection() {
                     className="EnrollementBeforeFooter-element"
                     style={{ color: "white" }}
                   >
-                    <b>We Provide Outsourced</b>
+                    <b>{texts.We_Provide}</b>
                     <br />
 
                     <div
                       className="videoContentMiddle"
-                      style={{ color: "white", fontSize: 55 }}
+                      style={{
+                        color: "white",
+                        fontSize: 55,
+                        textAlign: "center",
+                      }}
                     >
-                      Translation
+                      {texts.Translation}
                       <div
                         style={{
                           fontFamily: "sans-serif",
@@ -63,11 +69,13 @@ export default function VideoSection() {
                       >
                         &
                       </div>
-                      Interpreting
+                      {texts.Interpreting}
                     </div>
                     <br />
 
-                    <b>For small and mid sized businesses</b>
+                    <b style={{ padding: 17, textAlign: "center" }}>
+                      {texts.For_small_and_mid_sized_businesses}
+                    </b>
 
                     <br />
                     <br />
@@ -83,7 +91,7 @@ export default function VideoSection() {
                           <LeftRightButton
                             isBlue
                             whiteText
-                            title="Learn More"
+                            title={texts.Translation}
                           />
                         </HashLink>
                       </div>
@@ -93,7 +101,7 @@ export default function VideoSection() {
                         to="/TalkToUsNow#contact"
                       >
                         <div>
-                          <LeftRightButton whiteText title="Get in Touch" />
+                          <LeftRightButton whiteText title={texts.GetinTouch} />
                         </div>
                       </HashLink>
                     </div>
@@ -108,14 +116,14 @@ export default function VideoSection() {
                 <br />
                 <br />
 
-                <b>We Provide Outsourced</b>
+                <b>{texts.We_Provide}</b>
                 <br />
 
                 <div
                   className="videoContentMiddle"
                   style={{ color: "#0827D5", fontSize: 55 }}
                 >
-                  Translation
+                  {texts.Translation}
                   <div
                     style={{
                       fontFamily: "sans-serif",
@@ -125,11 +133,11 @@ export default function VideoSection() {
                   >
                     &
                   </div>
-                  Interpreting
+                  {texts.Translation}
                 </div>
                 <br />
 
-                <b>For small and mid sized businesses</b>
+                <b>{texts.Translation}</b>
 
                 <br />
                 <br />
@@ -137,13 +145,13 @@ export default function VideoSection() {
                   style={{ display: "flex", flexDirection: "column", gap: 20 }}
                 >
                   <div>
-                    </HashLink><LeftRightButton isBlue whiteText title="Learn More" /></HashLink>
+                    </HashLink><LeftRightButton isBlue whiteText title={texts.Translation} /></HashLink>
                   </div>
                   <div>
                     <LeftRightButton
                       whiteText
                       
-                      title="Get in Touch"
+                      title={texts.GetinTouch}
                     />
                   </div>
                 </div>
@@ -164,29 +172,29 @@ export default function VideoSection() {
                 <video src={video} autoPlay loop muted></video>
                 <div className="videoContent">
                   <div>
-                    <b>We Provide Outsourced</b>
+                    <b>{texts.We_Provide}</b>
                   </div>
                   <br />
 
                   <div className="videoContentMiddle" style={{ fontSize: 70 }}>
-                    Translation
+                    {texts.Translation}
                     <div
                       style={{ fontFamily: "sans-serif", textAlign: "center" }}
                     >
                       &
                     </div>
-                    Interpreting
+                    {texts.Interpreting}
                   </div>
                   <br />
 
                   <div>
-                    <b>For small and mid sized businesses</b>
+                    <b>{texts.For_small_and_mid_sized_businesses}</b>
                   </div>
                   <br />
                   <div style={{ display: "flex" }}>
                     <HashLink className="resetcss" smooth to="/#about">
                       <div>
-                        <LeftRightButton isBlue title="Learn More" />
+                        <LeftRightButton isBlue title={texts.LearnMore} />
                       </div>
                     </HashLink>
                     <HashLink
@@ -195,7 +203,7 @@ export default function VideoSection() {
                       to="/TalkToUsNow#contact"
                     >
                       <div style={{ marginLeft: 18 }}>
-                        <LeftRightButton title="Get in Touch" />
+                        <LeftRightButton title={texts.GetinTouch} />
                       </div>
                     </HashLink>
                   </div>
@@ -215,35 +223,37 @@ export default function VideoSection() {
                       style={{ fontWeight: "normal" }}
                       className="regular-font Gilroy-Regular"
                     >
-                      We Provide Outsourced
+                      {texts.We_Provide}
                     </b>
                   </div>
                   <br />
 
                   <div className="videoContentMiddle" style={{ fontSize: 90 }}>
-                    Translation
+                    {texts.Translation}
                     <div
                       style={{ fontFamily: "sans-serif", textAlign: "center" }}
                     >
                       &
                     </div>
-                    Interpreting
+                    {texts.Interpreting}
                   </div>
                   <br />
 
                   <div>
                     <b
-                      style={{ fontWeight: "normal" }}
+                      style={{
+                        fontWeight: "normal",
+                      }}
                       className="regular-font Gilroy-Regular"
                     >
-                      For small and mid sized businesses
+                      {texts.For_small_and_mid_sized_businesses}
                     </b>
                   </div>
                   <br />
                   <div style={{ display: "flex" }}>
                     <HashLink className="resetcss" smooth to="/#about">
                       <div>
-                        <LeftRightButton isBlue title="Learn More" />
+                        <LeftRightButton isBlue title={texts.Translation} />
                       </div>
                     </HashLink>
                     <HashLink
@@ -252,7 +262,7 @@ export default function VideoSection() {
                       to="/TalkToUsNow#contact"
                     >
                       <div style={{ marginLeft: 18 }}>
-                        <LeftRightButton title="Get in Touch" />
+                        <LeftRightButton title={texts.GetinTouch} />
                       </div>
                     </HashLink>
                   </div>

@@ -4,7 +4,7 @@
   padding: 10px 30px 10px 30px;
   border-radius: 5px;
   height: 15px;
-  width: 90px;
+  min-width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
   height: 15px;
-  width: 90px;
+  min-width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;

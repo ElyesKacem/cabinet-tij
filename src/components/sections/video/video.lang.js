@@ -3,7 +3,7 @@ import { LangContext } from "../../../context/Lang.context";
 
 const texts = {
   en: {
-    We_Provide_Outsourced: "We Provide Outsourced",
+    We_Provide: "We Provide Outsourced",
     Translation: "Translation",
     Interpreting: "Interpreting",
     For_small_and_mid_sized_businesses: "For small and mid sized businesses",
@@ -12,13 +12,13 @@ const texts = {
   },
 
   fr: {
-    We_Provide_Outsourced: `Nous fournissons des services externalisés`,
+    We_Provide: `Nous fournissons des services de`,
     Translation: "Traduction",
     Interpreting: "Interprétariat",
     For_small_and_mid_sized_businesses:
-      "Pour les petites et moyennes entreprises",
-    LearnMore: "Apprendre encore plus",
-    GetinTouch: "Entrer en contact",
+      "Pour les institutions publiques et au service des particuliers et des entreprises",
+    LearnMore: "À propos",
+    GetinTouch: "Nous contacter",
   },
 };
 

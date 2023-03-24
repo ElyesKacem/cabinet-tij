@@ -93,7 +93,7 @@ export default function Navbar() {
                     <GetQuoteButtonPurple
                       purple
                       blue={color}
-                      title="Get Quote"
+                      title={texts.GetQuote}
                       style={{
                         color: "white",
                         transform: "translate(-73px,35px)",
@@ -238,17 +238,17 @@ export default function Navbar() {
                 >
                   <div style={{ marginRight: 20, marginTop: 7 }}>
                     <HashLink className="resetcss" smooth to="/#home">
-                      <NavbarButton title="Home" />
+                      <NavbarButton title={texts.Home} />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
                     <HashLink className="resetcss" smooth to="/#about">
-                      <NavbarButton title="About" />
+                      <NavbarButton title={texts.About} />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
                     <HashLink className="resetcss" smooth to="/#services">
-                      <NavbarButton title="Services" />
+                      <NavbarButton title={texts.Services} />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 20, marginTop: 7 }}>
@@ -257,17 +257,20 @@ export default function Navbar() {
                       smooth
                       to="/TalkToUsNow#contact"
                     >
-                      <NavbarButton title="Contact" href="/TalkToUsNow" />
+                      <NavbarButton title={texts.Contact} href="/TalkToUsNow" />
                     </HashLink>
                   </div>
                   <div style={{ marginRight: 40, marginLeft: 20 }}>
                     <GetQuoteButton
                       blue={color}
-                      title="Get Quote"
+                      title={texts.GetQuote}
                     ></GetQuoteButton>
                   </div>
                   <div style={{ marginRight: 20 }}>
-                    <LanguageMenu color={color}></LanguageMenu>
+                    <LanguageMenu
+                      setHideMenu={setHideMenu}
+                      color={color}
+                    ></LanguageMenu>
                   </div>
                 </div>
               </div>
