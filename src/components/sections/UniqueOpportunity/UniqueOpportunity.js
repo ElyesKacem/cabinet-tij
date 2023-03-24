@@ -1,6 +1,7 @@
 import React from "react";
 import "./UniqueOpportunity.css";
 import OurCommunityMap from "../../../assets/images/OurCommunity/ourCommunityMap.png";
+import OurCommunityMapMobile from "../../../assets/images/OurCommunity/ourCommunityMapMobile.png";
 import Media from "react-media";
 
 export default function UniqueOpportunity() {
@@ -21,100 +22,113 @@ export default function UniqueOpportunity() {
         {(matches) => (
           <React.Fragment>
             {matches.large && (
-              <div>
+              <>
                 <div>
-                  <div className="grey-square" />
-                  <div className="UniqueOpportunity-blueTitle">
-                    A Unique Opportunity To Develop Your
+                  <div>
+                    <div className="grey-square" />
+                    <div className="UniqueOpportunity-blueTitle">
+                      A Unique Opportunity To Develop Your
+                    </div>
+                    <div className="UniqueOpportunity-blueTitle">
+                      Activity Serenely
+                    </div>
                   </div>
-                  <div className="UniqueOpportunity-blueTitle">
-                    Activity Serenely
+                  <br />
+                  <div className="UniqueOpportunity-paragraph">
+                    TIJ is looking to bring on board interpreters and
+                    translators to provide them
                   </div>
+                  <div className="UniqueOpportunity-paragraph">
+                    {" "}
+                    with the necessary support to excel in the language service
+                    field{" "}
+                  </div>
+                  <br />
+                  <br />
+                  <div className="UniqueOpportunity-blackTitle">
+                    Reasons To Join Us
+                  </div>
+                  <br />
                 </div>
                 <br />
-                <div className="UniqueOpportunity-paragraph">
-                  TIJ is looking to bring on board interpreters and translators
-                  to provide them
-                </div>
-                <div className="UniqueOpportunity-paragraph">
-                  {" "}
-                  with the necessary support to excel in the language service
-                  field{" "}
-                </div>
+                <img src={OurCommunityMap} style={{ width: "80%" }} />
                 <br />
                 <br />
-                <div className="UniqueOpportunity-blackTitle">
-                  Reasons To Join Us
-                </div>
-                <br />
-              </div>
+              </>
             )}
             {matches.medium && (
-              <div style={{ transform: "scale(0.8)" }}>
-                <div>
-                  <div className="grey-square" />
-                  <div className="UniqueOpportunity-blueTitle">
-                    A Unique Opportunity To Develop Your
+              <>
+                <div style={{ transform: "scale(0.8)" }}>
+                  <div>
+                    <div className="grey-square" />
+                    <div className="UniqueOpportunity-blueTitle">
+                      A Unique Opportunity To Develop Your
+                    </div>
+                    <div className="UniqueOpportunity-blueTitle">
+                      Activity Serenely
+                    </div>
                   </div>
-                  <div className="UniqueOpportunity-blueTitle">
-                    Activity Serenely
+                  <br />
+                  <div className="UniqueOpportunity-paragraph">
+                    TIJ is looking to bring on board interpreters and
+                    translators to provide them
                   </div>
+                  <div className="UniqueOpportunity-paragraph">
+                    {" "}
+                    with the necessary support to excel in the language service
+                    field{" "}
+                  </div>
+                  <br />
+                  <br />
+                  <div className="UniqueOpportunity-blackTitle">
+                    Reasons To Join Us
+                  </div>
+                  <br />
                 </div>
                 <br />
-                <div className="UniqueOpportunity-paragraph">
-                  TIJ is looking to bring on board interpreters and translators
-                  to provide them
-                </div>
-                <div className="UniqueOpportunity-paragraph">
-                  {" "}
-                  with the necessary support to excel in the language service
-                  field{" "}
-                </div>
+                <img src={OurCommunityMap} style={{ width: "80%" }} />
                 <br />
                 <br />
-                <div className="UniqueOpportunity-blackTitle">
-                  Reasons To Join Us
-                </div>
-                <br />
-              </div>
+              </>
             )}
             {matches.small && (
-              <div style={{ transform: "scale(0.8)" }}>
-                <div>
-                  <div className="UniqueOpportunity-blueTitle">
-                    <span style={{ position: "relative" }}>
-                      <div style={{ left: 0 }} className="grey-square" />
-                      <span style={{ position: "relative" }}>A</span>
-                    </span>{" "}
-                    Unique Opportunity To Develop Activity Serenely
+              <>
+                <div style={{ transform: "scale(0.8)" }}>
+                  <div>
+                    <div className="UniqueOpportunity-blueTitle">
+                      <span style={{ position: "relative" }}>
+                        <div style={{ left: 0 }} className="grey-square" />
+                        <span style={{ position: "relative" }}>A</span>
+                      </span>{" "}
+                      Unique Opportunity To Develop Activity Serenely
+                    </div>
                   </div>
+                  <br />
+                  <div className="UniqueOpportunity-paragraph">
+                    TIJ is looking to bring on board interpreters and
+                    translators to provide them
+                  </div>
+                  <div className="UniqueOpportunity-paragraph">
+                    {" "}
+                    with the necessary support to excel in the language service
+                    field{" "}
+                  </div>
+                  <br />
+                  <br />
+                  <div className="UniqueOpportunity-blackTitle">
+                    Reasons To Join Us
+                  </div>
+                  <br />
                 </div>
                 <br />
-                <div className="UniqueOpportunity-paragraph">
-                  TIJ is looking to bring on board interpreters and translators
-                  to provide them
-                </div>
-                <div className="UniqueOpportunity-paragraph">
-                  {" "}
-                  with the necessary support to excel in the language service
-                  field{" "}
-                </div>
+                <img src={OurCommunityMapMobile} style={{ width: 300 }} />
                 <br />
                 <br />
-                <div className="UniqueOpportunity-blackTitle">
-                  Reasons To Join Us
-                </div>
-                <br />
-              </div>
+              </>
             )}
           </React.Fragment>
         )}
       </Media>
-
-      <br />
-      <img src={OurCommunityMap} style={{ width: "80%" }} />
-      <br />
-      <br />
     </div>
   );
 }

@@ -23,3 +23,9 @@
   font-family: Gilroy-Bold;
   color: white;
 }
+@media screen and (max-width: 531px) {
+  .WeAreHere-container-title,
+  .WeAreHere-container-paragraph {
+    text-align: center;
+  }
+}

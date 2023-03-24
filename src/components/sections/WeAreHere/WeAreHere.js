@@ -94,6 +94,7 @@ export default function WeAreHere() {
                   style={{
                     display: "flex",
                     gap: 10,
+                    justifyContent: matches.small && "center",
                     alignItems: matches.vsmall && "center",
                     flexDirection: matches.vsmall && "column",
                   }}
