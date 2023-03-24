@@ -4,6 +4,11 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 583px) {
+  .OurCommunityHeader-paragraph {
+    transform: translateY(-80px);
+  }
+}
 
 .OurCommunityHeader-container {
   height: 100px;

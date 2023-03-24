@@ -21,8 +21,20 @@
 .FooterText {
   padding: 20px;
 }
+.footerText-title-arrow {
+  transform: translate(-10px, 5px);
+}
 @media screen and (max-width: 850px) {
   .footerText-title {
     justify-content: center;
+  }
+  .footerText-content {
+    text-align: center;
+  }
+  .footerText-title {
+    transform: translateX(-12px);
+  }
+  .footerText-title-arrow {
+    transform: translate(3px, 5px);
   }
 }

@@ -5,19 +5,27 @@ import EastIcon from "@mui/icons-material/East";
 import { HashLink } from "react-router-hash-link";
 
 export default function HomePhotoHover(props) {
+  const [gradient, setGradient] = React.useState(false);
   // console.log(props.img);
   return (
     <div>
       <div
         className="homePhotoHover"
-        style={{ backgroundImage: `url(${props.img})` }}
+        style={{
+          // backgroundImage: !gradient && `url(${props.img})`,
+          backgroundImage: gradient
+            ? `linear-gradient(0deg, rgba(39, 66, 228, 0), rgba(255,255,255, 0.0)),url(${props.img})`
+            : `linear-gradient(0deg, rgba(39, 66, 228, 1), rgba(255,255,255, 0.0)),url(${props.img})`,
+        }}
         onMouseLeave={() => {
+          setGradient(true);
           props.setIsHover([false, false, false, false, false]);
         }}
         onMouseEnter={() => {
           let isHover = [false, false, false, false, false];
           isHover[props.id] = true;
           props.setIsHover(isHover);
+          setGradient(false);
         }}
       >
         <div className="homePhotoHoverOverlay"></div>

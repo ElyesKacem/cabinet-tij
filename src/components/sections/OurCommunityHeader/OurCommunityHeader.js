@@ -180,30 +180,17 @@ export default function OurCommunityHeader() {
                     justifyContent: "center",
                   }}
                 >
-                  <div>
-                    <div className="OurCommunityHeader-title">
-                      Take part in our
-                    </div>
-                    <div className="OurCommunityHeader-title blue">
-                      Community
-                    </div>
-                    <br />
-                    <div
-                      className="OurCommunityHeader-paragraph"
-                      style={{ width: "auto" }}
-                    >
-                      TIJ is always on the lookout for multilingual individuals
-                      who are passionate about language to become a part of our
-                      national translator and interpreter network. We help these
-                      talented individuals to advance their careers in the field
-                      of language solutions.
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                  {" "}
+                  <div className="OurCommunityHeader-title">
+                    Take part in our
                   </div>
+                  <div className="OurCommunityHeader-title blue">Community</div>
                   <div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <div
                       style={{
                         width: 650,
@@ -244,6 +231,23 @@ export default function OurCommunityHeader() {
                       />
                     </div>
                     <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                  </div>
+                  <div>
+                    <br />
+                    <div
+                      className="OurCommunityHeader-paragraph"
+                      style={{ width: "auto" }}
+                    >
+                      TIJ is always on the lookout for multilingual individuals
+                      who are passionate about language to become a part of our
+                      national translator and interpreter network. We help these
+                      talented individuals to advance their careers in the field
+                      of language solutions.
+                    </div>
                     <br />
                     <br />
                     <br />

@@ -15,7 +15,8 @@
   position: absolute;
   opacity: 20%;
   z-index: 2;
-  /* transition: all 1s; */
+
+  transition: all 1s;
 
   /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
 }
@@ -26,8 +27,8 @@
   transform: scale(1.2);
 }
 .homePhotoHover:hover .homePhotoHoverOverlay {
-  background: transparent linear-gradient(180deg, #010101 0%, #080808 100%) 0%
-    0% no-repeat padding-box;
+  background: linear-gradient(0deg, #0026ff 25%, #d8d8d802 100%);
+  mix-blend-mode: multiply;
   /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
 }
 
@@ -39,11 +40,11 @@
 }
 
 .homePhotoHover-title {
-  color: #223ee2;
+  color: rgb(255, 255, 255);
   display: flex;
   font-size: 19px;
   transform: translate(8px, 210px);
-  width: 200px;
+  width: 175px;
 }
 .homePhotoHover-dash {
   font-weight: bold;
@@ -65,7 +66,7 @@
 }
 
 .homePhotoHover-arrow {
-  color: #2644f0;
+  color: #ffffff;
   transform: translate(8px, 210px);
   visibility: hidden;
 }

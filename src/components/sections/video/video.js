@@ -79,11 +79,7 @@ export default function VideoSection() {
                       }}
                     >
                       <div>
-                        <HashLink
-                          className="resetcss"
-                          smooth
-                          to="/requestquote#getquote"
-                        >
+                        <HashLink className="resetcss" smooth to="/#about">
                           <LeftRightButton
                             isBlue
                             whiteText
@@ -97,11 +93,7 @@ export default function VideoSection() {
                         to="/TalkToUsNow#contact"
                       >
                         <div>
-                          <LeftRightButton
-                            whiteText
-                            isBlue={true}
-                            title="Get in Touch"
-                          />
+                          <LeftRightButton whiteText title="Get in Touch" />
                         </div>
                       </HashLink>
                     </div>
@@ -150,7 +142,7 @@ export default function VideoSection() {
                   <div>
                     <LeftRightButton
                       whiteText
-                      isBlue={true}
+                      
                       title="Get in Touch"
                     />
                   </div>
@@ -192,11 +184,7 @@ export default function VideoSection() {
                   </div>
                   <br />
                   <div style={{ display: "flex" }}>
-                    <HashLink
-                      className="resetcss"
-                      smooth
-                      to="/requestquote#getquote"
-                    >
+                    <HashLink className="resetcss" smooth to="/#about">
                       <div>
                         <LeftRightButton isBlue title="Learn More" />
                       </div>
@@ -253,9 +241,11 @@ export default function VideoSection() {
                   </div>
                   <br />
                   <div style={{ display: "flex" }}>
-                    <div>
-                      <LeftRightButton isBlue title="Learn More" />
-                    </div>
+                    <HashLink className="resetcss" smooth to="/#about">
+                      <div>
+                        <LeftRightButton isBlue title="Learn More" />
+                      </div>
+                    </HashLink>
                     <HashLink
                       className="resetcss"
                       smooth

@@ -14,7 +14,7 @@ import { HashLink } from "react-router-hash-link";
 export default function Footer() {
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1253px)",
-    medium: "(max-width: 1253px) and (min-width: 851px)",
+    medium: "(max-width: 1253px) and (min-width: 850px)",
     // medium: "(min-width: 600px) and (max-width: 1199px)",
     small: "(max-width: 850px)",
   };

@@ -435,7 +435,7 @@ export default function GetQuoteForm() {
                         <div
                           className="getQuoteForm-input-file-label-X"
                           onClick={() => {
-                            setSingleFile(null);
+                            setSingleFile(false);
                             setSingleFileName(false);
                             const { others, files } = form;
                             setForm(others);

@@ -9,7 +9,7 @@ export default function FooterText(props) {
   return (
     <div className="FooterText" style={ms}>
       <div className="footerText-title">
-        <div style={{ transform: "translate(-10px,5px)" }}>
+        <div className="footerText-title-arrow">
           <EastIcon />
         </div>
         <div className="footerText-title">&nbsp;&nbsp;&nbsp;{props.title}</div>

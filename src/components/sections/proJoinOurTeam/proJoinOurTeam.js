@@ -5,6 +5,7 @@ import "./proJoinOurTeam.css";
 import Background from "../../../assets/images/meeting.jpg";
 import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
+import { HashLink } from "react-router-hash-link";
 
 export default function ProJoinOurTeam() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -42,11 +43,18 @@ export default function ProJoinOurTeam() {
                       Together, we can make a difference and create meaningful
                       change.
                     </div>
-                    <LeftRightButton
-                      title="Career"
-                      style={{ transform: "translateY(35px)" }}
-                      iconStyle={{ transform: "translateY(-1px)" }}
-                    />
+
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/enrollement#enrollement"
+                    >
+                      <LeftRightButton
+                        title="Career"
+                        style={{ transform: "translateY(35px)" }}
+                        iconStyle={{ transform: "translateY(-1px)" }}
+                      />
+                    </HashLink>
                   </div>
                 </BackgroundImage>
               </>
@@ -84,14 +92,20 @@ export default function ProJoinOurTeam() {
                         Together, we can make a difference and create meaningful
                         change.
                       </div>
-                      <LeftRightButton
-                        iconStyle={{ transform: "translateY(-1px)" }}
-                        title="Career"
-                        style={{
-                          transform: "translateY(35px)",
-                          margin: "auto",
-                        }}
-                      />
+                      <HashLink
+                        className="resetcss"
+                        smooth
+                        to="/enrollement#enrollement"
+                      >
+                        <LeftRightButton
+                          iconStyle={{ transform: "translateY(-1px)" }}
+                          title="Career"
+                          style={{
+                            transform: "translateY(35px)",
+                            margin: "auto",
+                          }}
+                        />
+                      </HashLink>
                     </div>
                   </div>
                 </BackgroundImage>

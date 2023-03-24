@@ -136,12 +136,18 @@ export default function YouAreProficient() {
                     <br />
 
                     <div className="YouAreProficient-blueButton">
-                      <div
-                        className="YouAreProficient-blueButton-title"
-                        style={{ color: "white" }}
+                      <HashLink
+                        className="resetcss"
+                        smooth
+                        to="/enrollement#enrollement"
                       >
-                        Become a member
-                      </div>
+                        <div
+                          className="YouAreProficient-blueButton-title"
+                          style={{ color: "white" }}
+                        >
+                          Become a member
+                        </div>
+                      </HashLink>
                     </div>
                   </div>
                 </div>
