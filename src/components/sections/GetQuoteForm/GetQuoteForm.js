@@ -101,9 +101,11 @@ export default function GetQuoteForm() {
 
   const handle_image = (event) => {
     const files = [...form.files];
-    Object.values(event.target.files).map((file) => {
-      files.push(file);
-    });
+    
+    Object.values(event.target.files).map((file) => 
+      files.push(file)
+    );
+
     setForm({ ...form, files: files });
   };
 
@@ -114,10 +116,18 @@ export default function GetQuoteForm() {
     // console.log(selected);
     setForm({ ...form, FORM_TYPE: selected });
   }, [menuSelected]);
-
+console.log(form)
   const Handle_submit = () => {
     let result = FormValidator(form);
 
+
+    let mFiles = []
+    if(singleFile)
+      mFiles.push(singleFile)
+    if(form.files?.length > 0)
+      mFiles.push(...form.files)
+    console.log(mFiles)
+    /*
     if (sending) {
       toast.error("we are sending please wait");
       return;
@@ -138,7 +148,7 @@ export default function GetQuoteForm() {
           set_sending(false);
         }
       );
-    }
+    }*/
   };
 
   const GLOBAL_MEDIA_QUERIES = {
@@ -249,7 +259,7 @@ export default function GetQuoteForm() {
                     <FormRequestQuoteInput
                       onChange={handle_change}
                       name="full_name"
-                      value={form.full_name}
+                      value={form?.full_name}
                       required
                       title="Full Name "
                     />
@@ -258,7 +268,7 @@ export default function GetQuoteForm() {
                     <FormRequestQuoteInput
                       onChange={handle_change}
                       name="company_name"
-                      value={form.company_name}
+                      value={form?.company_name}
                       title="Company name "
                     />
                   </Grid>
@@ -266,7 +276,7 @@ export default function GetQuoteForm() {
                     <FormRequestQuoteInput
                       onChange={handle_change}
                       name="email"
-                      value={form.email}
+                      value={form?.email}
                       required
                       title="E-mail "
                     />
@@ -275,7 +285,7 @@ export default function GetQuoteForm() {
                     <FormRequestQuoteInput
                       onChange={handle_change}
                       name="phone"
-                      value={form.phone}
+                      value={form?.phone}
                       title="Phone Number "
                     />
                   </Grid>
@@ -293,14 +303,14 @@ export default function GetQuoteForm() {
                           title="Location "
                           onChange={handle_change}
                           name="location"
-                          value={form.location}
+                          value={form?.location}
                         />
                         <FormRequestQuoteInput
                           required
                           title="Source Language "
                           onChange={handle_change}
                           name="source_lang"
-                          value={form.source_lang}
+                          value={form?.source_lang}
                           style={{ marginTop: 1 }}
                         />
                       </div>
@@ -310,7 +320,7 @@ export default function GetQuoteForm() {
                     <FormRequestQuoteInput
                       onChange={handle_change}
                       name="target_lang"
-                      value={form.target_lang}
+                      value={form?.target_lang}
                       required
                       title="Target Language "
                     />
@@ -338,7 +348,7 @@ export default function GetQuoteForm() {
                             showCalendar={showCalendar}
                             setShowCalendar={setShowCalendar}
                             title="Date "
-                            value={form.date}
+                            value={form?.date}
                           />
                           <FormRequestQuoteInput
                             required
@@ -406,13 +416,14 @@ export default function GetQuoteForm() {
                           placeholder="Full Name"
                           id="requotefile"
                           onChange={(e) => {
-                            handle_image(e);
-                            let file = e.target.value;
-                            setSingleFile(file);
-                            const fileNameArray = file.split("\\");
-                            setSingleFileName(
-                              fileNameArray[fileNameArray.length - 1]
-                            );
+                            if(e.target.files.length>0){
+                              console.log("333",e.target.files[0])
+                              setSingleFile(e.target.files[0]);
+                              setSingleFileName(
+                                e.target.files[0].name
+                              );
+                            }
+                            
                           }}
                         />
                         <div className="getQuoteForm-input-file-button">
@@ -435,10 +446,10 @@ export default function GetQuoteForm() {
                         <div
                           className="getQuoteForm-input-file-label-X"
                           onClick={() => {
-                            setSingleFile(false);
+                            setSingleFile(null);
                             setSingleFileName(false);
-                            const { others, files } = form;
-                            setForm(others);
+                            //const { others, files } = form;
+                            //setForm({...form});
                           }}
                         >
                           &nbsp;&nbsp;
@@ -473,12 +484,8 @@ export default function GetQuoteForm() {
                           id="requoteMULTIPLEfile"
                           onChange={(e) => {
                             handle_image(e);
-                            let file = e.target.value;
-                            setSingleFile(file);
-                            const fileNameArray = file.split("\\");
-                            setSingleFileName(
-                              fileNameArray[fileNameArray.length - 1]
-                            );
+                            
+                            form.files.push([e.target.files])
                           }}
                           multiple
                         />
@@ -488,7 +495,39 @@ export default function GetQuoteForm() {
                           </b>{" "}
                           Add More Files
                         </div>
+                        {form.files ? (
+                          <>
+                            
+                            { form.files.map((file,i) =>
+                              <div className="getQuoteForm-input-file-label-text" key={i}>
+                                &nbsp;&nbsp;{file.name}{" "}
+                              </div>
+                            )
+                              
+                            }
+                          </>
+                        ) : (
+                          <span className="getQuoteForm-input-file-label-text">
+                            &nbsp;&nbsp;No file chosen
+                          </span>
+                        )}
                       </label>
+                      {form.files.length > 0 && (
+                        <div
+                          className="getQuoteForm-input-file-label-X"
+                          onClick={() => {
+                            setForm({...form,files:[]});
+                            //const { others, files } = form;
+                            //setForm({...form});
+                          }}
+                        >
+                          &nbsp;&nbsp;
+                          <ClearIcon
+                            sx={{ fill: "url(#linearColors)" }}
+                            className="getQuoteForm-input-file-label-X"
+                          ></ClearIcon>{" "}
+                        </div>
+                      )}
                     </div>
                   </Grid>
                 </Grid>
