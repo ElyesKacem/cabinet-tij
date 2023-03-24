@@ -5,8 +5,10 @@ import Img from "../../../assets/images/OurCommunity/ourCommunityFinal.jpg";
 import WeAreHereButton from "../../buttons/WeAreHereButton/WeAreHereButton";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
+import GetText from "./WeAreHere.lang";
 
 export default function WeAreHere() {
+  const t = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 929px)",
     medium: "(max-width: 929px)",
@@ -22,15 +24,11 @@ export default function WeAreHere() {
             {matches.large && (
               <div className="WeAreHere-container">
                 <div className="WeAreHere-container-title">
-                  We are here, it<b className="normal">'</b>s time
-                  <br /> for you to join TIJ.
+                  {t.h1}
+                  <br /> {t.h2}
                 </div>
 
-                <p className="WeAreHere-container-paragraph">
-                  It will take less than 10 minutes for you to submit your
-                  application <br /> for affiliation. We will get back to you as
-                  soon as possible!
-                </p>
+                <p className="WeAreHere-container-paragraph">{t.parag}</p>
 
                 <div
                   style={{
@@ -45,7 +43,7 @@ export default function WeAreHere() {
                     smooth
                     to="/enrollement#enrollement"
                   >
-                    <WeAreHereButton title="Join Us" />
+                    <WeAreHereButton title={t.bt1} />
                   </HashLink>
                   <HashLink
                     className="resetcss"
@@ -53,7 +51,7 @@ export default function WeAreHere() {
                     to="/TalkToUsNow#contact"
                   >
                     <WeAreHereButton
-                      title="Contact Us"
+                      title={t.bt2}
                       arrowColor="#6E533D"
                       style={{ backgroundColor: "white", color: "#6E533D" }}
                     />
@@ -77,8 +75,7 @@ export default function WeAreHere() {
                     fontSize: matches.small && 43,
                   }}
                 >
-                  We are here, it<b className="normal">'</b>s time for you to
-                  join TIJ.
+                  {t.h1 + " " + t.h2}
                 </div>
 
                 <p
@@ -104,7 +101,7 @@ export default function WeAreHere() {
                     smooth
                     to="/enrollement#enrollement"
                   >
-                    <WeAreHereButton title="Join Us" />
+                    <WeAreHereButton title={t.bt1} />
                   </HashLink>
                   <HashLink
                     className="resetcss"
@@ -112,7 +109,7 @@ export default function WeAreHere() {
                     to="/TalkToUsNow#contact"
                   >
                     <WeAreHereButton
-                      title="Contact Us"
+                      title={t.bt2}
                       arrowColor="#6E533D"
                       style={{ backgroundColor: "white", color: "#6E533D" }}
                     />

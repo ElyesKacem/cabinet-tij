@@ -2,8 +2,10 @@ import React from "react";
 import "./EnrollementAttachFiles.css";
 import AddIcon from "@mui/icons-material/Add";
 import ClearIcon from "@mui/icons-material/Clear";
+import { LangContext } from "../../context/Lang.context";
 
 export default function EnrollementAttachFiles(props) {
+  const { lang } = React.useContext(LangContext);
   const { onChange } = props;
   const [fileName, setFileName] = React.useState();
   const [file, setFile] = React.useState();
@@ -36,12 +38,13 @@ export default function EnrollementAttachFiles(props) {
           />
           <div className="EnrollementAttachFiles-button">
             <div className="EnrollementAttachFiles-button-title">
-              Choose Files
+              {lang == "eng" ? "Choose Files" : "Ajouter un fichie"}
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <div className="EnrollementAttachFiles-fileName">
-              {!fileName && "No Chosen File"}
+              {!fileName &&
+                (lang == "eng" ? "No Chosen File" : "Aucun fichier")}
               {fileName && fileName}
             </div>
             {fileName && (

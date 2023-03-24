@@ -1,10 +1,16 @@
 import React from "react";
 import "./UniqueOpportunity.css";
 import OurCommunityMap from "../../../assets/images/OurCommunity/ourCommunityMap.png";
+import OurCommunityMapFr from "../../../assets/images/OurCommunity/ourCommunityMapFr.png";
 import OurCommunityMapMobile from "../../../assets/images/OurCommunity/ourCommunityMapMobile.png";
+import OurCommunityMapMobileFr from "../../../assets/images/OurCommunity/ourCommunityMapMobileFr.png";
 import Media from "react-media";
+import GetText from "./UniqueOpportunity.lang";
+import { LangContext } from "../../../context/Lang.context";
 
 export default function UniqueOpportunity() {
+  const { lang } = React.useContext(LangContext);
+  const t = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1133px)",
     medium: "(min-width: 1009px) and (max-width: 1133px)",
@@ -24,34 +30,28 @@ export default function UniqueOpportunity() {
             {matches.large && (
               <>
                 <div>
-                  <div>
-                    <div className="grey-square" />
+                  <div style={{ display: "flex", justifyContent: "center" }}>
                     <div className="UniqueOpportunity-blueTitle">
-                      A Unique Opportunity To Develop Your
+                      <span style={{ position: "relative" }}>
+                        <div style={{ left: 0 }} className="grey-square" />
+                        <span style={{ position: "relative" }}>{t.h1}</span>
+                      </span>{" "}
+                      {t.h2}
                     </div>
-                    <div className="UniqueOpportunity-blueTitle">
-                      Activity Serenely
-                    </div>
                   </div>
                   <br />
-                  <div className="UniqueOpportunity-paragraph">
-                    TIJ is looking to bring on board interpreters and
-                    translators to provide them
-                  </div>
-                  <div className="UniqueOpportunity-paragraph">
-                    {" "}
-                    with the necessary support to excel in the language service
-                    field{" "}
-                  </div>
+                  <div className="UniqueOpportunity-paragraph">{t.l1}</div>
+                  <div className="UniqueOpportunity-paragraph">{t.l2}</div>
                   <br />
                   <br />
-                  <div className="UniqueOpportunity-blackTitle">
-                    Reasons To Join Us
-                  </div>
+                  <div className="UniqueOpportunity-blackTitle">{t.bh1}</div>
                   <br />
                 </div>
                 <br />
-                <img src={OurCommunityMap} style={{ width: "80%" }} />
+                <img
+                  src={lang == "en" ? OurCommunityMap : OurCommunityMapFr}
+                  style={{ width: "80%" }}
+                />
                 <br />
                 <br />
               </>
@@ -59,34 +59,28 @@ export default function UniqueOpportunity() {
             {matches.medium && (
               <>
                 <div style={{ transform: "scale(0.8)" }}>
-                  <div>
-                    <div className="grey-square" />
+                  <div style={{ display: "flex", justifyContent: "center" }}>
                     <div className="UniqueOpportunity-blueTitle">
-                      A Unique Opportunity To Develop Your
+                      <span style={{ position: "relative" }}>
+                        <div style={{ left: 0 }} className="grey-square" />
+                        <span style={{ position: "relative" }}>{t.h1}</span>
+                      </span>{" "}
+                      {t.h2}
                     </div>
-                    <div className="UniqueOpportunity-blueTitle">
-                      Activity Serenely
-                    </div>
                   </div>
                   <br />
-                  <div className="UniqueOpportunity-paragraph">
-                    TIJ is looking to bring on board interpreters and
-                    translators to provide them
-                  </div>
-                  <div className="UniqueOpportunity-paragraph">
-                    {" "}
-                    with the necessary support to excel in the language service
-                    field{" "}
-                  </div>
+                  <div className="UniqueOpportunity-paragraph">{t.l1}</div>
+                  <div className="UniqueOpportunity-paragraph">{t.l2}</div>
                   <br />
                   <br />
-                  <div className="UniqueOpportunity-blackTitle">
-                    Reasons To Join Us
-                  </div>
+                  <div className="UniqueOpportunity-blackTitle">{t.bh1}</div>
                   <br />
                 </div>
                 <br />
-                <img src={OurCommunityMap} style={{ width: "80%" }} />
+                <img
+                  src={lang == "en" ? OurCommunityMap : OurCommunityMapFr}
+                  style={{ width: "80%" }}
+                />
                 <br />
                 <br />
               </>
@@ -94,34 +88,32 @@ export default function UniqueOpportunity() {
             {matches.small && (
               <>
                 <div style={{ transform: "scale(0.8)" }}>
-                  <div>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
                     <div className="UniqueOpportunity-blueTitle">
                       <span style={{ position: "relative" }}>
                         <div style={{ left: 0 }} className="grey-square" />
-                        <span style={{ position: "relative" }}>A</span>
+                        <span style={{ position: "relative" }}>{t.h1}</span>
                       </span>{" "}
-                      Unique Opportunity To Develop Activity Serenely
+                      {t.h2}
                     </div>
                   </div>
                   <br />
-                  <div className="UniqueOpportunity-paragraph">
-                    TIJ is looking to bring on board interpreters and
-                    translators to provide them
-                  </div>
-                  <div className="UniqueOpportunity-paragraph">
-                    {" "}
-                    with the necessary support to excel in the language service
-                    field{" "}
-                  </div>
+                  <div className="UniqueOpportunity-paragraph">{t.l1}</div>
+                  <div className="UniqueOpportunity-paragraph">{t.l2}</div>
                   <br />
                   <br />
-                  <div className="UniqueOpportunity-blackTitle">
-                    Reasons To Join Us
-                  </div>
+                  <div className="UniqueOpportunity-blackTitle">{t.bh1}</div>
                   <br />
                 </div>
                 <br />
-                <img src={OurCommunityMapMobile} style={{ width: 300 }} />
+                <img
+                  src={
+                    lang == "en"
+                      ? OurCommunityMapMobile
+                      : OurCommunityMapMobileFr
+                  }
+                  style={{ width: 300 }}
+                />
                 <br />
                 <br />
               </>

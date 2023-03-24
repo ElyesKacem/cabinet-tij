@@ -5,13 +5,21 @@ import DownArrow from "../../../assets/images/DownArrow.png";
 import HoverImage from "../../HoverImage/HoverImage";
 import Image1 from "../../../assets/images/OurCommunity/ourCommunityHeader.jpg";
 import ActivityButton from "../../../assets/images/OurCommunity/Activity.png";
+import ActivityButtonFr from "../../../assets/images/OurCommunity/ActivityFr.png";
 import FlexibleButton from "../../../assets/images/OurCommunity/Flexible.png";
+import FlexibleButtonFr from "../../../assets/images/OurCommunity/FlexibleFr.png";
 import IncomeButton from "../../../assets/images/OurCommunity/Income.png";
+import IncomeButtonFr from "../../../assets/images/OurCommunity/IncomeFr.png";
 import SupportButton from "../../../assets/images/OurCommunity/Support.png";
+import SupportButtonFr from "../../../assets/images/OurCommunity/SupportFr.png";
 import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
+import GetText from "./OurCommunityHeader.lang";
+import { LangContext } from "../../../context/Lang.context";
 
 export default function OurCommunityHeader() {
+  const { lang } = React.useContext(LangContext);
+  const t = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1386px)",
     medium: "(min-width: 1300px) and (max-width: 1386px)",
@@ -42,19 +50,11 @@ export default function OurCommunityHeader() {
               <div className="OurCommunityHeader-container">
                 <Grid container>
                   <Grid item xs={6}>
-                    <div className="OurCommunityHeader-title">
-                      Take part in our
-                    </div>
-                    <div className="OurCommunityHeader-title blue">
-                      Community
-                    </div>
+                    <div className="OurCommunityHeader-title">{t.wh}</div>
+                    <div className="OurCommunityHeader-title blue">{t.bh}</div>
                     <br />
                     <div className="OurCommunityHeader-paragraph">
-                      TIJ is always on the lookout for multilingual individuals
-                      who are passionate about language to become a part of our
-                      national translator and interpreter network. We help these
-                      talented individuals to advance their careers in the field
-                      of language solutions.
+                      {t.parag}
                     </div>
                     <br />
                     <br />
@@ -68,20 +68,22 @@ export default function OurCommunityHeader() {
                     <div style={{ width: 650, transform: "translateY(20px)" }}>
                       <HoverImage img={Image1} />
                       <img
-                        src={ActivityButton}
+                        src={lang == "fr" ? ActivityButtonFr : ActivityButton}
                         className="EnrollementImage-flyButton EnrollementImage-tl"
+                        style={{ transform: lang == "fr" && "scale(1.38)" }}
                       />
                       <img
-                        src={IncomeButton}
+                        src={lang == "fr" ? IncomeButtonFr : IncomeButton}
                         className="EnrollementImage-flyButton EnrollementImage-bl"
                       />
                       <img
-                        src={FlexibleButton}
+                        src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
                         className="EnrollementImage-flyButton EnrollementImage-tr"
                       />
                       <img
-                        src={SupportButton}
+                        src={lang == "fr" ? SupportButtonFr : SupportButton}
                         className="EnrollementImage-flyButton EnrollementImage-br"
+                        style={{ transform: lang == "fr" && "scale(1.5)" }}
                       />
                     </div>
                   </Grid>
@@ -106,19 +108,11 @@ export default function OurCommunityHeader() {
                   }}
                 >
                   <div>
-                    <div className="OurCommunityHeader-title">
-                      Take part in our
-                    </div>
-                    <div className="OurCommunityHeader-title blue">
-                      Community
-                    </div>
+                    <div className="OurCommunityHeader-title">{t.wh}</div>
+                    <div className="OurCommunityHeader-title blue">{t.bh}</div>
                     <br />
                     <div className="OurCommunityHeader-paragraph">
-                      TIJ is always on the lookout for multilingual individuals
-                      who are passionate about language to become a part of our
-                      national translator and interpreter network. We help these
-                      talented individuals to advance their careers in the field
-                      of language solutions.
+                      {t.parag}
                     </div>
                     <br />
                     <br />
@@ -137,20 +131,22 @@ export default function OurCommunityHeader() {
                     >
                       <HoverImage img={Image1} />
                       <img
-                        src={ActivityButton}
+                        src={lang == "fr" ? ActivityButtonFr : ActivityButton}
                         className="EnrollementImage-flyButton EnrollementImage-tl"
+                        style={{ transform: lang == "fr" && "scale(1.38)" }}
                       />
                       <img
-                        src={IncomeButton}
+                        src={lang == "fr" ? IncomeButtonFr : IncomeButton}
                         className="EnrollementImage-flyButton EnrollementImage-bl"
                       />
                       <img
-                        src={FlexibleButton}
+                        src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
                         className="EnrollementImage-flyButton EnrollementImage-tr"
                       />
                       <img
-                        src={SupportButton}
+                        src={lang == "fr" ? SupportButtonFr : SupportButton}
                         className="EnrollementImage-flyButton EnrollementImage-br"
+                        style={{ transform: lang == "fr" && "scale(1.5)" }}
                       />
                     </div>{" "}
                     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -181,10 +177,8 @@ export default function OurCommunityHeader() {
                   }}
                 >
                   {" "}
-                  <div className="OurCommunityHeader-title">
-                    Take part in our
-                  </div>
-                  <div className="OurCommunityHeader-title blue">Community</div>
+                  <div className="OurCommunityHeader-title">{t.wh}</div>
+                  <div className="OurCommunityHeader-title blue">{t.bh}</div>
                   <div>
                     <br />
                     <br />
@@ -203,20 +197,22 @@ export default function OurCommunityHeader() {
                     >
                       <HoverImage img={Image1} />
                       <img
-                        src={ActivityButton}
+                        src={lang == "fr" ? ActivityButtonFr : ActivityButton}
                         className="EnrollementImage-flyButton EnrollementImage-tl"
+                        style={{ transform: lang == "fr" && "scale(1.38)" }}
                       />
                       <img
-                        src={IncomeButton}
+                        src={lang == "fr" ? IncomeButtonFr : IncomeButton}
                         className="EnrollementImage-flyButton EnrollementImage-bl"
                       />
                       <img
-                        src={FlexibleButton}
+                        src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
                         className="EnrollementImage-flyButton EnrollementImage-tr"
                       />
                       <img
-                        src={SupportButton}
+                        src={lang == "fr" ? SupportButtonFr : SupportButton}
                         className="EnrollementImage-flyButton EnrollementImage-br"
+                        style={{ transform: lang == "fr" && "scale(1.5)" }}
                       />
                     </div>
                     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -242,11 +238,7 @@ export default function OurCommunityHeader() {
                       className="OurCommunityHeader-paragraph"
                       style={{ width: "auto" }}
                     >
-                      TIJ is always on the lookout for multilingual individuals
-                      who are passionate about language to become a part of our
-                      national translator and interpreter network. We help these
-                      talented individuals to advance their careers in the field
-                      of language solutions.
+                      {t.parag}
                     </div>
                     <br />
                     <br />

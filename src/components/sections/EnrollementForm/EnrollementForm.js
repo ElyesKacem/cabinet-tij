@@ -8,6 +8,7 @@ import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
 
 import { RQ_service } from "../../../services/services";
+import GetText from "./EnrollementForm.lang";
 
 const GLOBAL_MEDIA_QUERIES = {
   small: "(max-width: 1056px)",
@@ -35,6 +36,7 @@ const initial_form = {
 export default function EnrollementForm() {
   const [form, setForm] = useState({ ...initial_form });
   const [sending, set_sending] = useState(false);
+  const t = GetText();
 
   const handle_change = (event) => {
     const { name, value } = event.target;
@@ -80,26 +82,19 @@ export default function EnrollementForm() {
         <br />
         <br />
         <div className="EnrollementForm-paragraph">
-          On average, it takes our services <b>2</b> to <b>4</b> weeks to
-          process your application.
+          {t.h1} <b>2</b> {t.h2} <b>4</b> {t.h3}
         </div>
-        <div className="EnrollementForm-paragraph">
-          Additional requests may be sent to you via email. Once your
-          application is approve
-        </div>
-        <div className="EnrollementForm-paragraph">
-          a repsresentative will contact you to provide you with further
-          information
-        </div>
+        <div className="EnrollementForm-paragraph">{t.l2}</div>
+        <div className="EnrollementForm-paragraph">{t.l3}</div>
 
-        <b className="EnrollementForm-blackTitle">Apply For Affiliation</b>
-        <b className="EnrollementForm-title">Identity</b>
+        <b className="EnrollementForm-blackTitle">{t.applyFor}</b>
+        <b className="EnrollementForm-title">{t.identity}</b>
         <br />
         <Grid container spacing={4}>
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Full name"
+              title={t.name}
               required
               name="full_name"
               value={form.full_name}
@@ -108,7 +103,7 @@ export default function EnrollementForm() {
             <br />
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Phone"
+              title={t.phone}
               name="phone"
               value={form.phone}
               onChange={handle_change}
@@ -117,7 +112,7 @@ export default function EnrollementForm() {
             <br />
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="City"
+              title={t.city}
               name="city"
               value={form.city}
               onChange={handle_change}
@@ -128,7 +123,7 @@ export default function EnrollementForm() {
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="E-mail"
+              title={t.mail}
               name="email"
               value={form.email}
               onChange={handle_change}
@@ -137,7 +132,7 @@ export default function EnrollementForm() {
             <br />
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Adress"
+              title={t.adress}
               required
               name="adress"
               value={form.adress}
@@ -146,7 +141,7 @@ export default function EnrollementForm() {
             <br />
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Postal Code"
+              title={t.codePostal}
               required
               name="postal_code"
               value={form.postal_code}
@@ -159,14 +154,18 @@ export default function EnrollementForm() {
           className="EnrollementForm-title"
           style={{ width: 120, textAlign: "center" }}
         >
-          Expertise And Experience
+          {t.exandex1}
+          <br />
+          {t.exandex2}
+          <br />
+          {t.exandex3}
         </b>
         <br />
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Spoken Languages ( with priority )"
+              title={t.sokenLang}
               required
               name="spoken_lang"
               value={form.spoken_lang}
@@ -176,7 +175,7 @@ export default function EnrollementForm() {
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Diploma 1"
+              title={t.dip1}
               required
               name="diploma1"
               value={form.diploma1}
@@ -185,7 +184,7 @@ export default function EnrollementForm() {
             <br />
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Experience 1"
+              title={t.exp1}
               required
               name="exp1"
               value={form.exp1}
@@ -196,7 +195,7 @@ export default function EnrollementForm() {
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Diploma 2"
+              title={t.dip2}
               required
               name="diploma2"
               value={form.diploma2}
@@ -205,7 +204,7 @@ export default function EnrollementForm() {
             <br />
             <FormRequestQuoteInput
               borderRadius="5px"
-              title="Experience 2"
+              title={t.exp2}
               required
               name="exp2"
               value={form.exp2}
@@ -214,7 +213,7 @@ export default function EnrollementForm() {
             <br />
           </Grid>
         </Grid>
-        <b className="EnrollementForm-title">Attach Files</b>
+        <b className="EnrollementForm-title">{t.attach}</b>
         <Media queries={GLOBAL_MEDIA_QUERIES}>
           {(matches) => (
             <React.Fragment>
@@ -224,21 +223,21 @@ export default function EnrollementForm() {
                     <div>
                       <EnrollementAttachFiles
                         onChange={handle_image}
-                        title="Attestation insee or Kbis"
+                        title={t.attestation}
                       />
                       <EnrollementAttachFiles
                         onChange={handle_image}
-                        title="Identity document"
+                        title={t.identity}
                       />
                     </div>
                     <div>
                       <EnrollementAttachFiles
                         onChange={handle_image}
-                        title="Criminal record extract"
+                        title={t.criminal}
                       />
                       <EnrollementAttachFiles
                         onChange={handle_image}
-                        title="Professional Photo"
+                        title={t.prof}
                       />
                     </div>
                   </div>
@@ -248,8 +247,8 @@ export default function EnrollementForm() {
                       className="EnrollementForm-multiple-files"
                       style={{ transform: "translateX(10px)" }}
                     >
-                      <b style={{ fontFamily: "sans-serif" }}>+</b> Add More
-                      Files
+                      <b style={{ fontFamily: "sans-serif" }}>+</b>{" "}
+                      {t.addMoreFile}
                     </div>
                   </label>
                 </>
@@ -306,7 +305,7 @@ export default function EnrollementForm() {
         <br />
         <div className="EnrollementForm-submit">
           <div className="EnrollementForm-submit-title" onClick={Handle_submit}>
-            Submit
+            {t.submit}
           </div>
         </div>
 

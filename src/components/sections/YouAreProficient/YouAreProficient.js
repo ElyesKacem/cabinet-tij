@@ -4,9 +4,11 @@ import Grid from "@mui/material/Grid";
 import Zoomed from "../../../assets/images/OurCommunity/zoomed.jpg";
 import Idea from "../../../assets/images/OurCommunity/idea.svg";
 import Media from "react-media";
+import GetText from "./YouAreProficient.lang";
 import { HashLink } from "react-router-hash-link";
 
 export default function YouAreProficient() {
+  const t = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1000px)",
     medium: "(max-width: 999px) ",
@@ -41,24 +43,12 @@ export default function YouAreProficient() {
                   <div className="YouAreProficient-blueBakcground">
                     <img src={Idea} style={{ height: 70 }} />
 
-                    <div className="YouAreProficient-h1">
-                      You are language specialist.
-                    </div>
+                    <div className="YouAreProficient-h1">{t.t1}</div>
                     <br />
-                    <div className="YouAreProficient-p">
-                      You align with our ethical principles ? you are
-                      independent ? you possess a strong moral compass and
-                      professional integrity ? you value confidentiality and
-                      objectivity highly ? you have a business mindset or are
-                      seeking an additional income ? and you are interested in
-                      making a career out of your language skills ?
-                    </div>
+                    <div className="YouAreProficient-p">{t.parag}</div>
                     <br />
 
-                    <div className="YouAreProficient-h2">
-                      If so, we would be very happy for you to be a part of our
-                      adventure.
-                    </div>
+                    <div className="YouAreProficient-h2">{t.t2}</div>
                     <br />
 
                     <HashLink
@@ -69,7 +59,7 @@ export default function YouAreProficient() {
                       {" "}
                       <div className="YouAreProficient-blueButton">
                         <div className="YouAreProficient-blueButton-title">
-                          Become a member
+                          {t.bt}
                         </div>
                       </div>
                     </HashLink>
@@ -115,24 +105,12 @@ export default function YouAreProficient() {
                   >
                     <img src={Idea} style={{ height: 70 }} />
 
-                    <div className="YouAreProficient-h1">
-                      You are language specialist.
-                    </div>
+                    <div className="YouAreProficient-h1">{t.t1}</div>
                     <br />
-                    <div className="YouAreProficient-p">
-                      You align with our ethical principles ? you are
-                      independent ? you possess a strong moral compass and
-                      professional integrity ? you value confidentiality and
-                      objectivity highly ? you have a business mindset or are
-                      seeking an additional income ? and you are interested in
-                      making a career out of your language skills ?
-                    </div>
+                    <div className="YouAreProficient-p">{t.parag}</div>
                     <br />
 
-                    <div className="YouAreProficient-h2">
-                      If so, we would be very happy for you to be a part of our
-                      adventure.
-                    </div>
+                    <div className="YouAreProficient-h2">{t.t2}</div>
                     <br />
 
                     <div className="YouAreProficient-blueButton">
@@ -145,7 +123,7 @@ export default function YouAreProficient() {
                           className="YouAreProficient-blueButton-title"
                           style={{ color: "white" }}
                         >
-                          Become a member
+                          {t.bt}
                         </div>
                       </HashLink>
                     </div>
