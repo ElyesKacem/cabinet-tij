@@ -4,8 +4,10 @@ import Grid from "@mui/material/Grid";
 import Image from "../../../assets/images/dysnh.jpg";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
+import GetText from "./DoYouStillNeedHelp.lang";
 
 export default function DoYouStillNeedHelp() {
+  const t = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     small: "(max-width: 1100px)",
     // medium: "(min-width: 600px) and (max-width: 1199px)",
@@ -33,7 +35,7 @@ export default function DoYouStillNeedHelp() {
                   </Grid>
                   <Grid item xs={6}>
                     <div style={{ textAlign: "center", padding: 30 }}>
-                      <div className="firstClass">Do You Still Need Help?</div>
+                      <div className="firstClass">{t.h1}</div>
                       <p
                         style={{
                           fontWeight: "bold",
@@ -41,8 +43,7 @@ export default function DoYouStillNeedHelp() {
                           color: "grey",
                         }}
                       >
-                        Contact us directly and we will answer your questions
-                        and requests.
+                        {t.parag}
                       </p>
                     </div>
                   </Grid>
@@ -52,7 +53,7 @@ export default function DoYouStillNeedHelp() {
                       smooth
                       to="/TalkToUsNow#contact"
                     >
-                      <div className="RequestAQuoteButton">Contact Us</div>
+                      <div className="RequestAQuoteButton">{t.bt1}</div>
                     </HashLink>
                   </Grid>
                 </Grid>
@@ -71,7 +72,7 @@ export default function DoYouStillNeedHelp() {
                     <img className="shortImage" src={Image} />
                   </Grid>
                   <Grid style={{ transform: "translateX(20px)" }} item xs={6}>
-                    <div className="firstClass">Do You Still Need Help?</div>
+                    <div className="firstClass">{t.h1}</div>
                     <p
                       style={{
                         fontWeight: "bold",
@@ -80,8 +81,7 @@ export default function DoYouStillNeedHelp() {
                         width: 550,
                       }}
                     >
-                      Contact us directly and we will answer your questions and
-                      requests.
+                      {t.parag}
                     </p>
                   </Grid>
                   <Grid item xs={3}>
@@ -90,7 +90,7 @@ export default function DoYouStillNeedHelp() {
                       smooth
                       to="/TalkToUsNow#contact"
                     >
-                      <div className="RequestAQuoteButton">Contact Us</div>
+                      <div className="RequestAQuoteButton">{t.bt1}</div>
                     </HashLink>
                   </Grid>
                 </Grid>

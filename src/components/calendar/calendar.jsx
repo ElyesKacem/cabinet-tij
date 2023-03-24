@@ -5,8 +5,10 @@ import "./calendar.css";
 
 import { format } from "date-fns";
 import { DayPicker } from "react-day-picker";
+import { LangContext } from "../../context/Lang.context";
 
 export default function Calendar({ name, onChange, setShowCalendar }) {
+  const { lang } = React.useContext(LangContext);
   const today = new Date();
   const [selected, setSelected] = React.useState(today);
 
@@ -54,7 +56,10 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
           alignItems: "center",
         }}
       >
-        <div>Day choosen : {format(selected, "PP")}.</div>
+        <div>
+          {lang == "en" ? "Chosen day" : "Date choisi"} :{" "}
+          {format(selected, "PP")}.
+        </div>
         <div
           className="calendar-ok"
           onClick={() => {

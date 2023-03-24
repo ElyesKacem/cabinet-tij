@@ -50,7 +50,7 @@
   height: 31px;
   border-radius: 5px;
   /* padding: 14px 0px 5px 30px; */
-  width: 120px;
+  min-width: 120px;
   /* background-color: white; */
   color: #1633db;
   /* -webkit-text-stroke: 0.3px #ffffff; */
@@ -58,7 +58,7 @@
   transition: all 0.4s;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   background-color: white;
   font-weight: bold;
 }
@@ -144,7 +144,7 @@
 .getQuoteForm-input-file-label-text {
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 180px;
+  width: 191px;
   /* height: 1.2em;  */
   white-space: nowrap;
   font-family: "Gilroy-Medium";

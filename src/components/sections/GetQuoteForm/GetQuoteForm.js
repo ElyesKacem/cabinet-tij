@@ -22,29 +22,7 @@ import Calendar from "../../calendar/calendar";
 import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
 import { RQ_service } from "../../../services/services";
-
-const menuData = [
-  {
-    title: "Translation",
-    whiteIcon: whiteTranslation,
-    blueIcon: blueTranslation,
-  },
-  {
-    title: "Interpreting",
-    whiteIcon: whiteInterpreting,
-    blueIcon: blueInterpreting,
-  },
-  {
-    title: "Transcription",
-    whiteIcon: whiteTranscription,
-    blueIcon: blueTranscription,
-  },
-  {
-    title: "VIP Services",
-    whiteIcon: whiteVIP,
-    blueIcon: blueVIP,
-  },
-];
+import GetText from "./GetQuoteForm.lang";
 
 const initial_form = {
   full_name: "",
@@ -63,6 +41,30 @@ const initial_form = {
 };
 
 export default function GetQuoteForm() {
+  const t = GetText();
+  const menuData = [
+    {
+      title: t.translation,
+      whiteIcon: whiteTranslation,
+      blueIcon: blueTranslation,
+    },
+    {
+      title: t.interpreting,
+      whiteIcon: whiteInterpreting,
+      blueIcon: blueInterpreting,
+    },
+    {
+      title: t.transcription,
+      whiteIcon: whiteTranscription,
+      blueIcon: blueTranscription,
+    },
+    {
+      title: t.vipServ,
+      whiteIcon: whiteVIP,
+      blueIcon: blueVIP,
+    },
+  ];
+
   function useOutsideAlerter(ref) {
     React.useEffect(() => {
       /**
@@ -101,10 +103,8 @@ export default function GetQuoteForm() {
 
   const handle_image = (event) => {
     const files = [...form.files];
-    
-    Object.values(event.target.files).map((file) => 
-      files.push(file)
-    );
+
+    Object.values(event.target.files).map((file) => files.push(file));
 
     setForm({ ...form, files: files });
   };
@@ -116,17 +116,14 @@ export default function GetQuoteForm() {
     // console.log(selected);
     setForm({ ...form, FORM_TYPE: selected });
   }, [menuSelected]);
-console.log(form)
+  console.log(form);
   const Handle_submit = () => {
     let result = FormValidator(form);
 
-
-    let mFiles = []
-    if(singleFile)
-      mFiles.push(singleFile)
-    if(form.files?.length > 0)
-      mFiles.push(...form.files)
-    console.log(mFiles)
+    let mFiles = [];
+    if (singleFile) mFiles.push(singleFile);
+    if (form.files?.length > 0) mFiles.push(...form.files);
+    console.log(mFiles);
     /*
     if (sending) {
       toast.error("we are sending please wait");
@@ -170,7 +167,7 @@ console.log(form)
       <br />
       <div className="getQuoteForm-content">
         <div style={{ width: "85%", maxWidth: 1300 }}>
-          <div className="getQuoteForm-content-title">Request A Quote</div>
+          <div className="getQuoteForm-content-title">{t.title}</div>
           <br />
 
           <Media queries={GLOBAL_MEDIA_QUERIES}>
@@ -244,7 +241,7 @@ console.log(form)
             className="getQuoteForm-margin white-text"
             style={{ marginTop: 10 }}
           >
-            Required fields are marked with asterisk{" "}
+            {t.required}{" "}
             <i style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>
               (<b style={{ color: "red" }}>*</b>)
             </i>
@@ -261,7 +258,7 @@ console.log(form)
                       name="full_name"
                       value={form?.full_name}
                       required
-                      title="Full Name "
+                      title={t.name}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -269,7 +266,7 @@ console.log(form)
                       onChange={handle_change}
                       name="company_name"
                       value={form?.company_name}
-                      title="Company name "
+                      title={t.company}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -278,7 +275,7 @@ console.log(form)
                       name="email"
                       value={form?.email}
                       required
-                      title="E-mail "
+                      title={t.mail}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -286,7 +283,7 @@ console.log(form)
                       onChange={handle_change}
                       name="phone"
                       value={form?.phone}
-                      title="Phone Number "
+                      title={t.phone}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -302,12 +299,12 @@ console.log(form)
                           required
                           title="Location "
                           onChange={handle_change}
-                          name="location"
+                          name={t.Location}
                           value={form?.location}
                         />
                         <FormRequestQuoteInput
                           required
-                          title="Source Language "
+                          title={t.sl}
                           onChange={handle_change}
                           name="source_lang"
                           value={form?.source_lang}
@@ -322,7 +319,7 @@ console.log(form)
                       name="target_lang"
                       value={form?.target_lang}
                       required
-                      title="Target Language "
+                      title={t.tl}
                     />
                   </Grid>
                 </Grid>
@@ -389,7 +386,7 @@ console.log(form)
                     </div>
                     <FormRequestQuoteInputMultiline
                       multiline
-                      title="Notes "
+                      title={t.notes}
                       required
                       onChange={handle_change}
                       name="notes"
@@ -416,18 +413,15 @@ console.log(form)
                           placeholder="Full Name"
                           id="requotefile"
                           onChange={(e) => {
-                            if(e.target.files.length>0){
-                              console.log("333",e.target.files[0])
+                            if (e.target.files.length > 0) {
+                              console.log("333", e.target.files[0]);
                               setSingleFile(e.target.files[0]);
-                              setSingleFileName(
-                                e.target.files[0].name
-                              );
+                              setSingleFileName(e.target.files[0].name);
                             }
-                            
                           }}
                         />
                         <div className="getQuoteForm-input-file-button">
-                          Select a file
+                          {t.SaF}
                         </div>
 
                         {singleFileName ? (
@@ -438,7 +432,7 @@ console.log(form)
                           </>
                         ) : (
                           <span className="getQuoteForm-input-file-label-text">
-                            &nbsp;&nbsp;No file chosen
+                            &nbsp;&nbsp;{t.nofile}
                           </span>
                         )}
                       </label>
@@ -484,8 +478,8 @@ console.log(form)
                           id="requoteMULTIPLEfile"
                           onChange={(e) => {
                             handle_image(e);
-                            
-                            form.files.push([e.target.files])
+
+                            form.files.push([e.target.files]);
                           }}
                           multiple
                         />
@@ -493,22 +487,22 @@ console.log(form)
                           <b style={{ fontFamily: "sans-serif", fontSize: 20 }}>
                             + &nbsp;&nbsp;{" "}
                           </b>{" "}
-                          Add More Files
+                          {t.AMF}
                         </div>
                         {form.files ? (
                           <>
-                            
-                            { form.files.map((file,i) =>
-                              <div className="getQuoteForm-input-file-label-text" key={i}>
+                            {form.files.map((file, i) => (
+                              <div
+                                className="getQuoteForm-input-file-label-text"
+                                key={i}
+                              >
                                 &nbsp;&nbsp;{file.name}{" "}
                               </div>
-                            )
-                              
-                            }
+                            ))}
                           </>
                         ) : (
                           <span className="getQuoteForm-input-file-label-text">
-                            &nbsp;&nbsp;No file chosen
+                            &nbsp;&nbsp;{t.nofile}
                           </span>
                         )}
                       </label>
@@ -516,7 +510,7 @@ console.log(form)
                         <div
                           className="getQuoteForm-input-file-label-X"
                           onClick={() => {
-                            setForm({...form,files:[]});
+                            setForm({ ...form, files: [] });
                             //const { others, files } = form;
                             //setForm({...form});
                           }}
@@ -541,7 +535,7 @@ console.log(form)
                     onClick={Handle_submit}
                     className="getQuoteForm-submit-button"
                   >
-                    Submit
+                    {t.submit}
                   </div>
                 </div>
               </Grid>

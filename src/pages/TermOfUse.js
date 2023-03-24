@@ -21,7 +21,7 @@ export default function TermOfUse() {
       <br />
       <br />
       <div style={{ marginLeft: 50 }}>
-        <div className="EnrollementImage-title">Privacy And Policy</div>
+        <div className="EnrollementImage-title">Privacy Policy</div>
         <br />
         <br />
         <img

@@ -340,7 +340,7 @@ export default function Footer() {
             to="/termeofuse#termeofuse"
           >
             <div>
-              Terms of use &nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; Privacy and Policy
+              Terms of use &nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; Privacy Policy
             </div>
           </HashLink>
           <div>All Copyrights © are reserved 2022</div>

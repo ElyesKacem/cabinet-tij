@@ -13,8 +13,10 @@ import { RQ_service } from "../../../services/services";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { FormValidatorTalkToUs } from "../GetQuoteForm/validation";
+import GetText from "./TalkToUsNowSection.lang";
 
 export default function TalkToUsNowSection() {
+  const t = GetText();
   const [fileName, setFileName] = React.useState();
   const [file, setFile] = React.useState();
   const [sending, set_sending] = useState(false);
@@ -106,7 +108,7 @@ export default function TalkToUsNowSection() {
                   className="TalkToUsNowSection-title"
                   style={{ textAlign: "center" }}
                 >
-                  Talk To Us Now
+                  {t.h1}
                 </div>
                 <br />
                 <div style={{ transform: "translateY(-20px)" }}>
@@ -134,7 +136,7 @@ export default function TalkToUsNowSection() {
                       className="TalkToUsNowSection-subContainer"
                       style={{ paddingLeft: 8, paddingRight: 8 }}
                     >
-                      <div className="TalkToUsNowSection-pinkb">Contact Us</div>
+                      <div className="TalkToUsNowSection-pinkb">{t.bt1}</div>
                       <div>contact@cabinet-tij.com</div>
 
                       <div>06 99 08 64 91</div>
@@ -143,7 +145,7 @@ export default function TalkToUsNowSection() {
                       className="TalkToUsNowSection-subContainer"
                       style={{ paddingLeft: 8, paddingRight: 8 }}
                     >
-                      <div className="TalkToUsNowSection-pinkb">Find Us</div>
+                      <div className="TalkToUsNowSection-pinkb">{t.bt2}</div>
                       <div>3 rue Boccador, 75008 Paris.</div>
                     </div>
                   </div>
@@ -164,18 +166,12 @@ export default function TalkToUsNowSection() {
                     >
                       <div>
                         <div className="TalkToUsNowSection-paragraph">
-                          For further information, please contact us at contact
-                          <i className="thin">@</i>cabinet
-                          <i className="thin">-</i>tij.com or use the provided
-                          form. If you are a professional in translation or
-                          interpreting and wish to become part of our
-                          distinguished group of talents, kindly complete our
-                          Online{" "}
+                          {t.parag} &nbsp;
                           <Link
                             style={{ textDecoration: "none" }}
                             to="/enrollement"
                           >
-                            <b>Application Form</b>
+                            <b>{t.app}</b>
                           </Link>
                         </div>
                         <br />
@@ -194,7 +190,7 @@ export default function TalkToUsNowSection() {
                               name="full_name"
                               value={form.full_name}
                               required
-                              title="Full Name"
+                              title={t.name}
                             />
                           </div>
                           <div>
@@ -203,7 +199,7 @@ export default function TalkToUsNowSection() {
                               name="email"
                               value={form.email}
                               required
-                              title="Email"
+                              title={t.mail}
                             />
                           </div>
                           <div>
@@ -212,14 +208,14 @@ export default function TalkToUsNowSection() {
                               name="subject"
                               value={form.subject}
                               required
-                              title="Subject"
+                              title={t.subject}
                             />
                           </div>
                           <div>
                             <FormRequestQuoteInputMultiline
                               multiline
                               required
-                              title="Notes"
+                              title={t.notes}
                               onChange={handle_change}
                               name="notes"
                               value={form.notes}
@@ -237,10 +233,10 @@ export default function TalkToUsNowSection() {
                                 onChange={(event) => handlePutFile(event)}
                               />
                               <div className="TalkToUsNowSection-selectFile-button">
-                                <div>Select a file</div>
+                                <div>{t.selectFile}</div>
                               </div>
                               <div className="EnrollementAttachFiles-fileName">
-                                {!fileName && "No Chosen File"}
+                                {!fileName && t.nofile}
                                 {fileName && fileName}
                               </div>
                               {fileName && (
@@ -264,7 +260,7 @@ export default function TalkToUsNowSection() {
                         className="getQuoteForm-submit-button"
                         style={{ transform: "translateY(0px)" }}
                       >
-                        Submit
+                        {t.submit}
                       </div>
                     </div>
                   </div>
@@ -287,23 +283,15 @@ export default function TalkToUsNowSection() {
                       }}
                     >
                       <div>
-                        <div className="TalkToUsNowSection-title">
-                          Talk To Us Now
-                        </div>
+                        <div className="TalkToUsNowSection-title">{t.h1}</div>
                         <br />
                         <div className="TalkToUsNowSection-paragraph">
-                          For further information, please contact us at contact
-                          <i className="thin">@</i>cabinet
-                          <i className="thin">-</i>tij.com or use the provided
-                          form. If you are a professional in translation or
-                          interpreting and wish to become part of our
-                          distinguished group of talents, kindly complete our
-                          Online{" "}
+                          {t.parag} &nbsp;
                           <Link
                             style={{ textDecoration: "none" }}
                             to="/enrollement"
                           >
-                            <b>Application Form</b>
+                            <b>{t.app}</b>
                           </Link>
                         </div>
                         <br />
@@ -316,7 +304,7 @@ export default function TalkToUsNowSection() {
                               name="full_name"
                               value={form.full_name}
                               required
-                              title="Full Name"
+                              title={t.name}
                             />
                           </Grid>
                           <Grid item xs={12}>
@@ -325,7 +313,7 @@ export default function TalkToUsNowSection() {
                               name="email"
                               value={form.email}
                               required
-                              title="Email"
+                              title={t.mail}
                             />
                           </Grid>
                           <Grid item xs={12}>
@@ -334,14 +322,14 @@ export default function TalkToUsNowSection() {
                               name="subject"
                               value={form.subject}
                               required
-                              title="Subject"
+                              title={t.subject}
                             />
                           </Grid>
                           <Grid item xs={12}>
                             <FormRequestQuoteInputMultiline
                               multiline
                               required
-                              title="Notes"
+                              title={t.notes}
                               onChange={handle_change}
                               name="notes"
                               value={form.notes}
@@ -359,10 +347,10 @@ export default function TalkToUsNowSection() {
                                 onChange={(event) => handlePutFile(event)}
                               />
                               <div className="TalkToUsNowSection-selectFile-button">
-                                <div>Select a file</div>
+                                <div>{t.selectFile}</div>
                               </div>
                               <div className="EnrollementAttachFiles-fileName">
-                                {!fileName && "No Chosen File"}
+                                {!fileName && t.nofile}
                                 {fileName && fileName}
                               </div>
                               {fileName && (
@@ -385,7 +373,7 @@ export default function TalkToUsNowSection() {
                         onClick={Handle_submit}
                         className="getQuoteForm-submit-button"
                       >
-                        Submit
+                        {t.submit}
                       </div>
                     </div>
                   </Grid>
@@ -396,14 +384,12 @@ export default function TalkToUsNowSection() {
                     <br />
                     <div className="TalkToUsNowSection-container">
                       <div className="TalkToUsNowSection-subContainer">
-                        <div className="TalkToUsNowSection-pinkb">
-                          Contact Us
-                        </div>
+                        <div className="TalkToUsNowSection-pinkb">{t.bt1}</div>
                         <div>contact@cabinet-tij.com</div>
                         <div>06 99 08 64 91</div>
                       </div>
                       <div className="TalkToUsNowSection-subContainer">
-                        <div className="TalkToUsNowSection-pinkb">Find Us</div>
+                        <div className="TalkToUsNowSection-pinkb">{t.bt2}</div>
                         <div>3 rue Boccador, 75008 Paris.</div>
                       </div>
                     </div>
