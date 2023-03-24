@@ -9,29 +9,31 @@ import Image4 from "../../../assets/images/services/business.jpg";
 import Image5 from "../../../assets/images/services/personal.jpg";
 import Grid from "@mui/material/Grid";
 import Media from "react-media";
+import GetText from "./ourServices.lang.js";
 
 export default function OurServices() {
   const [isHover, setIsHover] = useState([false, false, false, false, false]);
+  const texts = GetText();
   const data = [
     {
       img: Image1,
-      title: "Interpreting",
+      title: texts.inter,
     },
     {
       img: Image2,
-      title: "Translation",
+      title: texts.transl,
     },
     {
       img: Image3,
-      title: "Sworn Translation",
+      title: texts.sworn,
     },
     {
       img: Image4,
-      title: "Business",
+      title: texts.business,
     },
     {
       img: Image5,
-      title: "Personal Services",
+      title: texts.personal,
     },
   ];
   const GLOBAL_MEDIA_QUERIES = {
@@ -58,14 +60,11 @@ export default function OurServices() {
                       />
 
                       <div className="greyRectangle">
-                        <b style={{ fontSize: 25 }}>Our Services</b>
+                        <b style={{ fontSize: 25 }}>{texts.our_serv}</b>
                       </div>
                       <br />
                       <br />
-                      <div className="firstClass">
-                        We Offer Solutions For Clients Both Large And Small,
-                        From corporate, Government And Private Sectors
-                      </div>
+                      <div className="firstClass">{texts.we_offer}</div>
                     </div>
                   </Container>
                   <div style={{ margin: 50 }}>
@@ -158,7 +157,7 @@ export default function OurServices() {
                       />
 
                       <div className="greyRectangle">
-                        <b style={{ fontSize: 25 }}>Our Services</b>
+                        <b style={{ fontSize: 25 }}>{texts.our_serv}</b>
                       </div>
                       <br />
                       <br />
@@ -169,8 +168,7 @@ export default function OurServices() {
                         }}
                         className="firstClass"
                       >
-                        We Offer Solutions For Clients Both Large And Small,
-                        From corporate, Government And Private Sectors
+                        {texts.we_offer}
                       </div>
                     </div>
                   </Container>

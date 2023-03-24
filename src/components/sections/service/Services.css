@@ -1,75 +1,71 @@
-.services{
- padding: 20px;
+.services {
+  padding: 20px;
 }
 
-.greyEmptyRectangle{
-    width: 40px;
-    height: 40px;
-    background-color: #dfdfdf;
-    /* transform: translateX(-40px); */
+.greyEmptyRectangle {
+  width: 40px;
+  height: 40px;
+  background-color: #dfdfdf;
+  /* transform: translateX(-40px); */
 }
-.greyRectangle{
-    color: #e2c522;
-    background-color:#dfdfdf ;
-    border-radius: 5px;
-    display: inline-block;
-    padding: 10px 35px 10px 35px;
-    font-weight:bold;
-    font-size: 13px;
-    font-family:"Gilroy-Bold";
-    
+.greyRectangle {
+  color: #e2c522;
+  background-color: #dfdfdf;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 35px 10px 35px;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Gilroy-Bold";
 }
-.firstClass{
-  
-    /* transform: translateX(15px); */
-      font-weight:bold;
-          font-size: 32px;
-          font-family:"Gilroy-Bold";
-          line-height: 110%;
+.firstClass {
+  /* transform: translateX(15px); */
+  font-weight: bold;
+  font-size: 32px;
+  font-family: "Gilroy-Bold";
+  line-height: 110%;
 }
-.secondClass{
-    
-    transform: translateX(15px);
-    font-weight:bold;
-    font-size: 23px;
-    color: rgb(34, 34, 34);
+.secondClass {
+  transform: translateX(15px);
+  font-weight: bold;
+  font-size: 23px;
+  color: rgb(34, 34, 34);
 }
-.thirdClass{
-     line-height: 150%;
-    transform: translateX(15px);
-    /* font-weight:bold; */
-    font-size: 18px;
+.thirdClass {
+  line-height: 150%;
+  transform: translateX(15px);
+  /* font-weight:bold; */
+  font-size: 18px;
 }
 
-.miniButtonClass{
-    
-    font-weight:bold;
-    font-size: 15px;
-    font-family:"Gilroy-Bold";
-    display: flex;
-    align-items: center;
-    transform: translateX(-10px);
-    cursor: pointer;
+.miniButtonClass {
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Gilroy-Bold";
+  display: flex;
+  align-items: center;
+  transform: translateX(-10px);
+  cursor: pointer;
 }
-.translateRight40{
-    margin-left: 40px;
-    padding-right: 30px;
-    max-width: 400px;
+.translateRight40 {
+  margin-left: 40px;
+  padding-right: 30px;
+  max-width: 450px;
 }
 
-.servicesPauseButton{
-/* position: absolute; */
-width: 100px;
-position: absolute;
-left: 0;
-transition: opacity 0.2s;
+.servicesPauseButton {
+  /* position: absolute; */
+  width: 100px;
+  position: absolute;
+  left: 0;
+  transition: opacity 0.2s;
 }
-.servicesPauseButton:hover{
-    opacity: 0;
+.servicesPauseButton:hover {
+  opacity: 0;
 }
-.ServicesleftImage{
-    border: 2px solid #A7A7A7AB;
-    background: #cfcfcfab;
-    opacity: 1;
-    width: 100%;
+.ServicesleftImage {
+  border: 2px solid #a7a7a7ab;
+  background: #cfcfcfab;
+  opacity: 1;
+  width: 100%;
 }

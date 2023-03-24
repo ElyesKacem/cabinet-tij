@@ -14,8 +14,11 @@ import QualityImage from "../../../assets/images/home/Quality.jpg";
 import AgilityImage from "../../../assets/images/home/Agility.jpg";
 import EfficiencyImage from "../../../assets/images/home/Efficiacity.jpg";
 import Media from "react-media";
+import GetText from "./whyChoiceUs.lang";
+import { LangContext } from "../../../context/Lang.context";
 
 export default function WhyChoiceUs() {
+  const { lang } = React.useContext(LangContext);
   const GLOBAL_MEDIA_QUERIES = {
     // medium: "(min-width: 600px) and (max-width: 1199px)",
     large: "(min-width: 900px)",
@@ -23,35 +26,35 @@ export default function WhyChoiceUs() {
     small: "(max-width: 550px) ",
     verysmall: "(max-width: 414px)",
   };
-
+  const texts = GetText();
   let data = [
     {
       image: ExpertiseImage,
-      title: "Expertise",
-      paragraph:
-        "Our Cabinet Provides a large network of over 400 language professionals.",
+      title: texts.expertise,
+      paragraph: texts.expertise_pg,
     },
     {
       image: ExperienceImage,
-      title: "Experience",
-      paragraph: "More than 80 Languages translated and interpreted.",
+      title: texts.experience,
+      paragraph: texts.experience_pg,
     },
     {
       image: QualityImage,
-      title: "Quality",
-      paragraph: "Tracking and verification of all completed missions.",
+      title: texts.quality,
+      paragraph: texts.quality_pg,
     },
     {
       image: AgilityImage,
-      title: "Agility",
-      paragraph: "24/7 and 365 days a year intervention throughout France.",
+      title: texts.agility,
+      paragraph: texts.agility_pg,
     },
     {
       image: EfficiencyImage,
-      title: "Efficiency",
-      paragraph: "A quick and effective response to your needs.",
+      title: texts.efficiency,
+      paragraph: texts.efficiency_pg,
     },
   ];
+
   const [selectedDataId, setSelectedDataId] = useState(0);
   const [dataToSet, setDataToSet] = useState(data[0]);
   const [isShadow, setIsShadow] = useState([true, false, false, false, false]);
@@ -69,9 +72,15 @@ export default function WhyChoiceUs() {
 
       <>
         <div className="WhyChoiceUs">
-          <div className="greyRectangle">WHY CHOOSE US</div>
+          <div className="greyRectangle">{texts.why_choice}</div>
           <p className="text-center firstClass">
-            Here Are Few Reasons <br /> To Trust Us
+            {lang == "fr" ? (
+              <>Raison de nous faire confiance</>
+            ) : (
+              <>
+                Here Are Few Reasons <br /> To Trust Us
+              </>
+            )}
           </p>
 
           <Media queries={GLOBAL_MEDIA_QUERIES}>
@@ -94,7 +103,7 @@ export default function WhyChoiceUs() {
                         selectedDataId={selectedDataId}
                         id={0}
                         img={Image1}
-                        title="Expertise"
+                        title={texts.expertise}
                       />
                       <DialogSelection
                         setIsShadow={setIsShadow}
@@ -103,7 +112,7 @@ export default function WhyChoiceUs() {
                         selectedDataId={selectedDataId}
                         id={1}
                         img={Image2}
-                        title="Experience"
+                        title={texts.experience}
                       />
                       <DialogSelection
                         setIsShadow={setIsShadow}
@@ -112,7 +121,7 @@ export default function WhyChoiceUs() {
                         selectedDataId={selectedDataId}
                         id={2}
                         img={Image3}
-                        title="Quality"
+                        title={texts.quality}
                       />
                       <DialogSelection
                         setIsShadow={setIsShadow}
@@ -121,7 +130,7 @@ export default function WhyChoiceUs() {
                         selectedDataId={selectedDataId}
                         id={3}
                         img={Image4}
-                        title="Agility"
+                        title={texts.agility}
                       />
                       <DialogSelection
                         setIsShadow={setIsShadow}
@@ -130,7 +139,7 @@ export default function WhyChoiceUs() {
                         selectedDataId={selectedDataId}
                         id={4}
                         img={Image5}
-                        title="Efficiency"
+                        title={texts.efficiency}
                       />
                     </div>
 
@@ -159,7 +168,7 @@ export default function WhyChoiceUs() {
                             selectedDataId={selectedDataId}
                             id={0}
                             img={Image1}
-                            title="Expertise"
+                            title={texts.expertise}
                           />
                         </div>
                         <div>
@@ -171,7 +180,7 @@ export default function WhyChoiceUs() {
                             selectedDataId={selectedDataId}
                             id={1}
                             img={Image2}
-                            title="Experience"
+                            title={texts.experience}
                           />
                         </div>
                         <div>
@@ -183,7 +192,7 @@ export default function WhyChoiceUs() {
                             selectedDataId={selectedDataId}
                             id={2}
                             img={Image3}
-                            title="Quality"
+                            title={texts.quality}
                           />
                         </div>
                         <div>
@@ -195,7 +204,7 @@ export default function WhyChoiceUs() {
                             selectedDataId={selectedDataId}
                             id={3}
                             img={Image4}
-                            title="Agility"
+                            title={texts.agility}
                           />
                         </div>
                         <div>
@@ -207,7 +216,7 @@ export default function WhyChoiceUs() {
                             selectedDataId={selectedDataId}
                             id={4}
                             img={Image5}
-                            title="Efficiency"
+                            title={texts.efficiency}
                           />
                         </div>
                       </div>

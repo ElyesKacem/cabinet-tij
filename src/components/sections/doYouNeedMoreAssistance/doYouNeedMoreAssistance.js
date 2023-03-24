@@ -3,6 +3,7 @@ import "./doYouNeedMoreAssistance.css";
 import Image from "../../../assets/images/dynma.jpg";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
+import GetText from "./doYouNeedMoreAssistance.lang";
 
 export default function DoYouNeedMoreAssistance(props) {
   const GLOBAL_MEDIA_QUERIES = {
@@ -10,6 +11,7 @@ export default function DoYouNeedMoreAssistance(props) {
     small: "(max-width: 600px)",
     large: "(min-width: 1080px)",
   };
+  const texts = GetText();
   return (
     <div style={props.style}>
       <br />
@@ -35,20 +37,14 @@ export default function DoYouNeedMoreAssistance(props) {
                 />
 
                 <div>
-                  <p className="firstClass">Do You Need More Assistance?</p>
+                  <p className="firstClass">{texts.do_you_need}</p>
                   <p
                     style={{
                       fontSize: " 20px",
                       color: "grey",
                     }}
                   >
-                    As per customer request, we can provide a suitable quote
-                    based on the nature of the document that needs to be
-                    translated. We offer the translation of different types of
-                    documents including technical and official ones. Our main
-                    goal is to provide our clients with all the help and
-                    assistance that they need, so feel free to contact us in
-                    order to receive a suitable quote.
+                    {texts.paragraph}
                   </p>
                 </div>
 
@@ -58,7 +54,9 @@ export default function DoYouNeedMoreAssistance(props) {
                     smooth
                     to="/requestquote#getquote"
                   >
-                    <div className="RequestAQuoteButton">Request a Quote</div>
+                    <div className="RequestAQuoteButton">
+                      {texts.button_title}
+                    </div>
                   </HashLink>
                 </div>
               </div>
@@ -80,9 +78,7 @@ export default function DoYouNeedMoreAssistance(props) {
                   />
                   <div style={{ display: "flex", alignItems: "center" }}>
                     <div>
-                      <p className="firstClass ">
-                        Do You Need More Assistance?
-                      </p>
+                      <p className="firstClass ">{texts.do_you_need}</p>
                       <p
                         style={{
                           fontSize: " 21.5px",
@@ -90,13 +86,7 @@ export default function DoYouNeedMoreAssistance(props) {
                           lineHeight: "1.5",
                         }}
                       >
-                        As per customer request, we can provide a suitable quote
-                        based on the nature of the document that needs to be
-                        translated. We offer the translation of different types
-                        of documents including technical and official ones. Our
-                        main goal is to provide our clients with all the help
-                        and assistance that they need, so feel free to contact
-                        us in order to receive a suitable quote.
+                        {texts.paragraph}
                       </p>
                     </div>
                   </div>
@@ -106,7 +96,9 @@ export default function DoYouNeedMoreAssistance(props) {
                       smooth
                       to="/requestquote#getquote"
                     >
-                      <div className="RequestAQuoteButton">Request a Quote</div>
+                      <div className="RequestAQuoteButton">
+                        {texts.button_title}
+                      </div>
                     </HashLink>
                   </div>
                 </div>

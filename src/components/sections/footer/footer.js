@@ -10,8 +10,10 @@ import FooterText from "../../footerText/footerText.js";
 import Media from "react-media";
 import "./footer.css";
 import { HashLink } from "react-router-hash-link";
+import GetText from "./footer.lang.js";
 
 export default function Footer() {
+  const text = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1253px)",
     medium: "(max-width: 1253px) and (min-width: 850px)",
@@ -90,10 +92,7 @@ export default function Footer() {
                   </div>
 
                   <div style={{ transform: "translateX(10px)" }}>
-                    <FooterText
-                      title="About"
-                      content="We are a translation company whose main goal is to provide specialized translations of various documents both technical and administrative as well as judicial."
-                    />
+                    <FooterText title={text.about} content={text.about_pg} />
                     <br />
                     <br />
                     <HashLink
@@ -125,8 +124,8 @@ export default function Footer() {
                 >
                   {/* <div style={{ display: "flex" }}>
                     <FooterText
-                      title="About"
-                      content="We are a translation company whose main goal is to provide specialized translations of various documents both technical and administrative as well as judicial."
+                      title={text.about}
+                      content={text.about_pg}
                     />
                     <HashLink
                     className="resetcss"
@@ -149,10 +148,7 @@ export default function Footer() {
                     }}
                   >
                     <div>
-                      <FooterText
-                        title="About"
-                        content="We are a translation company whose main goal is to provide specialized translations of various documents both technical and administrative as well as judicial."
-                      />
+                      <FooterText title={text.about} content={text.about_pg} />
                       <FooterText title="Solutions" />
                     </div>
                     <div>
@@ -244,10 +240,7 @@ export default function Footer() {
 
                   <div style={{ transform: "translateX(10px)" }}>
                     <div>
-                      <FooterText
-                        title="About"
-                        content="We are a translation company whose main goal is to provide specialized translations of various documents both technical and administrative as well as judicial."
-                      />
+                      <FooterText title={text.about} content={text.about_pg} />
                       <FooterText title="Solutions" />
                     </div>
                     <div>

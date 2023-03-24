@@ -91,7 +91,7 @@ export default function VideoSection() {
                           <LeftRightButton
                             isBlue
                             whiteText
-                            title={texts.Translation}
+                            title={texts.LearnMore}
                           />
                         </HashLink>
                       </div>
@@ -253,7 +253,7 @@ export default function VideoSection() {
                   <div style={{ display: "flex" }}>
                     <HashLink className="resetcss" smooth to="/#about">
                       <div>
-                        <LeftRightButton isBlue title={texts.Translation} />
+                        <LeftRightButton isBlue title={texts.LearnMore} />
                       </div>
                     </HashLink>
                     <HashLink

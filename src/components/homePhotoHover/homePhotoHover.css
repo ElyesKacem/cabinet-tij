@@ -37,6 +37,7 @@
   z-index: 3;
   font-family: "Gilroy-Bold";
   transition: transform 0.2s;
+  margin-left: 3px;
 }
 
 .homePhotoHover-title {

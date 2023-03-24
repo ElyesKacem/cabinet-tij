@@ -6,8 +6,10 @@ import Background from "../../../assets/images/meeting.jpg";
 import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
+import GetText from "./proJoinOurTeam.lang";
 
 export default function ProJoinOurTeam() {
+  const text = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 686px)",
     medium: "(max-width: 686px)",
@@ -33,15 +35,14 @@ export default function ProJoinOurTeam() {
                     <VerticalBar top="400px" left="90%" />
 
                     <div className="proJoinOurTeam-content-header">
-                      Professional ? <br />{" "}
-                      <b style={{ fontSize: 50 }}>Join Our team</b>
+                      {text.title1} <br />{" "}
+                      <b style={{ fontSize: 50 }}>{text.title2}</b>
                     </div>
                     <div className="proJoinOurTeam-content-paragraph">
-                      join our community and be a part of something special .
+                      {text.content1}
                     </div>
                     <div className="proJoinOurTeam-content-paragraph">
-                      Together, we can make a difference and create meaningful
-                      change.
+                      {text.content2}
                     </div>
 
                     <HashLink
@@ -50,7 +51,7 @@ export default function ProJoinOurTeam() {
                       to="/enrollement#enrollement"
                     >
                       <LeftRightButton
-                        title="Career"
+                        title={text.bt}
                         style={{ transform: "translateY(35px)" }}
                         iconStyle={{ transform: "translateY(-1px)" }}
                       />
@@ -82,15 +83,14 @@ export default function ProJoinOurTeam() {
                         className="proJoinOurTeam-content-header"
                         style={{ fontSize: matches.small && 48 }}
                       >
-                        Professional ? <br />{" "}
-                        <b style={{ fontSize: 50 }}>Join Our team</b>
+                        {text.title1} <br />{" "}
+                        <b style={{ fontSize: 50 }}>{text.title2}</b>
                       </div>
                       <div className="proJoinOurTeam-content-paragraph">
-                        join our community and be a part of something special .
+                        {text.content1}
                       </div>
                       <div className="proJoinOurTeam-content-paragraph">
-                        Together, we can make a difference and create meaningful
-                        change.
+                        {text.content2}
                       </div>
                       <HashLink
                         className="resetcss"
@@ -99,7 +99,7 @@ export default function ProJoinOurTeam() {
                       >
                         <LeftRightButton
                           iconStyle={{ transform: "translateY(-1px)" }}
-                          title="Career"
+                          title={text.bt}
                           style={{
                             transform: "translateY(35px)",
                             margin: "auto",

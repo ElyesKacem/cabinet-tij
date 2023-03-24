@@ -7,6 +7,7 @@ import Pause from "../../../assets/images/pause.png";
 import Play from "../../../assets/images/play.png";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
+import GetText from "./Services.lang";
 
 export default function Services() {
   const GLOBAL_MEDIA_QUERIES = {
@@ -14,6 +15,7 @@ export default function Services() {
     medium: "(max-width: 999px) ",
     large: "(min-width: 1000px)",
   };
+  const texts = GetText();
   return (
     <div className="services" id="about">
       <br />
@@ -40,27 +42,20 @@ export default function Services() {
                     <Grid item xs={6}>
                       <div className="translateRight40">
                         <div className="greyRectangle">
-                          <b>WHO WE ARE</b>
+                          <b>{texts.who_we_are}</b>
                         </div>
                         <div style={{ transform: "translateX(-14px)" }}>
                           <p
                             className="firstClass"
                             style={{ transform: "translateX(14px)" }}
                           >
-                            Cabinet Tij For Translation And Interpreting
+                            {texts.cabinet_Tij_For}
                           </p>
 
                           <p className="secondClass">
-                            We are specialized in the field of technical,
-                            administrative and judicial translation and
-                            interpreting.
+                            {texts.we_are_specialized}
                           </p>
-                          <p className="thirdClass">
-                            Thanks to our wide network of qualified
-                            professionals and strategic partners, we respond
-                            quickly and efficiently to the requests of our
-                            clients.
-                          </p>
+                          <p className="thirdClass">{texts.thanks_to_our}</p>
 
                           <div>
                             <div></div>
@@ -83,7 +78,7 @@ export default function Services() {
                                   // style={{ fontSize: 17 }}
                                   className="Gilroy-Regular"
                                 >
-                                  Our services
+                                  {texts.our_services}
                                 </div>
                               </div>
                             </HashLink>
@@ -105,26 +100,20 @@ export default function Services() {
                   <div>
                     <div className="translateRight40" style={{ maxWidth: 500 }}>
                       <div className="greyRectangle">
-                        <b>WHO WE ARE</b>
+                        <b>{texts.who_we_are}</b>
                       </div>
                       <div style={{ transform: "translateX(-14px)" }}>
                         <p
                           className="firstClass"
                           style={{ transform: "translateX(20px)" }}
                         >
-                          Cabinet Tij For Translation And Interpreting
+                          {texts.cabinet_Tij_For}
                         </p>
 
                         <p className="secondClass">
-                          We are specialized in the field of technical,
-                          administrative and judicial translation and
-                          interpreting.
+                          {texts.we_are_specialized}
                         </p>
-                        <p className="thirdClass">
-                          Thanks to our wide network of qualified professionals
-                          and strategic partners, we respond quickly and
-                          efficiently to the requests of our clients.
-                        </p>
+                        <p className="thirdClass">{texts.thanks_to_our}</p>
 
                         <div>
                           <div></div>
@@ -139,7 +128,9 @@ export default function Services() {
                                 />
                               </div>
 
-                              <div style={{ fontSize: 17 }}>Our services</div>
+                              <div style={{ fontSize: 17 }}>
+                                {texts.our_services}
+                              </div>
                             </div>
                           </HashLink>
                         </div>
@@ -167,14 +158,14 @@ export default function Services() {
                         style={{ transform: "translateX(-39px)" }}
                       />
                       <div className="greyRectangle">
-                        <b>WHO WE ARE</b>
+                        <b>{texts.who_we_are}</b>
                       </div>
                     </div>
                     <p
                       className="firstClass"
                       style={{ transform: "translateX(20px)" }}
                     >
-                      Cabinet Tij For Translation And Interpreting
+                      {texts.cabinet_Tij_For}
                     </p>
 
                     <p className="secondClass">
@@ -198,7 +189,7 @@ export default function Services() {
                             className="servicesPauseButton"
                           />
                         </div>
-                        <div>Our services</div>
+                        <div>{texts.our_services}</div>
                       </div>
                     </div>
                   </div>
@@ -231,11 +222,11 @@ export default function Services() {
 
               <div className="greyRectangle">
                 <b>
-                  WHO WE ARE
+                  {texts.who_we_are}
                 </b>
               </div>
 
-              <p className='firstClass' style={{ transform: 'translateX(20px)' }}>Cabinet Tij For Translation And Interpreting</p>
+              <p className='firstClass' style={{ transform: 'translateX(20px)' }}>{texts.cabinet_Tij_For}</p>
 
               <p className='secondClass'>We are specialized in the field of technical, administrative and judicial translation and interpreting.</p>
               <p className='thirdClass'>Thanks to our wide network of qualified professionals and strategic partners, we respond quickly and efficiently to the requests of our clients.</p>
@@ -250,7 +241,7 @@ export default function Services() {
                     <img src={Play} style={{ width: 80 }} className="servicesPauseButton" />
                   </div>
                   <div>
-                    Our services
+                    {texts.our_services}
                   </div>
                 </div>
               </div>

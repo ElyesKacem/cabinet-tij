@@ -1,8 +1,10 @@
 import React from "react";
 import "./footerText.css";
 import EastIcon from "@mui/icons-material/East";
+import { LangContext } from "../../context/Lang.context";
 
 export default function FooterText(props) {
+  const { lang } = React.useContext(LangContext);
   const ms = {
     ...props.style,
   };
@@ -18,25 +20,44 @@ export default function FooterText(props) {
       <div className="footerText-content">
         {props.title != ("Support" || "Information") && props.content}
         {props.title == "Support" && "Contact us"}
-        {props.title == "Solutions" && (
-          <>
-            Interpreting
-            <br />
-            <br />
-            Bussiness
-            <br />
-            <br />
-            Certified Translation
-            <br />
-            <br />
-            Sworn Translation
-            <br />
-            <br />
-            Personal Services
-            <br />
-            <br />
-          </>
-        )}
+        {props.title == "Solutions" &&
+          (lang == "en" ? (
+            <>
+              Interpreting
+              <br />
+              <br />
+              Bussiness
+              <br />
+              <br />
+              Certified Translation
+              <br />
+              <br />
+              Sworn Translation
+              <br />
+              <br />
+              Personal Services
+              <br />
+              <br />
+            </>
+          ) : (
+            <>
+              Interprétariat
+              <br />
+              <br />
+              Entreprises
+              <br />
+              <br />
+              Traduction
+              <br />
+              <br />
+              Traduction assermentée
+              <br />
+              <br />
+              Particuliers
+              <br />
+              <br />
+            </>
+          ))}
         {props.title == "Information" && (
           <>
             contact@cabinet-tij.com

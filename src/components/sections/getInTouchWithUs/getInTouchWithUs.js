@@ -7,6 +7,8 @@ import { toast } from "react-hot-toast";
 
 import { RQ_service } from "../../../services/services";
 import LeftRightButton from "../../buttons/leftRightButton/leftRightButton";
+import GetText from "./getInTouchWithUs.lang";
+import { LangContext } from "../../../context/Lang.context";
 
 const GLOBAL_MEDIA_QUERIES = {
   large: "(min-width: 700px)",
@@ -27,6 +29,8 @@ const initial_form = {
 };
 
 export default function GetInTouchWithUs() {
+  const { lang } = React.useContext(LangContext);
+  const texts = GetText();
   const [form, setForm] = useState({ ...initial_form });
   const [sending, set_sending] = useState(false);
 
@@ -69,9 +73,7 @@ export default function GetInTouchWithUs() {
               <br />
               <br />
               <div className="getInTouchWithUsFrom">
-                <div className="getInTouchWithUsFrom-title">
-                  Get In Touch With Us
-                </div>
+                <div className="getInTouchWithUsFrom-title">{texts.title}</div>
                 <br />
                 <br />
                 <Grid container spacing={5}>
@@ -79,7 +81,7 @@ export default function GetInTouchWithUs() {
                     <input
                       required
                       type="text"
-                      placeholder="Your Name *"
+                      placeholder={texts.name + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="full_name"
                       value={form.full_name}
@@ -89,7 +91,7 @@ export default function GetInTouchWithUs() {
                   <Grid item xs={12} md={6}>
                     <input
                       type="text"
-                      placeholder="Company *"
+                      placeholder={texts.company + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="company"
                       value={form.company}
@@ -99,7 +101,7 @@ export default function GetInTouchWithUs() {
                   <Grid item xs={12} md={6}>
                     <input
                       type="text"
-                      placeholder="Your Email *"
+                      placeholder={texts.mail + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="email"
                       value={form.email}
@@ -109,7 +111,7 @@ export default function GetInTouchWithUs() {
                   <Grid item xs={12} md={6}>
                     <input
                       type="text"
-                      placeholder="Subject *"
+                      placeholder={texts.subject + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="subject"
                       value={form.subject}
@@ -118,7 +120,7 @@ export default function GetInTouchWithUs() {
                   </Grid>
                   <Grid item xs={12} md={12}>
                     <textarea
-                      placeholder="Your Subject  *"
+                      placeholder={texts.content + " *"}
                       style={{ width: "99%", resize: "none" }}
                       className="getInTouchWithUsFrom-input"
                       name="content"
@@ -133,7 +135,7 @@ export default function GetInTouchWithUs() {
                   onClick={Handle_submit}
                   iconStyle={{ transform: "scale(0.9) translateY(-3px)" }}
                   isWhite
-                  title="Submit"
+                  title={texts.sub}
                   style={{
                     transform: "translateX(15px)",
                     fontSize: 16,
@@ -167,7 +169,11 @@ export default function GetInTouchWithUs() {
                 }}
               >
                 <div className="getInTouchWithUsFrom-title">
-                  Get In Touch {matches.verySmall && <br />} With Us
+                  {lang == "en" ? (
+                    <>Get In Touch {matches.verySmall && <br />} With Us</>
+                  ) : (
+                    "Nous contacter"
+                  )}
                 </div>
                 <br />
                 <br />
@@ -176,7 +182,7 @@ export default function GetInTouchWithUs() {
                     <input
                       required
                       type="text"
-                      placeholder="Your Name *"
+                      placeholder={texts.name + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="full_name"
                       value={form.full_name}
@@ -186,7 +192,7 @@ export default function GetInTouchWithUs() {
                   <Grid item xs={12}>
                     <input
                       type="text"
-                      placeholder="Company *"
+                      placeholder={texts.company + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="company"
                       value={form.company}
@@ -196,7 +202,7 @@ export default function GetInTouchWithUs() {
                   <Grid item xs={12}>
                     <input
                       type="text"
-                      placeholder="Your Email *"
+                      placeholder={texts.mail + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="email"
                       value={form.email}
@@ -206,7 +212,7 @@ export default function GetInTouchWithUs() {
                   <Grid item xs={12}>
                     <input
                       type="text"
-                      placeholder="Subject *"
+                      placeholder={texts.subject + " *"}
                       className="getInTouchWithUsFrom-input"
                       name="subject"
                       value={form.subject}
@@ -215,7 +221,7 @@ export default function GetInTouchWithUs() {
                   </Grid>
                   <Grid item xs={12}>
                     <textarea
-                      placeholder="Your Subject  *"
+                      placeholder={texts.content + " *"}
                       style={{ width: "99%", resize: "none" }}
                       className="getInTouchWithUsFrom-input"
                       name="content"
@@ -231,7 +237,7 @@ export default function GetInTouchWithUs() {
                   onClick={Handle_submit}
                   iconStyle={{ transform: "scale(0.9)" }}
                   isWhite
-                  title="Submit"
+                  title={texts.sub}
                   style={{
                     transform: "translateX(15px)",
                     fontSize: 18,
