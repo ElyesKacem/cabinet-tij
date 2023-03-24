@@ -57,7 +57,7 @@ const initial_form = {
   target_lang: "",
   notes: "",
   date: new Date(),
-  filesMap : {},
+  filesMap: {},
   files: [],
   FORM_TYPE: "translation",
   from: "Request a quote",
@@ -101,21 +101,17 @@ export default function GetQuoteForm() {
   };
 
   const handle_image = (event) => {
-    if(event.target.files){
+    if (event.target.files) {
       const files = [...form.files];
-    
-      const filesMap = {...form.filesMap}
-      Object.values(event.target.files).map((file) =>{
-        files.push(file)
-        filesMap[file.name] = file
-      } 
-        
-      );
-  
-  
-      setForm({ ...form, files: files,filesMap : filesMap });
+
+      const filesMap = { ...form.filesMap };
+      Object.values(event.target.files).map((file) => {
+        files.push(file);
+        filesMap[file.name] = file;
+      });
+
+      setForm({ ...form, files: files, filesMap: filesMap });
     }
-    
   };
 
   useEffect(() => {
@@ -125,17 +121,14 @@ export default function GetQuoteForm() {
     // console.log(selected);
     setForm({ ...form, FORM_TYPE: selected });
   }, [menuSelected]);
-console.log(form)
+  // console.log(form)
   const Handle_submit = () => {
     let result = FormValidator(form);
 
-
-    let mFiles = []
-    if(singleFile)
-      mFiles.push(singleFile)
-    if(form.filesMap)
-      mFiles.push(...Object.values(form.filesMap))
-    console.log(mFiles)
+    let mFiles = [];
+    if (singleFile) mFiles.push(singleFile);
+    if (form.filesMap) mFiles.push(...Object.values(form.filesMap));
+    // console.log(mFiles)
     /*
     if (sending) {
       toast.error("we are sending please wait");
@@ -425,14 +418,11 @@ console.log(form)
                           placeholder="Full Name"
                           id="requotefile"
                           onChange={(e) => {
-                            if(e.target.files.length>0){
-                              console.log("333",e.target.files[0])
+                            if (e.target.files.length > 0) {
+                              // console.log("333",e.target.files[0])
                               setSingleFile(e.target.files[0]);
-                              setSingleFileName(
-                                e.target.files[0].name
-                              );
+                              setSingleFileName(e.target.files[0].name);
                             }
-                            
                           }}
                         />
                         <div className="getQuoteForm-input-file-button">
@@ -482,68 +472,68 @@ console.log(form)
                     style={{ marginTop: 42 }}
                   >
                     <div style={{ transform: "translateY(-13px)" }}>
-                      <div
-                      >
-                        
+                      <div>
                         {form.filesMap ? (
                           <>
-                            
-                            { Object.keys(form.filesMap).map((file,i) =>
-                            <div style={{display : "flex"}} key={i}>
-                              <div className="getQuoteForm-input-file-label-text" key={i}>
-                                &nbsp;&nbsp;{file}{" "}
-                              </div>
-                              <div
-                                className="getQuoteForm-input-file-label-X"
-                                onClick={() => {
-                                  const mFilesMap = form.filesMap
-                                  delete mFilesMap[file]
-                                  setForm({...form,filesMap:mFilesMap});
-                                  //const { others, files } = form;
-                                  //setForm({...form});
-                                }}
-                              >
-                                &nbsp;&nbsp;
-                                <ClearIcon
-                                  sx={{ fill: "url(#linearColors)" }}
+                            {Object.keys(form.filesMap).map((file, i) => (
+                              <div style={{ display: "flex" }} key={i}>
+                                <div
+                                  className="getQuoteForm-input-file-label-text"
+                                  key={i}
+                                >
+                                  &nbsp;&nbsp;{file}{" "}
+                                </div>
+                                <div
                                   className="getQuoteForm-input-file-label-X"
-                                ></ClearIcon>{" "}
+                                  onClick={() => {
+                                    const mFilesMap = form.filesMap;
+                                    delete mFilesMap[file];
+                                    setForm({ ...form, filesMap: mFilesMap });
+                                    //const { others, files } = form;
+                                    //setForm({...form});
+                                  }}
+                                >
+                                  &nbsp;&nbsp;
+                                  <ClearIcon
+                                    sx={{ fill: "url(#linearColors)" }}
+                                    className="getQuoteForm-input-file-label-X"
+                                  ></ClearIcon>{" "}
+                                </div>
                               </div>
-                              </div>
-                            )
-                              
-                            }
+                            ))}
                           </>
                         ) : (
                           <span className="getQuoteForm-input-file-label-text">
                             &nbsp;&nbsp;No file chosen
                           </span>
                         )}
-                        <br/><br/>
+                        <br />
+                        <br />
                         <label
-                        className="getQuoteForm-input-file-label"
-                        htmlFor="requoteMULTIPLEfile"
+                          className="getQuoteForm-input-file-label"
+                          htmlFor="requoteMULTIPLEfile"
                         >
-                        <input
-                          type="file"
-                          className="getQuoteForm-input-file"
-                          placeholder="Full Name"
-                          id="requoteMULTIPLEfile"
-                          onChange={(e) => {
-                            handle_image(e);
-                            console.log(e.target.files[0].name)
-                            //form.files.push([e.target.files])
-                          }}
-                        />
-                        <div className="getQuoteForm-input-multipleFile-button">
-                          <b style={{ fontFamily: "sans-serif", fontSize: 20 }}>
-                            + &nbsp;&nbsp;{" "}
-                          </b>{" "}
-                          Add More Files
-                        </div>
+                          <input
+                            type="file"
+                            className="getQuoteForm-input-file"
+                            placeholder="Full Name"
+                            id="requoteMULTIPLEfile"
+                            onChange={(e) => {
+                              handle_image(e);
+                              // console.log(e.target.files[0].name)
+                              //form.files.push([e.target.files])
+                            }}
+                          />
+                          <div className="getQuoteForm-input-multipleFile-button">
+                            <b
+                              style={{ fontFamily: "sans-serif", fontSize: 20 }}
+                            >
+                              + &nbsp;&nbsp;{" "}
+                            </b>{" "}
+                            Add More Files
+                          </div>
                         </label>
                       </div>
-                        
                     </div>
                   </Grid>
                 </Grid>

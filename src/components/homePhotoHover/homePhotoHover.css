@@ -27,8 +27,8 @@
   transform: scale(1.2);
 }
 .homePhotoHover:hover .homePhotoHoverOverlay {
-  background: linear-gradient(0deg, #0026ff 25%, #d8d8d802 100%);
-  mix-blend-mode: multiply;
+  /* background: linear-gradient(0deg, #0026ff 25%, #d8d8d802 100%);
+  mix-blend-mode: multiply; */
   /* box-shadow: 10px 10px 15px rgb(7, 7, 7); */
 }
 

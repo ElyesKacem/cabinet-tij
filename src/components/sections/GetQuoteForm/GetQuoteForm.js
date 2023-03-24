@@ -116,14 +116,14 @@ export default function GetQuoteForm() {
     // console.log(selected);
     setForm({ ...form, FORM_TYPE: selected });
   }, [menuSelected]);
-  console.log(form);
+  // console.log(form);
   const Handle_submit = () => {
     let result = FormValidator(form);
 
     let mFiles = [];
     if (singleFile) mFiles.push(singleFile);
     if (form.files?.length > 0) mFiles.push(...form.files);
-    console.log(mFiles);
+    // console.log(mFiles);
     /*
     if (sending) {
       toast.error("we are sending please wait");
@@ -414,7 +414,7 @@ export default function GetQuoteForm() {
                           id="requotefile"
                           onChange={(e) => {
                             if (e.target.files.length > 0) {
-                              console.log("333", e.target.files[0]);
+                              // console.log("333", e.target.files[0]);
                               setSingleFile(e.target.files[0]);
                               setSingleFileName(e.target.files[0].name);
                             }

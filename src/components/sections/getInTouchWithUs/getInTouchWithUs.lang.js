@@ -6,7 +6,7 @@ const texts = {
     title: "Get In Touch With Us",
     name: "Your name",
     company: "Company",
-    mail: "Your E-mail",
+    mail: "Your e-mail",
     subject: "Subject",
     content: "Your subject",
     sub: "Submit",

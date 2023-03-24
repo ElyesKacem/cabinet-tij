@@ -12,7 +12,7 @@ export default function HomePhotoHover(props) {
       <div
         className="homePhotoHover"
         style={{
-          borderRadius: 5,
+          borderRadius: 6,
           // backgroundImage: !gradient && `url(${props.img})`,
           backgroundImage: gradient
             ? `linear-gradient(0deg, rgba(36, 45, 101, 0),rgba(207, 32, 50, 0), rgba(255,255,255, 0.0),rgba(255,255,255, 0.0)),url(${props.img})`

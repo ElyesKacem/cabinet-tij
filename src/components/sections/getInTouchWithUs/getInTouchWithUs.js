@@ -41,6 +41,7 @@ export default function GetInTouchWithUs() {
 
   const Handle_submit = () => {
     let result = FormValidator(form);
+    console.log(result);
     if (sending) {
       toast.error("we are sending please wait");
     }
