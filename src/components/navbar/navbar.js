@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import NavbarButton from "../buttons/navbarButton/navbarButton";
 import "./navbar.css";
 // import logo from './images/logo.png';
@@ -21,9 +21,15 @@ const GLOBAL_MEDIA_QUERIES = {
 };
 
 export default function Navbar() {
+  const ref = useRef(null);
   const [color, setColor] = useState(false);
   const [activateAnimation, setActivateAnimation] = useState(false);
   const [hideMenu, setHideMenu] = useState(false);
+  const [checkBox, setCheckBox] = useState();
+
+  useEffect(() => {
+    setCheckBox(ref.current);
+  }, []);
 
   const texts = GetText();
 
@@ -95,6 +101,7 @@ export default function Navbar() {
                     />
                     <div>
                       <input
+                        ref={ref}
                         type="checkbox"
                         id="active"
                         onClick={() => {
@@ -131,6 +138,7 @@ export default function Navbar() {
                               <HashLink
                                 className="resetcss"
                                 onClick={() => {
+                                  checkBox.click();
                                   setActivateAnimation(!activateAnimation);
                                 }}
                                 smooth
@@ -150,6 +158,7 @@ export default function Navbar() {
                               <HashLink
                                 className="resetcss"
                                 onClick={() => {
+                                  checkBox.click();
                                   setActivateAnimation(!activateAnimation);
                                 }}
                                 smooth
@@ -169,6 +178,7 @@ export default function Navbar() {
                               <HashLink
                                 className="resetcss"
                                 onClick={() => {
+                                  checkBox.click();
                                   setActivateAnimation(!activateAnimation);
                                 }}
                                 smooth
@@ -189,6 +199,7 @@ export default function Navbar() {
                               <HashLink
                                 className="resetcss"
                                 onClick={() => {
+                                  checkBox.click();
                                   setActivateAnimation(!activateAnimation);
                                 }}
                                 smooth
