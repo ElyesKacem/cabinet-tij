@@ -2,7 +2,7 @@ import React from "react";
 // Your App.tsx file
 import "react-day-picker/dist/style.css";
 import "./calendar.css";
-import { frCA, enUS } from "date-fns/locale";
+import { fr, enUS } from "date-fns/locale";
 import { format } from "date-fns";
 import { DayPicker } from "react-day-picker";
 
@@ -10,12 +10,31 @@ import { DayPicker } from "react-day-picker";
 import { LangContext } from "../../context/Lang.context";
 
 export default function Calendar({ name, onChange, setShowCalendar }) {
-  // registerLocale("fr", fr);
-  // registerLocale("en", enAU);
   const { lang } = React.useContext(LangContext);
   const today = new Date();
   const [selected, setSelected] = React.useState(today);
+  const [dateToShow, setdateToShow] = React.useState(format(selected, "PP"));
+  React.useEffect(() => {
+    const date = new Date(selected);
+    const formattedDate = new Intl.DateTimeFormat(
+      lang == "fr" ? "fr-FR" : "en-US",
+      {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }
+    ).format(date);
+    setdateToShow(formattedDate);
 
+    return () => {};
+  }, [selected]);
+  // const date = new Date("Mar 25, 2023");
+  // const formattedDate = new Intl.DateTimeFormat("fr-FR", {
+  //   year: "numeric",
+  //   month: "long",
+  //   day: "numeric",
+  // }).format(date);
+  // console.log(formattedDate);
   const css = `
   .new-today{
     
@@ -32,7 +51,9 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
   const handle_change = (select) => {
     if (select) {
       setSelected(select);
-      const event = { target: { name: name, value: new Date(select) } };
+      const event = {
+        target: { name: name, value: new Date(select).toLocaleDateString(fr) },
+      };
       onChange(event);
     }
   };
@@ -61,8 +82,7 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
         }}
       >
         <div>
-          {lang == "en" ? "Chosen day" : "Date choisi"} :{" "}
-          {format(selected, "PP")}.
+          {lang == "en" ? "Chosen day" : "Date choisi"} : {dateToShow}.
         </div>
         <div
           className="calendar-ok"
@@ -79,7 +99,7 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
     <div className="flexalignjustify">
       <style>{css}</style>
       <DayPicker
-        locale={lang == "fr" ? frCA : enUS}
+        locale={lang == "fr" ? fr : enUS}
         // months={MONTHS[lang]}
         // weekdaysLong={WEEKDAYS_LONG[lang]}
         // weekdaysShort={WEEKDAYS_SHORT[lang]}

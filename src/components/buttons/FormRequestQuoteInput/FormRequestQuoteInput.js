@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./FormRequestQuoteInput.css";
 import CalendarIcon from "../../../assets/images/calendar.svg";
-import { FullDateEn } from "../../../Functions/DateFunctions";
+import { FullDateEn, FullDateFr } from "../../../Functions/DateFunctions";
+import { LangContext } from "../../../context/Lang.context";
 
 export default function FormRequestQuoteInput(props) {
   const { name, value, onChange } = props;
@@ -93,6 +94,8 @@ export function FormRequestQuoteInputMultiline(props) {
 
 export function DateInputGetQuote(props) {
   const [show, setShow] = React.useState(true);
+  const { lang } = React.useContext(LangContext);
+
   return (
     <div
       onClick={() => {
@@ -107,7 +110,10 @@ export function DateInputGetQuote(props) {
       }}
     >
       <img src={CalendarIcon} style={{ width: 25 }} alt="" />
-      <div style={{ fontWeight: "bold" }}> {FullDateEn(props.value)}</div>
+      <div style={{ fontWeight: "bold" }}>
+        {" "}
+        {lang == "en" ? FullDateEn(props.value) : FullDateFr(props.value)}
+      </div>
     </div>
   );
 }

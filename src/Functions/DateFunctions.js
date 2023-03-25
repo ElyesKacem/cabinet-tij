@@ -14,13 +14,13 @@ const monthsEn = [
 ];
 
 const daysEn = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 const daysFr = [
   "Dimanche",
@@ -46,10 +46,6 @@ const monthsFr = [
   "Novembre",
   "Décembre",
 ];
-export const getDay = (dateStr) => {
-  let date = new Date(dateStr);
-  return date.getDate();
-};
 
 export const getDayEn = (dateStr) => {
   let date = new Date(dateStr);
@@ -68,10 +64,6 @@ export const getYear = (dateStr) => {
 
 export const getMonthEn = (dateStr) => {
   return dateStr.split(" ")[1];
-};
-
-const getOnlyTime = (dt) => {
-  return dt.toJSON().split("T")[1].split(".")[0];
 };
 
 export const TimeParser = (dateStr) => {
@@ -108,4 +100,41 @@ export const getDateEn = (date) => {
   let monthEn = getMonthEnFullName(date);
   let year = getYear(date);
   return `${monthEn} ${day}, ${year}`;
+};
+
+// french
+const getDay = (dateStr) => {
+  let date = new Date(dateStr);
+  return date.getDate();
+};
+
+export const getDayFr = (dateStr) => {
+  let date = new Date(dateStr);
+  return daysFr[date.getDay()];
+};
+
+export const getMonthFr = (dateStr) => {
+  return dateStr.split(" ")[1];
+};
+
+export const FullDateFr = (dateStr, timeStr) => {
+  //Tuesday, February 27, 2023
+  let day = getDay(dateStr);
+  let daypos = getDay(dateStr);
+  let monthFr = getMonthFrFullName(dateStr);
+  let year = getYear(dateStr);
+  return `${getDayFr(dateStr)}, ${monthFr} ${day}, ${year}`;
+};
+
+export const getMonthFrFullName = (dateStr) => {
+  let date = new Date(dateStr);
+  const monthNum = date.getMonth();
+  return monthsFr[monthNum];
+};
+
+export const getDateFr = (date) => {
+  let day = getDay(date);
+  let monthFr = getMonthFrFullName(date);
+  let year = getYear(date);
+  return `${monthFr} ${day}, ${year}`;
 };

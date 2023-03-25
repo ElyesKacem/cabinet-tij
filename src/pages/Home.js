@@ -12,26 +12,26 @@ export default function Home() {
   return (
     <div id="home">
       <VideoSection />
-      <FadeLeft>
-        <Services />
-      </FadeLeft>
+      {/* <FadeLeft> */}
+      <Services />
+      {/* </FadeLeft> */}
 
-      <FadeUp>
-        <WhyChoiceUs />
-      </FadeUp>
-      <FadeRight>
-        <DoYouNeedMoreAssistance />
-      </FadeRight>
-      <FadeLeft>
-        <OurServices />
-      </FadeLeft>
-      <FadeRight>
-        <GetInTouchWithUs />
-      </FadeRight>
+      {/* <FadeUp> */}
+      <WhyChoiceUs />
+      {/* </FadeUp> */}
+      {/* <FadeRight> */}
+      <DoYouNeedMoreAssistance />
+      {/* </FadeRight> */}
+      {/* <FadeLeft> */}
+      <OurServices />
+      {/* </FadeLeft> */}
+      {/* <FadeRight> */}
+      <GetInTouchWithUs />
+      {/* </FadeRight> */}
 
-      <FadeLeft>
-        <ProJoinOurTeam />
-      </FadeLeft>
+      {/* <FadeLeft> */}
+      <ProJoinOurTeam />
+      {/* </FadeLeft> */}
     </div>
   );
 }
