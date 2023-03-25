@@ -22,7 +22,30 @@ const daysEn = [
   "Saturday",
   "Sunday",
 ];
+const daysFr = [
+  "Dimanche",
+  "Lundi",
+  "Mardi",
+  "Mercredi",
+  "Jeudi",
+  "Vendredi",
+  "Samedi",
+];
 
+const monthsFr = [
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Décembre",
+];
 export const getDay = (dateStr) => {
   let date = new Date(dateStr);
   return date.getDate();

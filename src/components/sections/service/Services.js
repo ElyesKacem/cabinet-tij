@@ -8,12 +8,8 @@ import Play from "../../../assets/images/play.png";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
 import GetText from "./Services.lang";
-import AOS from "aos";
 
 export default function Services() {
-  React.useEffect(() => {
-    AOS.init();
-  }, []);
   const GLOBAL_MEDIA_QUERIES = {
     small: "(max-width: 649px)",
     medium: "(max-width: 999px) ",

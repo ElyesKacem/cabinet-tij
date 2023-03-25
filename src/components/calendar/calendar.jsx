@@ -2,12 +2,16 @@ import React from "react";
 // Your App.tsx file
 import "react-day-picker/dist/style.css";
 import "./calendar.css";
-
+import { frCA, enUS } from "date-fns/locale";
 import { format } from "date-fns";
 import { DayPicker } from "react-day-picker";
+
+// import MomentLocaleUtils from "react-day-picker/moment";
 import { LangContext } from "../../context/Lang.context";
 
 export default function Calendar({ name, onChange, setShowCalendar }) {
+  // registerLocale("fr", fr);
+  // registerLocale("en", enAU);
   const { lang } = React.useContext(LangContext);
   const today = new Date();
   const [selected, setSelected] = React.useState(today);
@@ -75,6 +79,10 @@ export default function Calendar({ name, onChange, setShowCalendar }) {
     <div className="flexalignjustify">
       <style>{css}</style>
       <DayPicker
+        locale={lang == "fr" ? frCA : enUS}
+        // months={MONTHS[lang]}
+        // weekdaysLong={WEEKDAYS_LONG[lang]}
+        // weekdaysShort={WEEKDAYS_SHORT[lang]}
         modifiersClassNames={{
           selected: "new-selected",
         }}

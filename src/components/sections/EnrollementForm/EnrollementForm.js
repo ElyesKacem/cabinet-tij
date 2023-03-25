@@ -56,7 +56,7 @@ export default function EnrollementForm() {
   };
 
   const Handle_submit = () => {
-    let result = FormValidator({
+    let result = FormValidator(t, {
       ...form,
       inseeKbis: inseeKbis,
       identityDoc: identityDoc,

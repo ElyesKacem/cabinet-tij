@@ -1,8 +1,7 @@
 import { not_emp } from "../../../Functions/validators";
 import { toast } from "react-hot-toast";
-import GetText from "./validation.lang";
 
-export const FormValidator = (form) => {
+export const FormValidator = (t, form) => {
   const {
     full_name,
     phone,
@@ -22,7 +21,7 @@ export const FormValidator = (form) => {
     criminalRecord,
     proPhoto,
   } = form;
-  const t = GetText();
+
   if (!not_emp(full_name)) {
     toast.error(t.full_name);
     return false;

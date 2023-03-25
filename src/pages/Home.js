@@ -1,4 +1,5 @@
 import React from "react";
+import { FadeLeft, FadeRight, FadeUp } from "../assets/Animations/Fade";
 import DoYouNeedMoreAssistance from "../components/sections/doYouNeedMoreAssistance/doYouNeedMoreAssistance";
 import GetInTouchWithUs from "../components/sections/getInTouchWithUs/getInTouchWithUs";
 import OurServices from "../components/sections/ourServices/ourServices";
@@ -11,12 +12,26 @@ export default function Home() {
   return (
     <div id="home">
       <VideoSection />
-      <Services />
-      <WhyChoiceUs />
-      <DoYouNeedMoreAssistance />
-      <OurServices />
-      <GetInTouchWithUs />
-      <ProJoinOurTeam />
+      <FadeLeft>
+        <Services />
+      </FadeLeft>
+
+      <FadeUp>
+        <WhyChoiceUs />
+      </FadeUp>
+      <FadeRight>
+        <DoYouNeedMoreAssistance />
+      </FadeRight>
+      <FadeLeft>
+        <OurServices />
+      </FadeLeft>
+      <FadeRight>
+        <GetInTouchWithUs />
+      </FadeRight>
+
+      <FadeLeft>
+        <ProJoinOurTeam />
+      </FadeLeft>
     </div>
   );
 }
