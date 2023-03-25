@@ -6,9 +6,11 @@ import EnrollementAttachFiles from "../../EnrollementAttachFiles/EnrollementAtta
 import Media from "react-media";
 import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
+import CircularProgress from "@mui/material/CircularProgress";
 
 import { RQ_service } from "../../../services/services";
 import GetText from "./EnrollementForm.lang";
+import { useNavigate } from "react-router-dom";
 
 const GLOBAL_MEDIA_QUERIES = {
   small: "(max-width: 1056px)",
@@ -23,17 +25,16 @@ const initial_form = {
   email: "",
   adress: "",
   postal_code: "",
-
   spoken_lang: "",
   diploma1: "",
   exp1: "",
   diploma2: "",
   exp2: "",
-
   files: [],
 };
 
 export default function EnrollementForm() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ ...initial_form });
   const [sending, set_sending] = useState(false);
   const [inseeKbis, setInseeKbis] = useState(false);
@@ -64,26 +65,29 @@ export default function EnrollementForm() {
       proPhoto: proPhoto,
     });
     if (sending) {
-      toast.error("we are sending please wait");
+      toast.error(t.sending);
       return;
     }
     if (result) {
-      console.log("result yoyo", result);
       set_sending(true);
+      toast.loading(t.sending, {
+        icon: <CircularProgress sx={{ color: "blue" }} />,
+      });
       RQ_service(
         result,
         () => {
-          toast.success("data sent successfully");
+          toast.success(t.success);
           setForm({ ...initial_form });
           set_sending(false);
           setInseeKbis(false);
           setIdentityDoc(false);
           setCriminalRecord(false);
           setProPhoto(false);
+          navigate("/");
           // use the navigation
         },
         () => {
-          toast.error("there was an error while sending data");
+          toast.error(t.error);
           set_sending(false);
         }
       );

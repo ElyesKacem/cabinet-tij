@@ -1,8 +1,7 @@
 import { not_emp } from "../../../Functions/validators";
 import { toast } from "react-hot-toast";
-import CircularProgress from "@mui/material/CircularProgress";
 
-const translationValid = (form) => {
+const translationValid = (t, form) => {
   const {
     full_name,
     email,
@@ -15,32 +14,32 @@ const translationValid = (form) => {
   } = form;
 
   if (!not_emp(full_name)) {
-    toast.error("Name can't be empty");
+    toast.error(t.nameError);
     return false;
   }
 
   if (!not_emp(email)) {
-    toast.error("Email can't be empty");
+    toast.error(t.mailError);
     return false;
   }
 
   if (!not_emp(source_lang)) {
-    toast.error("Source Language can't be empty");
+    toast.error(t.slError);
     return false;
   }
 
   if (!not_emp(target_lang)) {
-    toast.error("Target Language can't be empty");
+    toast.error(t.tlError);
     return false;
   }
 
   if (!not_emp(notes)) {
-    toast.error("Notes can't be empty");
+    toast.error(t.notesError);
     return false;
   }
 
   if (files.length == 0) {
-    toast.error("files can't be empty");
+    toast.error(t.fileError);
     return false;
   }
   return {
@@ -55,7 +54,7 @@ const translationValid = (form) => {
   };
 };
 
-const InterpretingValid = (form) => {
+const InterpretingValid = (t, form) => {
   const {
     full_name,
     email,
@@ -69,32 +68,32 @@ const InterpretingValid = (form) => {
   } = form;
 
   if (!not_emp(full_name)) {
-    toast.error("Name can't be empty");
+    toast.error(t.nameError);
     return false;
   }
 
   if (!not_emp(email)) {
-    toast.error("Email can't be empty");
+    toast.error(t.mailError);
     return false;
   }
 
   if (!not_emp(location)) {
-    toast.error("Location can't be empty");
+    toast.error(t.locationError);
     return false;
   }
 
   if (!not_emp(target_lang)) {
-    toast.error("Target Language can't be empty");
+    toast.error(t.tlError);
     return false;
   }
 
   if (!not_emp(notes)) {
-    toast.error("Notes can't be empty");
+    toast.error(t.notesError);
     return false;
   }
 
   if (files.length == 0) {
-    toast.error("files can't be empty");
+    toast.error(t.fileError);
     return false;
   }
 
@@ -111,7 +110,7 @@ const InterpretingValid = (form) => {
   };
 };
 
-const TranscriptValid = (form) => {
+const TranscriptValid = (t, form) => {
   const {
     full_name,
     email,
@@ -125,37 +124,37 @@ const TranscriptValid = (form) => {
   } = form;
 
   if (!not_emp(full_name)) {
-    toast.error("Name can't be empty");
+    toast.error(t.nameError);
     return false;
   }
 
   if (!not_emp(email)) {
-    toast.error("Email can't be empty");
+    toast.error(t.mailError);
     return false;
   }
 
   if (!not_emp(source_lang)) {
-    toast.error("Source Language can't be empty");
+    toast.error(t.slError);
     return false;
   }
 
   if (!not_emp(target_lang)) {
-    toast.error("Target Language can't be empty");
+    toast.error(t.tlError);
     return false;
   }
 
   if (!not_emp(languages)) {
-    toast.error("Languages can't be empty");
+    toast.error(t.languageError);
     return false;
   }
 
   if (!not_emp(notes)) {
-    toast.error("Notes can't be empty");
+    toast.error(t.notesError);
     return false;
   }
 
   if (files.length == 0) {
-    toast.error("files can't be empty");
+    toast.error(t.fileError);
     return false;
   }
 
@@ -172,41 +171,41 @@ const TranscriptValid = (form) => {
   };
 };
 
-export const FormValidator = (form) => {
+export const FormValidator = (t, form) => {
   switch (form.FORM_TYPE) {
     case "Translation":
-      return translationValid(form);
+      return translationValid(t, form);
     case "Interpreting":
-      return InterpretingValid(form);
+      return InterpretingValid(t, form);
     case "Transcription":
-      return TranscriptValid(form);
+      return TranscriptValid(t, form);
     case "VIP Services":
-      return InterpretingValid(form);
+      return InterpretingValid(t, form);
     default:
-      return translationValid(form);
+      return translationValid(t, form);
   }
 };
 
-export const FormValidatorTalkToUs = (form) => {
+export const FormValidatorTalkToUs = (t, form) => {
   const { full_name, email, subject, notes, files, from } = form;
 
   if (!not_emp(full_name)) {
-    toast.error("Name can't be empty");
+    toast.error(t.nameError);
     return false;
   }
 
   if (!not_emp(email)) {
-    toast.error("E-mail can't be empty");
+    toast.error(t.mailError);
     return false;
   }
 
   if (!not_emp(subject)) {
-    toast.error("Subject can't be empty");
+    toast.error(t.subjectError);
     return false;
   }
 
   if (!not_emp(notes)) {
-    toast.error("Notes can't be empty");
+    toast.error(t.notesError);
     return false;
   }
 
@@ -219,9 +218,3 @@ export const FormValidatorTalkToUs = (form) => {
     from,
   };
 };
-
-// export const SendingData = () => {
-//   return toast.loading("Sending Data...", {
-//     icon: <CircularProgress sx={{ color: "blue" }} />,
-//   });
-// };

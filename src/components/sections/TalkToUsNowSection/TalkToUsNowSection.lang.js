@@ -16,6 +16,13 @@ const texts = {
     submit: "Submit",
     bt1: "Contact Us",
     bt2: "Find Us",
+    error: "Error while sending data.",
+    sending: "Sending in progress",
+    success: "data sent successfully",
+    nameError: "Full Name is empty",
+    mailError: "E-mail is empty",
+    subjectError: "Subject is empty",
+    notesError: "Notes is empty",
   },
 
   fr: {
@@ -32,6 +39,13 @@ const texts = {
     submit: "Envoyer",
     bt1: "Nous contacter",
     bt2: "Trouvez-nous",
+    error: "Erreur lors de l'envoi des données.",
+    sending: "Envoi en cours...",
+    success: "Les données ont été envoyées avec succès.",
+    nameError: "Le champ 'Nom Complet' est vide.",
+    mailError: "Le champ 'E-mail' est vide.",
+    subjectError: "Le champ 'Objet' est vide.",
+    notesError: "Le champ 'Votre Message' est vide.",
   },
 };
 

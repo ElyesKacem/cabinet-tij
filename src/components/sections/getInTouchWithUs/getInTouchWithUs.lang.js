@@ -10,6 +10,14 @@ const texts = {
     subject: "Subject",
     content: "Your subject",
     sub: "Submit",
+    error: "Error while sending data.",
+    sending: "Sending in progress",
+    success: "data sent successfully",
+    nameError: "Full Name is empty",
+    mailError: "E-mail is empty",
+    companyError: "Company is empty",
+    subjectError: "Subject is empty",
+    contentError: "Content is empty",
   },
 
   fr: {
@@ -20,6 +28,14 @@ const texts = {
     subject: "Objet",
     content: "Votre demande",
     sub: "Envoyer",
+    error: "Erreur lors de l'envoi des données.",
+    sending: "Envoi en cours",
+    success: "Les données ont été envoyées avec succès.",
+    nameError: "Le champ 'Nom Complet' est vide.",
+    mailError: "Le champ 'E-mail' est vide.",
+    companyError: "Le champ 'Structure' est vide.",
+    subjectError: "Le champ 'Objet' est vide.",
+    contentError: "Le champ 'Votre demande' est vide",
   },
 };
 

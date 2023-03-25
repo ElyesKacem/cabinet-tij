@@ -23,6 +23,7 @@ import { FormValidator } from "./validation";
 import { toast } from "react-hot-toast";
 import { RQ_service } from "../../../services/services";
 import GetText from "./GetQuoteForm.lang";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const initial_form = {
   full_name: "",
@@ -123,17 +124,20 @@ export default function GetQuoteForm() {
     if (form.files?.length > 0) mFiles.push(...form.files);
     // console.log(mFiles);
     // console.log("xaxa", { ...form, files: mFiles });
-    let result = FormValidator({ ...form, files: mFiles });
+    let result = FormValidator(t, { ...form, files: mFiles });
     if (sending) {
-      toast.error("we are sending please wait");
+      toast.error(t.sending);
       return;
     }
     if (result) {
       set_sending(true);
+      toast.loading(t.sending, {
+        icon: <CircularProgress sx={{ color: "blue" }} />,
+      });
       RQ_service(
         result,
         () => {
-          toast.success("data sent successfully");
+          toast.success(t.success);
           setForm({ ...initial_form });
           // delete file from state
           set_sending(false);
@@ -142,7 +146,7 @@ export default function GetQuoteForm() {
           // use the navigation
         },
         () => {
-          toast.error("there was an error while sending data");
+          toast.error(t.error);
           set_sending(false);
         }
       );
@@ -350,7 +354,7 @@ export default function GetQuoteForm() {
                           />
                           <FormRequestQuoteInput
                             required
-                            title="Languages "
+                            title={t.language}
                             style={{ marginTop: 86 }}
                             onChange={handle_change}
                             name="languages"

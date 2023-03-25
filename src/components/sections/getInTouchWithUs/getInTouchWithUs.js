@@ -9,7 +9,7 @@ import { RQ_service } from "../../../services/services";
 import LeftRightButton from "../../buttons/leftRightButton/leftRightButton";
 import GetText from "./getInTouchWithUs.lang";
 import { LangContext } from "../../../context/Lang.context";
-
+import CircularProgress from "@mui/material/CircularProgress";
 const GLOBAL_MEDIA_QUERIES = {
   large: "(min-width: 700px)",
   medium: "(max-width: 700px)",
@@ -40,23 +40,26 @@ export default function GetInTouchWithUs() {
   };
 
   const Handle_submit = () => {
-    let result = FormValidator(form);
+    let result = FormValidator(texts, form);
 
     if (sending) {
-      toast.error("we are sending please wait");
+      toast.error(texts.sending);
     }
     if (result) {
       set_sending(true);
+      toast.loading(texts.sending, {
+        icon: <CircularProgress sx={{ color: "blue" }} />,
+      });
       RQ_service(
         result,
         () => {
-          toast.success("data sent successfully");
+          toast.success(texts.success);
           setForm({ ...initial_form });
           set_sending(false);
           // use the navigation
         },
         () => {
-          toast.error("there was an error while sending data");
+          toast.error(texts.error);
           set_sending(false);
         }
       );

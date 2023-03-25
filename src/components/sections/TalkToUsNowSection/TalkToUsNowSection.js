@@ -14,6 +14,7 @@ import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { FormValidatorTalkToUs } from "../GetQuoteForm/validation";
 import GetText from "./TalkToUsNowSection.lang";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function TalkToUsNowSection() {
   const t = GetText();
@@ -66,20 +67,23 @@ export default function TalkToUsNowSection() {
   const Handle_submit = () => {
     setForm({ ...form, files: [file] });
 
-    const result = FormValidatorTalkToUs({ ...form, files: [file] });
+    const result = FormValidatorTalkToUs(t, { ...form, files: [file] });
     console.log("prepared data ", { ...form, files: [file] });
     console.log("Result : ", result);
 
     if (sending) {
-      toast.error("we are sending please wait");
+      toast.error(t.sending);
       return;
     }
     if (result) {
       set_sending(true);
+      toast.loading(t.sending, {
+        icon: <CircularProgress sx={{ color: "blue" }} />,
+      });
       RQ_service(
         result,
         () => {
-          toast.success("data sent successfully");
+          toast.success(t.success);
           setForm({ ...initial_form });
           // delete file from state
           set_sending(false);
@@ -88,7 +92,7 @@ export default function TalkToUsNowSection() {
           // use the navigation
         },
         () => {
-          toast.error("there was an error while sending data");
+          toast.error(t.error);
           set_sending(false);
         }
       );

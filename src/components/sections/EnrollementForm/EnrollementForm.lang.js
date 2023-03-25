@@ -48,6 +48,9 @@ const texts = {
     identityDoc: "Missing Identity document file",
     criminalRecord: "Missing Criminal record extract file",
     proPhoto: "Missing Professional Photo file",
+    error: "Error while sending data.",
+    sending: "Sending in progress",
+    success: "data sent successfully",
   },
 
   fr: {
@@ -96,6 +99,9 @@ const texts = {
     identityDoc: "Ajouter un fichier pour Justificatif d'itentité",
     criminalRecord: "Ajouter un fichier pour Casier judiciaire",
     proPhoto: "Ajouter un fichier pour Photographe professionnelle",
+    error: "Erreur lors de l'envoi des données.",
+    sending: "Envoi en cours",
+    success: "Les données ont été envoyées avec succès.",
   },
 };
 
