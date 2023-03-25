@@ -3,9 +3,11 @@ import "./homePhotoHover.css";
 import RemoveIcon from "@mui/icons-material/Remove";
 import EastIcon from "@mui/icons-material/East";
 import { HashLink } from "react-router-hash-link";
+import { LangContext } from "../../context/Lang.context";
 
 export default function HomePhotoHover(props) {
   const [gradient, setGradient] = React.useState(true);
+  const { lang } = React.useContext(LangContext);
   // console.log(props.img);
   return (
     <div>
@@ -42,7 +44,7 @@ export default function HomePhotoHover(props) {
 
           <div className="homePhotoHover-paragraph">
             <HashLink className="resetcss" smooth to="/requestquote#getquote">
-              <div>Learn More</div>
+              <div>{lang == "en" ? "Learn More" : "En savoir plus"}</div>
             </HashLink>
           </div>
         </div>

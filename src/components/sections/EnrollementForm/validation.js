@@ -33,17 +33,17 @@ export const FormValidator = (t, form) => {
   }
 
   if (!not_emp(phone)) {
-    toast.error(t.phone);
+    toast.error(t.phoneError);
     return false;
   }
 
   if (!not_emp(city)) {
-    toast.error(t.city);
+    toast.error(t.cityError);
     return false;
   }
 
   if (!not_emp(adress)) {
-    toast.error(t.adress);
+    toast.error(t.adressError);
     return false;
   }
 
@@ -63,7 +63,7 @@ export const FormValidator = (t, form) => {
   }
 
   if (!not_emp(exp1)) {
-    toast.error(t.exp1);
+    toast.error(t.exp1Error);
     return false;
   }
   if (!not_emp(diploma2)) {
@@ -72,7 +72,7 @@ export const FormValidator = (t, form) => {
   }
 
   if (!not_emp(exp2)) {
-    toast.error(t.exp2);
+    toast.error(t.exp2Error);
     return false;
   }
   if (!inseeKbis) {

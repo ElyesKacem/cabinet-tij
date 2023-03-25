@@ -7,6 +7,7 @@ import GetQuote from "./pages/GetQuote";
 import Footer from "./components/sections/footer/footer";
 import Enrollement from "./pages/Enrollement";
 import TalkToUsNow from "./pages/TalkToUsNow";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TakePartInOurCommunity from "./pages/TakePartInOurCommunity";
 import Toaster from "./components/Toast/Toast";
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/enrollement" element={<Enrollement />} />
             <Route path="/talktousnow" element={<TalkToUsNow />} />
             <Route path="/termeofuse" element={<TermOfUse />} />
+            <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
             <Route
               path="/TakePartInOurCommunity"
               element={<TakePartInOurCommunity />}

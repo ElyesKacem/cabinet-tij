@@ -313,29 +313,53 @@ export default function Footer() {
       {/* <br /><br /><br /><br /><br /> */}
       <div
         style={{
-          height: 40,
+          // height: 40,
+          padding: 10,
           color: "#d9d9d9",
           backgroundColor: "black",
           position: "relative",
           zIndex: "3",
+          textAlign: "center",
         }}
       >
         <div className="footer-b-container">
-          <HashLink
+          <div
             style={{
               color: "#d9d9d9",
               textDecoration: "none",
-              cursor: "pointer",
             }}
-            className="resetcss"
-            smooth
-            to="/termeofuse#termeofuse"
           >
-            <div>
-              Terms of use &nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; Privacy Policy
+            <div style={{ display: "flex", justifyContent: "space-around" }}>
+              <div>
+                <HashLink
+                  style={{ cursor: "pointer" }}
+                  className="resetcss"
+                  smooth
+                  to="/PrivacyPolicy#"
+                >
+                  {lang == "en" ? "Terms of use" : "Motions légales"}{" "}
+                  &nbsp;&nbsp;
+                </HashLink>
+              </div>
+              <div>|</div>
+              <div>
+                <HashLink
+                  style={{ cursor: "pointer" }}
+                  className="resetcss"
+                  smooth
+                  to="/termeofuse#termeofuse"
+                >
+                  &nbsp;&nbsp;&nbsp;{" "}
+                  {lang == "en"
+                    ? "Privacy Policy"
+                    : "Politique de Confidentialité"}
+                </HashLink>
+              </div>
             </div>
-          </HashLink>
-          <div>All Copyrights © are reserved 2022</div>
+          </div>
+          <div style={{ minWidth: 110 }}>
+            All Copyrights © are reserved 2023
+          </div>
         </div>
       </div>
     </div>
