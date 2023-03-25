@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { FormValidatorTalkToUs } from "../GetQuoteForm/validation";
 import GetText from "./TalkToUsNowSection.lang";
 import CircularProgress from "@mui/material/CircularProgress";
+import { FadeLeft, FadeRight } from "../../../assets/Animations/Fade";
 
 export default function TalkToUsNowSection() {
   const t = GetText();
@@ -291,125 +292,133 @@ export default function TalkToUsNowSection() {
                 <VerticalBar top="90%" left="90%" />
                 <Grid container>
                   <Grid item xs={6}>
-                    <div
-                      style={{
-                        width: "90%",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                      }}
-                    >
-                      <div>
-                        <div className="TalkToUsNowSection-title">{t.h1}</div>
-                        <br />
-                        <div className="TalkToUsNowSection-paragraph">
-                          {t.parag} &nbsp;
-                          <Link
-                            style={{ textDecoration: "none" }}
-                            to="/enrollement"
-                          >
-                            <b>{t.app}</b>
-                          </Link>
+                    <FadeRight>
+                      <div
+                        style={{
+                          width: "90%",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div>
+                          <div className="TalkToUsNowSection-title">{t.h1}</div>
+                          <br />
+                          <div className="TalkToUsNowSection-paragraph">
+                            {t.parag} &nbsp;
+                            <Link
+                              style={{ textDecoration: "none" }}
+                              to="/enrollement"
+                            >
+                              <b>{t.app}</b>
+                            </Link>
+                          </div>
+                          <br />
+                          <br />
+
+                          <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                              <FormRequestQuoteInput
+                                onChange={handle_change}
+                                name="full_name"
+                                value={form.full_name}
+                                required
+                                title={t.name}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              <FormRequestQuoteInput
+                                onChange={handle_change}
+                                name="email"
+                                value={form.email}
+                                required
+                                title={t.mail}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              <FormRequestQuoteInput
+                                onChange={handle_change}
+                                name="subject"
+                                value={form.subject}
+                                required
+                                title={t.subject}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              <FormRequestQuoteInputMultiline
+                                multiline
+                                required
+                                title={t.notes}
+                                onChange={handle_change}
+                                name="notes"
+                                value={form.notes}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              <label
+                                htmlFor="file"
+                                className="TalkToUsNowSection-selectFile"
+                              >
+                                <input
+                                  type="file"
+                                  className="displaynone"
+                                  id="file"
+                                  onChange={(event) => handlePutFile(event)}
+                                />
+                                <div className="TalkToUsNowSection-selectFile-button">
+                                  <div>{t.selectFile}</div>
+                                </div>
+                                <div className="EnrollementAttachFiles-fileName">
+                                  {!fileName && t.nofile}
+                                  {fileName && fileName}
+                                </div>
+                                {fileName && (
+                                  <ClearIcon
+                                    sx={{ fill: "url(#linearColors)" }}
+                                    style={{
+                                      transform: "translateY(2px)",
+                                      cursor: "pointer",
+                                    }}
+                                    onClick={handleRemoveFile}
+                                  ></ClearIcon>
+                                )}
+                              </label>
+                            </Grid>
+                          </Grid>
                         </div>
                         <br />
                         <br />
-
-                        <Grid container spacing={2}>
-                          <Grid item xs={12}>
-                            <FormRequestQuoteInput
-                              onChange={handle_change}
-                              name="full_name"
-                              value={form.full_name}
-                              required
-                              title={t.name}
-                            />
-                          </Grid>
-                          <Grid item xs={12}>
-                            <FormRequestQuoteInput
-                              onChange={handle_change}
-                              name="email"
-                              value={form.email}
-                              required
-                              title={t.mail}
-                            />
-                          </Grid>
-                          <Grid item xs={12}>
-                            <FormRequestQuoteInput
-                              onChange={handle_change}
-                              name="subject"
-                              value={form.subject}
-                              required
-                              title={t.subject}
-                            />
-                          </Grid>
-                          <Grid item xs={12}>
-                            <FormRequestQuoteInputMultiline
-                              multiline
-                              required
-                              title={t.notes}
-                              onChange={handle_change}
-                              name="notes"
-                              value={form.notes}
-                            />
-                          </Grid>
-                          <Grid item xs={12}>
-                            <label
-                              htmlFor="file"
-                              className="TalkToUsNowSection-selectFile"
-                            >
-                              <input
-                                type="file"
-                                className="displaynone"
-                                id="file"
-                                onChange={(event) => handlePutFile(event)}
-                              />
-                              <div className="TalkToUsNowSection-selectFile-button">
-                                <div>{t.selectFile}</div>
-                              </div>
-                              <div className="EnrollementAttachFiles-fileName">
-                                {!fileName && t.nofile}
-                                {fileName && fileName}
-                              </div>
-                              {fileName && (
-                                <ClearIcon
-                                  sx={{ fill: "url(#linearColors)" }}
-                                  style={{
-                                    transform: "translateY(2px)",
-                                    cursor: "pointer",
-                                  }}
-                                  onClick={handleRemoveFile}
-                                ></ClearIcon>
-                              )}
-                            </label>
-                          </Grid>
-                        </Grid>
+                        <div
+                          onClick={Handle_submit}
+                          className="getQuoteForm-submit-button"
+                        >
+                          {t.submit}
+                        </div>
                       </div>
-                      <br />
-                      <br />
-                      <div
-                        onClick={Handle_submit}
-                        className="getQuoteForm-submit-button"
-                      >
-                        {t.submit}
-                      </div>
-                    </div>
+                    </FadeRight>
                   </Grid>
                   <Grid item xs={6} style={{ transform: "translateY(20px)" }}>
-                    <HoverImage img={Image1} />
-                    <br />
-                    <br />
-                    <br />
-                    <div className="TalkToUsNowSection-container">
-                      <div className="TalkToUsNowSection-subContainer">
-                        <div className="TalkToUsNowSection-pinkb">{t.bt1}</div>
-                        <div>contact@cabinet-tij.com</div>
-                        <div>06 99 08 64 91</div>
+                    <FadeLeft>
+                      <HoverImage img={Image1} />
+                      <br />
+                      <br />
+                      <br />
+                      <div className="TalkToUsNowSection-container">
+                        <div className="TalkToUsNowSection-subContainer">
+                          <div className="TalkToUsNowSection-pinkb">
+                            {t.bt1}
+                          </div>
+                          <div>contact@cabinet-tij.com</div>
+                          <div>06 99 08 64 91</div>
+                        </div>
+                        <div className="TalkToUsNowSection-subContainer">
+                          <div className="TalkToUsNowSection-pinkb">
+                            {t.bt2}
+                          </div>
+                          <div>3 rue Boccador, 75008 Paris.</div>
+                        </div>
                       </div>
-                      <div className="TalkToUsNowSection-subContainer">
-                        <div className="TalkToUsNowSection-pinkb">{t.bt2}</div>
-                        <div>3 rue Boccador, 75008 Paris.</div>
-                      </div>
-                    </div>
+                    </FadeLeft>
                   </Grid>
                 </Grid>
               </div>

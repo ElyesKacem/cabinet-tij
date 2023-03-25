@@ -6,6 +6,7 @@ import WeAreHereButton from "../../buttons/WeAreHereButton/WeAreHereButton";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
 import GetText from "./WeAreHere.lang";
+import { FadeLeft, FadeUp } from "../../../assets/Animations/Fade";
 
 export default function WeAreHere() {
   const t = GetText();
@@ -23,40 +24,42 @@ export default function WeAreHere() {
           <React.Fragment>
             {matches.large && (
               <div className="WeAreHere-container">
-                <div className="WeAreHere-container-title">
-                  {t.h1}
-                  <br /> {t.h2}
-                </div>
+                <FadeLeft>
+                  <div className="WeAreHere-container-title">
+                    {t.h1}
+                    <br /> {t.h2}
+                  </div>
 
-                <p className="WeAreHere-container-paragraph">{t.parag}</p>
+                  <p className="WeAreHere-container-paragraph">{t.parag}</p>
 
-                <div
-                  style={{
-                    display: "flex",
-                    gap: 10,
-                    alignItems: matches.vsmall && "center",
-                    flexDirection: matches.vsmall && "column",
-                  }}
-                >
-                  <HashLink
-                    className="resetcss"
-                    smooth
-                    to="/enrollement#enrollement"
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: 10,
+                      alignItems: matches.vsmall && "center",
+                      flexDirection: matches.vsmall && "column",
+                    }}
                   >
-                    <WeAreHereButton title={t.bt1} />
-                  </HashLink>
-                  <HashLink
-                    className="resetcss"
-                    smooth
-                    to="/TalkToUsNow#contact"
-                  >
-                    <WeAreHereButton
-                      title={t.bt2}
-                      arrowColor="#6E533D"
-                      style={{ backgroundColor: "white", color: "#6E533D" }}
-                    />
-                  </HashLink>
-                </div>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/enrollement#enrollement"
+                    >
+                      <WeAreHereButton title={t.bt1} />
+                    </HashLink>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <WeAreHereButton
+                        title={t.bt2}
+                        arrowColor="#6E533D"
+                        style={{ backgroundColor: "white", color: "#6E533D" }}
+                      />
+                    </HashLink>
+                  </div>
+                </FadeLeft>
               </div>
             )}
             {matches.medium && (
@@ -69,52 +72,54 @@ export default function WeAreHere() {
                   paddingRight: matches.small && 0,
                 }}
               >
-                <div
-                  className="WeAreHere-container-title"
-                  style={{
-                    fontSize: matches.small && 43,
-                  }}
-                >
-                  {t.h1 + " " + t.h2}
-                </div>
-
-                <p
-                  className="WeAreHere-container-paragraph"
-                  style={{ width: "auto" }}
-                >
-                  It will take less than 10 minutes for you to submit your
-                  application <br /> for affiliation. We will get back to you as
-                  soon as possible!
-                </p>
-
-                <div
-                  style={{
-                    display: "flex",
-                    gap: 10,
-                    justifyContent: matches.small && "center",
-                    alignItems: matches.vsmall && "center",
-                    flexDirection: matches.vsmall && "column",
-                  }}
-                >
-                  <HashLink
-                    className="resetcss"
-                    smooth
-                    to="/enrollement#enrollement"
+                <FadeUp>
+                  <div
+                    className="WeAreHere-container-title"
+                    style={{
+                      fontSize: matches.small && 43,
+                    }}
                   >
-                    <WeAreHereButton title={t.bt1} />
-                  </HashLink>
-                  <HashLink
-                    className="resetcss"
-                    smooth
-                    to="/TalkToUsNow#contact"
+                    {t.h1 + " " + t.h2}
+                  </div>
+
+                  <p
+                    className="WeAreHere-container-paragraph"
+                    style={{ width: "auto" }}
                   >
-                    <WeAreHereButton
-                      title={t.bt2}
-                      arrowColor="#6E533D"
-                      style={{ backgroundColor: "white", color: "#6E533D" }}
-                    />
-                  </HashLink>
-                </div>
+                    It will take less than 10 minutes for you to submit your
+                    application <br /> for affiliation. We will get back to you
+                    as soon as possible!
+                  </p>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: 10,
+                      justifyContent: matches.small && "center",
+                      alignItems: matches.vsmall && "center",
+                      flexDirection: matches.vsmall && "column",
+                    }}
+                  >
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/enrollement#enrollement"
+                    >
+                      <WeAreHereButton title={t.bt1} />
+                    </HashLink>
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/TalkToUsNow#contact"
+                    >
+                      <WeAreHereButton
+                        title={t.bt2}
+                        arrowColor="#6E533D"
+                        style={{ backgroundColor: "white", color: "#6E533D" }}
+                      />
+                    </HashLink>
+                  </div>
+                </FadeUp>
               </div>
             )}
           </React.Fragment>

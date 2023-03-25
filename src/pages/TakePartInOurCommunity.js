@@ -1,4 +1,5 @@
 import React from "react";
+import { FadeUp } from "../assets/Animations/Fade";
 import OurCommunityHeader from "../components/sections/OurCommunityHeader/OurCommunityHeader";
 import UniqueOpportunity from "../components/sections/UniqueOpportunity/UniqueOpportunity";
 import WeAreHere from "../components/sections/WeAreHere/WeAreHere";
@@ -8,8 +9,12 @@ export default function TakePartInOurCommunity() {
   return (
     <div>
       <OurCommunityHeader />
-      <UniqueOpportunity />
-      <YouAreProficient />
+      <FadeUp>
+        <UniqueOpportunity />
+      </FadeUp>
+      <FadeUp>
+        <YouAreProficient />
+      </FadeUp>
       <WeAreHere />
     </div>
   );

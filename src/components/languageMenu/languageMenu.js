@@ -34,6 +34,7 @@ export default function LanguageMenu(props) {
                 style={{ display: "flex", cursor: "pointer" }}
                 onClick={() => {
                   setLang("en");
+                  localStorage.setItem("lang", "en");
                   setRotateButton(!rotateButton);
                   props.setHideMenu(!rotateButton);
                 }}
@@ -49,6 +50,7 @@ export default function LanguageMenu(props) {
                   setLang("fr");
                   setRotateButton(!rotateButton);
                   props.setHideMenu(!rotateButton);
+                  localStorage.setItem("lang", "fr");
                 }}
                 style={{ display: "flex", cursor: "pointer" }}
               >

@@ -16,6 +16,7 @@ import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 import GetText from "./OurCommunityHeader.lang";
 import { LangContext } from "../../../context/Lang.context";
+import { FadeDown } from "../../../assets/Animations/Fade";
 
 export default function OurCommunityHeader() {
   const { lang } = React.useContext(LangContext);
@@ -43,214 +44,227 @@ export default function OurCommunityHeader() {
       <br />
       <br />
       <br />
-      <Media queries={GLOBAL_MEDIA_QUERIES}>
-        {(matches) => (
-          <React.Fragment>
-            {matches.large && (
-              <div className="OurCommunityHeader-container">
-                <Grid container>
-                  <Grid item xs={6}>
-                    <div className="OurCommunityHeader-title">{t.wh}</div>
-                    <div className="OurCommunityHeader-title blue">{t.bh}</div>
-                    <br />
-                    <div className="OurCommunityHeader-paragraph">
-                      {t.parag}
-                    </div>
-                    <br />
-                    <br />
-                    <img
-                      src={DownArrow}
-                      className="EnrollementImage-Arrow"
-                      style={{ height: 60, width: "auto", marginLeft: "40%" }}
-                    />
-                  </Grid>
-                  <Grid item xs={6}>
-                    <div style={{ width: 650, transform: "translateY(20px)" }}>
-                      <HoverImage img={Image1} />
-                      <img
-                        src={lang == "fr" ? ActivityButtonFr : ActivityButton}
-                        className="EnrollementImage-flyButton EnrollementImage-tl"
-                        style={{ transform: lang == "fr" && "scale(1.38)" }}
-                      />
-                      <img
-                        src={lang == "fr" ? IncomeButtonFr : IncomeButton}
-                        className="EnrollementImage-flyButton EnrollementImage-bl"
-                      />
-                      <img
-                        src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
-                        className="EnrollementImage-flyButton EnrollementImage-tr"
-                      />
-                      <img
-                        src={lang == "fr" ? SupportButtonFr : SupportButton}
-                        className="EnrollementImage-flyButton EnrollementImage-br"
-                        style={{ transform: lang == "fr" && "scale(1.5)" }}
-                      />
-                    </div>
-                  </Grid>
-                </Grid>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-              </div>
-            )}
-            {(matches.medium || matches.smallerMedium) && (
-              <div className="OurCommunityHeader-container">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 100,
-                  }}
-                >
-                  <div>
-                    <div className="OurCommunityHeader-title">{t.wh}</div>
-                    <div className="OurCommunityHeader-title blue">{t.bh}</div>
-                    <br />
-                    <div className="OurCommunityHeader-paragraph">
-                      {t.parag}
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                  </div>
-                  <div>
-                    <br />
-                    <br />
-                    <br />
-                    <div
-                      style={{
-                        width: 650,
-                        transform: "translate(-20px,-20px)",
-                      }}
-                    >
-                      <HoverImage img={Image1} />
-                      <img
-                        src={lang == "fr" ? ActivityButtonFr : ActivityButton}
-                        className="EnrollementImage-flyButton EnrollementImage-tl"
-                        style={{ transform: lang == "fr" && "scale(1.38)" }}
-                      />
-                      <img
-                        src={lang == "fr" ? IncomeButtonFr : IncomeButton}
-                        className="EnrollementImage-flyButton EnrollementImage-bl"
-                      />
-                      <img
-                        src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
-                        className="EnrollementImage-flyButton EnrollementImage-tr"
-                      />
-                      <img
-                        src={lang == "fr" ? SupportButtonFr : SupportButton}
-                        className="EnrollementImage-flyButton EnrollementImage-br"
-                        style={{ transform: lang == "fr" && "scale(1.5)" }}
-                      />
-                    </div>{" "}
-                    <div style={{ display: "flex", justifyContent: "center" }}>
+      <FadeDown>
+        <Media queries={GLOBAL_MEDIA_QUERIES}>
+          {(matches) => (
+            <React.Fragment>
+              {matches.large && (
+                <div className="OurCommunityHeader-container">
+                  <Grid container>
+                    <Grid item xs={6}>
+                      <div className="OurCommunityHeader-title">{t.wh}</div>
+                      <div className="OurCommunityHeader-title blue">
+                        {t.bh}
+                      </div>
+                      <br />
+                      <div className="OurCommunityHeader-paragraph">
+                        {t.parag}
+                      </div>
+                      <br />
+                      <br />
                       <img
                         src={DownArrow}
                         className="EnrollementImage-Arrow"
-                        style={{ height: 60, width: "auto" }}
+                        style={{ height: 60, width: "auto", marginLeft: "40%" }}
                       />
-                    </div>
-                  </div>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <div
+                        style={{ width: 650, transform: "translateY(20px)" }}
+                      >
+                        <HoverImage img={Image1} />
+                        <img
+                          src={lang == "fr" ? ActivityButtonFr : ActivityButton}
+                          className="EnrollementImage-flyButton EnrollementImage-tl"
+                          style={{ transform: lang == "fr" && "scale(1.38)" }}
+                        />
+                        <img
+                          src={lang == "fr" ? IncomeButtonFr : IncomeButton}
+                          className="EnrollementImage-flyButton EnrollementImage-bl"
+                        />
+                        <img
+                          src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
+                          className="EnrollementImage-flyButton EnrollementImage-tr"
+                        />
+                        <img
+                          src={lang == "fr" ? SupportButtonFr : SupportButton}
+                          className="EnrollementImage-flyButton EnrollementImage-br"
+                          style={{ transform: lang == "fr" && "scale(1.5)" }}
+                        />
+                      </div>
+                    </Grid>
+                  </Grid>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                 </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-              </div>
-            )}
-            {(matches.small || matches.smallerSmall || matches.verySmall) && (
-              <div className="OurCommunityHeader-container">
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {" "}
-                  <div className="OurCommunityHeader-title">{t.wh}</div>
-                  <div className="OurCommunityHeader-title blue">{t.bh}</div>
-                  <div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <div
-                      style={{
-                        width: 650,
-                        transform: matches.verySmall
-                          ? "translateY(-80px)  scale(0.5)   "
-                          : matches.smallerSmall
-                          ? "translateY(-20px) scale(0.8)"
-                          : "translateY(-20px)",
-                      }}
-                    >
-                      <HoverImage img={Image1} />
-                      <img
-                        src={lang == "fr" ? ActivityButtonFr : ActivityButton}
-                        className="EnrollementImage-flyButton EnrollementImage-tl"
-                        style={{ transform: lang == "fr" && "scale(1.38)" }}
-                      />
-                      <img
-                        src={lang == "fr" ? IncomeButtonFr : IncomeButton}
-                        className="EnrollementImage-flyButton EnrollementImage-bl"
-                      />
-                      <img
-                        src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
-                        className="EnrollementImage-flyButton EnrollementImage-tr"
-                      />
-                      <img
-                        src={lang == "fr" ? SupportButtonFr : SupportButton}
-                        className="EnrollementImage-flyButton EnrollementImage-br"
-                        style={{ transform: lang == "fr" && "scale(1.5)" }}
-                      />
+              )}
+              {(matches.medium || matches.smallerMedium) && (
+                <div className="OurCommunityHeader-container">
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: 100,
+                    }}
+                  >
+                    <div>
+                      <div className="OurCommunityHeader-title">{t.wh}</div>
+                      <div className="OurCommunityHeader-title blue">
+                        {t.bh}
+                      </div>
+                      <br />
+                      <div className="OurCommunityHeader-paragraph">
+                        {t.parag}
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                     </div>
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                      <img
-                        src={DownArrow}
-                        className="EnrollementImage-Arrow"
+                    <div>
+                      <br />
+                      <br />
+                      <br />
+                      <div
                         style={{
-                          height: 60,
-                          width: "auto",
-                          transform: matches.verySmall && "translateY(-100px)",
+                          width: 650,
+                          transform: "translate(-20px,-20px)",
                         }}
-                      />
+                      >
+                        <HoverImage img={Image1} />
+                        <img
+                          src={lang == "fr" ? ActivityButtonFr : ActivityButton}
+                          className="EnrollementImage-flyButton EnrollementImage-tl"
+                          style={{ transform: lang == "fr" && "scale(1.38)" }}
+                        />
+                        <img
+                          src={lang == "fr" ? IncomeButtonFr : IncomeButton}
+                          className="EnrollementImage-flyButton EnrollementImage-bl"
+                        />
+                        <img
+                          src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
+                          className="EnrollementImage-flyButton EnrollementImage-tr"
+                        />
+                        <img
+                          src={lang == "fr" ? SupportButtonFr : SupportButton}
+                          className="EnrollementImage-flyButton EnrollementImage-br"
+                          style={{ transform: lang == "fr" && "scale(1.5)" }}
+                        />
+                      </div>{" "}
+                      <div
+                        style={{ display: "flex", justifyContent: "center" }}
+                      >
+                        <img
+                          src={DownArrow}
+                          className="EnrollementImage-Arrow"
+                          style={{ height: 60, width: "auto" }}
+                        />
+                      </div>
                     </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                   </div>
-                  <div>
-                    <br />
-                    <div
-                      className="OurCommunityHeader-paragraph"
-                      style={{ width: "auto" }}
-                    >
-                      {t.parag}
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </div>
+              )}
+              {(matches.small || matches.smallerSmall || matches.verySmall) && (
+                <div className="OurCommunityHeader-container">
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {" "}
+                    <div className="OurCommunityHeader-title">{t.wh}</div>
+                    <div className="OurCommunityHeader-title blue">{t.bh}</div>
+                    <div>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <div
+                        style={{
+                          width: 650,
+                          transform: matches.verySmall
+                            ? "translateY(-80px)  scale(0.5)   "
+                            : matches.smallerSmall
+                            ? "translateY(-20px) scale(0.8)"
+                            : "translateY(-20px)",
+                        }}
+                      >
+                        <HoverImage img={Image1} />
+                        <img
+                          src={lang == "fr" ? ActivityButtonFr : ActivityButton}
+                          className="EnrollementImage-flyButton EnrollementImage-tl"
+                          style={{ transform: lang == "fr" && "scale(1.38)" }}
+                        />
+                        <img
+                          src={lang == "fr" ? IncomeButtonFr : IncomeButton}
+                          className="EnrollementImage-flyButton EnrollementImage-bl"
+                        />
+                        <img
+                          src={lang == "fr" ? FlexibleButtonFr : FlexibleButton}
+                          className="EnrollementImage-flyButton EnrollementImage-tr"
+                        />
+                        <img
+                          src={lang == "fr" ? SupportButtonFr : SupportButton}
+                          className="EnrollementImage-flyButton EnrollementImage-br"
+                          style={{ transform: lang == "fr" && "scale(1.5)" }}
+                        />
+                      </div>
+                      <div
+                        style={{ display: "flex", justifyContent: "center" }}
+                      >
+                        <img
+                          src={DownArrow}
+                          className="EnrollementImage-Arrow"
+                          style={{
+                            height: 60,
+                            width: "auto",
+                            transform:
+                              matches.verySmall && "translateY(-100px)",
+                          }}
+                        />
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                     </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    <div>
+                      <br />
+                      <div
+                        className="OurCommunityHeader-paragraph"
+                        style={{ width: "auto" }}
+                      >
+                        {t.parag}
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </React.Fragment>
-        )}
-      </Media>
+              )}
+            </React.Fragment>
+          )}
+        </Media>
+      </FadeDown>
     </div>
   );
 }

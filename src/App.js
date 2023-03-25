@@ -17,10 +17,13 @@ import { LangContext } from "./context/Lang.context";
 import TermOfUse from "./pages/TermOfUse";
 
 function App() {
-  const [lang, setLang] = useState("fr");
+  const [lang, setLang] = useState(localStorage.getItem("lang") || "fr");
 
   useEffect(() => {
-    // console.log(lang);
+    if (!localStorage.getItem("lang")) {
+      localStorage.setItem("lang", "fr");
+      console.log();
+    }
   }, [lang]);
 
   return (

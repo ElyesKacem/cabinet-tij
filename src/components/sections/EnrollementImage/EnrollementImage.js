@@ -1,5 +1,4 @@
 import React from "react";
-import Arrow from "../../../assets/images/DownArrow.png";
 import "./EnrollementImage.css";
 import Background from "../../../assets/images/EnrollementImage.jpg";
 import BackgroundImage from "../../backgroundImage/backgroundImage";
@@ -7,6 +6,7 @@ import DownArrow from "../../../assets/images/DownArrow.png";
 import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 import GetText from "./EnrollementImage.lang";
+import { FadeDown, FadeUp } from "../../../assets/Animations/Fade";
 
 export default function EnrollementImage() {
   const text = GetText();
@@ -27,37 +27,41 @@ export default function EnrollementImage() {
             <React.Fragment>
               {matches.medium && (
                 <div style={{ padding: 20 }}>
-                  <div
-                    className="EnrollementImage-title"
-                    style={{ fontSize: matches.small ? 45 : 60 }}
-                  >
-                    {text.title}
-                  </div>
-                  <div className="EnrollementImage-paragraph">
-                    {text.paragraph1}
-                    <br /> {text.paragraph2}
-                  </div>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <img src={DownArrow} className="EnrollementImage-Arrow" />
+                  <FadeDown>
+                    <div
+                      className="EnrollementImage-title"
+                      style={{ fontSize: matches.small ? 45 : 60 }}
+                    >
+                      {text.title}
+                    </div>
+                    <div className="EnrollementImage-paragraph">
+                      {text.paragraph1}
+                      <br /> {text.paragraph2}
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <img src={DownArrow} className="EnrollementImage-Arrow" />
+                  </FadeDown>
                 </div>
               )}
 
               {matches.large && (
-                <div>
-                  <div className="EnrollementImage-title">{text.title}</div>
-                  <div className="EnrollementImage-paragraph">
-                    {text.paragraph1}
-                    <br /> {text.paragraph2}
+                <FadeDown>
+                  <div>
+                    <div className="EnrollementImage-title">{text.title}</div>
+                    <div className="EnrollementImage-paragraph">
+                      {text.paragraph1}
+                      <br /> {text.paragraph2}
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <img src={DownArrow} className="EnrollementImage-Arrow" />
                   </div>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <img src={DownArrow} className="EnrollementImage-Arrow" />
-                </div>
+                </FadeDown>
               )}
             </React.Fragment>
           )}
