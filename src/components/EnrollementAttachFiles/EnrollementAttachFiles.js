@@ -6,18 +6,19 @@ import { LangContext } from "../../context/Lang.context";
 
 export default function EnrollementAttachFiles(props) {
   const { lang } = React.useContext(LangContext);
-  const { onChange } = props;
+
   const [fileName, setFileName] = React.useState();
   const [file, setFile] = React.useState();
   const handlePutFile = (e) => {
-    onChange(e);
-    let file = e.target.value;
-    setFile(file);
-    const fileNameArray = file.split("\\");
-    setFileName(fileNameArray[fileNameArray.length - 1]);
+    if (e.target.files.length > 0) {
+      let file = e.target.files[0];
+      props.setState(file);
+      const fileNameArray = file?.name.split("\\");
+      setFileName(fileNameArray[fileNameArray.length - 1]);
+    }
   };
   const handleRemoveFile = () => {
-    setFile(null);
+    props.setState(false);
     setFileName(null);
   };
   return (
@@ -26,15 +27,12 @@ export default function EnrollementAttachFiles(props) {
         <AddIcon></AddIcon> <div>{props.title}</div>
       </div>
       <div>
-        <label
-          htmlFor={props.id}
-          className="EnrollementAttachFiles-label"
-          onChange={(event) => handlePutFile(event)}
-        >
+        <label htmlFor={props.id} className="EnrollementAttachFiles-label">
           <input
             type="file"
             className="EnrollementAttachFiles-file-input"
             id={props.id}
+            onChange={(event) => handlePutFile(event)}
           />
           <div className="EnrollementAttachFiles-button">
             <div className="EnrollementAttachFiles-button-title">

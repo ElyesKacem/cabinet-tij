@@ -36,6 +36,10 @@ const initial_form = {
 export default function EnrollementForm() {
   const [form, setForm] = useState({ ...initial_form });
   const [sending, set_sending] = useState(false);
+  const [inseeKbis, setInseeKbis] = useState(false);
+  const [identityDoc, setIdentityDoc] = useState(false);
+  const [criminalRecord, setCriminalRecord] = useState(false);
+  const [proPhoto, setProPhoto] = useState(false);
   const t = GetText();
 
   const handle_change = (event) => {
@@ -52,12 +56,19 @@ export default function EnrollementForm() {
   };
 
   const Handle_submit = () => {
-    let result = FormValidator(form);
+    let result = FormValidator({
+      ...form,
+      inseeKbis: inseeKbis,
+      identityDoc: identityDoc,
+      criminalRecord: criminalRecord,
+      proPhoto: proPhoto,
+    });
     if (sending) {
       toast.error("we are sending please wait");
       return;
     }
     if (result) {
+      console.log("result yoyo", result);
       set_sending(true);
       RQ_service(
         result,
@@ -65,6 +76,10 @@ export default function EnrollementForm() {
           toast.success("data sent successfully");
           setForm({ ...initial_form });
           set_sending(false);
+          setInseeKbis(false);
+          setIdentityDoc(false);
+          setCriminalRecord(false);
+          setProPhoto(false);
           // use the navigation
         },
         () => {
@@ -222,27 +237,36 @@ export default function EnrollementForm() {
                   <div className="Enrollement-attach-files">
                     <div>
                       <EnrollementAttachFiles
-                        onChange={handle_image}
+                        setState={setInseeKbis}
                         title={t.attestation}
                       />
                       <EnrollementAttachFiles
-                        onChange={handle_image}
+                        setState={setIdentityDoc}
                         title={t.identity}
                       />
                     </div>
                     <div>
                       <EnrollementAttachFiles
-                        onChange={handle_image}
+                        setState={setCriminalRecord}
                         title={t.criminal}
                       />
                       <EnrollementAttachFiles
-                        onChange={handle_image}
+                        setState={setProPhoto}
                         title={t.prof}
                       />
                     </div>
                   </div>
                   <label>
-                    <input className="displaynone" type="file" multiple />
+                    <input
+                      className="displaynone"
+                      onChange={(e) => {
+                        handle_image(e);
+
+                        form.files.push([e.target.files]);
+                      }}
+                      type="file"
+                      multiple
+                    />
                     <div
                       className="EnrollementForm-multiple-files"
                       style={{ transform: "translateX(10px)" }}
@@ -267,23 +291,32 @@ export default function EnrollementForm() {
                     <br />
                     <EnrollementAttachFiles
                       onChange={handle_image}
-                      title="Attestation insee or Kbis"
+                      title={t.attestation}
                     />
                     <EnrollementAttachFiles
                       onChange={handle_image}
-                      title="Identity document"
+                      title={t.identity}
                     />
                     <EnrollementAttachFiles
                       onChange={handle_image}
-                      title="Criminal record extract"
+                      title={t.criminal}
                     />
                     <EnrollementAttachFiles
                       onChange={handle_image}
-                      title="Professional Photo"
+                      title={t.prof}
                     />
                   </div>
                   <label>
-                    <input className="displaynone" type="file" multiple />
+                    <input
+                      className="displaynone"
+                      onChange={(e) => {
+                        handle_image(e);
+
+                        form.files.push([e.target.files]);
+                      }}
+                      type="file"
+                      multiple
+                    />
                     <div
                       className="EnrollementForm-multiple-files"
                       style={{
@@ -292,7 +325,7 @@ export default function EnrollementForm() {
                       }}
                     >
                       <b style={{ fontFamily: "sans-serif" }}>+</b>
-                      <span>Add More Files</span>
+                      <span>{t.addMoreFile}</span>
                     </div>
                   </label>
                 </>

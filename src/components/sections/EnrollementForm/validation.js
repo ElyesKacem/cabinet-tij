@@ -16,66 +16,86 @@ export const FormValidator = (form) => {
     diploma2,
     exp2,
     files,
+    inseeKbis,
+    identityDoc,
+    criminalRecord,
+    proPhoto,
   } = form;
 
   if (!not_emp(full_name)) {
-    toast.error("Name can't be empty");
+    toast.error("Name is empty");
     return false;
   }
 
   if (!not_emp(email)) {
-    toast.error("Email can't be empty");
+    toast.error("Email is empty");
     return false;
   }
 
   if (!not_emp(phone)) {
-    toast.error("Phone Number can't be empty");
+    toast.error("Phone Number is empty");
     return false;
   }
 
   if (!not_emp(city)) {
-    toast.error("city can't be empty");
+    toast.error("City is empty");
     return false;
   }
 
   if (!not_emp(adress)) {
-    toast.error("adress can't be empty");
+    toast.error("Adress is empty");
     return false;
   }
 
   if (!not_emp(postal_code)) {
-    toast.error("postal code can't be empty");
+    toast.error("Postal code is empty");
     return false;
   }
 
   if (!not_emp(spoken_lang)) {
-    toast.error("spoken languages can't be empty");
+    toast.error("Spoken languages is empty");
     return false;
   }
 
   if (!not_emp(diploma1)) {
-    toast.error("diploma 1  can't be empty");
+    toast.error("Diploma 1  is empty");
     return false;
   }
 
   if (!not_emp(exp1)) {
-    toast.error("Experience 1  can't be empty");
+    toast.error("Experience 1  is empty");
     return false;
   }
   if (!not_emp(diploma2)) {
-    toast.error("diploma 2  can't be empty");
+    toast.error("diploma 2  is empty");
     return false;
   }
 
   if (!not_emp(exp2)) {
-    toast.error("Experience 2  can't be empty");
+    toast.error("Experience 2  is empty");
     return false;
   }
-
-  if (files.length < 4) {
-    toast.error("Please put all files");
+  if (!inseeKbis) {
+    toast.error("Attestation insee or Kbis is empty");
     return false;
   }
+  if (!identityDoc) {
+    toast.error("Identity document is empty");
+    return false;
+  }
+  if (!criminalRecord) {
+    toast.error("Criminal record extract is empty");
+    return false;
+  }
+  if (!proPhoto) {
+    toast.error("Professional Photo is empty");
+    return false;
+  }
+  let filesToAdd = files;
+  filesToAdd.push(inseeKbis);
+  filesToAdd.push(identityDoc);
+  filesToAdd.push(criminalRecord);
+  filesToAdd.push(proPhoto);
 
   return {
     full_name,
@@ -90,6 +110,6 @@ export const FormValidator = (form) => {
     exp1,
     diploma2,
     exp2,
-    files,
+    files: filesToAdd,
   };
 };
