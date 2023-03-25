@@ -7,6 +7,7 @@ import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
 import GetText from "./proJoinOurTeam.lang";
+import { FadeUp } from "../../../assets/Animations/Fade";
 
 export default function ProJoinOurTeam() {
   const text = GetText();
@@ -29,34 +30,36 @@ export default function ProJoinOurTeam() {
                   rgba2="0,0,0"
                   opacity="0.3"
                 >
-                  <div className="proJoinOurTeam-content">
-                    <VerticalBar top="100px" left="50px" />
-                    <VerticalBar top="200px" left="70%" />
-                    <VerticalBar top="400px" left="90%" />
+                  <FadeUp>
+                    <div className="proJoinOurTeam-content">
+                      <VerticalBar top="100px" left="50px" />
+                      <VerticalBar top="200px" left="70%" />
+                      <VerticalBar top="400px" left="90%" />
 
-                    <div className="proJoinOurTeam-content-header">
-                      {text.title1} <br />{" "}
-                      <b style={{ fontSize: 50 }}>{text.title2}</b>
-                    </div>
-                    <div className="proJoinOurTeam-content-paragraph">
-                      {text.content1}
-                    </div>
-                    <div className="proJoinOurTeam-content-paragraph">
-                      {text.content2}
-                    </div>
+                      <div className="proJoinOurTeam-content-header">
+                        {text.title1} <br />{" "}
+                        <b style={{ fontSize: 50 }}>{text.title2}</b>
+                      </div>
+                      <div className="proJoinOurTeam-content-paragraph">
+                        {text.content1}
+                      </div>
+                      <div className="proJoinOurTeam-content-paragraph">
+                        {text.content2}
+                      </div>
 
-                    <HashLink
-                      className="resetcss"
-                      smooth
-                      to="TakePartInOurCommunity#community"
-                    >
-                      <LeftRightButton
-                        title={text.bt}
-                        style={{ transform: "translateY(35px)" }}
-                        iconStyle={{ transform: "translateY(-1px)" }}
-                      />
-                    </HashLink>
-                  </div>
+                      <HashLink
+                        className="resetcss"
+                        smooth
+                        to="TakePartInOurCommunity#community"
+                      >
+                        <LeftRightButton
+                          title={text.bt}
+                          style={{ transform: "translateY(35px)" }}
+                          iconStyle={{ transform: "translateY(-1px)" }}
+                        />
+                      </HashLink>
+                    </div>
+                  </FadeUp>
                 </BackgroundImage>
               </>
             )}
@@ -69,45 +72,47 @@ export default function ProJoinOurTeam() {
                   rgba2="0,0,0"
                   opacity="0.3"
                 >
-                  <div
-                    className="proJoinOurTeam-content"
-                    style={{
-                      height: "100%",
-                    }}
-                  >
-                    {/* <VerticalBar top="100px" left="50px" />
+                  <FadeUp>
+                    <div
+                      className="proJoinOurTeam-content"
+                      style={{
+                        height: "100%",
+                      }}
+                    >
+                      {/* <VerticalBar top="100px" left="50px" />
                     <VerticalBar top="200px" left="70%" />
                     <VerticalBar top="400px" left="90%" /> */}
-                    <div style={{ padding: 20 }}>
-                      <div
-                        className="proJoinOurTeam-content-header"
-                        style={{ fontSize: matches.small && 48 }}
-                      >
-                        {text.title1} <br />{" "}
-                        <b style={{ fontSize: 50 }}>{text.title2}</b>
+                      <div style={{ padding: 20 }}>
+                        <div
+                          className="proJoinOurTeam-content-header"
+                          style={{ fontSize: matches.small && 48 }}
+                        >
+                          {text.title1} <br />{" "}
+                          <b style={{ fontSize: 50 }}>{text.title2}</b>
+                        </div>
+                        <div className="proJoinOurTeam-content-paragraph">
+                          {text.content1}
+                        </div>
+                        <div className="proJoinOurTeam-content-paragraph">
+                          {text.content2}
+                        </div>
+                        <HashLink
+                          className="resetcss"
+                          smooth
+                          to="TakePartInOurCommunity#community"
+                        >
+                          <LeftRightButton
+                            iconStyle={{ transform: "translateY(-1px)" }}
+                            title={text.bt}
+                            style={{
+                              transform: "translateY(35px)",
+                              margin: "auto",
+                            }}
+                          />
+                        </HashLink>
                       </div>
-                      <div className="proJoinOurTeam-content-paragraph">
-                        {text.content1}
-                      </div>
-                      <div className="proJoinOurTeam-content-paragraph">
-                        {text.content2}
-                      </div>
-                      <HashLink
-                        className="resetcss"
-                        smooth
-                        to="TakePartInOurCommunity#community"
-                      >
-                        <LeftRightButton
-                          iconStyle={{ transform: "translateY(-1px)" }}
-                          title={text.bt}
-                          style={{
-                            transform: "translateY(35px)",
-                            margin: "auto",
-                          }}
-                        />
-                      </HashLink>
                     </div>
-                  </div>
+                  </FadeUp>
                 </BackgroundImage>
               </>
             )}

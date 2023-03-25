@@ -10,6 +10,7 @@ import Image5 from "../../../assets/images/services/personal.jpg";
 import Grid from "@mui/material/Grid";
 import Media from "react-media";
 import GetText from "./ourServices.lang.js";
+import { FadeDown, FadeUp } from "../../../assets/Animations/Fade.jsx";
 
 export default function OurServices() {
   const [isHover, setIsHover] = useState([false, false, false, false, false]);
@@ -52,40 +53,44 @@ export default function OurServices() {
             <React.Fragment>
               {matches.large && (
                 <>
-                  <Container>
-                    <div style={{ padding: "0px 50px 0px 55px" }}>
-                      <div
-                        className="greyEmptyRectangle"
-                        style={{ transform: "translateX(-40px)" }}
-                      />
+                  <FadeDown>
+                    <Container>
+                      <div style={{ padding: "0px 50px 0px 55px" }}>
+                        <div
+                          className="greyEmptyRectangle"
+                          style={{ transform: "translateX(-40px)" }}
+                        />
 
-                      <div className="greyRectangle">
-                        <b style={{ fontSize: 25 }}>{texts.our_serv}</b>
+                        <div className="greyRectangle">
+                          <b style={{ fontSize: 25 }}>{texts.our_serv}</b>
+                        </div>
+                        <br />
+                        <br />
+                        <div className="firstClass">{texts.we_offer}</div>
                       </div>
-                      <br />
-                      <br />
-                      <div className="firstClass">{texts.we_offer}</div>
-                    </div>
-                  </Container>
+                    </Container>
+                  </FadeDown>
                   <div style={{ margin: 50 }}>
-                    <Grid
-                      container
-                      spacing={4}
-                      direction="row"
-                      justifyContent="center"
-                      alignItems="center"
-                    >
-                      {data.map((element, index) => (
-                        <Grid key={index} item>
-                          <HomePhotoHover
-                            setIsHover={setIsHover}
-                            id={index}
-                            img={element.img}
-                            title={element.title}
-                          />
-                        </Grid>
-                      ))}
-                    </Grid>
+                    <FadeUp>
+                      <Grid
+                        container
+                        spacing={4}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                      >
+                        {data.map((element, index) => (
+                          <Grid key={index} item>
+                            <HomePhotoHover
+                              setIsHover={setIsHover}
+                              id={index}
+                              img={element.img}
+                              title={element.title}
+                            />
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </FadeUp>
                   </div>
 
                   <div
@@ -145,52 +150,56 @@ export default function OurServices() {
               )}
               {(matches.medium || matches.small) && (
                 <>
-                  <Container>
-                    <div
-                      style={{
-                        padding: "0px 15px 0px 50px",
-                      }}
-                    >
-                      <div
-                        className="greyEmptyRectangle"
-                        style={{ transform: "translateX(-40px)" }}
-                      />
-
-                      <div className="greyRectangle">
-                        <b style={{ fontSize: 25 }}>{texts.our_serv}</b>
-                      </div>
-                      <br />
-                      <br />
+                  <FadeDown>
+                    <Container>
                       <div
                         style={{
-                          fontSize: matches.small && 27,
-                          marginTop: matches.small && 20,
+                          padding: "0px 15px 0px 50px",
                         }}
-                        className="firstClass"
                       >
-                        {texts.we_offer}
+                        <div
+                          className="greyEmptyRectangle"
+                          style={{ transform: "translateX(-40px)" }}
+                        />
+
+                        <div className="greyRectangle">
+                          <b style={{ fontSize: 25 }}>{texts.our_serv}</b>
+                        </div>
+                        <br />
+                        <br />
+                        <div
+                          style={{
+                            fontSize: matches.small && 27,
+                            marginTop: matches.small && 20,
+                          }}
+                          className="firstClass"
+                        >
+                          {texts.we_offer}
+                        </div>
                       </div>
-                    </div>
-                  </Container>
+                    </Container>
+                  </FadeDown>
                   <div style={{ margin: 50 }}>
-                    <Grid
-                      container
-                      spacing={4}
-                      direction="column"
-                      justifyContent="center"
-                      alignItems="center"
-                    >
-                      {data.map((element, index) => (
-                        <Grid key={index} item>
-                          <HomePhotoHover
-                            setIsHover={setIsHover}
-                            id={index}
-                            img={element.img}
-                            title={element.title}
-                          />
-                        </Grid>
-                      ))}
-                    </Grid>
+                    <FadeUp>
+                      <Grid
+                        container
+                        spacing={4}
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                      >
+                        {data.map((element, index) => (
+                          <Grid key={index} item>
+                            <HomePhotoHover
+                              setIsHover={setIsHover}
+                              id={index}
+                              img={element.img}
+                              title={element.title}
+                            />
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </FadeUp>
                   </div>
                 </>
               )}

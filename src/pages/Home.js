@@ -12,26 +12,23 @@ export default function Home() {
   return (
     <div id="home">
       <VideoSection />
-      {/* <FadeLeft> */}
+
       <Services />
-      {/* </FadeLeft> */}
 
-      {/* <FadeUp> */}
-      <WhyChoiceUs />
-      {/* </FadeUp> */}
-      {/* <FadeRight> */}
-      <DoYouNeedMoreAssistance />
-      {/* </FadeRight> */}
-      {/* <FadeLeft> */}
+      <FadeUp>
+        <WhyChoiceUs />
+      </FadeUp>
+      <FadeUp>
+        <DoYouNeedMoreAssistance />
+      </FadeUp>
+
       <OurServices />
-      {/* </FadeLeft> */}
-      {/* <FadeRight> */}
-      <GetInTouchWithUs />
-      {/* </FadeRight> */}
 
-      {/* <FadeLeft> */}
+      <div data-aos="flip-left" data-aos-duration="1500">
+        <GetInTouchWithUs />
+      </div>
+
       <ProJoinOurTeam />
-      {/* </FadeLeft> */}
     </div>
   );
 }
