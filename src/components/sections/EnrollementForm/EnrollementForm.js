@@ -303,10 +303,8 @@ export default function EnrollementForm() {
 
         <br />
         <br />
-        <div className="EnrollementForm-submit">
-          <div className="EnrollementForm-submit-title" onClick={Handle_submit}>
-            {t.submit}
-          </div>
+        <div className="EnrollementForm-submit" onClick={Handle_submit}>
+          <div className="EnrollementForm-submit-title">{t.submit}</div>
         </div>
 
         <br />

@@ -11,8 +11,10 @@ import Media from "react-media";
 import "./footer.css";
 import { HashLink } from "react-router-hash-link";
 import GetText from "./footer.lang.js";
+import { LangContext } from "../../../context/Lang.context.js";
 
 export default function Footer() {
+  const { lang } = React.useContext(LangContext);
   const text = GetText();
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1253px)",
@@ -122,21 +124,6 @@ export default function Footer() {
                   className="footer-container"
                   style={{ flexDirection: "column", alignItems: "center" }}
                 >
-                  {/* <div style={{ display: "flex" }}>
-                    <FooterText
-                      title={text.about}
-                      content={text.about_pg}
-                    />
-                    <HashLink
-                    className="resetcss"
-                    smooth
-                    to="/TalkToUsNow#contact"
-                  ><FooterText title="Support" content="Contact Us" /></HashLink>
-                  </div>
-                  <div style={{ display: "flex" }}>
-                    <FooterText title="Solutions" />
-                    <FooterText title="Information" content=" " />
-                  </div> */}
                   <br />
                   <br />
 
@@ -160,7 +147,12 @@ export default function Footer() {
                         <FooterText title="Support" content="Contact Us" />
                       </HashLink>
                       <FooterText
-                        style={{ transform: "translateY(50px)" }}
+                        style={{
+                          transform:
+                            lang == "en"
+                              ? "translateY(50px)"
+                              : "translateY(20px)",
+                        }}
                         title="Information"
                         content=" "
                       />

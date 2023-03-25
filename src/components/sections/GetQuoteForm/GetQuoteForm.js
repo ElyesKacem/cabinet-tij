@@ -118,13 +118,12 @@ export default function GetQuoteForm() {
   }, [menuSelected]);
   // console.log(form);
   const Handle_submit = () => {
-    let result = FormValidator(form);
-
     let mFiles = [];
     if (singleFile) mFiles.push(singleFile);
     if (form.files?.length > 0) mFiles.push(...form.files);
     // console.log(mFiles);
-    /*
+    // console.log("xaxa", { ...form, files: mFiles });
+    let result = FormValidator({ ...form, files: mFiles });
     if (sending) {
       toast.error("we are sending please wait");
       return;
@@ -138,6 +137,8 @@ export default function GetQuoteForm() {
           setForm({ ...initial_form });
           // delete file from state
           set_sending(false);
+          setSingleFile(null);
+          setSingleFileName(false);
           // use the navigation
         },
         () => {
@@ -145,7 +146,7 @@ export default function GetQuoteForm() {
           set_sending(false);
         }
       );
-    }*/
+    }
   };
 
   const GLOBAL_MEDIA_QUERIES = {
@@ -489,16 +490,18 @@ export default function GetQuoteForm() {
                           </b>{" "}
                           {t.AMF}
                         </div>
+
+                        {/* To show FILES :  */}
                         {form.files ? (
                           <>
-                            {form.files.map((file, i) => (
+                            {/* {form.files.map((file, i) => (
                               <div
                                 className="getQuoteForm-input-file-label-text"
                                 key={i}
                               >
                                 &nbsp;&nbsp;{file.name}{" "}
                               </div>
-                            ))}
+                            ))} */}
                           </>
                         ) : (
                           <span className="getQuoteForm-input-file-label-text">
@@ -506,7 +509,8 @@ export default function GetQuoteForm() {
                           </span>
                         )}
                       </label>
-                      {form.files.length > 0 && (
+                      {/* X of showed Files, on lines =_= 492 */}
+                      {/* {form.files.length > 0 && (
                         <div
                           className="getQuoteForm-input-file-label-X"
                           onClick={() => {
@@ -521,7 +525,7 @@ export default function GetQuoteForm() {
                             className="getQuoteForm-input-file-label-X"
                           ></ClearIcon>{" "}
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </Grid>
                 </Grid>

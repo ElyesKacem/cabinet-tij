@@ -62,6 +62,15 @@ export const FormValidator = (form) => {
     toast.error("Experience 1  can't be empty");
     return false;
   }
+  if (!not_emp(diploma2)) {
+    toast.error("diploma 2  can't be empty");
+    return false;
+  }
+
+  if (!not_emp(exp2)) {
+    toast.error("Experience 2  can't be empty");
+    return false;
+  }
 
   if (files.length < 4) {
     toast.error("Please put all files");

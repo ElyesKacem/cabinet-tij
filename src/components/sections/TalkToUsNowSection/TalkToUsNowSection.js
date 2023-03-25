@@ -17,8 +17,8 @@ import GetText from "./TalkToUsNowSection.lang";
 
 export default function TalkToUsNowSection() {
   const t = GetText();
-  const [fileName, setFileName] = React.useState();
-  const [file, setFile] = React.useState();
+  const [fileName, setFileName] = React.useState(false);
+  const [file, setFile] = React.useState(false);
   const [sending, set_sending] = useState(false);
   const initial_form = {
     full_name: "",
@@ -32,24 +32,31 @@ export default function TalkToUsNowSection() {
   const [form, setForm] = useState({ ...initial_form });
 
   const handlePutFile = (e) => {
-    let file = e.target.value;
-    setFile(file);
-    const fileNameArray = file.split("\\");
-    setFileName(fileNameArray[fileNameArray.length - 1]);
+    if (e.target.files.length > 0) {
+      // console.log("333", e.target.files[0]);
+
+      let files = e.target.files[0];
+      setFile(files);
+
+      const fileNameArray = files.name.split("\\");
+      setFileName(fileNameArray[fileNameArray.length - 1]);
+    }
   };
 
   const handleRemoveFile = () => {
     setFile(null);
     setFileName(null);
+    // setForm({ ...form, files: [] });
+    // console.log("removed");
   };
 
-  const handle_image = (event) => {
-    const files = [...form.files];
-    Object.values(event.target.files).map((file) => {
-      files.push(file);
-    });
-    setForm({ ...form, files: files });
-  };
+  // const handle_image = (event) => {
+  //   const files = [...form.files];
+  //   Object.values(event.target.files).map((file) => {
+  //     files.push(file);
+  //   });
+  //   setForm({ ...form, files: files });
+  // };
 
   const handle_change = (event) => {
     const { name, value } = event.target;
@@ -57,7 +64,11 @@ export default function TalkToUsNowSection() {
   };
 
   const Handle_submit = () => {
-    let result = FormValidatorTalkToUs(form);
+    setForm({ ...form, files: [file] });
+
+    const result = FormValidatorTalkToUs({ ...form, files: [file] });
+    console.log("prepared data ", { ...form, files: [file] });
+    console.log("Result : ", result);
 
     if (sending) {
       toast.error("we are sending please wait");
@@ -72,6 +83,8 @@ export default function TalkToUsNowSection() {
           setForm({ ...initial_form });
           // delete file from state
           set_sending(false);
+          setFileName(false);
+          setFile(false);
           // use the navigation
         },
         () => {

@@ -41,7 +41,7 @@ export default function GetInTouchWithUs() {
 
   const Handle_submit = () => {
     let result = FormValidator(form);
-    console.log(result);
+
     if (sending) {
       toast.error("we are sending please wait");
     }
@@ -132,18 +132,19 @@ export default function GetInTouchWithUs() {
                 </Grid>
                 <br />
                 <br />
-                <LeftRightButton
-                  onClick={Handle_submit}
-                  iconStyle={{ transform: "scale(0.9) translateY(-3px)" }}
-                  isWhite
-                  title={texts.sub}
-                  style={{
-                    transform: "translateX(15px)",
-                    fontSize: 16,
-                    padding: "14px 0px 6px 10px",
-                    width: 160,
-                  }}
-                />
+                <div onClick={Handle_submit}>
+                  <LeftRightButton
+                    iconStyle={{ transform: "scale(0.9) translateY(-3px)" }}
+                    isWhite
+                    title={texts.sub}
+                    style={{
+                      transform: "translateX(15px)",
+                      fontSize: 16,
+                      padding: "14px 0px 6px 10px",
+                      width: 160,
+                    }}
+                  />
+                </div>
               </div>
               <br />
               <br />
