@@ -8,6 +8,9 @@ export default function FooterText(props) {
   const ms = {
     ...props.style,
   };
+  const ms2 = {
+    ...props.style2,
+  };
   return (
     <div className="FooterText" style={ms}>
       <div className="footerText-title">
@@ -17,7 +20,7 @@ export default function FooterText(props) {
         <div className="footerText-title">&nbsp;&nbsp;&nbsp;{props.title}</div>
       </div>
       <br />
-      <div className="footerText-content">
+      <div className="footerText-content" style={ms2}>
         {props.title != ("Support" || "Information") && props.content}
         {props.title == "Support" && "Contact us"}
         {props.title == "Solutions" &&

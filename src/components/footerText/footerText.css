@@ -29,6 +29,8 @@
     justify-content: center;
   }
   .footerText-content {
+    /* margin-left: 52px; */
+    /* max-width: 100%; */
     text-align: center;
   }
   .footerText-title {

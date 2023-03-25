@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { FormValidatorTalkToUs } from "../GetQuoteForm/validation";
 import GetText from "./TalkToUsNowSection.lang";
 import CircularProgress from "@mui/material/CircularProgress";
-import { FadeLeft, FadeRight } from "../../../assets/Animations/Fade";
+import { FadeLeft, FadeRight, FadeUp } from "../../../assets/Animations/Fade";
 
 export default function TalkToUsNowSection() {
   const t = GetText();
@@ -69,8 +69,8 @@ export default function TalkToUsNowSection() {
     setForm({ ...form, files: [file] });
 
     const result = FormValidatorTalkToUs(t, { ...form, files: [file] });
-    console.log("prepared data ", { ...form, files: [file] });
-    console.log("Result : ", result);
+    // console.log("prepared data ", { ...form, files: [file] });
+    // console.log("Result : ", result);
 
     if (sending) {
       toast.error(t.sending);
@@ -131,42 +131,50 @@ export default function TalkToUsNowSection() {
                 <br />
                 <div style={{ transform: "translateY(-20px)" }}>
                   {matches.small && (
-                    <div style={{ transform: "scale(0.6)" }}>
-                      <HoverImage img={Image1} />
-                    </div>
+                    <FadeUp>
+                      <div style={{ transform: "scale(0.6)" }}>
+                        <HoverImage img={Image1} />
+                      </div>
+                    </FadeUp>
                   )}
                   {!matches.small && (
                     <>
                       <br />
                       <br />
                       <br />
-                      <div>
-                        <HoverImage img={Image1} />
-                        <br />
-                        <br />
-                        <br />
-                      </div>
+                      <FadeUp>
+                        {" "}
+                        <div>
+                          <HoverImage img={Image1} />
+                          <br />
+                          <br />
+                          <br />
+                        </div>
+                      </FadeUp>
                     </>
                   )}
 
-                  <div className="TalkToUsNowSection-container">
-                    <div
-                      className="TalkToUsNowSection-subContainer"
-                      style={{ paddingLeft: 8, paddingRight: 8 }}
-                    >
-                      <div className="TalkToUsNowSection-pinkb">{t.bt1}</div>
-                      <div>contact@cabinet-tij.com</div>
+                  <FadeUp>
+                    <div className="TalkToUsNowSection-container">
+                      <div
+                        className="TalkToUsNowSection-subContainer"
+                        style={{ paddingLeft: 8, paddingRight: 8 }}
+                      >
+                        <div className="TalkToUsNowSection-pinkb">{t.bt1}</div>
+                        <div>contact@cabinet-tij.com</div>
 
-                      <div>06 99 08 64 91</div>
+                        <div>06 99 08 64 91</div>
+                      </div>
+                      <div
+                        className="TalkToUsNowSection-subContainer"
+                        style={{ paddingLeft: 8, paddingRight: 8 }}
+                      >
+                        <div className="TalkToUsNowSection-pinkb">{t.bt2}</div>
+
+                        <div>3 rue Boccador, 75008 Paris.</div>
+                      </div>
                     </div>
-                    <div
-                      className="TalkToUsNowSection-subContainer"
-                      style={{ paddingLeft: 8, paddingRight: 8 }}
-                    >
-                      <div className="TalkToUsNowSection-pinkb">{t.bt2}</div>
-                      <div>3 rue Boccador, 75008 Paris.</div>
-                    </div>
-                  </div>
+                  </FadeUp>
                 </div>
                 <br />
                 <br />

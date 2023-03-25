@@ -10,7 +10,7 @@ export default function HomePhotoHover(props) {
   const { lang } = React.useContext(LangContext);
   // console.log(props.img);
   return (
-    <div>
+    <div style={{ marginTop: 10 }}>
       <div
         className="homePhotoHover"
         style={{

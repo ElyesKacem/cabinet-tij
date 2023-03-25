@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/navbar/navbar";
-import logoFrance from "./assets/images/franceR.png";
+
 import GetQuote from "./pages/GetQuote";
 import Footer from "./components/sections/footer/footer";
 import Enrollement from "./pages/Enrollement";
@@ -23,7 +23,6 @@ function App() {
   useEffect(() => {
     if (!localStorage.getItem("lang")) {
       localStorage.setItem("lang", "fr");
-      console.log();
     }
   }, [lang]);
 
@@ -32,9 +31,7 @@ function App() {
       <div className="gradient-color">
         <div className="myDiv2">
           <div className="bg2"></div>
-          <div>
-            <img className="logofr" src={logoFrance} />
-          </div>
+
           <Toaster position="top-center" />
           <Navbar />
           <Routes>

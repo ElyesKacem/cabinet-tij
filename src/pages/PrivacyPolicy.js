@@ -61,7 +61,7 @@ export default function TermOfUse() {
       <br />
       <br />
       <br />
-      <div style={{ width: "80%", textAlign: "center" }}>
+      <div style={{ width: "85%" }}>
         <Media queries={GLOBAL_MEDIA_QUERIES}>
           {(matches) => (
             <React.Fragment>
@@ -88,9 +88,10 @@ export default function TermOfUse() {
         <p
           style={{
             color: "white",
-            textAlign: "center",
+
             lineHeight: "1.5",
             marginTop: 50,
+            fontSize: 22,
           }}
         >
           {text.parag}

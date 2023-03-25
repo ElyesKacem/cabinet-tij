@@ -233,7 +233,10 @@ export default function Footer() {
                   <div style={{ transform: "translateX(10px)" }}>
                     <div>
                       <FooterText title={text.about} content={text.about_pg} />
-                      <FooterText title="Solutions" />
+                      <FooterText
+                        style2={{ textAlign: "center" }}
+                        title="Solutions"
+                      />
                     </div>
                     <div>
                       <FooterText title="Information" content=" " />
@@ -335,7 +338,7 @@ export default function Footer() {
                   style={{ cursor: "pointer" }}
                   className="resetcss"
                   smooth
-                  to="/PrivacyPolicy#"
+                  to="/termeofuse#termeofuse"
                 >
                   {lang == "en" ? "Terms of use" : "Motions légales"}{" "}
                   &nbsp;&nbsp;
@@ -347,7 +350,7 @@ export default function Footer() {
                   style={{ cursor: "pointer" }}
                   className="resetcss"
                   smooth
-                  to="/termeofuse#termeofuse"
+                  to="/PrivacyPolicy#"
                 >
                   &nbsp;&nbsp;&nbsp;{" "}
                   {lang == "en"
