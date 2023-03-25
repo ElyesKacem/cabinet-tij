@@ -27,7 +27,10 @@ export default function LanguageMenu(props) {
   return (
     <div style={mStyle}>
       <div>
-        <div className={rotateButton ? "dropDownMenu" : "dropUpMenu"}>
+        <div
+          style={{ transition: "all 0.8s" }}
+          className={rotateButton ? "dropDownMenu" : "dropUpMenu"}
+        >
           <div className="languageMenuContent-overlay" style={mOpacity}>
             <div className="languageMenuContent">
               <div
@@ -74,11 +77,16 @@ export default function LanguageMenu(props) {
         </linearGradient>
       </svg>
       <ExpandLessIcon
-        className={rotateButton ? "rotateButtonForward" : "rotateButtonBack"}
+        className={
+          rotateButton
+            ? "rotateButtonForward rotateButtonBack"
+            : "rotateButtonBack"
+        }
         sx={{
           fontSize: 50,
           fill: props.color ? "white" : "url(#linearColors)",
           cursor: "pointer",
+          transition: "all 0.7s",
         }}
         onClick={() => {
           setRotateButton(!rotateButton);
