@@ -20,7 +20,7 @@ const texts = {
 const GetText = () => {
   const { lang } = useContext(LangContext);
   if (!lang) {
-    return texts.en;
+    return texts.fr;
   } else {
     return texts[lang];
   }

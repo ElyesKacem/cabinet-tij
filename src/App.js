@@ -17,7 +17,7 @@ import { LangContext } from "./context/Lang.context";
 import TermOfUse from "./pages/TermOfUse";
 
 function App() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("fr");
 
   useEffect(() => {
     // console.log(lang);

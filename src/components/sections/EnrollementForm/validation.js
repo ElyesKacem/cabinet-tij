@@ -1,5 +1,6 @@
 import { not_emp } from "../../../Functions/validators";
 import { toast } from "react-hot-toast";
+import GetText from "./validation.lang";
 
 export const FormValidator = (form) => {
   const {
@@ -21,74 +22,74 @@ export const FormValidator = (form) => {
     criminalRecord,
     proPhoto,
   } = form;
-
+  const t = GetText();
   if (!not_emp(full_name)) {
-    toast.error("Name is empty");
+    toast.error(t.full_name);
     return false;
   }
 
   if (!not_emp(email)) {
-    toast.error("Email is empty");
+    toast.error(t.email);
     return false;
   }
 
   if (!not_emp(phone)) {
-    toast.error("Phone Number is empty");
+    toast.error(t.phone);
     return false;
   }
 
   if (!not_emp(city)) {
-    toast.error("City is empty");
+    toast.error(t.city);
     return false;
   }
 
   if (!not_emp(adress)) {
-    toast.error("Adress is empty");
+    toast.error(t.adress);
     return false;
   }
 
   if (!not_emp(postal_code)) {
-    toast.error("Postal code is empty");
+    toast.error(t.postal_code);
     return false;
   }
 
   if (!not_emp(spoken_lang)) {
-    toast.error("Spoken languages is empty");
+    toast.error(t.spoken_lang);
     return false;
   }
 
   if (!not_emp(diploma1)) {
-    toast.error("Diploma 1  is empty");
+    toast.error(t.diploma1);
     return false;
   }
 
   if (!not_emp(exp1)) {
-    toast.error("Experience 1  is empty");
+    toast.error(t.exp1);
     return false;
   }
   if (!not_emp(diploma2)) {
-    toast.error("diploma 2  is empty");
+    toast.error(t.diploma2);
     return false;
   }
 
   if (!not_emp(exp2)) {
-    toast.error("Experience 2  is empty");
+    toast.error(t.exp2);
     return false;
   }
   if (!inseeKbis) {
-    toast.error("Attestation insee or Kbis is empty");
+    toast.error(t.inseeKbis);
     return false;
   }
   if (!identityDoc) {
-    toast.error("Identity document is empty");
+    toast.error(t.identityDoc);
     return false;
   }
   if (!criminalRecord) {
-    toast.error("Criminal record extract is empty");
+    toast.error(t.criminalRecord);
     return false;
   }
   if (!proPhoto) {
-    toast.error("Professional Photo is empty");
+    toast.error(t.proPhoto);
     return false;
   }
   let filesToAdd = files;
