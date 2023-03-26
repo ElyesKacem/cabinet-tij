@@ -301,11 +301,11 @@ export default function GetQuoteForm() {
                               ? "getQuoteForm-animation translateYdown52"
                               : "getQuoteForm-animation"
                           }
-                          style={{ position: "relative", zIndex: "3" }}
+                          style={{ position: "relative", zIndex: "30" }}
                           required
-                          title="Location "
+                          title={t.Location}
                           onChange={handle_change}
-                          name={t.Location}
+                          name="location"
                           value={form?.location}
                         />
                         <FormRequestQuoteInput
