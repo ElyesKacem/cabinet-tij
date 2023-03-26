@@ -85,6 +85,7 @@ export default function EnrollementForm() {
           setProPhoto(false);
           // navigate("/");
           // use the navigation
+          window.location.reload(false);
         },
         () => {
           toast.error(t.error);

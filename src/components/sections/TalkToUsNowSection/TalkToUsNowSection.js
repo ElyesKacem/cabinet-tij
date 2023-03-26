@@ -104,6 +104,7 @@ export default function TalkToUsNowSection() {
     large: "(min-width: 1200px)",
     medium: "(max-width: 1200px)",
     small: " (max-width: 640px)",
+    vsmall: " (max-width: 471px)",
   };
   return (
     <div className="TalkToUsNowSection-background">
@@ -248,34 +249,90 @@ export default function TalkToUsNowSection() {
                             />
                           </div>
                           <div>
-                            <label
-                              htmlFor="file"
-                              className="TalkToUsNowSection-selectFile"
-                            >
-                              <input
-                                type="file"
-                                className="displaynone"
-                                id="file"
-                                onChange={(event) => handlePutFile(event)}
-                              />
-                              <div className="TalkToUsNowSection-selectFile-button">
-                                <div>{t.selectFile}</div>
-                              </div>
-                              <div className="EnrollementAttachFiles-fileName">
-                                {!fileName && t.nofile}
-                                {fileName && fileName}
-                              </div>
-                              {fileName && (
-                                <ClearIcon
-                                  sx={{ fill: "url(#linearColors)" }}
+                            {!matches.vsmall && (
+                              <label
+                                htmlFor="file"
+                                className="TalkToUsNowSection-selectFile"
+                              >
+                                <input
+                                  type="file"
+                                  className="displaynone"
+                                  id="file"
+                                  onChange={(event) => handlePutFile(event)}
+                                />
+                                <div className="TalkToUsNowSection-selectFile-button">
+                                  <div>{t.selectFile}</div>
+                                </div>
+                                <div className="EnrollementAttachFiles-fileName">
+                                  {!fileName && t.nofile}
+                                  {fileName && fileName}
+                                </div>
+                                {fileName && (
+                                  <ClearIcon
+                                    sx={{ fill: "url(#linearColors)" }}
+                                    style={{
+                                      transform: "translateY(2px)",
+                                      cursor: "pointer",
+                                    }}
+                                    onClick={handleRemoveFile}
+                                  ></ClearIcon>
+                                )}
+                              </label>
+                            )}
+                            {matches.vsmall && (
+                              <label
+                                htmlFor="file"
+                                className="TalkToUsNowSection-selectFile"
+                                style={{
+                                  flexDirection: "column",
+                                  alignItems: "start",
+                                }}
+                              >
+                                <input
+                                  type="file"
+                                  className="displaynone"
+                                  id="file"
+                                  onChange={(event) => handlePutFile(event)}
+                                />
+
+                                <div className="TalkToUsNowSection-selectFile-button">
+                                  <div>{t.selectFile}</div>
+                                </div>
+
+                                <div
                                   style={{
-                                    transform: "translateY(2px)",
-                                    cursor: "pointer",
+                                    display: "flex",
+                                    alignItems: "center",
                                   }}
-                                  onClick={handleRemoveFile}
-                                ></ClearIcon>
-                              )}
-                            </label>
+                                >
+                                  <div
+                                    className="EnrollementAttachFiles-fileName"
+                                    style={{
+                                      maxWidth: "70%",
+                                      display: "flex",
+                                      gap: 20,
+                                    }}
+                                  >
+                                    <div>
+                                      {!fileName && t.nofile}
+                                      {fileName && fileName}
+                                    </div>
+                                  </div>
+                                  <div>
+                                    {fileName && (
+                                      <ClearIcon
+                                        sx={{ fill: "url(#linearColors)" }}
+                                        style={{
+                                          transform: "translateY(2px)",
+                                          cursor: "pointer",
+                                        }}
+                                        onClick={handleRemoveFile}
+                                      ></ClearIcon>
+                                    )}
+                                  </div>
+                                </div>
+                              </label>
+                            )}
                           </div>
                         </div>
                       </div>
