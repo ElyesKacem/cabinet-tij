@@ -37,8 +37,8 @@ const initial_form = {
   notes: "",
   date: new Date(),
   files: [],
-  FORM_TYPE: "translation",
-  from: "Request a quote",
+  FORM_TYPE: "",
+  from: "",
 };
 
 export default function GetQuoteForm() {
@@ -114,7 +114,7 @@ export default function GetQuoteForm() {
     let selected = menuData.filter((item, index) => {
       return menuSelected[index];
     })[0].title;
-    // console.log(selected);
+    // console.log(menuSelected.indexOf(true));
     setForm({ ...form, FORM_TYPE: selected });
   }, [menuSelected]);
   // console.log(form);
@@ -122,9 +122,28 @@ export default function GetQuoteForm() {
     let mFiles = [];
     if (singleFile) mFiles.push(singleFile);
     if (form.files?.length > 0) mFiles.push(...form.files);
+    let from;
+    switch (menuSelected.indexOf(true)) {
+      case 0:
+        from = "Translation form";
+
+        break;
+      case 1:
+        from = "Interpreting form";
+
+        break;
+      case 2:
+        from = "Transcription form";
+
+        break;
+
+      default:
+        from = "VIP Service form";
+        break;
+    }
     // console.log(mFiles);
     // console.log("xaxa", { ...form, files: mFiles });
-    let result = FormValidator(t, { ...form, files: mFiles });
+    let result = FormValidator(t, { ...form, files: mFiles, from: from });
     if (sending) {
       toast.error(t.sending);
       return;

@@ -8,7 +8,7 @@ export default function EnrollementAttachFiles(props) {
   const { lang } = React.useContext(LangContext);
 
   const [fileName, setFileName] = React.useState();
-  const [file, setFile] = React.useState();
+  // const [file, setFile] = React.useState();
   const handlePutFile = (e) => {
     if (e.target.files.length > 0) {
       let file = e.target.files[0];

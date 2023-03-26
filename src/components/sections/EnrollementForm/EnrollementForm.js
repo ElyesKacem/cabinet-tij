@@ -295,18 +295,22 @@ export default function EnrollementForm() {
                   >
                     <br />
                     <EnrollementAttachFiles
+                      setState={setInseeKbis}
                       onChange={handle_image}
                       title={t.attestation}
                     />
                     <EnrollementAttachFiles
+                      setState={setIdentityDoc}
                       onChange={handle_image}
                       title={t.identity}
                     />
                     <EnrollementAttachFiles
+                      setState={setCriminalRecord}
                       onChange={handle_image}
                       title={t.criminal}
                     />
                     <EnrollementAttachFiles
+                      setState={setProPhoto}
                       onChange={handle_image}
                       title={t.prof}
                     />

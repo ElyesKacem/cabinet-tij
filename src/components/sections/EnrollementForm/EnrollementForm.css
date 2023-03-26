@@ -17,8 +17,8 @@
   flex-direction: column;
   text-align: center;
   color: #4b4848;
-  width: 80%;
-  max-width: 70%;
+  /* width: 80%;
+  max-width: 70%; */
 }
 
 .EnrollementForm-blackTitle {

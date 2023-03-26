@@ -11,12 +11,16 @@ export const RQ_service = (data, succ, fail) => {
   }
   formdata.append("text", parser(data));
   // console.log("data : ", data);
+  // console.log("from : ", data.from);
   // toast.loading("Sending Data...", {
   //   icon: <CircularProgress sx={{ color: "blue" }} />,
   // });
 
   axios
-    .post("http://localhost:4000/sendmail", formdata, { text: parser(data) })
+    .post("http://localhost:4000/sendmail", formdata, {
+      text: { text: parser(data) },
+      params: { from: data.from },
+    })
     .then((res) => {
       // console.log(res);
       toast.dismiss();

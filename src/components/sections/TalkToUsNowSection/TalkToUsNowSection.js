@@ -28,7 +28,7 @@ export default function TalkToUsNowSection() {
     subject: "",
     notes: "",
     files: [],
-    from: "Request a quote",
+    from: "Contact page form",
   };
 
   const [form, setForm] = useState({ ...initial_form });
@@ -308,7 +308,7 @@ export default function TalkToUsNowSection() {
                                   <div
                                     className="EnrollementAttachFiles-fileName"
                                     style={{
-                                      maxWidth: "70%",
+                                      maxWidth: 200,
                                       display: "flex",
                                       gap: 20,
                                     }}

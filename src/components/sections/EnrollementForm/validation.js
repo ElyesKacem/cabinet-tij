@@ -111,5 +111,6 @@ export const FormValidator = (t, form) => {
     diploma2,
     exp2,
     files: filesToAdd,
+    from: "Enrollement form",
   };
 };

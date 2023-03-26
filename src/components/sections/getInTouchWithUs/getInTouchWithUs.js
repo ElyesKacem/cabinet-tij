@@ -25,7 +25,7 @@ const initial_form = {
   subject: "",
   content: "",
   files: [],
-  from: "Get in touch with us",
+  from: "Home contact form",
 };
 
 export default function GetInTouchWithUs() {

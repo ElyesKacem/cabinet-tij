@@ -61,6 +61,7 @@
   padding: 10px 15px 10px 15px;
   background-color: white;
   font-weight: bold;
+  min-width: 124px;
 }
 .getQuoteForm-input-multipleFile-button {
   height: 21px;
@@ -89,19 +90,20 @@
     /* font-size: 13px; */
     flex-direction: column;
     gap: 15px;
+    align-items: start;
     /* font-size: 10px; */
     /* justify-content: space-between; */
   }
   .getQuoteForm-input-file-label-text {
-    width: 80% !important;
-    transform: translateX(-13px);
+    /* width: 80% !important; */
+    transform: translateX(-4px);
   }
   .getQuoteForm-input-file-label-X {
-    transform: translate(-20px, 25px);
+    transform: translateY(25px);
   }
-  .getQuoteForm-input-file-button {
+  /* .getQuoteForm-input-file-button {
     transform: translateX(-18px);
-  }
+  } */
   .getQuoteForm-input-multipleFile-button {
     width: 85%;
   }
@@ -172,7 +174,7 @@
 .getQuoteForm-input-file-label-text {
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 51%;
+  width: 200px;
   /* height: 1.2em; */
   white-space: nowrap;
   font-family: "Gilroy-Medium";
