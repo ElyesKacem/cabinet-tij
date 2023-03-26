@@ -10,7 +10,7 @@ export const RQ_service = (data, succ, fail) => {
     formdata = make_form_data(data.files);
   }
   formdata.append("text", parser(data));
-  console.log("data : ", data);
+  // console.log("data : ", data);
   // toast.loading("Sending Data...", {
   //   icon: <CircularProgress sx={{ color: "blue" }} />,
   // });

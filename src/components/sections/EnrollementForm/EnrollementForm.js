@@ -10,7 +10,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import { RQ_service } from "../../../services/services";
 import GetText from "./EnrollementForm.lang";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const GLOBAL_MEDIA_QUERIES = {
   small: "(max-width: 1056px)",
@@ -34,7 +34,7 @@ const initial_form = {
 };
 
 export default function EnrollementForm() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [form, setForm] = useState({ ...initial_form });
   const [sending, set_sending] = useState(false);
   const [inseeKbis, setInseeKbis] = useState(false);
@@ -83,7 +83,7 @@ export default function EnrollementForm() {
           setIdentityDoc(false);
           setCriminalRecord(false);
           setProPhoto(false);
-          navigate("/");
+          // navigate("/");
           // use the navigation
         },
         () => {
