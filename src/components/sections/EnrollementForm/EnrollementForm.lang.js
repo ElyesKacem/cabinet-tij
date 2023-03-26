@@ -50,7 +50,7 @@ const texts = {
     proPhoto: "Missing Professional Photo file",
     error: "Error while sending data.",
     sending: "Sending in progress",
-    success: "data sent successfully",
+    success: "Your message has been successfully sent",
   },
 
   fr: {
@@ -101,7 +101,7 @@ const texts = {
     proPhoto: "Ajouter un fichier pour Photographe professionnelle",
     error: "Erreur lors de l'envoi des données.",
     sending: "Envoi en cours",
-    success: "Les données ont été envoyées avec succès.",
+    success: "Votre message a été envoyé avec succès.",
   },
 };
 

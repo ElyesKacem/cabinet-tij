@@ -94,7 +94,8 @@ export default function WeAreHere() {
                   <div
                     style={{
                       display: "flex",
-                      gap: 10,
+                      gap: 23,
+                      transform: "translateY(20px)",
                       justifyContent: matches.small && "center",
                       alignItems: matches.vsmall && "center",
                       flexDirection: matches.vsmall && "column",

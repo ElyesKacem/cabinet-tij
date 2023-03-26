@@ -12,7 +12,7 @@ const texts = {
     sub: "Submit",
     error: "Error while sending data.",
     sending: "Sending in progress",
-    success: "data sent successfully",
+    success: "Your message has been successfully sent",
     nameError: "Full Name is empty",
     mailError: "E-mail is empty",
     companyError: "Company is empty",
@@ -21,7 +21,7 @@ const texts = {
   },
 
   fr: {
-    title: "Nous contacter",
+    title: "Nous Contacter",
     name: "Nom",
     company: "Structure",
     mail: "E-mail",
@@ -30,7 +30,7 @@ const texts = {
     sub: "Envoyer",
     error: "Erreur lors de l'envoi des données.",
     sending: "Envoi en cours",
-    success: "Les données ont été envoyées avec succès.",
+    success: "Votre message a été envoyé avec succès.",
     nameError: "Le champ 'Nom Complet' est vide.",
     mailError: "Le champ 'E-mail' est vide.",
     companyError: "Le champ 'Structure' est vide.",

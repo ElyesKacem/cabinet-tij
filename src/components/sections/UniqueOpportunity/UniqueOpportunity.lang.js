@@ -12,7 +12,7 @@ const texts = {
 
   fr: {
     h1: "Une",
-    h2: "Opportunité Pour DévelopperVvotre Activité Sereinement",
+    h2: "Opportunité Pour Développer Votre Activité Sereinement",
     l1: "Nous recrutons, en continu, des interprètes et des traducteurs professionnels et nous leur fournissons le soutien nécessaire pour exceller dans le domaine des services linguistiques. ",
     l2: " ",
     bh1: "Raisons Pour Nous Rejoinder",

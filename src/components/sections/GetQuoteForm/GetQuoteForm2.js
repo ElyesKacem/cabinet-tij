@@ -139,7 +139,7 @@ export default function GetQuoteForm() {
       RQ_service(
         result,
         () => {
-          toast.success("data sent successfully");
+          toast.success("Your message has been successfully sent");
           setForm({ ...initial_form });
           // delete file from state
           set_sending(false);

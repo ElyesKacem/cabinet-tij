@@ -189,6 +189,7 @@ export default function GetQuoteForm() {
                         style={{
                           display: "flex",
                           gap: 10,
+                          height: 68,
                         }}
                       >
                         {menuData.map((element, index) => (
@@ -425,7 +426,10 @@ export default function GetQuoteForm() {
                             }
                           }}
                         />
-                        <div className="getQuoteForm-input-file-button">
+                        <div
+                          // style={{ transform: "translateX(-19px)" }}
+                          className="getQuoteForm-input-file-button"
+                        >
                           {t.SaF}
                         </div>
 
@@ -455,7 +459,7 @@ export default function GetQuoteForm() {
                           <ClearIcon
                             sx={{ fill: "url(#linearColors)" }}
                             className="getQuoteForm-input-file-label-X"
-                          ></ClearIcon>{" "}
+                          ></ClearIcon>
                         </div>
                       )}
                     </div>

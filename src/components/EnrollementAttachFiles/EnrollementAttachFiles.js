@@ -36,7 +36,7 @@ export default function EnrollementAttachFiles(props) {
           />
           <div className="EnrollementAttachFiles-button">
             <div className="EnrollementAttachFiles-button-title">
-              {lang == "en" ? "Choose Files" : "Ajouter un fichie"}
+              {lang == "en" ? "Choose Files" : "Ajouter un fichier"}
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>

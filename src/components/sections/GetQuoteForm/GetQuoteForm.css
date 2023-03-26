@@ -32,9 +32,9 @@
 }
 
 .getQuoteForm-margin::-webkit-scrollbar {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
 
-  margin-top: 10px;
+  /* margin-top: 0px; */
 }
 
 .white-text {
@@ -83,6 +83,34 @@
   align-items: center;
   transform: translateY(-15px);
 }
+
+@media screen and (max-width: 467px) {
+  .getQuoteForm-input-file-label {
+    /* font-size: 13px; */
+    flex-direction: column;
+    gap: 15px;
+    /* font-size: 10px; */
+    /* justify-content: space-between; */
+  }
+  .getQuoteForm-input-file-label-text {
+    width: 80% !important;
+    transform: translateX(-13px);
+  }
+  .getQuoteForm-input-file-label-X {
+    transform: translate(-20px, 25px);
+  }
+  .getQuoteForm-input-file-button {
+    transform: translateX(-18px);
+  }
+  .getQuoteForm-input-multipleFile-button {
+    width: 85%;
+  }
+}
+/* @media screen and (max-width: 407px) {
+  .getQuoteForm-input-file-label-X {
+    transform: translate(-100px, 20px);
+  }
+} */
 
 .getQuoteForm-input-file-label .getQuoteForm-input-file-button:hover {
   background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
@@ -144,18 +172,13 @@
 .getQuoteForm-input-file-label-text {
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 191px;
-  /* height: 1.2em;  */
+  width: 51%;
+  /* height: 1.2em; */
   white-space: nowrap;
   font-family: "Gilroy-Medium";
   background-image: linear-gradient(180deg, #242d65, #cf2032);
-
-  /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -moz-background-clip: text;

@@ -222,7 +222,10 @@ export default function OurCommunityHeader() {
                         <img
                           src={lang == "fr" ? SupportButtonFr : SupportButton}
                           className="EnrollementImage-flyButton EnrollementImage-br"
-                          style={{ transform: lang == "fr" && "scale(1.5)" }}
+                          style={{
+                            transform:
+                              lang == "fr" && "scale(1.5) translateX(-20px)",
+                          }}
                         />
                       </div>
                       <div
