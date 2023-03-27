@@ -45,6 +45,7 @@ function App() {
               path="/TakePartInOurCommunity"
               element={<TakePartInOurCommunity />}
             />
+            <Route path="/*" element={<Home />} />
           </Routes>
           <Footer />
         </div>
