@@ -17,7 +17,7 @@ export const RQ_service = (data, succ, fail) => {
   // });
 
   axios
-    .post("http://localhost:4000/sendmail", formdata, {
+    .post("http://www.cabinet-tij.com:4000/sendmail", formdata, {
       text: { text: parser(data) },
       params: { from: data.from },
     })
