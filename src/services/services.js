@@ -17,7 +17,7 @@ export const RQ_service = (data, succ, fail) => {
   // });
 
   axios
-    .post("http://f7bfecc.online-server.cloud/api/sendmail", formdata, {
+    .post("https://www.cabinet-tij.com/api/sendmail", formdata, {
       text: { text: parser(data) },
       params: { from: data.from },
     })
