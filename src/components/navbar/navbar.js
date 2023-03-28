@@ -83,10 +83,17 @@ export default function Navbar() {
                   }
                 >
                   <div>
-                    <img
-                      className={color ? "width100 logoMobile" : "logoMobile"}
-                      src={color && !activateAnimation ? logoWhite : logo}
-                    />
+                    <HashLink
+                      className="resetcss"
+                      smooth
+                      to="/#home"
+                      style={{ fontWeight: "normal", fontSize: 28 }}
+                    >
+                      <img
+                        className={color ? "width100 logoMobile" : "logoMobile"}
+                        src={color && !activateAnimation ? logoWhite : logo}
+                      />
+                    </HashLink>
                   </div>
                   <div>
                     {/* Others */}
@@ -223,12 +230,19 @@ export default function Navbar() {
                 style={{ display: "flex" }}
                 className={color ? "nav nav-background" : "nav"}
               >
-                <div>
-                  <img
-                    className={color ? "logoWeb width99" : "logoWeb"}
-                    src={color ? logoWhite : logo}
-                  />
-                </div>
+                <HashLink
+                  className="resetcss"
+                  smooth
+                  to="/#home"
+                  style={{ fontWeight: "normal", fontSize: 28 }}
+                >
+                  <div>
+                    <img
+                      className={color ? "logoWeb width99" : "logoWeb"}
+                      src={color ? logoWhite : logo}
+                    />
+                  </div>{" "}
+                </HashLink>
                 <div
                   className={
                     color

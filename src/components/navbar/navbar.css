@@ -307,6 +307,7 @@ input[type="checkbox"] {
   transform: translateY(14px);
   transition: all 0.4s;
   margin-left: 10px;
+  cursor: pointer;
 }
 .width99 {
   width: 100px;

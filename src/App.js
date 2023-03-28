@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/navbar/navbar";
 
@@ -10,8 +10,6 @@ import TalkToUsNow from "./pages/TalkToUsNow";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TakePartInOurCommunity from "./pages/TakePartInOurCommunity";
 import Toaster from "./components/Toast/Toast";
-
-import logo from "./logo.svg";
 import "./App.css";
 
 import { LangContext } from "./context/Lang.context";
