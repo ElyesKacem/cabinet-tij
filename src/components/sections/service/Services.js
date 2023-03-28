@@ -46,7 +46,11 @@ export default function Services() {
                           <div className="greyRectangle">
                             <b>{texts.who_we_are}</b>
                           </div>
-                          <div style={{ transform: "translateX(-14px)" }}>
+                          <div
+                            style={{
+                              transform: "translateX(-14px)",
+                            }}
+                          >
                             <p
                               className="firstClass"
                               style={{ transform: "translateX(14px)" }}
@@ -110,7 +114,7 @@ export default function Services() {
                       <div style={{ transform: "translateX(-14px)" }}>
                         <p
                           className="firstClass"
-                          style={{ transform: "translateX(20px)" }}
+                          style={{ transform: "translateX(16px)" }}
                         >
                           {texts.cabinet_Tij_For}
                         </p>

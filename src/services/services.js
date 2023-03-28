@@ -17,7 +17,7 @@ export const RQ_service = (data, succ, fail) => {
   // });
 
   axios
-    .post("https://https://www.cabinettij.com/api/sendmail", formdata, {
+    .post("https://www.cabinettij.com/api/sendmail", formdata, {
       text: { text: parser(data) },
       params: { from: data.from },
     })

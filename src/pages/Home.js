@@ -24,9 +24,9 @@ export default function Home() {
 
       <OurServices />
 
-      <div data-aos="flip-left" data-aos-duration="1500">
+      <FadeUp>
         <GetInTouchWithUs />
-      </div>
+      </FadeUp>
 
       <ProJoinOurTeam />
     </div>

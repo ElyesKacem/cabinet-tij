@@ -5,16 +5,16 @@ const texts = {
   en: {
     We_Provide: "We Provide Outsourced",
     Translation: "Translation",
-    Interpreting: "Interpreting",
+    Interpretation: "Interpretation",
     For_small_and_mid_sized_businesses: "For small and mid sized businesses",
     LearnMore: "Learn More",
     GetinTouch: "Get in Touch",
   },
 
   fr: {
-    We_Provide: `Nous fournissons des services de`,
+    We_Provide: `Cabinet Tij`,
     Translation: "Traduction",
-    Interpreting: "Interprétariat",
+    Interpretation: "Interprétariat",
     For_small_and_mid_sized_businesses:
       "Pour les institutions publiques et au service des particuliers et des entreprises",
     LearnMore: "À propos",

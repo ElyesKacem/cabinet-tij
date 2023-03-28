@@ -14,7 +14,7 @@ export default function TermOfUse() {
       h1: "Politique de Confidentialité",
       parag:
         "TIJ s'engage à protéger la confidentialité des données personnelles de ses clients et de ses utilisateurs. Les informations collectées sont utilisées pour répondre à leurs demandes et pour améliorer l'expérience utilisateur. Nous ne divulguons aucune information à des tiers, sauf dans les cas où cela est exigé par la loi ou les autorités compétentes.",
-      h2: "Motions légales ",
+      h2: "Montions légales ",
       t1: "Nom de la société :",
       t2: "Adresse siège Social : ",
       t3: "Numéro de telephone : ",
@@ -111,7 +111,7 @@ export default function TermOfUse() {
           </p>
           <p style={{ color: "white" }}>
             {" "}
-            <b style={blueTitle}>{text.t3} </b> 0033 06 99 08 64 91{" "}
+            <b style={blueTitle}>{text.t3} </b> 0033 +33 6 99 08 64 91{" "}
           </p>
           <p style={{ color: "white" }}>
             {" "}

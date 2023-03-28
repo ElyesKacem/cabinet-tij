@@ -105,6 +105,7 @@ export default function TalkToUsNowSection() {
     medium: "(max-width: 1200px)",
     small: " (max-width: 640px)",
     vsmall: " (max-width: 471px)",
+    extraSmall: " (max-width: 385px)",
   };
   return (
     <div className="TalkToUsNowSection-background">
@@ -130,7 +131,14 @@ export default function TalkToUsNowSection() {
                   {t.h1}
                 </div>
                 <br />
-                <div style={{ transform: "translateY(-20px)" }}>
+
+                <div
+                  style={{
+                    transform: matches.extraSmall
+                      ? "scale(0.88) translateY(-20px)"
+                      : "translateY(-20px)",
+                  }}
+                >
                   {matches.small && (
                     <FadeUp>
                       <div style={{ transform: "scale(0.6)" }}>
@@ -164,7 +172,7 @@ export default function TalkToUsNowSection() {
                         <div className="TalkToUsNowSection-pinkb">{t.bt1}</div>
                         <div>contact@cabinet-tij.com</div>
 
-                        <div>06 99 08 64 91</div>
+                        <div>+33 6 99 08 64 91</div>
                       </div>
                       <div
                         className="TalkToUsNowSection-subContainer"
@@ -474,7 +482,7 @@ export default function TalkToUsNowSection() {
                             {t.bt1}
                           </div>
                           <div>contact@cabinet-tij.com</div>
-                          <div>06 99 08 64 91</div>
+                          <div>+33 6 99 08 64 91</div>
                         </div>
                         <div className="TalkToUsNowSection-subContainer">
                           <div className="TalkToUsNowSection-pinkb">

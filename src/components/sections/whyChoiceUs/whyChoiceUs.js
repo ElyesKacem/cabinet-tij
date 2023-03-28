@@ -25,6 +25,8 @@ export default function WhyChoiceUs() {
     medium: "(max-width: 900px) and (min-width: 550px)",
     small: "(max-width: 550px) ",
     verysmall: "(max-width: 414px)",
+    extraSmall: "(max-width: 361px)",
+    extraSmall2: "(max-width: 390px)",
   };
   const texts = GetText();
   let data = [
@@ -73,15 +75,30 @@ export default function WhyChoiceUs() {
       <>
         <div className="WhyChoiceUs">
           <div className="greyRectangle">{texts.why_choice}</div>
-          <p className="text-center firstClass">
-            {lang == "fr" ? (
-              <>Raison de nous faire confiance</>
-            ) : (
-              <>
-                Here Are Few Reasons <br /> To Trust Us
-              </>
+          <Media queries={GLOBAL_MEDIA_QUERIES}>
+            {(matches) => (
+              <React.Fragment>
+                <div style={{ padding: matches.extraSmall2 && 18 }}>
+                  <p
+                    className="text-center firstClass"
+                    style={{
+                      fontSize: matches.extraSmall && 28,
+                    }}
+                  >
+                    {lang == "fr" ? (
+                      <div style={{ lineHeight: "1.2" }}>
+                        Quelques bonnes raisons pour <br /> nous faire confiance
+                      </div>
+                    ) : (
+                      <div style={{ lineHeight: "1.2" }}>
+                        Here Are Few Reasons <br /> To Trust Us
+                      </div>
+                    )}
+                  </p>
+                </div>
+              </React.Fragment>
             )}
-          </p>
+          </Media>
 
           <Media queries={GLOBAL_MEDIA_QUERIES}>
             {(matches) => (

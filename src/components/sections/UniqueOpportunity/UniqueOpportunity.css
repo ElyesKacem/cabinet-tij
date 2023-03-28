@@ -30,6 +30,12 @@
   margin: auto;
   width: 75%;
 }
+@media screen and (max-width: 625px) {
+  .UniqueOpportunity-paragraph {
+    width: auto;
+    margin-bottom: 40px;
+  }
+}
 
 .UniqueOpportunity-blackTitle {
   font-family: Gilroy-Bold;

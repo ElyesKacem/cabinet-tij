@@ -10,7 +10,7 @@ const texts = {
   },
 
   fr: {
-    h1: `Besoin D’aide Encore?`,
+    h1: `Besoin de plus d’informations ?`,
     parag:
       "Contactez-nous et nous allons répondre à vos questions et vos demandes",
     bt1: "Contacter-nous ",

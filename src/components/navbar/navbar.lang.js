@@ -7,7 +7,7 @@ const texts = {
     Services: "Services",
     About: "About",
     Contact: "Contact",
-    GetQuote: "Get Quote",
+    GetQuote: "Get a Quote",
   },
 
   fr: {

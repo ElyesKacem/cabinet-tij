@@ -4,8 +4,8 @@ import { LangContext } from "../../../context/Lang.context";
 const texts = {
   en: {
     h1: "A ",
-    h2: "Unique Opportunity To Develop Your Activity Serenely",
-    l1: "TIJ is looking to bring on board interpreters and translators to provide them with the necessary support to excel in the language service field",
+    h2: "Unique Opportunity To Develop Your Activity",
+    l1: "TIJ is looking to bring on board interpreters and translators to provide them with the necessary support in order to excel in the field of language services.",
     l2: "",
     bh1: "Reasons To Join Us",
   },

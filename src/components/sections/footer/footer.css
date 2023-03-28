@@ -31,3 +31,9 @@
   opacity: 0.75;
   cursor: pointer;
 }
+
+@media screen and (max-width: 716px) {
+  .footer-b-container {
+    font-size: 11px;
+  }
+}

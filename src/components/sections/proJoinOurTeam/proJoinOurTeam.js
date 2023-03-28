@@ -7,7 +7,7 @@ import VerticalBar from "../../verticalBar/verticalBar";
 import Media from "react-media";
 import { HashLink } from "react-router-hash-link";
 import GetText from "./proJoinOurTeam.lang";
-import { FadeUp } from "../../../assets/Animations/Fade";
+import { FadeDown } from "../../../assets/Animations/Fade";
 import { LangContext } from "../../../context/Lang.context";
 
 export default function ProJoinOurTeam() {
@@ -32,7 +32,7 @@ export default function ProJoinOurTeam() {
                   rgba2="0,0,0"
                   opacity="0.3"
                 >
-                  <FadeUp>
+                  <FadeDown>
                     <div className="proJoinOurTeam-content">
                       <VerticalBar top="100px" left="50px" />
                       <VerticalBar top="200px" left="70%" />
@@ -95,7 +95,7 @@ export default function ProJoinOurTeam() {
                         />
                       </HashLink>
                     </div>
-                  </FadeUp>
+                  </FadeDown>
                 </BackgroundImage>
               </>
             )}

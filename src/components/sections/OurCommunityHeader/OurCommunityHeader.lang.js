@@ -6,7 +6,7 @@ const texts = {
     wh: "Take part in our",
     bh: "Community",
     parag:
-      "TIJ is always on the lookout for multilingual individuals who are passionate about language to become a part of our national translator and interpreter network. We help these talented individuals to advance their careers in the field of language solutions.",
+      "We welcome passionate professionals and invite them to be a part of our national network of translators and interpreters. We help these people reach career advancement in the field of language services.",
   },
 
   fr: {

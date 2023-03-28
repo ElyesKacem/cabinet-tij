@@ -13,7 +13,7 @@ export default function GetQuoteButton(props) {
         className={props.blue ? "get-quote get-quote-blueBG" : "get-quote"}
         style={myStyle}
       >
-        {props.title}
+        <div className="scale2">{props.title}</div>
       </div>
     </HashLink>
   );

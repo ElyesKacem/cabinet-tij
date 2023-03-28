@@ -101,11 +101,13 @@ export default function EnrollementForm() {
         <br />
         <br />
         <br />
-        <div className="EnrollementForm-paragraph">
-          {t.h1} <b>2</b> {t.h2} <b>4</b> {t.h3}
+        <div style={{ padding: 13 }}>
+          <div className="EnrollementForm-paragraph">
+            {t.h1} <b>2</b> {t.h2} <b>4</b> {t.h3}
+          </div>
+          <div className="EnrollementForm-paragraph">{t.l2}</div>
+          <div className="EnrollementForm-paragraph">{t.l3}</div>
         </div>
-        <div className="EnrollementForm-paragraph">{t.l2}</div>
-        <div className="EnrollementForm-paragraph">{t.l3}</div>
 
         <b className="EnrollementForm-blackTitle">{t.applyFor}</b>
         <b className="EnrollementForm-title">{t.identity}</b>
@@ -341,7 +343,7 @@ export default function EnrollementForm() {
                         transform: "translateX(10px)",
                       }}
                     >
-                      <b style={{ fontFamily: "sans-serif" }}>+</b>
+                      <b style={{ fontFamily: "sans-serif" }}>+&nbsp;</b>
                       <span>{t.addMoreFile}</span>
                     </div>
                   </label>
@@ -354,7 +356,7 @@ export default function EnrollementForm() {
         <br />
         <br />
         <div className="EnrollementForm-submit" onClick={Handle_submit}>
-          <div className="EnrollementForm-submit-title">{t.submit}</div>
+          <div className="EnrollementForm-submit-title"> {t.submit}</div>
         </div>
 
         <br />

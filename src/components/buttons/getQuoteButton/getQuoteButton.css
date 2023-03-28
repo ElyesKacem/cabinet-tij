@@ -44,6 +44,13 @@
   background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
     0% no-repeat padding-box;
   border-color: transparent;
-  font-size: 15px;
-  transition: all 0.2s ease-out;
+  /* font-size: 15px; */
+}
+
+.scale2 {
+  transition: 0.2s transform;
+}
+
+.get-quote:hover .scale2 {
+  transform: scale(1.1);
 }

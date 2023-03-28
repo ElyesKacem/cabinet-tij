@@ -30,7 +30,7 @@ const menuData = [
     blueIcon: blueTranslation,
   },
   {
-    title: "Interpreting",
+    title: "Interpretation",
     whiteIcon: whiteInterpreting,
     blueIcon: blueInterpreting,
   },

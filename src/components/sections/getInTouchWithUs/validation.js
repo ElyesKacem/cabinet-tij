@@ -1,6 +1,9 @@
 import { not_emp } from "../../../Functions/validators";
 import { toast } from "react-hot-toast";
-
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
 export const FormValidator = (t, form) => {
   const { full_name, company, email, subject, content, from, files } = form;
 
@@ -11,6 +14,11 @@ export const FormValidator = (t, form) => {
 
   if (!not_emp(email)) {
     toast.error(t.mailError);
+    return false;
+  }
+
+  if (!validateEmail(email)) {
+    toast.error(t.mailFormatError);
     return false;
   }
 

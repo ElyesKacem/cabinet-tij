@@ -1,6 +1,11 @@
 import { not_emp } from "../../../Functions/validators";
 import { toast } from "react-hot-toast";
 
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
 const translationValid = (t, form) => {
   const {
     full_name,
@@ -12,7 +17,7 @@ const translationValid = (t, form) => {
     files,
     from,
   } = form;
-
+  console.log(validateEmail(email));
   if (!not_emp(full_name)) {
     toast.error(t.nameError);
     return false;
@@ -20,6 +25,10 @@ const translationValid = (t, form) => {
 
   if (!not_emp(email)) {
     toast.error(t.mailError);
+    return false;
+  }
+  if (!validateEmail(email)) {
+    toast.error(t.mailFormatError);
     return false;
   }
 
@@ -74,6 +83,10 @@ const InterpretingValid = (t, form) => {
 
   if (!not_emp(email)) {
     toast.error(t.mailError);
+    return false;
+  }
+  if (!validateEmail(email)) {
+    toast.error(t.mailFormatError);
     return false;
   }
 
@@ -133,6 +146,11 @@ const TranscriptValid = (t, form) => {
     return false;
   }
 
+  if (!validateEmail(email)) {
+    toast.error(t.mailFormatError);
+    return false;
+  }
+
   if (!not_emp(source_lang)) {
     toast.error(t.slError);
     return false;
@@ -175,7 +193,7 @@ export const FormValidator = (t, form) => {
   switch (form.FORM_TYPE) {
     case "Translation":
       return translationValid(t, form);
-    case "Interpreting":
+    case "Interpretation":
       return InterpretingValid(t, form);
     case "Transcription":
       return TranscriptValid(t, form);
@@ -196,6 +214,11 @@ export const FormValidatorTalkToUs = (t, form) => {
 
   if (!not_emp(email)) {
     toast.error(t.mailError);
+    return false;
+  }
+
+  if (!validateEmail(email)) {
+    toast.error(t.mailFormatError);
     return false;
   }
 

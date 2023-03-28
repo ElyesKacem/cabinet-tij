@@ -14,6 +14,7 @@ export default function VideoSection() {
     large: "(min-width: 1210px) ",
     medium: " (min-width:1110px) and (max-width: 1210px)",
     small: "(max-width:1110px)",
+    vsmall: "(max-width:360px)",
     // medium: "(min-width: 600px) and (max-width: 1199px)",
   };
   const texts = GetText();
@@ -56,7 +57,7 @@ export default function VideoSection() {
                       className="videoContentMiddle"
                       style={{
                         color: "white",
-                        fontSize: 55,
+                        fontSize: matches.vsmall ? 47 : 55,
                         textAlign: "center",
                       }}
                     >
@@ -69,7 +70,7 @@ export default function VideoSection() {
                       >
                         &
                       </div>
-                      {texts.Interpreting}
+                      {texts.Interpretation}
                     </div>
                     <br />
 
@@ -178,12 +179,10 @@ export default function VideoSection() {
 
                   <div className="videoContentMiddle" style={{ fontSize: 70 }}>
                     {texts.Translation}
-                    <div
-                      style={{ fontFamily: "sans-serif", textAlign: "center" }}
-                    >
+                    <div style={{ fontFamily: "sans-serif", marginLeft: 170 }}>
                       &
                     </div>
-                    {texts.Interpreting}
+                    {texts.Interpretation}
                   </div>
                   <br />
 
@@ -232,12 +231,10 @@ export default function VideoSection() {
 
                   <div className="videoContentMiddle" style={{ fontSize: 90 }}>
                     {texts.Translation}
-                    <div
-                      style={{ fontFamily: "sans-serif", textAlign: "center" }}
-                    >
+                    <div style={{ fontFamily: "sans-serif", marginLeft: 200 }}>
                       &
                     </div>
-                    {texts.Interpreting}
+                    {texts.Interpretation}
                   </div>
                   <br />
 

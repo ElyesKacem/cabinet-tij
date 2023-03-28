@@ -21,21 +21,22 @@ export default function FooterText(props) {
       </div>
       <br />
       <div className="footerText-content" style={ms2}>
-        {props.title != ("Support" || "Information") && props.content}
+        {props.title != ("Support" || "Information" || "Informations") &&
+          props.content}
         {props.title == "Support" && "Contact us"}
-        {props.title == "Solutions" &&
+        {props.title == "Services" &&
           (lang == "en" ? (
             <>
-              Interpreting
+              Interpretation
               <br />
               <br />
-              Bussiness
-              <br />
-              <br />
-              Certified Translation
+              Translation
               <br />
               <br />
               Sworn Translation
+              <br />
+              <br />
+              Professional Services
               <br />
               <br />
               Personal Services
@@ -47,13 +48,13 @@ export default function FooterText(props) {
               Interprétariat
               <br />
               <br />
-              Entreprises
-              <br />
-              <br />
               Traduction
               <br />
               <br />
               Traduction assermentée
+              <br />
+              <br />
+              Services aux entreprises
               <br />
               <br />
               Particuliers
@@ -61,12 +62,12 @@ export default function FooterText(props) {
               <br />
             </>
           ))}
-        {props.title == "Information" && (
+        {(props.title == "Information" || props.title == "Informations") && (
           <>
             contact@cabinet-tij.com
             <br />
             <br />
-            06 99 08 64 91
+            +33 6 99 08 64 91
             <br />
             <br />3 rue Boccador, 75008 Paris.
           </>

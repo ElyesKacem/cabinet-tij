@@ -65,18 +65,21 @@ export default function OurCommunityHeader() {
                       <img
                         src={DownArrow}
                         className="EnrollementImage-Arrow"
-                        style={{ height: 60, width: "auto", marginLeft: "40%" }}
+                        style={{ marginLeft: "40%" }}
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <div
-                        style={{ width: 650, transform: "translateY(20px)" }}
+                        style={{
+                          position: "relative",
+                          width: 650,
+                          transform: "translate(-px,20px)",
+                        }}
                       >
                         <HoverImage img={Image1} />
                         <img
                           src={lang == "fr" ? ActivityButtonFr : ActivityButton}
                           className="EnrollementImage-flyButton EnrollementImage-tl"
-                          style={{ transform: lang == "fr" && "scale(1.38)" }}
                         />
                         <img
                           src={lang == "fr" ? IncomeButtonFr : IncomeButton}
@@ -89,7 +92,6 @@ export default function OurCommunityHeader() {
                         <img
                           src={lang == "fr" ? SupportButtonFr : SupportButton}
                           className="EnrollementImage-flyButton EnrollementImage-br"
-                          style={{ transform: lang == "fr" && "scale(1.5)" }}
                         />
                       </div>
                     </Grid>
@@ -110,38 +112,32 @@ export default function OurCommunityHeader() {
                       flexDirection: "column",
                       alignItems: "center",
                       justifyContent: "center",
-                      gap: 100,
                     }}
                   >
+                    {" "}
+                    <div className="OurCommunityHeader-title">{t.wh}</div>
+                    <div className="OurCommunityHeader-title blue">{t.bh}</div>
                     <div>
-                      <div className="OurCommunityHeader-title">{t.wh}</div>
-                      <div className="OurCommunityHeader-title blue">
-                        {t.bh}
-                      </div>
-                      <br />
-                      <div className="OurCommunityHeader-paragraph">
-                        {t.parag}
-                      </div>
                       <br />
                       <br />
-                      <br />
-                      <br />
-                    </div>
-                    <div>
                       <br />
                       <br />
                       <br />
                       <div
                         style={{
+                          position: "relative",
                           width: 650,
-                          transform: "translate(-20px,-20px)",
+                          transform: matches.verySmall
+                            ? "translateY(-80px)  scale(0.5)   "
+                            : matches.smallerSmall
+                            ? "translateY(-20px) scale(0.8)"
+                            : "translateY(-20px)",
                         }}
                       >
                         <HoverImage img={Image1} />
                         <img
                           src={lang == "fr" ? ActivityButtonFr : ActivityButton}
                           className="EnrollementImage-flyButton EnrollementImage-tl"
-                          style={{ transform: lang == "fr" && "scale(1.38)" }}
                         />
                         <img
                           src={lang == "fr" ? IncomeButtonFr : IncomeButton}
@@ -154,26 +150,40 @@ export default function OurCommunityHeader() {
                         <img
                           src={lang == "fr" ? SupportButtonFr : SupportButton}
                           className="EnrollementImage-flyButton EnrollementImage-br"
-                          style={{ transform: lang == "fr" && "scale(1.5)" }}
                         />
-                      </div>{" "}
+                      </div>
                       <div
                         style={{ display: "flex", justifyContent: "center" }}
                       >
                         <img
                           src={DownArrow}
                           className="EnrollementImage-Arrow"
-                          style={{ height: 60, width: "auto" }}
+                          style={{
+                            transform:
+                              matches.verySmall && "translateY(-100px)",
+                          }}
                         />
                       </div>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                    </div>
+                    <div>
+                      <br />
+                      <div
+                        className="OurCommunityHeader-paragraph"
+                        style={{ width: "auto" }}
+                      >
+                        {t.parag}
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
                     </div>
                   </div>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
-                  <br />
                 </div>
               )}
               {(matches.small || matches.smallerSmall || matches.verySmall) && (
@@ -197,6 +207,7 @@ export default function OurCommunityHeader() {
                       <br />
                       <div
                         style={{
+                          position: "relative",
                           width: 650,
                           transform: matches.verySmall
                             ? "translateY(-80px)  scale(0.5)   "
@@ -209,7 +220,6 @@ export default function OurCommunityHeader() {
                         <img
                           src={lang == "fr" ? ActivityButtonFr : ActivityButton}
                           className="EnrollementImage-flyButton EnrollementImage-tl"
-                          style={{ transform: lang == "fr" && "scale(1.38)" }}
                         />
                         <img
                           src={lang == "fr" ? IncomeButtonFr : IncomeButton}
@@ -222,10 +232,6 @@ export default function OurCommunityHeader() {
                         <img
                           src={lang == "fr" ? SupportButtonFr : SupportButton}
                           className="EnrollementImage-flyButton EnrollementImage-br"
-                          style={{
-                            transform:
-                              lang == "fr" && "scale(1.5) translateX(-20px)",
-                          }}
                         />
                       </div>
                       <div
@@ -235,8 +241,6 @@ export default function OurCommunityHeader() {
                           src={DownArrow}
                           className="EnrollementImage-Arrow"
                           style={{
-                            height: 60,
-                            width: "auto",
                             transform:
                               matches.verySmall && "translateY(-100px)",
                           }}

@@ -3,7 +3,7 @@ import { LangContext } from "../../../context/Lang.context";
 
 const texts = {
   en: {
-    t1: "You are language specialist ?",
+    t1: "You are a language specialist ?",
     parag:
       "You align with our ethical principles ? you are independent ? you possess a strong moral compass and professional integrity ? you value confidentiality and objectivity highly ? you have a business mindset or are seeking an additional income ? and you are interested in making a career out of your language skills ?",
     t2: "If so, we would be very happy for you to be a part of our adventure.",

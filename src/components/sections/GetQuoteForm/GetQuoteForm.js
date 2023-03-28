@@ -50,7 +50,7 @@ export default function GetQuoteForm() {
       blueIcon: blueTranslation,
     },
     {
-      title: t.interpreting,
+      title: t.Interpretation,
       whiteIcon: whiteInterpreting,
       blueIcon: blueInterpreting,
     },
@@ -129,7 +129,7 @@ export default function GetQuoteForm() {
 
         break;
       case 1:
-        from = "Interpreting form";
+        from = "Interpretation form";
 
         break;
       case 2:
@@ -512,7 +512,13 @@ export default function GetQuoteForm() {
                           multiple
                         />
                         <div className="getQuoteForm-input-multipleFile-button">
-                          <b style={{ fontFamily: "sans-serif", fontSize: 20 }}>
+                          <b
+                            style={{
+                              fontFamily: "sans-serif",
+                              fontSize: 20,
+                              transform: "translateY(1px)",
+                            }}
+                          >
                             + &nbsp;&nbsp;{" "}
                           </b>{" "}
                           {t.AMF}

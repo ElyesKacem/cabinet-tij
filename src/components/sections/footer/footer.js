@@ -21,6 +21,8 @@ export default function Footer() {
     medium: "(max-width: 1253px) and (min-width: 850px)",
     // medium: "(min-width: 600px) and (max-width: 1199px)",
     small: "(max-width: 850px)",
+    vsmall: "(max-width: 376px)",
+    mediumSmall: "(max-width: 573px)",
   };
   return (
     <div>
@@ -34,7 +36,7 @@ export default function Footer() {
               <>
                 <div
                   className="footer-container"
-                  style={{ transform: "translateX(-50px)" }}
+                  style={{ transform: "translateX(-56px)" }}
                 >
                   <div
                     style={{
@@ -102,18 +104,24 @@ export default function Footer() {
                       smooth
                       to="/TalkToUsNow#contact"
                     >
-                      <FooterText title="Support" content="Contact Us" />
+                      <FooterText
+                        title={text.support}
+                        content={text.contact_us}
+                      />
                     </HashLink>
                   </div>
 
                   <div
                     style={{ transform: "translateX(40px)", marginRight: 40 }}
                   >
-                    <FooterText title="Solutions" />
+                    <FooterText title="Services" />
                   </div>
 
                   <div style={{ transform: "translateX(110px)" }}>
-                    <FooterText title="Information" content=" " />
+                    <FooterText
+                      title={lang == "en" ? "Information" : "Informations"}
+                      content=" "
+                    />
                   </div>
                 </div>
               </>
@@ -136,7 +144,7 @@ export default function Footer() {
                   >
                     <div>
                       <FooterText title={text.about} content={text.about_pg} />
-                      <FooterText title="Solutions" />
+                      <FooterText title="Services" />
                     </div>
                     <div>
                       <HashLink
@@ -144,7 +152,10 @@ export default function Footer() {
                         smooth
                         to="/TalkToUsNow#contact"
                       >
-                        <FooterText title="Support" content="Contact Us" />
+                        <FooterText
+                          title={text.support}
+                          content={text.contact_us}
+                        />
                       </HashLink>
                       <FooterText
                         style={{
@@ -153,7 +164,7 @@ export default function Footer() {
                               ? "translateY(50px)"
                               : "translateY(20px)",
                         }}
-                        title="Information"
+                        title={lang == "en" ? "Information" : "Informations"}
                         content=" "
                       />
                     </div>
@@ -235,17 +246,23 @@ export default function Footer() {
                       <FooterText title={text.about} content={text.about_pg} />
                       <FooterText
                         style2={{ textAlign: "center" }}
-                        title="Solutions"
+                        title="Services"
                       />
                     </div>
                     <div>
-                      <FooterText title="Information" content=" " />
+                      <FooterText
+                        title={lang == "en" ? "Information" : "Informations"}
+                        content=" "
+                      />
                       <HashLink
                         className="resetcss"
                         smooth
                         to="/TalkToUsNow#contact"
                       >
-                        <FooterText title="Support" content="Contact Us" />
+                        <FooterText
+                          title={text.support}
+                          content={text.contact_us}
+                        />
                       </HashLink>
                     </div>
                   </div>
@@ -325,45 +342,59 @@ export default function Footer() {
           textAlign: "center",
         }}
       >
-        <div className="footer-b-container">
-          <div
-            style={{
-              color: "#d9d9d9",
-              textDecoration: "none",
-            }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <div>
-                <HashLink
-                  style={{ cursor: "pointer" }}
-                  className="resetcss"
-                  smooth
-                  to="/termeofuse#termeofuse"
+        <Media queries={GLOBAL_MEDIA_QUERIES}>
+          {(matches) => (
+            <React.Fragment>
+              <div className="footer-b-container">
+                <div
+                  style={{
+                    color: "#d9d9d9",
+                    textDecoration: "none",
+                  }}
                 >
-                  {lang == "en" ? "Terms of use" : "Motions légales"}{" "}
-                  &nbsp;&nbsp;
-                </HashLink>
-              </div>
-              <div>|</div>
-              <div>
-                <HashLink
-                  style={{ cursor: "pointer" }}
-                  className="resetcss"
-                  smooth
-                  to="/PrivacyPolicy#"
-                >
-                  &nbsp;&nbsp;&nbsp;{" "}
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div>
+                      <HashLink
+                        style={{ cursor: "pointer" }}
+                        className="resetcss"
+                        smooth
+                        to="/termeofuse#termeofuse"
+                      >
+                        {lang == "en" ? "Terms of use" : "Mentions légales"}{" "}
+                        {!matches.mediumSmall && <>&nbsp;</>}
+                      </HashLink>
+                    </div>
+                    <div style={{ marginLeft: 5, marginRight: 5 }}>|</div>
+                    <div>
+                      <HashLink
+                        style={{ cursor: "pointer" }}
+                        className="resetcss"
+                        smooth
+                        to="/PrivacyPolicy#"
+                      >
+                        {!matches.mediumSmall && <>&nbsp;&nbsp;</>}
+                        {lang == "en"
+                          ? "Privacy Policy"
+                          : "Politique de Confidentialité"}
+                      </HashLink>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ minWidth: 110 }}>
                   {lang == "en"
-                    ? "Privacy Policy"
-                    : "Politique de Confidentialité"}
-                </HashLink>
+                    ? "All Copyrights © are reserved 2023"
+                    : "Tous droits © réservés 2023"}
+                </div>
               </div>
-            </div>
-          </div>
-          <div style={{ minWidth: 110 }}>
-            All Copyrights © are reserved 2023
-          </div>
-        </div>
+            </React.Fragment>
+          )}
+        </Media>
       </div>
     </div>
   );

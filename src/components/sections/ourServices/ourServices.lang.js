@@ -6,10 +6,10 @@ const texts = {
     our_serv: "Our Services",
     we_offer:
       "We Offer Solutions For Clients Both Large And Small, From corporate, Government And Private Sectors",
-    inter: "Interpreting",
+    inter: "Interpretation",
     transl: "Translation",
     sworn: "Sworn Translation",
-    business: "Business",
+    business: "Professional Services",
     personal: "Personal Services",
   },
 
@@ -20,7 +20,7 @@ const texts = {
     inter: "Interprétariat",
     transl: "Traduction",
     sworn: "Traduction assermentée",
-    business: "Entreprises",
+    business: "Services aux entreprises",
     personal: "Particuliers",
   },
 };

@@ -21,14 +21,15 @@
 .firstClass {
   /* transform: translateX(15px); */
   font-weight: bold;
-  font-size: 32px;
+  font-size: 30px;
   font-family: "Gilroy-Bold";
   line-height: 110%;
 }
+
 .secondClass {
   transform: translateX(15px);
   font-weight: bold;
-  font-size: 23px;
+  font-size: 22px;
   color: rgb(34, 34, 34);
 }
 .thirdClass {

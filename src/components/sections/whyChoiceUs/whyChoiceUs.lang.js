@@ -27,7 +27,7 @@ const texts = {
     agility: "Agilité",
     efficiency: "Efficiacité",
     expertise_pg:
-      "Plus de 50 langues de travail et plus de 400 traducteurs et interprètes.",
+      "Plus de 60 langues de travail et plus de 400 traducteurs et interprètes.",
     experience_pg: "Plus de 80 langues traduites et interprétées.",
     quality_pg: "Une réponse rapide et efficace à vos demandes.",
     agility_pg: "Intervention 24h/24 et 7j/7 toute l'année partout en France",

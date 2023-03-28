@@ -8,6 +8,12 @@
   transform: translateX(-25px);
 }
 
+@media screen and (min-width: 1253px) {
+  .footerText-title {
+    transform: translateX(-22px);
+  }
+}
+
 .footerText-content {
   font-size: 20px;
   font-family: "Gilroy-Medium";
@@ -27,15 +33,14 @@
 @media screen and (max-width: 850px) {
   .footerText-title {
     justify-content: center;
+    transform: translateX(-9px);
   }
   .footerText-content {
     /* margin-left: 52px; */
     /* max-width: 100%; */
     text-align: center;
   }
-  .footerText-title {
-    transform: translateX(-12px);
-  }
+
   .footerText-title-arrow {
     transform: translate(3px, 5px);
   }
