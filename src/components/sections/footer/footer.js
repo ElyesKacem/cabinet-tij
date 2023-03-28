@@ -230,7 +230,7 @@ export default function Footer() {
                   <br />
                   <br />
 
-                  <div style={{ transform: "translateX(10px)" }}>
+                  <div>
                     <div>
                       <FooterText title={text.about} content={text.about_pg} />
                       <FooterText

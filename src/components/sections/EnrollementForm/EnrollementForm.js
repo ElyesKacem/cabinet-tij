@@ -110,7 +110,11 @@ export default function EnrollementForm() {
         <b className="EnrollementForm-blackTitle">{t.applyFor}</b>
         <b className="EnrollementForm-title">{t.identity}</b>
         <br />
-        <Grid container spacing={4}>
+        <Grid
+          style={{ paddingLeft: 20, paddingRight: 20 }}
+          container
+          spacing={4}
+        >
           <Grid item sm={6} xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
@@ -181,7 +185,11 @@ export default function EnrollementForm() {
           {t.exandex3}
         </b>
         <br />
-        <Grid container spacing={4}>
+        <Grid
+          style={{ paddingLeft: 20, paddingRight: 20 }}
+          container
+          spacing={4}
+        >
           <Grid item xs={12}>
             <FormRequestQuoteInput
               borderRadius="5px"
