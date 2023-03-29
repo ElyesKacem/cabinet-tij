@@ -478,6 +478,7 @@ export default function GetQuoteForm() {
                           {singleFile && (
                             <div
                               className="getQuoteForm-input-file-label-X"
+                              style={{ transform: "translateY(2px)" }}
                               onClick={() => {
                                 setSingleFile(null);
                                 setSingleFileName(false);

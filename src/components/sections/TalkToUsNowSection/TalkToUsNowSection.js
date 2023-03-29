@@ -45,12 +45,12 @@ export default function TalkToUsNowSection() {
     }
   };
 
-  const handleRemoveFile = () => {
-    setFile(null);
-    setFileName(null);
-    // setForm({ ...form, files: [] });
-    // console.log("removed");
-  };
+  // const handleRemoveFile = () => {
+  //   setFile(null);
+  //   setFileName(null);
+  //   // setForm({ ...form, files: [] });
+  //   // console.log("removed");
+  // };
 
   // const handle_image = (event) => {
   //   const files = [...form.files];
@@ -102,7 +102,7 @@ export default function TalkToUsNowSection() {
 
   const GLOBAL_MEDIA_QUERIES = {
     large: "(min-width: 1200px)",
-    medium: "(max-width: 1200px)",
+    medium: "(max-width: 1200px) and (min-width:471px)",
     small: " (max-width: 640px)",
     vsmall: " (max-width: 471px)",
     extraSmall: " (max-width: 385px)",
@@ -257,39 +257,15 @@ export default function TalkToUsNowSection() {
                             />
                           </div>
                           <div>
-                            {!matches.vsmall && (
-                              // <label
-                              //   htmlFor="file"
-                              //   className="TalkToUsNowSection-selectFile"
-                              // >
-                              //   <input
-                              //     type="file"
-                              //     className="displaynone"
-                              //     id="file"
-                              //     onChange={(event) => handlePutFile(event)}
-                              //   />
-                              //   <div className="TalkToUsNowSection-selectFile-button">
-                              //     <div>{t.selectFile}</div>
-                              //   </div>
-                              //   <div className="EnrollementAttachFiles-fileName">
-                              //     {!fileName && t.nofile}
-                              //     {fileName && fileName}
-                              //   </div>
-                              //   {fileName && (
-                              //     <ClearIcon
-                              //       sx={{ fill: "url(#linearColors)" }}
-                              //       style={{
-                              //         transform: "translateY(2px)",
-                              //         cursor: "pointer",
-                              //       }}
-                              //       onClick={handleRemoveFile}
-                              //     ></ClearIcon>
-                              //   )}
-                              // </label>
-                              <div style={{ display: "flex", marginTop: 20 }}>
+                            {matches.vsmall && (
+                              <div
+                                className="getQuoteForm-input-file-label"
+                                style={{ display: "flex", marginTop: 20 }}
+                              >
                                 <label
                                   className="getQuoteForm-input-file-label"
                                   htmlFor="requotefile"
+                                  style={{ marginTop: -18 }}
                                 >
                                   <input
                                     type="file"
@@ -304,91 +280,115 @@ export default function TalkToUsNowSection() {
                                   >
                                     {t.selectFile}
                                   </div>
-
-                                  {fileName ? (
-                                    <>
-                                      <div className="getQuoteForm-input-file-label-text">
-                                        &nbsp;&nbsp;{fileName}{" "}
-                                      </div>
-                                    </>
-                                  ) : (
-                                    <span className="getQuoteForm-input-file-label-text">
-                                      &nbsp;&nbsp;{t.nofile}
-                                    </span>
-                                  )}
                                 </label>
-                                {fileName && (
-                                  <div
-                                    className="getQuoteForm-input-file-label-X"
-                                    onClick={() => {
-                                      setFile(null);
-                                      setFileName(false);
-                                      //const { others, files } = form;
-                                      //setForm({...form});
-                                    }}
-                                  >
-                                    &nbsp;&nbsp;
-                                    <ClearIcon
-                                      sx={{ fill: "url(#linearColors)" }}
-                                      className="getQuoteForm-input-file-label-X"
-                                    ></ClearIcon>
-                                  </div>
-                                )}
-                              </div>
-                            )}
-                            {matches.vsmall && (
-                              <label
-                                htmlFor="file"
-                                className="TalkToUsNowSection-selectFile"
-                                style={{
-                                  flexDirection: "column",
-                                  alignItems: "start",
-                                }}
-                              >
-                                <input
-                                  type="file"
-                                  className="displaynone"
-                                  id="file"
-                                  onChange={(event) => handlePutFile(event)}
-                                />
-
-                                <div className="TalkToUsNowSection-selectFile-button">
-                                  <div>{t.selectFile}</div>
-                                </div>
-
                                 <div
                                   style={{
                                     display: "flex",
+                                    transform: "translateY(-10px)",
                                     alignItems: "center",
                                   }}
                                 >
-                                  <div
-                                    className="EnrollementAttachFiles-fileName"
-                                    style={{
-                                      maxWidth: 200,
-                                      display: "flex",
-                                      gap: 20,
-                                    }}
-                                  >
-                                    <div>
-                                      {!fileName && t.nofile}
-                                      {fileName && fileName}
-                                    </div>
+                                  <div>
+                                    {fileName ? (
+                                      <>
+                                        <div className="getQuoteForm-input-file-label-text">
+                                          &nbsp;&nbsp;{fileName}{" "}
+                                        </div>
+                                      </>
+                                    ) : (
+                                      <span className="getQuoteForm-input-file-label-text">
+                                        &nbsp;&nbsp;{t.nofile}
+                                      </span>
+                                    )}
                                   </div>
                                   <div>
-                                    {fileName && (
-                                      <ClearIcon
-                                        sx={{ fill: "url(#linearColors)" }}
-                                        style={{
-                                          transform: "translateY(2px)",
-                                          cursor: "pointer",
+                                    {file && (
+                                      <div
+                                        className="getQuoteForm-input-file-label-X"
+                                        onClick={() => {
+                                          setFile(null);
+                                          setFileName(false);
+                                          //const { others, files } = form;
+                                          //setForm({...form});
                                         }}
-                                        onClick={handleRemoveFile}
-                                      ></ClearIcon>
+                                      >
+                                        &nbsp;&nbsp;
+                                        <ClearIcon
+                                          sx={{ fill: "url(#linearColors)" }}
+                                          className="getQuoteForm-input-file-label-X"
+                                        ></ClearIcon>
+                                      </div>
                                     )}
                                   </div>
                                 </div>
-                              </label>
+                              </div>
+                            )}
+                            {matches.medium && (
+                              <div
+                                className="getQuoteForm-input-file-label"
+                                style={{ display: "flex", marginTop: 20 }}
+                              >
+                                <label
+                                  className="getQuoteForm-input-file-label"
+                                  htmlFor="requotefile"
+                                  style={{ marginTop: -18 }}
+                                >
+                                  <input
+                                    type="file"
+                                    className="getQuoteForm-input-file"
+                                    placeholder="Full Name"
+                                    id="requotefile"
+                                    onChange={(event) => handlePutFile(event)}
+                                  />
+                                  <div
+                                    // style={{ transform: "translateX(-19px)" }}
+                                    className="getQuoteForm-input-file-button"
+                                  >
+                                    {t.selectFile}
+                                  </div>
+                                </label>
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    transform: "translateY(-10px)",
+                                    alignItems: "center",
+                                  }}
+                                >
+                                  <div>
+                                    {fileName ? (
+                                      <>
+                                        <div className="getQuoteForm-input-file-label-text">
+                                          &nbsp;&nbsp;{fileName}{" "}
+                                        </div>
+                                      </>
+                                    ) : (
+                                      <span className="getQuoteForm-input-file-label-text">
+                                        &nbsp;&nbsp;{t.nofile}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <div>
+                                    {file && (
+                                      <div
+                                        className="getQuoteForm-input-file-label-X"
+                                        style={{ transform: "translateY(5px)" }}
+                                        onClick={() => {
+                                          setFile(null);
+                                          setFileName(false);
+                                          //const { others, files } = form;
+                                          //setForm({...form});
+                                        }}
+                                      >
+                                        &nbsp;&nbsp;
+                                        <ClearIcon
+                                          sx={{ fill: "url(#linearColors)" }}
+                                          className="getQuoteForm-input-file-label-X"
+                                        ></ClearIcon>
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
                             )}
                           </div>
                         </div>
@@ -477,7 +477,7 @@ export default function TalkToUsNowSection() {
                               />
                             </Grid>
                             <Grid item xs={12}>
-                              <label
+                              {/* <label
                                 htmlFor="file"
                                 className="TalkToUsNowSection-selectFile"
                               >
@@ -504,7 +504,72 @@ export default function TalkToUsNowSection() {
                                     onClick={handleRemoveFile}
                                   ></ClearIcon>
                                 )}
-                              </label>
+                              </label> */}
+                              <div
+                                className="getQuoteForm-input-file-label"
+                                style={{ display: "flex", marginTop: 20 }}
+                              >
+                                <label
+                                  className="getQuoteForm-input-file-label"
+                                  htmlFor="requotefile"
+                                  style={{ marginTop: -18 }}
+                                >
+                                  <input
+                                    type="file"
+                                    className="getQuoteForm-input-file"
+                                    placeholder="Full Name"
+                                    id="requotefile"
+                                    onChange={(event) => handlePutFile(event)}
+                                  />
+                                  <div
+                                    // style={{ transform: "translateX(-19px)" }}
+                                    className="getQuoteForm-input-file-button"
+                                  >
+                                    {t.selectFile}
+                                  </div>
+                                </label>
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    transform: "translateY(-10px)",
+                                    alignItems: "center",
+                                  }}
+                                >
+                                  <div>
+                                    {fileName ? (
+                                      <>
+                                        <div className="getQuoteForm-input-file-label-text">
+                                          &nbsp;&nbsp;{fileName}{" "}
+                                        </div>
+                                      </>
+                                    ) : (
+                                      <span className="getQuoteForm-input-file-label-text">
+                                        &nbsp;&nbsp;{t.nofile}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <div>
+                                    {file && (
+                                      <div
+                                        className="getQuoteForm-input-file-label-X"
+                                        style={{ transform: "translateY(5px)" }}
+                                        onClick={() => {
+                                          setFile(null);
+                                          setFileName(false);
+                                          //const { others, files } = form;
+                                          //setForm({...form});
+                                        }}
+                                      >
+                                        &nbsp;&nbsp;
+                                        <ClearIcon
+                                          sx={{ fill: "url(#linearColors)" }}
+                                          className="getQuoteForm-input-file-label-X"
+                                        ></ClearIcon>
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
                             </Grid>
                           </Grid>
                         </div>
