@@ -258,34 +258,83 @@ export default function TalkToUsNowSection() {
                           </div>
                           <div>
                             {!matches.vsmall && (
-                              <label
-                                htmlFor="file"
-                                className="TalkToUsNowSection-selectFile"
-                              >
-                                <input
-                                  type="file"
-                                  className="displaynone"
-                                  id="file"
-                                  onChange={(event) => handlePutFile(event)}
-                                />
-                                <div className="TalkToUsNowSection-selectFile-button">
-                                  <div>{t.selectFile}</div>
-                                </div>
-                                <div className="EnrollementAttachFiles-fileName">
-                                  {!fileName && t.nofile}
-                                  {fileName && fileName}
-                                </div>
-                                {fileName && (
-                                  <ClearIcon
-                                    sx={{ fill: "url(#linearColors)" }}
-                                    style={{
-                                      transform: "translateY(2px)",
-                                      cursor: "pointer",
+                              // <label
+                              //   htmlFor="file"
+                              //   className="TalkToUsNowSection-selectFile"
+                              // >
+                              //   <input
+                              //     type="file"
+                              //     className="displaynone"
+                              //     id="file"
+                              //     onChange={(event) => handlePutFile(event)}
+                              //   />
+                              //   <div className="TalkToUsNowSection-selectFile-button">
+                              //     <div>{t.selectFile}</div>
+                              //   </div>
+                              //   <div className="EnrollementAttachFiles-fileName">
+                              //     {!fileName && t.nofile}
+                              //     {fileName && fileName}
+                              //   </div>
+                              //   {fileName && (
+                              //     <ClearIcon
+                              //       sx={{ fill: "url(#linearColors)" }}
+                              //       style={{
+                              //         transform: "translateY(2px)",
+                              //         cursor: "pointer",
+                              //       }}
+                              //       onClick={handleRemoveFile}
+                              //     ></ClearIcon>
+                              //   )}
+                              // </label>
+                              <div style={{ display: "flex" }}>
+                                <label
+                                  className="getQuoteForm-input-file-label"
+                                  htmlFor="requotefile"
+                                >
+                                  <input
+                                    type="file"
+                                    className="getQuoteForm-input-file"
+                                    placeholder="Full Name"
+                                    id="requotefile"
+                                    onChange={(event) => handlePutFile(event)}
+                                  />
+                                  <div
+                                    // style={{ transform: "translateX(-19px)" }}
+                                    className="getQuoteForm-input-file-button"
+                                  >
+                                    {t.SaF}
+                                  </div>
+
+                                  {fileName ? (
+                                    <>
+                                      <div className="getQuoteForm-input-file-label-text">
+                                        &nbsp;&nbsp;{fileName}{" "}
+                                      </div>
+                                    </>
+                                  ) : (
+                                    <span className="getQuoteForm-input-file-label-text">
+                                      &nbsp;&nbsp;{t.nofile}
+                                    </span>
+                                  )}
+                                </label>
+                                {singleFile && (
+                                  <div
+                                    className="getQuoteForm-input-file-label-X"
+                                    onClick={() => {
+                                      setSingleFile(null);
+                                      setFileName(false);
+                                      //const { others, files } = form;
+                                      //setForm({...form});
                                     }}
-                                    onClick={handleRemoveFile}
-                                  ></ClearIcon>
+                                  >
+                                    &nbsp;&nbsp;
+                                    <ClearIcon
+                                      sx={{ fill: "url(#linearColors)" }}
+                                      className="getQuoteForm-input-file-label-X"
+                                    ></ClearIcon>
+                                  </div>
                                 )}
-                              </label>
+                              </div>
                             )}
                             {matches.vsmall && (
                               <label
