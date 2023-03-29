@@ -321,7 +321,7 @@ export default function TalkToUsNowSection() {
                                   <div
                                     className="getQuoteForm-input-file-label-X"
                                     onClick={() => {
-                                      setSingleFile(null);
+                                      setFile(null);
                                       setFileName(false);
                                       //const { others, files } = form;
                                       //setForm({...form});
