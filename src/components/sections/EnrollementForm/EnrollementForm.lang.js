@@ -98,7 +98,7 @@ const texts = {
     diploma2: "le champ Niveau 2 est vide",
     exp2Error: "le champ Expérience 2 est vide",
     inseeKbis: "Ajouter un fichier pour Attestation Insee ou Kbis",
-    identityDoc: "Ajouter un fichier pour Justificatif d'itentité",
+    identityDoc: "Ajouter un fichier pour l'itentité",
     criminalRecord: "Ajouter un fichier pour Casier judiciaire",
     proPhoto: "Ajouter un fichier pour Photographe professionnelle",
     error: "Erreur lors de l'envoi de la demande.",

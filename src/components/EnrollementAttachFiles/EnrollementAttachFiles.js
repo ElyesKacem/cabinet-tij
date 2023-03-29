@@ -27,18 +27,20 @@ export default function EnrollementAttachFiles(props) {
         <AddIcon></AddIcon> <div>{props.title}</div>
       </div>
       <div>
-        <label htmlFor={props.id} className="EnrollementAttachFiles-label">
-          <input
-            type="file"
-            className="EnrollementAttachFiles-file-input"
-            id={props.id}
-            onChange={(event) => handlePutFile(event)}
-          />
-          <div className="EnrollementAttachFiles-button">
-            <div className="EnrollementAttachFiles-button-title">
-              {lang == "en" ? "Choose Files" : "Ajouter un fichier"}
+        <div className="EnrollementAttachFiles-label">
+          <label htmlFor={props.id} className="EnrollementAttachFiles-label">
+            <input
+              type="file"
+              className="EnrollementAttachFiles-file-input"
+              id={props.id}
+              onChange={(event) => handlePutFile(event)}
+            />
+            <div className="EnrollementAttachFiles-button">
+              <div className="EnrollementAttachFiles-button-title">
+                {lang == "en" ? "Choose Files" : "Ajouter un fichier"}
+              </div>
             </div>
-          </div>
+          </label>
           <div style={{ display: "flex", alignItems: "center" }}>
             <div className="EnrollementAttachFiles-fileName">
               {!fileName && (lang == "en" ? "No Chosen File" : "Aucun fichier")}
@@ -51,7 +53,7 @@ export default function EnrollementAttachFiles(props) {
               />
             )}
           </div>
-        </label>
+        </div>
       </div>
     </div>
   );

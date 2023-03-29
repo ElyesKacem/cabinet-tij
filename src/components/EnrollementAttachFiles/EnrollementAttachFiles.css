@@ -20,6 +20,9 @@
   .EnrollementAttachFiles-label {
     flex-direction: column;
   }
+  .EnrollementAttachFiles-button {
+    transform: translateX(-25px);
+  }
 }
 
 .EnrollementAttachFiles-button {
