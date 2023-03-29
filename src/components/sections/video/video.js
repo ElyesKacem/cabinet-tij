@@ -14,7 +14,7 @@ export default function VideoSection() {
     large: "(min-width: 1210px) ",
     medium: " (min-width:1110px) and (max-width: 1210px)",
     small: "(max-width:1110px)",
-    vsmall: "(max-width:360px)",
+    vsmall: "(max-width:400px)",
     // medium: "(min-width: 600px) and (max-width: 1199px)",
   };
   const texts = GetText();
