@@ -286,7 +286,7 @@ export default function TalkToUsNowSection() {
                               //     ></ClearIcon>
                               //   )}
                               // </label>
-                              <div style={{ display: "flex" }}>
+                              <div style={{ display: "flex", marginTop: 20 }}>
                                 <label
                                   className="getQuoteForm-input-file-label"
                                   htmlFor="requotefile"
@@ -302,7 +302,7 @@ export default function TalkToUsNowSection() {
                                     // style={{ transform: "translateX(-19px)" }}
                                     className="getQuoteForm-input-file-button"
                                   >
-                                    {t.SaF}
+                                    {t.selectFile}
                                   </div>
 
                                   {fileName ? (
@@ -317,7 +317,7 @@ export default function TalkToUsNowSection() {
                                     </span>
                                   )}
                                 </label>
-                                {singleFile && (
+                                {fileName && (
                                   <div
                                     className="getQuoteForm-input-file-label-X"
                                     onClick={() => {
