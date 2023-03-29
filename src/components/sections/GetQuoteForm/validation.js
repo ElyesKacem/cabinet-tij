@@ -17,7 +17,7 @@ const translationValid = (t, form) => {
     files,
     from,
   } = form;
-  console.log(validateEmail(email));
+
   if (!not_emp(full_name)) {
     toast.error(t.nameError);
     return false;

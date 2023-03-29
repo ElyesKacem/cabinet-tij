@@ -427,10 +427,14 @@ export default function GetQuoteForm() {
                         : "getQuoteForm-animation getQuoteForm-input-label"
                     }
                   >
-                    <div style={{ display: "flex" }}>
+                    <div
+                      className="getQuoteForm-input-file-label"
+                      style={{ display: "flex" }}
+                    >
                       <label
                         className="getQuoteForm-input-file-label"
                         htmlFor="requotefile"
+                        style={{ marginTop: -18 }}
                       >
                         <input
                           type="file"
@@ -438,11 +442,9 @@ export default function GetQuoteForm() {
                           placeholder="Full Name"
                           id="requotefile"
                           onChange={(e) => {
-                            if (e.target.files.length > 0) {
-                              // console.log("333", e.target.files[0]);
-                              setSingleFile(e.target.files[0]);
-                              setSingleFileName(e.target.files[0].name);
-                            }
+                            // console.log("333", e.target.files[0]);
+                            setSingleFile(e.target.files[0]);
+                            setSingleFileName(e.target.files[0].name);
                           }}
                         />
                         <div
@@ -451,36 +453,47 @@ export default function GetQuoteForm() {
                         >
                           {t.SaF}
                         </div>
-
-                        {singleFileName ? (
-                          <>
-                            <div className="getQuoteForm-input-file-label-text">
-                              &nbsp;&nbsp;{singleFileName}{" "}
-                            </div>
-                          </>
-                        ) : (
-                          <span className="getQuoteForm-input-file-label-text">
-                            &nbsp;&nbsp;{t.nofile}
-                          </span>
-                        )}
                       </label>
-                      {singleFile && (
-                        <div
-                          className="getQuoteForm-input-file-label-X"
-                          onClick={() => {
-                            setSingleFile(null);
-                            setSingleFileName(false);
-                            //const { others, files } = form;
-                            //setForm({...form});
-                          }}
-                        >
-                          &nbsp;&nbsp;
-                          <ClearIcon
-                            sx={{ fill: "url(#linearColors)" }}
-                            className="getQuoteForm-input-file-label-X"
-                          ></ClearIcon>
+                      <div
+                        style={{
+                          display: "flex",
+                          transform: "translateY(-10px)",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div>
+                          {singleFileName ? (
+                            <>
+                              <div className="getQuoteForm-input-file-label-text">
+                                &nbsp;&nbsp;{singleFileName}{" "}
+                              </div>
+                            </>
+                          ) : (
+                            <span className="getQuoteForm-input-file-label-text">
+                              &nbsp;&nbsp;{t.nofile}
+                            </span>
+                          )}
                         </div>
-                      )}
+                        <div>
+                          {singleFile && (
+                            <div
+                              className="getQuoteForm-input-file-label-X"
+                              onClick={() => {
+                                setSingleFile(null);
+                                setSingleFileName(false);
+                                //const { others, files } = form;
+                                //setForm({...form});
+                              }}
+                            >
+                              &nbsp;&nbsp;
+                              <ClearIcon
+                                sx={{ fill: "url(#linearColors)" }}
+                                className="getQuoteForm-input-file-label-X"
+                              ></ClearIcon>
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </div>
                     {/* </Grid> */}
                   </Grid>
