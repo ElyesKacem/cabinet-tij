@@ -27,7 +27,8 @@ export default function OurCommunityHeader() {
     smallerMedium: "(min-width: 1223px) and (max-width: 1300px)",
     small: "(max-width: 1223px)",
     smallerSmall: "(max-width: 746px)",
-    verySmall: "(max-width: 583px)",
+    verySmall: "(max-width: 618px)",
+    veryExtraSmall: "(max-width: 400px)",
   };
   return (
     <div id="community" className="TalkToUsNowSection-background">
@@ -209,7 +210,9 @@ export default function OurCommunityHeader() {
                         style={{
                           position: "relative",
                           width: 650,
-                          transform: matches.verySmall
+                          transform: matches.veryExtraSmall
+                            ? "translateY(-80px) scale(0.44)"
+                            : matches.verySmall
                             ? "translateY(-80px)  scale(0.5)   "
                             : matches.smallerSmall
                             ? "translateY(-20px) scale(0.8)"
