@@ -10,7 +10,7 @@
 }
 
 .EnrollementAttachFiles-label {
-  cursor: pointer;
+  /* cursor: pointer; */
   display: flex;
   gap: 10px;
   align-items: center;
@@ -26,6 +26,7 @@
 }
 
 .EnrollementAttachFiles-button {
+  cursor: pointer;
   border: 1px solid #4b4848;
   padding: 10px 25px 10px 26px;
   border-radius: 5px;
@@ -95,7 +96,7 @@
 .EnrollementAttachFiles-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   margin-bottom: 50px;
   transform: translateX(10%);

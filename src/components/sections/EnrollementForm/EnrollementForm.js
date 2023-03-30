@@ -299,7 +299,7 @@ export default function EnrollementForm() {
                     className="Enrollement-attach-files"
                     style={{
                       flexDirection: "column",
-                      transform: "translateX(-30px)",
+                      transform: "translateX(-25px)",
                       gap: 0,
                     }}
                   >
