@@ -14,6 +14,7 @@ import "./App.css";
 
 import { LangContext } from "./context/Lang.context";
 import TermOfUse from "./pages/TermOfUse";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [lang, setLang] = useState(localStorage.getItem("lang") || "fr");
@@ -43,7 +44,7 @@ function App() {
               path="/TakePartInOurCommunity"
               element={<TakePartInOurCommunity />}
             />
-            <Route path="/*" element={<Home />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
           <Footer />
         </div>
