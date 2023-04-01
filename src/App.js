@@ -15,6 +15,7 @@ import "./App.css";
 import { LangContext } from "./context/Lang.context";
 import TermOfUse from "./pages/TermOfUse";
 import NotFound from "./pages/NotFound";
+// import XML from './sitemap.xml';
 
 function App() {
   const [lang, setLang] = useState(localStorage.getItem("lang") || "fr");

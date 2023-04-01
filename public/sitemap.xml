@@ -1,16 +1,71 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-   <url>
-
-      <loc>http://www.example.com/</loc>
-
-      <lastmod>2005-01-01</lastmod>
-
-      <changefreq>monthly</changefreq>
-
-      <priority>0.8</priority>
-
-   </url>
-    -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.cabinettij.com/</loc>
+    <lastmod>2023-04-01</lastmod>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/Illustration.7c5ded731ff13c72592b759f92976d6e.svg</image:loc>
+    </image:image>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/Expertise.7e5378eedacb10245528.jpg</image:loc>
+    </image:image>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/Experience.00474044409c6a27776b.jpg</image:loc>
+    </image:image>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/Quality.97409f302143a448740f.jpg</image:loc>
+    </image:image>
+   <image:image>
+<image:loc>https://www.cabinettij.com/static/media/Agility.f006e014c3161ab09d50.jpg</image:loc>
+    </image:image>
+   <image:image>
+<image:loc>https://https://www.cabinettij.com/static/media/Efficiacity.00427f02839d26081fdc.jpg</image:loc>
+    </image:image>
+   <image:image>
+<image:loc>https://www.cabinettij.com/static/media/dynma.0c63fcfc5d834caf6fa9.jpg</image:loc>
+    </image:image>
+   <image:image>
+<image:loc>https://www.cabinettij.com/static/media/logo.1866a5e22d2c55067db1.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.cabinettij.com/requestquote</loc>
+    <lastmod>2023-04-01</lastmod>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/dysnh.e3f0ab837a4210cf120d.jpg</image:loc>
+    </image:image>
+  </url>
+<url>
+    <loc>https://www.cabinettij.com/TakePartInOurCommunity</loc>
+    <lastmod>2023-04-01</lastmod>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/ourCommunityHeader.c8d319894d65cd8dcf01.jpg</image:loc>
+    </image:image>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/ourCommunityMap.3d76672d042213d2f4ee.png</image:loc>
+    </image:image>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/zoomed.371b04d9c83b86a5feea.jpg</image:loc>
+    </image:image>
+  </url>
+<url>
+    <loc>https://www.cabinettij.com/enrollement</loc>
+     <lastmod>2023-04-01</lastmod>
+  </url>
+<url>
+    <loc>https://www.cabinettij.com/TalkToUsNow</loc>
+    <lastmod>2023-04-01</lastmod>
+    <image:image>
+<image:loc>https://www.cabinettij.com/static/media/TalkToUs1.ddc055048554a34f7d5b.jpg</image:loc>
+    </image:image>
+  </url>
+<url>
+    <loc>https://www.cabinettij.com/termeofuse</loc>
+     <lastmod>2023-04-01</lastmod>
+  </url>
+<url>
+    <loc>https://www.cabinettij.com/PrivacyPolicy</loc>
+     <lastmod>2023-04-01</lastmod>
+  </url>
+</urlset>
