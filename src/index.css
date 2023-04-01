@@ -12,9 +12,11 @@ code {
     monospace;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
+/* ::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 35px;
   height: 6px;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,8 +29,4 @@ code {
   background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
     0% no-repeat padding-box;
   border-radius: 35px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  /* background: #797979; */
-}
+} */

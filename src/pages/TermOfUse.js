@@ -20,7 +20,7 @@ export default function TermOfUse() {
       t3: "Numéro de telephone : ",
       t4: "Adresse e-mail :",
       t5: "Numéro d’immatriculation :",
-      t6: "Directeur :",
+      t6: "Directrice :",
     },
     en: {
       h1: "Privacy Policy",
@@ -111,7 +111,7 @@ export default function TermOfUse() {
           </p>
           <p style={{ color: "white" }}>
             {" "}
-            <b style={blueTitle}>{text.t3} </b> 0033 +33 6 99 08 64 91{" "}
+            <b style={blueTitle}>{text.t3} </b> +33 6 99 08 64 91{" "}
           </p>
           <p style={{ color: "white" }}>
             {" "}

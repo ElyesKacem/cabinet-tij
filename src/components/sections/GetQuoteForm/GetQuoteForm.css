@@ -32,11 +32,21 @@
 }
 
 .getQuoteForm-margin::-webkit-scrollbar {
-  /* -webkit-appearance: none; */
-
-  /* margin-top: 0px; */
+  width: 10px;
+  border-radius: 35px;
+  height: 6px;
+  background-color: transparent;
 }
-
+.getQuoteForm-margin::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 35px;
+  border: 0.5px solid #6d6d6d;
+}
+.getQuoteForm-margin::-webkit-scrollbar-thumb {
+  background: transparent linear-gradient(180deg, #242d65 0%, #cf2032 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 35px;
+}
 .white-text {
   color: white;
 }

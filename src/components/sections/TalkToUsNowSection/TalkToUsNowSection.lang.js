@@ -5,11 +5,11 @@ const texts = {
   en: {
     h1: "Talk To Us Now",
     parag:
-      "For further information, please contact us at contact@cabinet-tij.com or use the provided form. If you are a translator or interpreter and wish to become part of our distinguished group of of skilled professionals, kindly complete our Online",
+      "For further information, please contact us at contact@cabinet-tij.com or use the provided form. If you are a translator or an interpreter and wish to become part of our distinguished group of of skilled professionals, kindly complete our Online",
     app: " Application Form",
     name: "Full name",
     mail: "E-mail",
-    subject: "Subject",
+    subject: "Request",
     notes: "Notes",
     selectFile: "Select a file",
     nofile: "No Chosen File",
@@ -22,7 +22,7 @@ const texts = {
     nameError: "Full Name is empty",
     mailError: "E-mail is empty",
     mailFormatError: "Invalid email format",
-    subjectError: "Subject is empty",
+    subjectError: "Request is empty",
     notesError: "Notes is empty",
   },
 

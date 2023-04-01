@@ -3,7 +3,7 @@ import { LangContext } from "../../../context/Lang.context";
 
 const texts = {
   en: {
-    title1: "Professional ?",
+    title1: "Are You A Professional ?",
     title2: "Join Our team",
     content1: "join our community and be a part of something special .",
     content2:

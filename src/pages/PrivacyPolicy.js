@@ -18,7 +18,7 @@ export default function TermOfUse() {
     en: {
       h1: "Privacy Policy",
       parag:
-        "TIJ is committed to protecting the privacy of its customers and users' personal data. The information collected is used to respond to their requests and to improve the user experience. We do not disclose any information to third parties, except where required by law or competent authorities",
+        "TIJ is committed to protecting the privacy of its clients and users personal data. The information collected is used to respond to their requests and to improve the user experience. We do not disclose any information to third parties, except where required by law or competent authorities.",
     },
   };
 

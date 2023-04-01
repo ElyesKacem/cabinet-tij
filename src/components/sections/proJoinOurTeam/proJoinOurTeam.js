@@ -40,7 +40,10 @@ export default function ProJoinOurTeam() {
                       {lang == "fr" && (
                         <div
                           className="proJoinOurTeam-content-header"
-                          style={{ fontSize: matches.medium && 36 }}
+                          style={{
+                            fontSize: matches.medium && 36,
+                            padding: 10,
+                          }}
                         >
                           {text.title1} <br />{" "}
                           <b
@@ -59,7 +62,10 @@ export default function ProJoinOurTeam() {
                       {lang == "en" && (
                         <div
                           className="proJoinOurTeam-content-header"
-                          style={{ fontSize: matches.medium && 43 }}
+                          style={{
+                            fontSize: matches.medium && 43,
+                            padding: 10,
+                          }}
                         >
                           {text.title1} <br />{" "}
                           <b

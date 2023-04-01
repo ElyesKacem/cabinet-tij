@@ -4,21 +4,21 @@ import { LangContext } from "../../../context/Lang.context";
 const texts = {
   en: {
     title: "Get In Touch With Us",
-    name: "Your name",
+    name: "Name",
     company: "Company",
-    mail: "Your e-mail",
+    mail: "E-Mail",
     subject: "Subject",
-    content: "Your subject",
+    content: "Request",
     sub: "Submit",
     error: "Error while sending message.",
     sending: "Sending in progress...",
     success: "Your message has been successfully sent",
-    nameError: "Full Name is empty",
+    nameError: "Name is empty",
     mailError: "E-mail is empty",
     mailFormatError: "Invalid email format",
     companyError: "Company is empty",
     subjectError: "Subject is empty",
-    contentError: "Content is empty",
+    contentError: "Request is empty",
   },
 
   fr: {

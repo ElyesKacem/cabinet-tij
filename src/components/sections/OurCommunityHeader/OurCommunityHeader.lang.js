@@ -13,7 +13,7 @@ const texts = {
     wh: "Rejoignez",
     bh: "Notre équipe",
     parag:
-      "TIJ est toujours à la recherche de professionnels pour faire partie de notre réseau national de traducteurs et d'interprètes.  Nous aidons ces personnes à faire progresser leur carrière dans le domaine des services linguistiques.",
+      "TIJ est toujours à la recherche de professionnels pour faire partie de son réseau national de traducteurs et interpretes.  Nous aidons ces personnes à faire progresser leur carrière dans le domaine des services linguistiques.",
   },
 };
 

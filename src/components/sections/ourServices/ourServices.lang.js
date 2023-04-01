@@ -5,7 +5,7 @@ const texts = {
   en: {
     our_serv: "Our Services",
     we_offer:
-      "We Offer Solutions For Clients Both Large And Small, From corporate, Government And Private Sectors",
+      "We Offer Services For All Our Clients From Corporate, Government And Private Sectors",
     inter: "Interpretation",
     transl: "Translation",
     sworn: "Sworn Translation",

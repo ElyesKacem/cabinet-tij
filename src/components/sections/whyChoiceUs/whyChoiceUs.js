@@ -91,7 +91,7 @@ export default function WhyChoiceUs() {
                       </div>
                     ) : (
                       <div style={{ lineHeight: "1.2" }}>
-                        Here Are Few Reasons <br /> To Trust Us
+                        Here Are A Few Reasons <br /> To Trust Us
                       </div>
                     )}
                   </p>

@@ -3,7 +3,7 @@ import { LangContext } from "../../../context/Lang.context";
 
 const texts = {
   en: {
-    who_we_are: "WHO WE ARE",
+    who_we_are: "WHO WE ARE ?",
     cabinet_Tij_For: "Cabinet Tij For Translation And Interpretation",
     we_are_specialized:
       "We are specialized in the field of technical, administrative and judicial translation and Interpretation.",
@@ -17,7 +17,7 @@ const texts = {
     cabinet_Tij_For:
       "Cabinet TIJ pour vos besoins en traduction et en interprétariat",
     we_are_specialized:
-      "Nous sommes spécialisés dans le domaine de la traduction et de l'interprétariat technique, administrative et judiciaire.",
+      "Nous sommes spécialisés dans le domaine de la traduction et de l'interprétariat techniques, administratifs et judiciaires.",
     thanks_to_our:
       "Grâce à son réseau de traducteurs et d'interprètes qualifiés, notre cabinet intervient pour répondre efficacement à vos besoins de traduction ou d'interprétariat",
     our_services: "Nos services",

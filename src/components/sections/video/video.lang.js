@@ -6,7 +6,7 @@ const texts = {
     We_Provide: "We Provide Outsourced",
     Translation: "Translation",
     Interpretation: "Interpretation",
-    For_small_and_mid_sized_businesses: "For small and mid sized businesses",
+    For_small_and_mid_sized_businesses: "For public and private sectors.",
     LearnMore: "Learn More",
     GetinTouch: "Get in Touch",
   },
