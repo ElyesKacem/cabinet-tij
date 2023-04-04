@@ -2,6 +2,7 @@ import React from "react";
 import "./footerText.css";
 import EastIcon from "@mui/icons-material/East";
 import { LangContext } from "../../context/Lang.context";
+import { HashLink } from "react-router-hash-link";
 
 export default function FooterText(props) {
   const { lang } = React.useContext(LangContext);
@@ -21,9 +22,30 @@ export default function FooterText(props) {
       </div>
       <br />
       <div className="footerText-content" style={ms2}>
-        {props.title != ("Support" || "Information" || "Informations") &&
+        {props.title != "Support" &&
+          props.title !=
+            ("Aide" || "Support" || "Information" || "Informations") &&
           props.content}
-        {props.title == "Support" && "Contact us"}
+        {props.title == "Aide" && (
+          <HashLink
+            style={{ cursor: "pointer" }}
+            className="resetcss"
+            smooth
+            to="/TalkToUsNow#contact"
+          >
+            Contactez-nous
+          </HashLink>
+        )}
+        {props.title == "Support" && (
+          <HashLink
+            style={{ cursor: "pointer" }}
+            className="resetcss"
+            smooth
+            to="/TalkToUsNow#contact"
+          >
+            Contact us{" "}
+          </HashLink>
+        )}
         {props.title == "Services" &&
           (lang == "en" ? (
             <>

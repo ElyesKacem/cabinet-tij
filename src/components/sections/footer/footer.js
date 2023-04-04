@@ -99,16 +99,11 @@ export default function Footer() {
                     <FooterText title={text.about} content={text.about_pg} />
                     <br />
                     <br />
-                    <HashLink
-                      className="resetcss"
-                      smooth
-                      to="/TalkToUsNow#contact"
-                    >
-                      <FooterText
-                        title={text.support}
-                        content={text.contact_us}
-                      />
-                    </HashLink>
+
+                    <FooterText
+                      title={text.support}
+                      content={text.contact_us}
+                    />
                   </div>
 
                   <div
