@@ -86,9 +86,7 @@ export default function WeAreHere() {
                     className="WeAreHere-container-paragraph"
                     style={{ width: "auto" }}
                   >
-                    It will take less than 10 minutes for you to submit your
-                    application <br /> for affiliation. We will get back to you
-                    as soon as possible!
+                    {t.h1} <br /> {t.h2}
                   </p>
 
                   <div
