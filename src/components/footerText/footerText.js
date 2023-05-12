@@ -92,7 +92,7 @@ export default function FooterText(props) {
             +33 1 53 67 44 72
             <br />
             <br />
-            42 Avenue Montaigne 75008 Paris.
+            42 Avenue Montaigne, <br /> 75008 Paris.
           </>
         )}
       </div>
