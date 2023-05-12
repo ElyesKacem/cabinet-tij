@@ -107,11 +107,11 @@ export default function TermOfUse() {
           </p>
           <p style={{ color: "white" }}>
             {" "}
-            <b style={blueTitle}>{text.t2} </b> 3 rue Boccador, 75008 Paris.{" "}
+            <b style={blueTitle}>{text.t2} </b> 42 Avenue Montaigne 75008 Paris.{" "}
           </p>
           <p style={{ color: "white" }}>
             {" "}
-            <b style={blueTitle}>{text.t3} </b> +33 6 99 08 64 91{" "}
+            <b style={blueTitle}>{text.t3} </b> +33 1 53 67 44 72{" "}
           </p>
           <p style={{ color: "white" }}>
             {" "}
