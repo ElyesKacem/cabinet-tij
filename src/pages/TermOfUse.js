@@ -112,9 +112,8 @@ export default function TermOfUse() {
           </p>
           <p style={{ color: "white" }}>
             {" "}
-            <b style={blueTitle}>{text.t3} </b> +33 1 53 67 44 72
-            <br />
-            +33 6 99 08 64 91{" "}
+            <b style={blueTitle}>{text.t3} </b> +33 1 53 67 44 72 &nbsp; +33 6
+            99 08 64 91{" "}
           </p>
           <p style={{ color: "white" }}>
             {" "}

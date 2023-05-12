@@ -89,7 +89,10 @@ export default function FooterText(props) {
             contact@cabinet-tij.com
             <br />
             <br />
-            +33 1 53 67 44 72 <br /> +33 6 99 08 64 91
+            +33 1 53 67 44 72
+            <br />
+            <br />
+            +33 6 99 08 64 91
             <br />
             <br />
             42 Avenue Montaigne, <br /> 75008 Paris.
