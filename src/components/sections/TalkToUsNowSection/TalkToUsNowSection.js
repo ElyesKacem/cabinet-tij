@@ -172,7 +172,7 @@ export default function TalkToUsNowSection() {
                         <div className="TalkToUsNowSection-pinkb">{t.bt1}</div>
                         <div>contact@cabinet-tij.com</div>
 
-                        <div>
+                        <div style={{ lineHeight: "1.9" }}>
                           +33 1 53 67 44 72 <br />
                           +33 6 99 08 64 91
                         </div>
@@ -599,7 +599,7 @@ export default function TalkToUsNowSection() {
                             {t.bt1}
                           </div>
                           <div>contact@cabinet-tij.com</div>
-                          <div>
+                          <div style={{ lineHeight: "1.9" }}>
                             +33 1 53 67 44 72 <br /> +33 6 99 08 64 91
                           </div>
                         </div>
